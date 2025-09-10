@@ -13,3 +13,4 @@ func is_stage_unlocked(stage_index: int) -> bool:
 	if stage_index < unlocked_stages.size():
 		return unlocked_stages[stage_index];
 	return false;
+ 

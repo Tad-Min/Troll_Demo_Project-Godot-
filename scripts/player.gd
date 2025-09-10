@@ -66,7 +66,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("die"):
 		die()
 
-
 func _on_animated_sprite_2d_frame_changed():
 	if $AnimatedSprite2D.animation == "jump_right":
 		if $AnimatedSprite2D.frame == 4:

@@ -1603,8 +1603,6 @@ animation = &"Default"
 autoplay = "Default"
 frame_progress = 0.390006
 script = ExtResource("7_g4q3r")
-next_level_path = null
-stage_to_unlock = null
 
 [node name="Player" parent="." instance=ExtResource("7_vyjv3")]
 position = Vector2(56, 320)
