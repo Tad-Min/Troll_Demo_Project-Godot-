@@ -1,16 +1,16 @@
-[gd_scene load_steps=31 format=4 uid="uid://ch12rgidooprk"]
+[gd_scene load_steps=31 format=4 uid="uid://bdyykv77g4ky6"]
 
-[ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_7p65b"]
-[ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://Jungle Asset Pack/parallax background/plx-2.png" id="2_oskok"]
-[ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://Jungle Asset Pack/parallax background/plx-4.png" id="3_l3d6l"]
-[ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://Jungle Asset Pack/parallax background/plx-5.png" id="4_215dr"]
-[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="5_fqcln"]
-[ext_resource type="Script" uid="uid://c7x18wpej2aka" path="res://scenes/Level/door_lv_1.gd" id="6_215dr"]
-[ext_resource type="Texture2D" uid="uid://befmu440wgg3g" path="res://assets/portal.png" id="6_l3d6l"]
-[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="6_oskok"]
+[ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_dugty"]
+[ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://Jungle Asset Pack/parallax background/plx-2.png" id="2_g4q3r"]
+[ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://Jungle Asset Pack/parallax background/plx-4.png" id="3_ctqag"]
+[ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://Jungle Asset Pack/parallax background/plx-5.png" id="4_7e7dt"]
+[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="5_w6d4j"]
+[ext_resource type="Texture2D" uid="uid://befmu440wgg3g" path="res://assets/portal.png" id="6_hdbly"]
+[ext_resource type="Script" uid="uid://c7x18wpej2aka" path="res://scenes/Level/door_lv_1.gd" id="7_g4q3r"]
+[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="7_vyjv3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
-texture = ExtResource("5_fqcln")
+texture = ExtResource("5_w6d4j")
 19:1/0 = 0
 19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:1/0 = 0
@@ -693,7 +693,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_oskok")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_215dr"]
-texture = ExtResource("5_fqcln")
+texture = ExtResource("5_w6d4j")
 19:1/0 = 0
 19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:1/0 = 0
@@ -1376,71 +1376,71 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_215dr")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l3d6l"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_215dr"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fqcln"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3u6yt"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_trgvg"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1jteh"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ycurf"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ccrv4"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qwpae"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8r58q"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ga040"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(64, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bmjqr"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(96, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nm6a8"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yg8ht"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(32, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xo4jt"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(64, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4xmb0"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(96, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d4vyj"]
-atlas = ExtResource("6_l3d6l")
+atlas = ExtResource("6_hdbly")
 region = Rect2(0, 128, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_215dr"]
@@ -1502,7 +1502,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Lv1" type="Node2D"]
+[node name="Lv2" type="Node2D"]
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = 191.0
@@ -1523,7 +1523,7 @@ offset_right = 152.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_7p65b")
+texture = ExtResource("1_dugty")
 
 [node name="Bg_layer2" type="TextureRect" parent="Background"]
 layout_mode = 1
@@ -1536,7 +1536,7 @@ offset_right = 152.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_oskok")
+texture = ExtResource("2_g4q3r")
 
 [node name="Bg_layer3" type="TextureRect" parent="Background"]
 layout_mode = 1
@@ -1549,7 +1549,7 @@ offset_right = 152.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_oskok")
+texture = ExtResource("2_g4q3r")
 
 [node name="Bg_layer4" type="TextureRect" parent="Background"]
 layout_mode = 1
@@ -1562,7 +1562,7 @@ offset_right = 152.0
 offset_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_l3d6l")
+texture = ExtResource("3_ctqag")
 
 [node name="Bg_layer5" type="TextureRect" parent="Background"]
 layout_mode = 1
@@ -1575,7 +1575,7 @@ offset_right = 152.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_215dr")
+texture = ExtResource("4_7e7dt")
 
 [node name="LevelLabel" type="RichTextLabel" parent="."]
 offset_left = 560.0
@@ -1595,21 +1595,17 @@ position = Vector2(0, -232)
 tile_map_data = PackedByteArray("AAACACYAAAAGAAUAAAADACUAAAAGAAQAAAAEACQAAAAGAAMAAAAEACMAAAAGAAIAAAACACUAAAAGAAQAAAADACYAAAAGAAUAAAAEACUAAAAGAAQAAAAEACYAAAAGAAUAAAAFACUAAAAGAAQAAAAFACYAAAAGAAUAAAAGACUAAAAGAAQAAAAGACYAAAAGAAUAAAAHACUAAAAGAAQAAAAHACYAAAAGAAUAAAACACMAAAAFAAIAAAACACQAAAAGAAMAAAADACMAAAAFAAIAAAADACQAAAAGAAMAAAAFACMAAAAHAAIAAAAFACQAAAAGAAMAAAAGACMAAAAHAAIAAAAGACQAAAAGAAMAAAAHACMAAAAHAAIAAAAHACQAAAAGAAMAAAAIACMAAAAGAAIAAAAIACQAAAAGAAMAAAAIACUAAAAGAAQAAAAIACYAAAAGAAUAAAAJACMAAAAHAAIAAAAJACQAAAAGAAMAAAAJACUAAAAGAAQAAAAJACYAAAAGAAUAAAAKACMAAAAHAAIAAAAKACQAAAAGAAMAAAAKACUAAAAGAAQAAAAKACYAAAAGAAUAAAALACMAAAAHAAIAAAALACQAAAAGAAMAAAALACUAAAAGAAQAAAALACYAAAAGAAUAAAAMACMAAAAHAAIAAAAMACQAAAAGAAMAAAAMACUAAAAGAAQAAAAMACYAAAAGAAUAAAANACMAAAAHAAIAAAANACQAAAAHAAMAAAANACUAAAAHAAQAAAANACYAAAAHAAUAAAAOACMAAAAIAAIAAAAOACQAAAAIAAMAAAAOACUAAAAIAAQAAAAOACYAAAAIAAUAAAATAB8AAAAEAAIAAAATACAAAAAEAAMAAAATACEAAAAEAAQAAAATACIAAAAEAAUAAAATACMAAAAEAAYAAAAUAB8AAAAFAAIAAAAUACAAAAAFAAMAAAAUACEAAAAFAAQAAAAUACIAAAAFAAUAAAAUACMAAAAFAAYAAAAVAB8AAAAGAAIAAAAVACAAAAAGAAMAAAAVACEAAAAGAAQAAAAVACIAAAAGAAUAAAAVACMAAAAGAAYAAAAWAB8AAAAHAAIAAAAWACAAAAAHAAMAAAAWACEAAAAHAAQAAAAWACIAAAAHAAUAAAAWACMAAAAHAAYAAAAXAB8AAAAIAAIAAAAXACAAAAAIAAMAAAAXACEAAAAIAAQAAAAXACIAAAAIAAUAAAAXACMAAAAIAAYAAAAdABcAAAAEAAQAAAAdABgAAAAEAAMAAAAdABkAAAAEAAMAAAAdABoAAAAEAAMAAAAdABsAAAAEAAQAAAAdABwAAAAEAAUAAAAdAB0AAAAEAAYAAAAdABYAAAAEAAIAAAAeABYAAAAFAAIAAAAeABcAAAAFAAQAAAAeABgAAAAFAAQAAAAeABkAAAAFAAQAAAAeABoAAAAFAAQAAAAeABsAAAAFAAQAAAAeABwAAAAFAAUAAAAeAB0AAAAFAAYAAAAfABYAAAAGAAIAAAAfABcAAAAGAAQAAAAfABgAAAAGAAQAAAAfABkAAAAGAAQAAAAfABoAAAAGAAQAAAAfABsAAAAGAAQAAAAfABwAAAAGAAUAAAAfAB0AAAAGAAYAAAAgABYAAAAHAAIAAAAgABcAAAAHAAQAAAAgABgAAAAHAAQAAAAgABkAAAAHAAQAAAAgABoAAAAHAAQAAAAgABsAAAAHAAQAAAAgABwAAAAHAAUAAAAgAB0AAAAHAAYAAAAhABYAAAAIAAIAAAAhABcAAAAIAAQAAAAhABgAAAAIAAUAAAAhABkAAAAIAAQAAAAhABoAAAAIAAMAAAAhABsAAAAIAAQAAAAhABwAAAAIAAUAAAAhAB0AAAAIAAYAAAAmABoAAAAEAAIAAAAmABsAAAAEAAMAAAAmABwAAAAEAAQAAAAmAB0AAAAEAAUAAAAnABoAAAAFAAIAAAAnABsAAAAFAAMAAAAnABwAAAAFAAQAAAAnAB0AAAAFAAUAAAAoABoAAAAGAAIAAAAoABsAAAAGAAMAAAAoABwAAAAGAAQAAAAoAB0AAAAGAAUAAAApABoAAAAHAAIAAAApABsAAAAGAAMAAAApABwAAAAGAAQAAAApAB0AAAAGAAUAAAAqABoAAAAHAAIAAAAqABsAAAAGAAMAAAAqABwAAAAGAAQAAAAqAB0AAAAGAAUAAAArABoAAAAHAAIAAAArABsAAAAGAAMAAAArABwAAAAGAAQAAAArAB0AAAAGAAUAAAAsABoAAAAGAAIAAAAsABsAAAAGAAMAAAAsABwAAAAGAAQAAAAsAB0AAAAGAAUAAAAtABoAAAAHAAIAAAAtABsAAAAGAAMAAAAtABwAAAAGAAQAAAAtAB0AAAAGAAUAAAAuABoAAAAHAAIAAAAuABsAAAAGAAMAAAAuABwAAAAGAAQAAAAuAB0AAAAGAAUAAAAvABoAAAAHAAIAAAAvABsAAAAGAAMAAAAvABwAAAAGAAQAAAAvAB0AAAAGAAUAAAAwABoAAAAHAAIAAAAwABsAAAAGAAMAAAAwABwAAAAGAAQAAAAwAB0AAAAGAAUAAAAxABoAAAAHAAIAAAAxABsAAAAHAAMAAAAxABwAAAAHAAQAAAAxAB0AAAAHAAUAAAAyABoAAAAIAAIAAAAyABsAAAAIAAMAAAAyABwAAAAIAAQAAAAyAB0AAAAIAAUAAAAmAB4AAAAEAAYAAAAnAB4AAAAFAAYAAAAoAB4AAAAGAAYAAAApAB4AAAAHAAYAAAAqAB4AAAAGAAYAAAArAB4AAAAFAAYAAAAsAB4AAAAGAAYAAAAtAB4AAAAHAAYAAAAuAB4AAAAGAAYAAAAvAB4AAAAFAAYAAAAwAB4AAAAGAAYAAAAxAB4AAAAHAAYAAAAyAB4AAAAIAAYAAAAuABIAAAAEAAIAAAAuABMAAAAEAAMAAAAuABQAAAAEAAQAAAAuABUAAAAEAAUAAAAuABYAAAAEAAYAAAAvABIAAAAFAAIAAAAvABMAAAAFAAMAAAAvABQAAAAFAAQAAAAvABUAAAAFAAUAAAAvABYAAAAFAAYAAAAwABIAAAAGAAIAAAAwABMAAAAGAAMAAAAwABQAAAAGAAQAAAAwABUAAAAGAAUAAAAwABYAAAAGAAYAAAAxABIAAAAHAAIAAAAxABMAAAAHAAMAAAAxABQAAAAHAAQAAAAxABUAAAAHAAUAAAAxABYAAAAHAAYAAAAyABIAAAAIAAIAAAAyABMAAAAIAAMAAAAyABQAAAAIAAQAAAAyABUAAAAIAAUAAAAyABYAAAAIAAYAAAABACQAAAAFAAMAAAABACUAAAAFAAQAAAABACYAAAAFAAUAAAABACMAAAARAAkAAAAKACcAAAAHAAYAAAALACcAAAAFAAYAAAAMACcAAAAGAAYAAAANACcAAAAHAAYAAAAOACcAAAAIAAYAAAAIACcAAAAFAAYAAAAJACcAAAAGAAYAAAAFACcAAAAHAAYAAAAGACcAAAAGAAYAAAAHACcAAAAHAAYAAAADACcAAAAGAAYAAAAEACcAAAAHAAYAAAACACcAAAAFAAYAAAABACcAAAALAAkAAAA9ABYAAAANAAIAAAA=")
 tile_set = SubResource("TileSet_fqcln")
 
-[node name="DoorLv1" type="CollisionPolygon2D" parent="."]
+[node name="DoorLv2" type="AnimatedSprite2D" parent="."]
 position = Vector2(984, 88)
 scale = Vector2(2.51654, 2.51654)
-build_mode = 1
-polygon = PackedVector2Array(-15.8948, -3.17897, -15.8948, 15.8948, 15.8948, 15.8948, 15.8948, -3.17897, 12.7159, -9.5369, 0, -15.8948, -9.5369, -12.7159)
-script = ExtResource("6_215dr")
-next_level_path = null
-stage_to_unlock = null
-
-[node name="DoorLv1" type="AnimatedSprite2D" parent="DoorLv1"]
 sprite_frames = SubResource("SpriteFrames_215dr")
 animation = &"Default"
 autoplay = "Default"
 frame_progress = 0.390006
+script = ExtResource("7_g4q3r")
+next_level_path = null
+stage_to_unlock = null
 
-[node name="Player" parent="." instance=ExtResource("6_oskok")]
+[node name="Player" parent="." instance=ExtResource("7_vyjv3")]
 position = Vector2(56, 320)
 scale = Vector2(2, 2)
