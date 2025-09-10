@@ -1469,7 +1469,7 @@ tile_map_data = PackedByteArray("AAACACYAAAAGAAUAAAADACUAAAAGAAQAAAAEACQAAAAGAAM
 tile_set = SubResource("TileSet_fqcln")
 
 [node name="Portal" parent="." instance=ExtResource("9_fqcln")]
-position = Vector2(184, 296)
+position = Vector2(985, 103)
 rotation = 3.14159
 scale = Vector2(2.01603, -2.0561)
 

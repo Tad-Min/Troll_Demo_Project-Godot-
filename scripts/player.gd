@@ -32,7 +32,8 @@ func _physics_process(delta: float) -> void:
 				velocity.y = jump_velocity
 				air_jump_done+=1
 				$JumpSound.play()
-
+	if position.y > 900:
+		get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
 
 
 
