@@ -1600,5 +1600,4 @@ autoplay = "Default"
 frame_progress = 0.390006
 
 [node name="Player" parent="." instance=ExtResource("6_oskok")]
-position = Vector2(48, 560)
-scale = Vector2(2.51654, 2.51654)
+position = Vector2(56, 552)
