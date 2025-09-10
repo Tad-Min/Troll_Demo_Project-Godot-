@@ -1,10 +1,11 @@
-[gd_scene load_steps=30 format=3 uid="uid://dhqdda1mfogu7"]
+[gd_scene load_steps=31 format=3 uid="uid://dhqdda1mfogu7"]
 
 [ext_resource type="Texture2D" uid="uid://bbjunvicfbbgg" path="res://assets/character.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://c27cqf6yfkjx5" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="AudioStream" uid="uid://c4clc60ywg7em" path="res://assets/cartoon-jump-6462.mp3" id="3_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://bvngj0swsjsly" path="res://scenes/move_buttons.tscn" id="4_dqkch"]
 [ext_resource type="AudioStream" uid="uid://cvy1ls0r8b1w1" path="res://assets/male-death-scream-horror-352706.mp3" id="5_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://b56jq3ppjx0xe" path="res://Trap asset/Voicy_Cyka Blyat.mp3" id="6_tuyoq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -245,6 +246,10 @@ stream = ExtResource("3_qhqgy")
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_qlg0r")
-volume_db = 13.302
+
+[node name="Cursing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_tuyoq")
+volume_db = 10.4
+autoplay = true
 
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
