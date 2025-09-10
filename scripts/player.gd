@@ -20,7 +20,6 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump"):
-		print("jumping")
 		if is_on_floor():
 			if last_direction == -1.0:
 				lr_anim=false
@@ -40,7 +39,6 @@ func _physics_process(delta: float) -> void:
 
 	# Handle movement A-D
 	var direction := Input.get_axis("move_left", "move_right")
-	print(direction)
 	if last_direction != direction and lr_anim:
 		if direction == -1:
 			$AnimatedSprite2D.play("left")
@@ -64,6 +62,9 @@ func _physics_process(delta: float) -> void:
 		lr_anim=true
 
 	move_and_slide()
+	#press X to die, testing only
+	if Input.is_action_just_pressed("die"):
+		die()
 
 
 func _on_animated_sprite_2d_frame_changed():
@@ -75,3 +76,15 @@ func _on_animated_sprite_2d_frame_changed():
 		if $AnimatedSprite2D.frame == 4:
 			velocity.y = jump_velocity
 			$JumpSound.play()
+
+
+var is_dead: bool = false
+func die() -> bool:
+	if is_dead:
+		return false  # already dead, nothing happens
+	
+	is_dead = true
+	$CollisionShape2D.disabled = true
+	print("Player died")
+	
+	return true
