@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://ch12rgidooprk"]
+[gd_scene load_steps=14 format=4 uid="uid://dpky82ktmbk6c"]
 
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_7p65b"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://Jungle Asset Pack/parallax background/plx-2.png" id="2_oskok"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="5_fqcln"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="6_oskok"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="8_215dr"]
+[ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="9_3u6yt"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="9_fqcln"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
@@ -1472,6 +1473,9 @@ tile_set = SubResource("TileSet_fqcln")
 position = Vector2(184, 296)
 rotation = 3.14159
 scale = Vector2(2.01603, -2.0561)
+
+[node name="Spike" parent="." instance=ExtResource("9_3u6yt")]
+position = Vector2(120, 322)
 
 [node name="Player" parent="." instance=ExtResource("6_oskok")]
 position = Vector2(56, 320)

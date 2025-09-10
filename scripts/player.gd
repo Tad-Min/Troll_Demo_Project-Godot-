@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+signal player_died 
 
 @export var speed: float = 100.0
 @export var jump_velocity: float = -400.0
@@ -10,8 +11,13 @@ var lr_anim : bool = true
 const MAX_AIR_JUMPS = 1   # only 1 allowed in air
 var air_jump_done = 0
 
+var is_dead: bool = false
 
 func _physics_process(delta: float) -> void:
+	if is_dead:
+		$CollisionShape2D.disabled = true
+		
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -77,13 +83,7 @@ func _on_animated_sprite_2d_frame_changed():
 			$JumpSound.play()
 
 
-var is_dead: bool = false
 func die() -> bool:
-	if is_dead:
-		return false  # already dead, nothing happens
-	
-	is_dead = true
-	$CollisionShape2D.disabled = true
-	print("Player died")
-	
+	emit_signal("player_died") # notify GameCenter
+	is_dead = true 
 	return true
