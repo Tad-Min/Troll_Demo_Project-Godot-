@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 100.0
-const JUMP_VELOCITY = -200.0
+const JUMP_VELOCITY = -400.0
 const GRAVITY : int = 4200
 var last_direction = 0
 var lr_anim : bool = true

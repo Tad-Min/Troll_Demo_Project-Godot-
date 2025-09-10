@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Troll_Demo"
-run/main_scene="uid://c80ny1n1xaiyg"
+run/main_scene="uid://ch12rgidooprk"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
