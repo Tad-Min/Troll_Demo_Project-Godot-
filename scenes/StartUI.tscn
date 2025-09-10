@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://bys8ghsb0vx7p"]
+
+[ext_resource type="Script" uid="uid://dlkyqsml0cwne" path="res://scripts/StartButton.gd" id="1_jef12"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1w7y4"]
+font_size = 100
+font_color = Color(1, 0, 0, 1)
+shadow_color = Color(0.792157, 0, 0, 0)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 641.0
+color = Color(0.133333, 1, 1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 340.0
+offset_right = 172.0
+offset_bottom = 460.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 164.0
+offset_right = 916.0
+offset_bottom = 301.0
+text = "GAME TROLL"
+label_settings = SubResource("LabelSettings_1w7y4")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 321.0
+offset_right = 714.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 50
+text = "Play"
+script = ExtResource("1_jef12")
