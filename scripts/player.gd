@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 100.0
-const JUMP_VELOCITY = -200.0
+@export var speed: float = 100.0
+@export var jump_velocity: float = -200.0
 const GRAVITY : int = 4200
 var last_direction = 0
 var lr_anim : bool = true
@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("jump_right")
 		else:
 			if air_jump_done==0:
-				velocity.y = JUMP_VELOCITY
+				velocity.y = jump_velocity
 				air_jump_done+=1
 				$JumpSound.play()
 			
@@ -51,9 +51,9 @@ func _physics_process(delta: float) -> void:
 	last_direction=direction
 	
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = direction * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
 
 	#animation reset after jump
 	if $AnimatedSprite2D.animation== "jump_right" and $AnimatedSprite2D.frame == 9:
@@ -69,9 +69,9 @@ func _physics_process(delta: float) -> void:
 func _on_animated_sprite_2d_frame_changed():
 	if $AnimatedSprite2D.animation == "jump_right":
 		if $AnimatedSprite2D.frame == 4:
-			velocity.y = JUMP_VELOCITY
+			velocity.y = jump_velocity
 			$JumpSound.play()
 	if $AnimatedSprite2D.animation == "jump_left":
 		if $AnimatedSprite2D.frame == 4:
-			velocity.y = JUMP_VELOCITY
+			velocity.y = jump_velocity
 			$JumpSound.play()
