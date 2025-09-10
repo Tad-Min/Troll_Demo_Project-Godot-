@@ -7,11 +7,16 @@ const GRAVITY : int = 4200
 var last_direction = 0
 var lr_anim : bool = true
 
+var is_dead: bool = false
 const MAX_AIR_JUMPS = 1   # only 1 allowed in air
 var air_jump_done = 0
 
 
 func _physics_process(delta: float) -> void:
+	if is_dead:
+		$CollisionShape2D.disabled = true	
+		air_jump_done = MAX_AIR_JUMPS
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -40,6 +45,8 @@ func _physics_process(delta: float) -> void:
 
 	# Handle movement A-D
 	var direction := Input.get_axis("move_left", "move_right")
+	if(is_dead): 
+		direction=0
 	if last_direction != direction and lr_anim:
 		if direction == -1:
 			$AnimatedSprite2D.play("left")
@@ -78,13 +85,9 @@ func _on_animated_sprite_2d_frame_changed():
 			$JumpSound.play()
 
 
-var is_dead: bool = false
 func die() -> bool:
-	if is_dead:
-		return false  # already dead, nothing happens
-	
 	is_dead = true
-	$CollisionShape2D.disabled = true
+	velocity.y = jump_velocity
+	$DeathSound.play()
 	print("Player died")
-	
 	return true
