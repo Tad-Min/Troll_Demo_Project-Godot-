@@ -13,7 +13,10 @@ config_version=5
 config/name="Troll_Demo"
 run/main_scene="uid://ch12rgidooprk"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
+
+[autoload]
+
+GameData="*res://scripts/GameData.gd"
 
 [display]
 

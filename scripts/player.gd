@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-@export var speed: float = 100.0
-@export var jump_velocity: float = -400.0
+@export var speed: float #Change in Inspector
+@export var jump_velocity: float #Change in Inspector
 const GRAVITY : int = 4200
 var last_direction = 0
 var lr_anim : bool = true
