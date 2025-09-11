@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=13 format=4 uid="uid://bbgfyfgnfy6iu"]
+=======
+[gd_scene load_steps=14 format=4 uid="uid://byb02a5f2psw5"]
+>>>>>>> Stashed changes
 
+[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scenes/Level/background.gd" id="1_kp1uq"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_mhow5"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://Jungle Asset Pack/parallax background/plx-2.png" id="2_kp1uq"]
 [ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://Jungle Asset Pack/parallax background/plx-4.png" id="3_yjt2l"]
@@ -1382,6 +1387,7 @@ offset_left = 191.0
 offset_top = 107.0
 offset_right = 1000.0
 offset_bottom = 584.0
+script = ExtResource("1_kp1uq")
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
