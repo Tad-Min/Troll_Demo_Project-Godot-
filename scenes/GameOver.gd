@@ -1,4 +1,4 @@
-extends Button
+extends Control
 
 func _pressed():
 	var last_level = get_tree().get_meta("last_level", "")
