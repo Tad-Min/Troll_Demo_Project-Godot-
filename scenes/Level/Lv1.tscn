@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://ch12rgidooprk"]
+[gd_scene load_steps=17 format=4 uid="uid://ch12rgidooprk"]
 
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_7p65b"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://Jungle Asset Pack/parallax background/plx-2.png" id="2_oskok"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="9_3u6yt"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="9_fqcln"]
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="10_3u6yt"]
+[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="12_1jteh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jteh"]
 texture = ExtResource("5_fqcln")
@@ -1489,3 +1490,5 @@ text = "LV 1"
 
 [node name="Spear" parent="." instance=ExtResource("10_3u6yt")]
 position = Vector2(152, 343)
+
+[node name="Pause" parent="." instance=ExtResource("12_1jteh")]

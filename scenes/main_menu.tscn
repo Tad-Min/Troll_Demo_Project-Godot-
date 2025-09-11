@@ -1,12 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://r1wevnxcj7kt"]
+[gd_scene load_steps=5 format=3 uid="uid://bp2bj2bq04yej"]
 
-[ext_resource type="Script" uid="uid://cq2h87phkluov" path="res://scripts/main_menu.gd" id="1_wu84c"]
 [ext_resource type="Texture2D" uid="uid://bs0loabqe27n0" path="res://buttonImage/Screenshot 2025-09-11 100525.png" id="2_8ln24"]
 [ext_resource type="Texture2D" uid="uid://bugeuw1iafpa7" path="res://buttonImage/Screenshot 2025-09-11 100534.png" id="3_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://dbifbofthih0e" path="res://buttonImage/Screenshot 2025-09-11 100543.png" id="4_oa1go"]
 
+[sub_resource type="GDScript" id="GDScript_bqqt6"]
+script/source = "extends Node2D
+
+
+
+func _on_start_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/Level/Lv1.tscn\")
+
+
+func _on_options_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/Level/Lv2.tscn\")
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()
+"
+
 [node name="Main Menu" type="Node2D"]
-script = ExtResource("1_wu84c")
+script = SubResource("GDScript_bqqt6")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1153.0

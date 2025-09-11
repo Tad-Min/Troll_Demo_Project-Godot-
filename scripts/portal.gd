@@ -15,7 +15,4 @@ func _on_body_entered(body: Node) -> void:
 		print("Player entered the portal!")
 		emit_signal("player_entered")  # notify GameCenter
 		GameData.unlock_stage(stage_to_unlock)
-		call_deferred("_change_scene")
 		
-func _change_scene() -> void:
-	get_tree().change_scene_to_file(next_level_path)
