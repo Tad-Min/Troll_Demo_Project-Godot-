@@ -1519,18 +1519,6 @@ offset_right = 64.0
 offset_bottom = 56.0
 text = "LV 2"
 
-[node name="Pause" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-script = null
-
 [node name="Floor_trap" type="StaticBody2D" parent="."]
 position = Vector2(280, 240)
 script = ExtResource("11_w6d4j")
