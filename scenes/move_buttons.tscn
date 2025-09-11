@@ -7,19 +7,19 @@
 [node name="MobileControls" type="CanvasLayer"]
 
 [node name="Left" type="TouchScreenButton" parent="."]
-position = Vector2(20, 437)
-scale = Vector2(0.162245, 0.162245)
+position = Vector2(29, 526)
+scale = Vector2(0.106, 0.106)
 texture_normal = ExtResource("1_shmq3")
 action = "move_left"
 
 [node name="Right" type="TouchScreenButton" parent="."]
-position = Vector2(206, 441)
-scale = Vector2(0.156122, 0.156122)
+position = Vector2(150, 527)
+scale = Vector2(0.106, 0.106)
 texture_normal = ExtResource("2_e1rc4")
 action = "move_right"
 
 [node name="Jump" type="TouchScreenButton" parent="."]
-position = Vector2(877, 402)
-scale = Vector2(0.20102, 0.20102)
+position = Vector2(914, 522)
+scale = Vector2(0.106, 0.106)
 texture_normal = ExtResource("3_cnyym")
 action = "jump"
