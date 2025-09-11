@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://bdyykv77g4ky6"]
 
-[ext_resource type="Script" path="res://scenes/Level/background.gd" id="1_7e7dt"]
+[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scenes/Level/background.gd" id="1_7e7dt"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_dugty"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://Jungle Asset Pack/parallax background/plx-2.png" id="2_g4q3r"]
 [ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://Jungle Asset Pack/parallax background/plx-4.png" id="3_ctqag"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="5_w6d4j"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="6_g4q3r"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="7_vyjv3"]
-[ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/Spike.tscn" id="8_7e7dt"]
+[ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="8_7e7dt"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="8_ctqag"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
@@ -1470,7 +1470,7 @@ position = Vector2(48, 320)
 scale = Vector2(2, 2)
 
 [node name="Portal" parent="." instance=ExtResource("6_g4q3r")]
-position = Vector2(960, 344)
+position = Vector2(178, 299)
 stage_to_unlock = 2
 
 [node name="Manager" parent="." instance=ExtResource("8_ctqag")]
