@@ -1,6 +1,7 @@
 extends Node
 var death_count: int = 0
 
+
 var level_paths: Array = [
 	"res://scenes/Level/Lv1.tscn",
 	"res://scenes/Level/Lv2.tscn",

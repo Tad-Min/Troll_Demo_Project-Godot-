@@ -44,7 +44,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_88ekj")
 text = "Play Again"
 script = ExtResource("1_6bcno")
 
-[node name="Label" type="Label" parent="."]
+[node name="GameOver" type="Label" parent="."]
 layout_mode = 0
 offset_left = 198.0
 offset_top = -24.0
@@ -59,9 +59,8 @@ vertical_alignment = 1
 
 [node name="DeathLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 529.0
-offset_top = 239.0
-offset_right = 569.0
-offset_bottom = 262.0
-text = "DEATH"
-script = ExtResource("1_6bcno")
+offset_left = 435.0
+offset_top = 200.0
+offset_right = 547.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0.815686, 0.109804, 0.203922, 1)

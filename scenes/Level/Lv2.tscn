@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bdyykv77g4ky6"]
+[gd_scene load_steps=16 format=4 uid="uid://bdyykv77g4ky6"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scenes/Level/background.gd" id="1_7e7dt"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_dugty"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="7_vyjv3"]
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="8_7e7dt"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="8_ctqag"]
+[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="11_w6d4j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
 texture = ExtResource("5_w6d4j")
@@ -1484,3 +1485,5 @@ offset_top = 32.0
 offset_right = 64.0
 offset_bottom = 56.0
 text = "LV 2"
+
+[node name="Pause" parent="." instance=ExtResource("11_w6d4j")]
