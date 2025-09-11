@@ -8,9 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="5_fqcln"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="6_oskok"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="8_215dr"]
-[ext_resource type="PackedScene" uid="uid://cscn7argcytcj" path="res://scenes/Trap/Spike.tscn" id="9_3u6yt"]
+[ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/Spike.tscn" id="9_3u6yt"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="9_fqcln"]
-[ext_resource type="PackedScene" uid="uid://cncurqb8hxvgg" path="res://scenes/Trap/Spear.tscn" id="10_3u6yt"]
+[ext_resource type="PackedScene" path="res://scenes/Trap/Spear.tscn" id="10_3u6yt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
 texture = ExtResource("5_fqcln")
@@ -1472,8 +1472,6 @@ tile_set = SubResource("TileSet_fqcln")
 [node name="Player" parent="." instance=ExtResource("6_oskok")]
 position = Vector2(56, 320)
 scale = Vector2(2, 2)
-speed = 100.0
-jump_velocity = -400.0
 
 [node name="Manager" parent="." instance=ExtResource("8_215dr")]
 

@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
+signal died
 
-@export var speed: float #Change in Inspector
-@export var jump_velocity: float #Change in Inspector
+@export var speed: float = 100.0
+@export var jump_velocity: float = -400.0
 const GRAVITY : int = 4200
 var last_direction = 0
 var lr_anim : bool = true
-var is_trapped = false
+
 var is_dead: bool = false
 const MAX_AIR_JUMPS = 1   # only 1 allowed in air
 var air_jump_done = 0
@@ -37,14 +38,8 @@ func _physics_process(delta: float) -> void:
 				velocity.y = jump_velocity
 				air_jump_done+=1
 				$JumpSound.play()
-	if position.y > 900 and not is_dead:
-		is_dead = true
-		$Cursing.play()
-		call_deferred("change_scene")
-func change_scene_after_death():
-	await get_tree().create_timer(1.0).timeout
-	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
-
+	if position.y > 900:
+		emit_signal("died")
 
 
 
@@ -97,28 +92,3 @@ func die() -> bool:
 	$DeathSound.play()
 	print("Player died")
 	return true
-
-	
-func take_damage(trap_type: String) -> void:
-	if is_trapped:
-		return
-	is_trapped = true
-
-	match trap_type:
-		"spike":
-			velocity.y = -400
-			velocity.x = 0 
-			print("Player dính Spike!")
-			$DeathSound.play()
-		"spear":
-			velocity.y = -400
-			velocity.x = 0 
-			print("Player dính Spear!")
-			$DeathSound.play()
-
-	# turn off collider
-	for child in get_children():
-		if child is CollisionShape2D:
-			child.disabled = true
-	collision_layer = 0
-	collision_mask = 0
