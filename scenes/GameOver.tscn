@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0utewo88mmpo"]
+
+[ext_resource type="Script" uid="uid://5maxewdhu0r" path="res://scenes/GameOver.gd" id="1_6bcno"]
+[ext_resource type="Texture2D" uid="uid://btk83wkub78j5" path="res://Jungle Asset Pack/parallax background/cranfield-traditional-etching-ink-mid-black-400x221.jpg" id="1_vuicl"]
+[ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://Jungle Asset Pack/Pixeled.ttf" id="3_4noiy"]
+[ext_resource type="AudioStream" uid="uid://8x83rfnqpmn" path="res://assets/titanic-flute-music-1736313719587.mp3" id="4_4noiy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gijjb"]
+texture = ExtResource("1_vuicl")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88ekj"]
+bg_color = Color(0.969137, 0.969137, 0.969137, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6bcno")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gijjb")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 377.0
+offset_right = 689.0
+offset_bottom = 477.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_88ekj")
+text = "Play Again"
+script = ExtResource("1_6bcno")
+
+[node name="GameOver" type="Label" parent="."]
+layout_mode = 0
+offset_left = 198.0
+offset_top = -24.0
+offset_right = 966.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.882353, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4noiy")
+theme_override_font_sizes/font_size = 80
+text = "GAME OVER !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeathLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 200.0
+offset_right = 547.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0.815686, 0.109804, 0.203922, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_4noiy")
+volume_db = 2.811
+autoplay = true

@@ -11,10 +11,22 @@ config_version=5
 [application]
 
 config/name="Troll_Demo"
+<<<<<<< Updated upstream
 run/main_scene="uid://dpky82ktmbk6c"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+=======
+run/main_scene="uid://mlem4f31wu2r"
+config/features=PackedStringArray("4.4", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameData="*res://scripts/GameData.gd"
+Music="*res://scenes/Music.tscn"
+
+>>>>>>> Stashed changes
 [display]
 
 window/stretch/mode="canvas_items"

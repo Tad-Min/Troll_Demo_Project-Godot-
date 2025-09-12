@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=31 format=4 uid="uid://baj5a56ob02p1"]
+=======
+[gd_scene load_steps=22 format=4 uid="uid://bmrcp3t1cl6oa"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_dugty"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://Jungle Asset Pack/parallax background/plx-2.png" id="2_g4q3r"]
