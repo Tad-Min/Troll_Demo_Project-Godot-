@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=3 uid="uid://blnjmna71025t"]
+
+[ext_resource type="Script" uid="uid://bqud0bqb2dq15" path="res://scenes/select_level.gd" id="1_adu0t"]
+[ext_resource type="Texture2D" uid="uid://6rflweclk7du" path="res://Jungle Asset Pack/parallax background/saddle-brown-color-solid-background-1920x1080.png" id="2_jjqxc"]
+[ext_resource type="Texture2D" uid="uid://b6y5vkou3j877" path="res://Jungle Asset Pack/parallax background/Lv1.png" id="3_uo0xe"]
+[ext_resource type="Texture2D" uid="uid://dwdnu5osgy8ne" path="res://Jungle Asset Pack/parallax background/Lv2.png" id="4_vp03w"]
+[ext_resource type="Texture2D" uid="uid://k6rlbh1o1qen" path="res://Jungle Asset Pack/parallax background/Lv3.png" id="5_82unp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1c1a"]
+texture = ExtResource("2_jjqxc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibsxg"]
+texture = ExtResource("3_uo0xe")
+modulate_color = Color(0.344076, 0.344076, 0.344076, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xlyyc"]
+texture = ExtResource("4_vp03w")
+modulate_color = Color(0.332881, 0.332881, 0.332881, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iw11j"]
+texture = ExtResource("5_82unp")
+modulate_color = Color(0.389287, 0.389287, 0.389287, 1)
+
+[node name="SelectLevel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -9.0
+offset_right = 18.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_adu0t")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_i1c1a")
+
+[node name="btnlv1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 47.0
+offset_right = 796.0
+offset_bottom = 179.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_ibsxg")
+text = "LEVEL 1
+"
+
+[node name="btnlv2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 245.0
+offset_right = 804.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_xlyyc")
+text = "LEVEL 2
+"
+
+[node name="btnlv3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 465.0
+offset_right = 814.0
+offset_bottom = 599.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_iw11j")
+text = "LEVEL 3
+"

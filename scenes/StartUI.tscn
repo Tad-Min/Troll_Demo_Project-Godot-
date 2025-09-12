@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://mlem4f31wu2r"]
+[gd_scene load_steps=10 format=3 uid="uid://mlem4f31wu2r"]
 
 [ext_resource type="Script" uid="uid://b11k6hhlf3rex" path="res://scripts/start_ui.gd" id="1_31gsc"]
 [ext_resource type="Texture2D" uid="uid://cv1njptgorlup" path="res://Jungle Asset Pack/mockup.png" id="1_yubl7"]
@@ -11,6 +11,13 @@ modulate_color = Color(0.288518, 0.288518, 0.288518, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1bwx"]
 bg_color = Color(0.986752, 0.986752, 0.986752, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31gsc"]
+bg_color = Color(0.964742, 0.964742, 0.964742, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -50,14 +57,26 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_6msbp")
 
 [node name="btnPlay" type="Button" parent="."]
 layout_mode = 0
-offset_left = 472.0
-offset_top = 321.0
-offset_right = 714.0
-offset_bottom = 455.0
+offset_left = 464.0
+offset_top = 178.0
+offset_right = 706.0
+offset_bottom = 312.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_o1bwx")
 text = "Play"
+
+[node name="btnselectlevel" type="Button" parent="."]
+layout_mode = 0
+offset_left = 459.0
+offset_top = 343.0
+offset_right = 726.0
+offset_bottom = 468.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_31gsc")
+text = "SELECT LEVEL
+"
 
 [node name="btnExit" type="Button" parent="."]
 layout_mode = 0
@@ -73,10 +92,10 @@ script = SubResource("GDScript_6msbp")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 314.0
-offset_top = 120.0
-offset_right = 902.0
-offset_bottom = 288.0
+offset_left = 308.0
+offset_top = 4.0
+offset_right = 896.0
+offset_bottom = 172.0
 theme_override_colors/font_color = Color(0.901961, 0.0823529, 0, 1)
 theme_override_fonts/font = ExtResource("3_31gsc")
 theme_override_font_sizes/font_size = 60
