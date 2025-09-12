@@ -5,7 +5,6 @@ func _ready() -> void:
 	set_physics_process(false)
 	visible = false
 	$Area2D.monitoring = false
-	$Area2D.monitorable = false
 
 func start() -> void:
 	visible = true
@@ -13,4 +12,3 @@ func start() -> void:
 	set_physics_process(true)
 	$AnimatedSprite2D.play("Spear")
 	$Area2D.monitoring = true
-	$Area2D.monitorable = true
