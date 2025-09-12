@@ -1,8 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://1bof6obh3yvu"]
+<<<<<<< Updated upstream
+[gd_scene load_steps=6 format=3 uid="uid://dsdlojkg3ds5j"]
+=======
+[gd_scene load_steps=7 format=3 uid="uid://1bof6obh3yvu"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://5maxewdhu0r" path="res://scenes/GameOver.gd" id="1_6bcno"]
 [ext_resource type="Texture2D" uid="uid://btk83wkub78j5" path="res://Jungle Asset Pack/parallax background/cranfield-traditional-etching-ink-mid-black-400x221.jpg" id="1_vuicl"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://Jungle Asset Pack/Pixeled.ttf" id="3_4noiy"]
+[ext_resource type="AudioStream" uid="uid://c1311niaggily" path="res://assets/titanic-flute-music-1736313719587.mp3" id="4_4noiy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gijjb"]
 texture = ExtResource("1_vuicl")
@@ -64,3 +69,8 @@ offset_top = 200.0
 offset_right = 547.0
 offset_bottom = 314.0
 theme_override_colors/font_color = Color(0.815686, 0.109804, 0.203922, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_4noiy")
+volume_db = 2.811
+autoplay = true
