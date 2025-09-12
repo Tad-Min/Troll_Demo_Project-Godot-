@@ -50,7 +50,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Spike" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 script = ExtResource("1_vr1c8")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -65,6 +65,7 @@ frame_progress = 0.690456
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_n3gcb")
+volume_db = -20.558
 pitch_scale = 0.47
 autoplay = true
 
