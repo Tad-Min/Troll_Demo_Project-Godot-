@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=17 format=4 uid="uid://ch12rgidooprk"]
-=======
-[gd_scene load_steps=20 format=4 uid="uid://ch12rgidooprk"]
->>>>>>> Stashed changes
+[gd_scene load_steps=19 format=4 uid="uid://ch12rgidooprk"]
 
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_7p65b"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://Jungle Asset Pack/parallax background/plx-2.png" id="2_oskok"]
@@ -15,13 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="9_3u6yt"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="9_fqcln"]
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="10_3u6yt"]
-[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="12_1jteh"]
-<<<<<<< Updated upstream
-=======
+[ext_resource type="PackedScene" path="res://scenes/Pause.tscn" id="12_1jteh"]
 [ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="14_ccrv4"]
-[ext_resource type="PackedScene" uid="uid://dcgfl4af1l45v" path="res://scenes/Music.tscn" id="15_8r58q"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="15_qwpae"]
->>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jteh"]
 texture = ExtResource("5_fqcln")
@@ -1487,11 +1479,7 @@ scale = Vector2(2, 2)
 [node name="Manager" parent="." instance=ExtResource("8_215dr")]
 
 [node name="Portal" parent="." instance=ExtResource("9_fqcln")]
-<<<<<<< Updated upstream
-position = Vector2(981, 93)
-=======
-position = Vector2(983, 90)
->>>>>>> Stashed changes
+position = Vector2(992, 96)
 next_level_path = "res://scenes/Level/Lv2.tscn"
 stage_to_unlock = 1
 
@@ -1506,8 +1494,6 @@ text = "LV 1"
 position = Vector2(152, 343)
 
 [node name="Pause" parent="." instance=ExtResource("12_1jteh")]
-<<<<<<< Updated upstream
-=======
 
 [node name="Trapzone" parent="." instance=ExtResource("15_qwpae")]
 position = Vector2(372, 264)
@@ -1525,7 +1511,4 @@ position = Vector2(433, 215)
 rotation = -1.56182
 scale = Vector2(1.24656, 1.13822)
 
-[node name="Music" parent="." instance=ExtResource("15_8r58q")]
-
 [editable path="Trapzone"]
->>>>>>> Stashed changes

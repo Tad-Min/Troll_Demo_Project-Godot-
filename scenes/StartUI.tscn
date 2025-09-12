@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://mlem4f31wu2r"]
+[gd_scene load_steps=8 format=3 uid="uid://mlem4f31wu2r"]
 
 [ext_resource type="Script" path="res://scripts/start_ui.gd" id="1_31gsc"]
 [ext_resource type="Texture2D" uid="uid://cv1njptgorlup" path="res://Jungle Asset Pack/mockup.png" id="1_yubl7"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://Jungle Asset Pack/Pixeled.ttf" id="3_31gsc"]
-[ext_resource type="AudioStream" uid="uid://cdm4vstrqcot2" path="res://assets/undertale-shop-1736313719592.mp3" id="4_31gsc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6msbp"]
 texture = ExtResource("1_yubl7")
@@ -83,12 +82,6 @@ theme_override_font_sizes/font_size = 60
 text = "TROLL GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_31gsc")
-volume_db = -7.495
-autoplay = true
-parameters/looping = true
 
 [connection signal="pressed" from="btnPlay" to="." method="_on_btn_play_pressed"]
 [connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]
