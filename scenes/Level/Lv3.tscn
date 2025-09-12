@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://bbgfyfgnfy6iu"]
+[gd_scene load_steps=15 format=4 uid="uid://bbgfyfgnfy6iu"]
 
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_mhow5"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://Jungle Asset Pack/parallax background/plx-2.png" id="2_kp1uq"]
@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="7_rmfpm"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="8_gjm0f"]
 [ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="9_kp1uq"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="PackedScene" uid="uid://dcgfl4af1l45v" path="res://scenes/Music.tscn" id="10_yjt2l"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
 texture = ExtResource("5_xoj35")
@@ -1480,3 +1484,5 @@ offset_bottom = 64.0
 text = "LV 3"
 
 [node name="Pause" parent="." instance=ExtResource("9_kp1uq")]
+
+[node name="Music" parent="." instance=ExtResource("10_yjt2l")]

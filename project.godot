@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameData="*res://scripts/GameData.gd"
+Music="*res://scenes/Music.tscn"
 
 [display]
 

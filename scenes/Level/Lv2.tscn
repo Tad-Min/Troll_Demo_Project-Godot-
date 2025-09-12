@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=16 format=4 uid="uid://bdyykv77g4ky6"]
+=======
+[gd_scene load_steps=23 format=4 uid="uid://bdyykv77g4ky6"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scenes/Level/background.gd" id="1_7e7dt"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_dugty"]
@@ -10,7 +14,16 @@
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="7_vyjv3"]
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="8_7e7dt"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="8_ctqag"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="11_w6d4j"]
+=======
+[ext_resource type="Script" uid="uid://blahow7g0egwd" path="res://scripts/Level/Lv2/floor_trap_4.gd" id="11_vyjv3"]
+[ext_resource type="Script" uid="uid://b02shbfu0csf6" path="res://scripts/Level/floor_trap.gd" id="11_w6d4j"]
+[ext_resource type="Script" uid="uid://cjyl8pg3sef16" path="res://scripts/Level/Lv2/trigger_Floor_trap4.gd" id="12_vyjv3"]
+[ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="14_va34t"]
+[ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="15_ckrnp"]
+[ext_resource type="PackedScene" uid="uid://dcgfl4af1l45v" path="res://scenes/Music.tscn" id="16_ychvn"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
 texture = ExtResource("5_w6d4j")
@@ -1486,4 +1499,142 @@ offset_right = 64.0
 offset_bottom = 56.0
 text = "LV 2"
 
+<<<<<<< Updated upstream
 [node name="Pause" parent="." instance=ExtResource("11_w6d4j")]
+=======
+[node name="Floor_trap" type="StaticBody2D" parent="."]
+position = Vector2(280, 240)
+script = ExtResource("11_w6d4j")
+move_distance = 210.0
+speed = 65.0
+loop = true
+direction = Vector2(0, 1)
+
+[node name="Floor_trap_texture" type="Sprite2D" parent="Floor_trap"]
+position = Vector2(40, 40)
+texture = ExtResource("5_w6d4j")
+region_enabled = true
+region_rect = Rect2(64, 32, 80, 80)
+metadata/_edit_group_ = true
+
+[node name="Floor_trap_Shape" type="CollisionShape2D" parent="Floor_trap"]
+position = Vector2(40, 40)
+shape = SubResource("RectangleShape2D_hdbly")
+metadata/_edit_group_ = true
+
+[node name="Trapzone" parent="Floor_trap" instance=ExtResource("14_va34t")]
+position = Vector2(64, -5)
+
+[node name="CollisionShape2D" parent="Floor_trap/Trapzone" index="0"]
+position = Vector2(-12, 2)
+
+[node name="RightSpawner" parent="Floor_trap/Trapzone" index="1"]
+position = Vector2(1022, -70)
+
+[node name="Floor_trap2" type="StaticBody2D" parent="."]
+position = Vector2(520, 240)
+script = ExtResource("11_w6d4j")
+move_distance = 210.0
+speed = 50.0
+loop = true
+direction = Vector2(0, 1)
+
+[node name="Floor_trap_texture" type="Sprite2D" parent="Floor_trap2"]
+position = Vector2(40, 40)
+texture = ExtResource("5_w6d4j")
+region_enabled = true
+region_rect = Rect2(64, 32, 80, 80)
+metadata/_edit_group_ = true
+
+[node name="Floor_trap_Shape" type="CollisionShape2D" parent="Floor_trap2"]
+position = Vector2(40, 40)
+shape = SubResource("RectangleShape2D_hdbly")
+metadata/_edit_group_ = true
+
+[node name="Trapzone2" parent="Floor_trap2" instance=ExtResource("14_va34t")]
+position = Vector2(75, -4)
+
+[node name="CollisionShape2D" parent="Floor_trap2/Trapzone2" index="0"]
+position = Vector2(-12.25, 2)
+
+[node name="RightSpawner" parent="Floor_trap2/Trapzone2" index="1"]
+position = Vector2(805, 28)
+
+[node name="Floor_trap3" type="StaticBody2D" parent="."]
+position = Vector2(746, 240)
+script = ExtResource("11_w6d4j")
+move_distance = 210.0
+speed = 70.0
+loop = true
+direction = Vector2(0, 1)
+
+[node name="Floor_trap_texture" type="Sprite2D" parent="Floor_trap3"]
+position = Vector2(40, 40)
+texture = ExtResource("5_w6d4j")
+region_enabled = true
+region_rect = Rect2(64, 32, 80, 80)
+metadata/_edit_group_ = true
+
+[node name="Floor_trap_Shape" type="CollisionShape2D" parent="Floor_trap3"]
+position = Vector2(40, 40)
+shape = SubResource("RectangleShape2D_hdbly")
+metadata/_edit_group_ = true
+
+[node name="Trapzone3" parent="Floor_trap3" instance=ExtResource("14_va34t")]
+position = Vector2(77, -6)
+
+[node name="CollisionShape2D" parent="Floor_trap3/Trapzone3" index="0"]
+position = Vector2(-12.25, 2)
+
+[node name="RightSpawner" parent="Floor_trap3/Trapzone3" index="1"]
+position = Vector2(545, 127)
+
+[node name="Floor_trap4" type="StaticBody2D" parent="."]
+position = Vector2(1016, 112)
+script = ExtResource("11_vyjv3")
+move_distance = 1100.0
+speed = 1100.0
+direction = Vector2(-1, 0)
+
+[node name="Floor_trap_texture" type="Sprite2D" parent="Floor_trap4"]
+position = Vector2(229.642, 213.565)
+scale = Vector2(-2.14106, 8.33913)
+texture = ExtResource("5_w6d4j")
+region_enabled = true
+region_rect = Rect2(64, 32, 80, 80)
+metadata/_edit_group_ = true
+
+[node name="Floor_trap_Shape" type="CollisionShape2D" parent="Floor_trap4"]
+position = Vector2(229.642, 213.565)
+scale = Vector2(-2.14106, 8.33913)
+shape = SubResource("RectangleShape2D_hdbly")
+metadata/_edit_group_ = true
+
+[node name="trigger_Floor_trap4" type="Area2D" parent="."]
+position = Vector2(136, 184)
+script = ExtResource("12_vyjv3")
+trap_node = NodePath("../Floor_trap4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trigger_Floor_trap4"]
+position = Vector2(768, 144)
+shape = SubResource("RectangleShape2D_w6d4j")
+
+[node name="Player" parent="." instance=ExtResource("7_vyjv3")]
+position = Vector2(56, 224)
+scale = Vector2(1.5, 1.5)
+
+[node name="Jumper" parent="." instance=ExtResource("15_ckrnp")]
+position = Vector2(446, 235)
+
+[node name="Jumper2" parent="." instance=ExtResource("15_ckrnp")]
+position = Vector2(671, 329)
+
+[node name="Jumper3" parent="." instance=ExtResource("15_ckrnp")]
+position = Vector2(122, 400)
+
+[node name="Music" parent="." instance=ExtResource("16_ychvn")]
+
+[editable path="Floor_trap/Trapzone"]
+[editable path="Floor_trap2/Trapzone2"]
+[editable path="Floor_trap3/Trapzone3"]
+>>>>>>> Stashed changes
