@@ -5,6 +5,7 @@ signal died
 @export var speed: float = 100.0
 @export var jump_velocity: float = -400.0
 const GRAVITY : int = 4200
+var is_on_jumper : bool = false
 var last_direction = 0
 var lr_anim : bool = true
 
@@ -25,7 +26,7 @@ func _physics_process(delta: float) -> void:
 		air_jump_done = 0
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump"):
+	if not is_on_jumper and Input.is_action_just_pressed("jump"):
 		if is_on_floor():
 			if last_direction == -1.0:
 				lr_anim=false
