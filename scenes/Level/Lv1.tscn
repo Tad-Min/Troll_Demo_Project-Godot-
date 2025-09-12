@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="9_3u6yt"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="9_fqcln"]
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="10_3u6yt"]
-[ext_resource type="PackedScene" path="res://scenes/Pause.tscn" id="12_1jteh"]
+[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="12_1jteh"]
 [ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="14_ccrv4"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="15_qwpae"]
 
@@ -1473,7 +1473,7 @@ tile_map_data = PackedByteArray("AAACACYAAAAGAAUAAAADACUAAAAGAAQAAAAEACQAAAAGAAM
 tile_set = SubResource("TileSet_1jteh")
 
 [node name="Player" parent="." instance=ExtResource("6_oskok")]
-position = Vector2(56, 320)
+position = Vector2(60, 324)
 scale = Vector2(2, 2)
 
 [node name="Manager" parent="." instance=ExtResource("8_215dr")]
@@ -1494,17 +1494,23 @@ text = "LV 1"
 position = Vector2(152, 343)
 
 [node name="Pause" parent="." instance=ExtResource("12_1jteh")]
+offset_left = 0.0
+offset_right = 0.0
 
 [node name="Trapzone" parent="." instance=ExtResource("15_qwpae")]
 position = Vector2(372, 264)
+
+[node name="CollisionShape2D" parent="Trapzone" index="0"]
+position = Vector2(-8.375, -1.75)
 
 [node name="RightSpawner" parent="Trapzone" index="1"]
 position = Vector2(834, 8)
 
 [node name="Jumper" parent="." instance=ExtResource("14_ccrv4")]
-position = Vector2(977, 136)
-rotation = -1.58991
-scale = Vector2(1, 1.44)
+position = Vector2(951, 148)
+rotation = -1.17238
+scale = Vector2(0.87467, 1.44)
+jump_force = 1000.0
 
 [node name="Spear2" parent="." instance=ExtResource("10_3u6yt")]
 position = Vector2(433, 215)
