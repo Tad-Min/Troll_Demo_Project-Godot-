@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://bbgfyfgnfy6iu"]
+[gd_scene load_steps=49 format=4 uid="uid://bbgfyfgnfy6iu"]
 
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_mhow5"]
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_xoj35"]
@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://dyeb21ty11fol" path="res://scripts/Level/LV3/trigger_7.gd" id="19_tycxe"]
 [ext_resource type="Script" uid="uid://ds8wva3r4qcw2" path="res://scripts/Level/LV3/trigger_10.gd" id="20_w3web"]
 [ext_resource type="Script" uid="uid://dfswq1b7urkus" path="res://scripts/Level/LV3/floor_trap.gd" id="21_w3web"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="23_tyqfo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_38c72"]
 texture = ExtResource("5_xoj35")
@@ -2962,3 +2963,5 @@ metadata/_edit_group_ = true
 
 [node name="Pause" parent="." instance=ExtResource("9_kp1uq")]
 visible = false
+
+[node name="MusicBackground" parent="." instance=ExtResource("23_tyqfo")]

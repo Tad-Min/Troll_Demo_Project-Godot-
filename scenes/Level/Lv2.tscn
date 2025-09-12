@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bdyykv77g4ky6"]
+[gd_scene load_steps=23 format=4 uid="uid://bdyykv77g4ky6"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_7e7dt"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_dugty"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://cjyl8pg3sef16" path="res://scripts/Level/Lv2/trigger_Floor_trap4.gd" id="12_vyjv3"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="14_va34t"]
 [ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="15_ckrnp"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="16_ychvn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
 texture = ExtResource("5_w6d4j")
@@ -1650,6 +1651,8 @@ position = Vector2(671, 329)
 
 [node name="Jumper3" parent="." instance=ExtResource("15_ckrnp")]
 position = Vector2(122, 400)
+
+[node name="MusicBackground" parent="." instance=ExtResource("16_ychvn")]
 
 [editable path="Floor_trap/Trapzone"]
 [editable path="Floor_trap2/Trapzone2"]

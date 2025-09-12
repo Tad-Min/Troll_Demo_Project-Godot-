@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://ch12rgidooprk"]
+[gd_scene load_steps=20 format=4 uid="uid://ch12rgidooprk"]
 
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_7p65b"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://Jungle Asset Pack/parallax background/plx-2.png" id="2_oskok"]
@@ -11,8 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="9_3u6yt"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="9_fqcln"]
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="10_3u6yt"]
-[ext_resource type="PackedScene" path="res://scenes/Pause.tscn" id="12_1jteh"]
+[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="12_1jteh"]
 [ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="14_ccrv4"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="15_8r58q"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="15_qwpae"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jteh"]
@@ -1510,5 +1511,7 @@ scale = Vector2(1, 1.44)
 position = Vector2(433, 215)
 rotation = -1.56182
 scale = Vector2(1.24656, 1.13822)
+
+[node name="MusicBackground" parent="." instance=ExtResource("15_8r58q")]
 
 [editable path="Trapzone"]
