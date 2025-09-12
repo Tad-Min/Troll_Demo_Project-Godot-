@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsdlojkg3ds5j"]
+[gd_scene load_steps=6 format=3 uid="uid://1bof6obh3yvu"]
 
 [ext_resource type="Script" uid="uid://5maxewdhu0r" path="res://scenes/GameOver.gd" id="1_6bcno"]
 [ext_resource type="Texture2D" uid="uid://btk83wkub78j5" path="res://Jungle Asset Pack/parallax background/cranfield-traditional-etching-ink-mid-black-400x221.jpg" id="1_vuicl"]
@@ -14,7 +14,7 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bob6w8het7cgg"
+path="res://.godot/imported/shuriken-fx_C.wav-d0313049d099892deceeb5b7d44af437.sample"
+
+[deps]
+
+source_file="res://Trap asset/shuriken-fx_C.wav"
+dest_files=["res://.godot/imported/shuriken-fx_C.wav-d0313049d099892deceeb5b7d44af437.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
