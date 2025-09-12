@@ -78,11 +78,11 @@ func _physics_process(delta: float) -> void:
 
 func _on_animated_sprite_2d_frame_changed():
 	if $AnimatedSprite2D.animation == "jump_right":
-		if $AnimatedSprite2D.frame == 4:
+		if $AnimatedSprite2D.frame == 4 and is_on_floor():
 			velocity.y = jump_velocity
 			$JumpSound.play()
 	if $AnimatedSprite2D.animation == "jump_left":
-		if $AnimatedSprite2D.frame == 4:
+		if $AnimatedSprite2D.frame == 4 and is_on_floor():
 			velocity.y = jump_velocity
 			$JumpSound.play()
 
