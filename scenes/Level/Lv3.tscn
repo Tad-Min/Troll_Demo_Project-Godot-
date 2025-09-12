@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="9_yjt2l"]
 [ext_resource type="Script" uid="uid://c2ys02ax1vno2" path="res://scripts/Level/LV3/spike1,2,6,7_trigger_2,4,8,9.gd" id="10_prk1d"]
 [ext_resource type="Script" uid="uid://b7ynttut3q54g" path="res://scripts/Level/LV3/trigger_1-6.gd" id="13_gjm0f"]
-[ext_resource type="Script" uid="uid://pevku8htii0y" path="res://scenes/Level/slide_back_trigger_6.gd" id="15_7vrde"]
+[ext_resource type="Script" uid="uid://pevku8htii0y" path="res://scripts/Level/LV3/slide_back_trigger_6.gd" id="15_7vrde"]
 [ext_resource type="Script" uid="uid://bt6u63fquuj83" path="res://scripts/Level/LV3/drop_1_trigger_5.gd" id="17_2n02m"]
 [ext_resource type="Script" uid="uid://dyeb21ty11fol" path="res://scripts/Level/LV3/trigger_7.gd" id="19_tycxe"]
 [ext_resource type="Script" uid="uid://ds8wva3r4qcw2" path="res://scripts/Level/LV3/trigger_10.gd" id="20_w3web"]
