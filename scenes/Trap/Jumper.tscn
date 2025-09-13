@@ -81,7 +81,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rr85o"]
-radius = 7.0
+radius = 8.24621
 
 [node name="Jumper" type="Node2D"]
 script = ExtResource("1_bss2r")
@@ -96,6 +96,7 @@ frame_progress = 0.443252
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -13)
+rotation = 0.310963
 shape = SubResource("CircleShape2D_rr85o")
 
 [node name="Jumper" type="AudioStreamPlayer" parent="."]

@@ -1644,13 +1644,13 @@ position = Vector2(56, 224)
 scale = Vector2(1.5, 1.5)
 
 [node name="Jumper" parent="." instance=ExtResource("15_ckrnp")]
-position = Vector2(446, 235)
+position = Vector2(145, 362)
 
 [node name="Jumper2" parent="." instance=ExtResource("15_ckrnp")]
-position = Vector2(671, 329)
+position = Vector2(444, 277)
 
 [node name="Jumper3" parent="." instance=ExtResource("15_ckrnp")]
-position = Vector2(122, 400)
+position = Vector2(676, 305)
 
 [node name="MusicBackground" parent="." instance=ExtResource("16_ychvn")]
 

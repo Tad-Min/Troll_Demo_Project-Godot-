@@ -24,7 +24,8 @@ func _process(delta: float) -> void:
 			if loop:
 				moving_forward = false
 			else:
-				set_process(false)
+				stop()
+				
 	else:
 		position -= move_amount
 		if (position - start_position).length() <= 1.0:
@@ -33,3 +34,12 @@ func _process(delta: float) -> void:
 func start():
 	set_process(true)
 	set_physics_process(true)
+	if $RotateSP:
+		$RotateSP.play()
+func stop():
+	set_process(false)
+	set_physics_process(false)
+	if $RotateSP and $RotateSP.playing:
+		$RotateSP.stop()
+
+	

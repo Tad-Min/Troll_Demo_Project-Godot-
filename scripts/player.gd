@@ -23,10 +23,10 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	else:
-		air_jump_done = 0
+			air_jump_done = 0
 
 	# Handle jump.
-	if not is_on_jumper and Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
 			if last_direction == -1.0:
 				lr_anim=false
@@ -39,6 +39,7 @@ func _physics_process(delta: float) -> void:
 				velocity.y = jump_velocity
 				air_jump_done+=1
 				$JumpSound.play()
+
 	if position.y > 900:
 		emit_signal("died")
 
@@ -91,5 +92,6 @@ func die() -> bool:
 	is_dead = true
 	velocity.y = jump_velocity
 	$DeathSound.play()
+	$AnimatedSprite2D.modulate = Color(1,0,0) #Change Player color into red when die
 	print("Player died")
 	return true
