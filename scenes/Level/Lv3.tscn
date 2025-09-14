@@ -24,7 +24,7 @@
 [ext_resource type="Script" uid="uid://dfswq1b7urkus" path="res://scripts/Level/LV3/floor_trap.gd" id="21_w3web"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="23_tyqfo"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_38c72"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkayq"]
 texture = ExtResource("5_xoj35")
 19:1/0 = 0
 21:1/0 = 0
@@ -366,7 +366,7 @@ texture = ExtResource("5_xoj35")
 38:20/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_rmfpm"]
-sources/0 = SubResource("TileSetAtlasSource_38c72")
+sources/0 = SubResource("TileSetAtlasSource_pkayq")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gjm0f"]
 size = Vector2(64, 32)
@@ -2084,7 +2084,7 @@ texture = ExtResource("5_xoj35")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6fbnu")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rmfpm"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tyqfo"]
 texture = ExtResource("5_xoj35")
 19:1/0 = 0
 21:1/0 = 0
@@ -2426,7 +2426,7 @@ texture = ExtResource("5_xoj35")
 38:20/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_gjm0f"]
-sources/0 = SubResource("TileSetAtlasSource_rmfpm")
+sources/0 = SubResource("TileSetAtlasSource_tyqfo")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vrde"]
 size = Vector2(256.243, 146.676)

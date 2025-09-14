@@ -5,7 +5,7 @@ signal died
 @export var speed: float = 100.0
 @export var jump_velocity: float = -400.0
 var min_jc = 0.75
-var max_jc = 1.75
+var max_jc = 1.25
 var jump_charge = 0.75
 const GRAVITY : int = 4200
 var is_on_jumper : bool = false
