@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://cgli08wsvmvi0"]
+[gd_scene load_steps=44 format=4 uid="uid://ca3duvjy5rdkv"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_uxs65"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_obagd"]
@@ -11,12 +11,13 @@
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="9_b6xpa"]
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="9_obagd"]
 [ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="10_0cdfx"]
-[ext_resource type="PackedScene" uid="uid://4ex8nd3vkga1" path="res://scenes/Button.tscn" id="12_epcp4"]
+[ext_resource type="PackedScene" path="res://scenes/Button.tscn" id="12_epcp4"]
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="12_l6hvn"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="13_obagd"]
-[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="14_78xed"]
+[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="14_78xed"]
 [ext_resource type="Texture2D" uid="uid://bs46ixrcwq7vf" path="res://assets/Lock.png" id="14_l6hvn"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="16_bq8uq"]
+[ext_resource type="PackedScene" path="res://scenes/MusicBackground.tscn" id="16_bq8uq"]
+[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="18_l6hvn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_78xed"]
 size = Vector2(943.125, 10.5)
@@ -2799,6 +2800,8 @@ position = Vector2(48, 464)
 scale = Vector2(1.5, 1.5)
 
 [node name="MusicBackground" parent="." instance=ExtResource("16_bq8uq")]
+
+[node name="Pause" parent="." instance=ExtResource("18_l6hvn")]
 
 [editable path="Trapzone1"]
 [editable path="Trapzone2"]

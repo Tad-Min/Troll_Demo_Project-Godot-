@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dr18coxufyuep"]
+[gd_scene load_steps=24 format=4 uid="uid://dh3sd0jqfbki8"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_ejisw"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_aistd"]
@@ -9,11 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="7_p0wg5"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="9_oeyta"]
 [ext_resource type="PackedScene" uid="uid://c3p15mm8xfels" path="res://scenes/Trap/Shuriken.tscn" id="10_8o3fb"]
-[ext_resource type="PackedScene" uid="uid://4ex8nd3vkga1" path="res://scenes/Button.tscn" id="10_b7suj"]
+[ext_resource type="PackedScene" path="res://scenes/Button.tscn" id="10_b7suj"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="13_ye8g6"]
 [ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="14_ye8g6"]
-[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="14_ygmnw"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="16_wh7kg"]
+[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="14_ygmnw"]
+[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="15_na5l0"]
+[ext_resource type="PackedScene" path="res://scenes/MusicBackground.tscn" id="16_wh7kg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8o3fb"]
 texture = ExtResource("7_p0wg5")
@@ -1922,3 +1923,5 @@ position = Vector2(1110, 424)
 
 [node name="Jumper3" parent="." instance=ExtResource("14_ye8g6")]
 position = Vector2(1016, 488)
+
+[node name="Pause" parent="." instance=ExtResource("15_na5l0")]

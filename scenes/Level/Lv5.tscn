@@ -1,21 +1,22 @@
-[gd_scene load_steps=49 format=4 uid="uid://vkdc4x8qsa10"]
+[gd_scene load_steps=50 format=4 uid="uid://ci452bhaihtqk"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_kwm4m"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_0vflr"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://Jungle Asset Pack/parallax background/plx-2.png" id="3_80gqm"]
 [ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://Jungle Asset Pack/parallax background/plx-4.png" id="4_17y74"]
 [ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://Jungle Asset Pack/parallax background/plx-5.png" id="5_5e08d"]
-[ext_resource type="PackedScene" uid="uid://4ex8nd3vkga1" path="res://scenes/Button.tscn" id="7_7g18n"]
+[ext_resource type="PackedScene" path="res://scenes/Button.tscn" id="7_7g18n"]
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="7_b7kuw"]
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="7_gyue2"]
 [ext_resource type="Texture2D" uid="uid://bs46ixrcwq7vf" path="res://assets/Lock.png" id="8_kwm4m"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="9_gyu7e"]
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="9_ycfpd"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="10_b5mx3"]
-[ext_resource type="Script" uid="uid://kibhb3aeaw8j" path="res://scripts/Level/rotating_saw.gd" id="10_h0nj6"]
+[ext_resource type="Script" path="res://scripts/Level/rotating_saw.gd" id="10_h0nj6"]
 [ext_resource type="PackedScene" uid="uid://c3p15mm8xfels" path="res://scenes/Trap/Shuriken.tscn" id="10_nq577"]
-[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="14_sskub"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="16_ipiet"]
+[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="14_sskub"]
+[ext_resource type="PackedScene" path="res://scenes/MusicBackground.tscn" id="16_ipiet"]
+[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="17_0vflr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atyod"]
 texture = ExtResource("7_gyue2")
@@ -4199,3 +4200,5 @@ scale = Vector2(1.5, 1.5)
 [node name="Portal" parent="." instance=ExtResource("10_b5mx3")]
 position = Vector2(964, 56)
 scale = Vector2(-1.5, 1.5)
+
+[node name="Pause" parent="." instance=ExtResource("17_0vflr")]

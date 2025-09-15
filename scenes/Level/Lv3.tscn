@@ -22,7 +22,7 @@
 [ext_resource type="Script" uid="uid://dyeb21ty11fol" path="res://scripts/Level/LV3/trigger_7.gd" id="19_tycxe"]
 [ext_resource type="Script" uid="uid://ds8wva3r4qcw2" path="res://scripts/Level/LV3/trigger_10.gd" id="20_w3web"]
 [ext_resource type="Script" uid="uid://dfswq1b7urkus" path="res://scripts/Level/LV3/floor_trap.gd" id="21_w3web"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="23_tyqfo"]
+[ext_resource type="PackedScene" path="res://scenes/MusicBackground.tscn" id="23_tyqfo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkayq"]
 texture = ExtResource("5_xoj35")

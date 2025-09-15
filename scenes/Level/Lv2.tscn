@@ -15,7 +15,7 @@
 [ext_resource type="Script" uid="uid://cjyl8pg3sef16" path="res://scripts/Level/Lv2/trigger_Floor_trap4.gd" id="12_vyjv3"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="14_va34t"]
 [ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="15_ckrnp"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="16_ychvn"]
+[ext_resource type="PackedScene" path="res://scenes/MusicBackground.tscn" id="16_ychvn"]
 [ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="17_4o0sl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]

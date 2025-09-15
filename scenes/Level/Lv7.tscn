@@ -17,9 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="16_rykfc"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="17_2vpdl"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="19_heubl"]
-[ext_resource type="PackedScene" uid="uid://d8sfk2gyygn4" path="res://scenes/Trap/hidden_jumper.tscn" id="21_xqnkm"]
+[ext_resource type="PackedScene" path="res://scenes/Trap/hidden_jumper.tscn" id="21_xqnkm"]
 [ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="22_cqj4n"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="23_f1njk"]
+[ext_resource type="PackedScene" path="res://scenes/MusicBackground.tscn" id="23_f1njk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
 texture = ExtResource("14_1mhdt")
@@ -1834,6 +1834,8 @@ position = Vector2(685, 504)
 
 [node name="HiddenJumper5" parent="HiddenJumpers" instance=ExtResource("21_xqnkm")]
 position = Vector2(1002, 506)
+
+[node name="Pause2" parent="." instance=ExtResource("22_cqj4n")]
 
 [editable path="DodgeTraps/Trapzone"]
 [editable path="DodgeTraps/Trapzone3"]
