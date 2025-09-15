@@ -3574,7 +3574,6 @@ position = Vector2(2, 68.5)
 scale = Vector2(0.5, 0.5)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Button1/Lock1"]
-scale = Vector2(1, 1)
 tile_map_data = PackedByteArray("AAAFAP7/AAAPAAIAAAAFAP//AAAPAAMAAAAFAAAAAAAPAAQAAAAFAAEAAAAPAAUAAAAFAAIAAAAPAAYAAAA=")
 tile_set = SubResource("TileSet_eon6f")
 
@@ -3594,7 +3593,6 @@ rotation = 1.5708
 scale = Vector2(0.5, 0.5)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Button2/Lock2"]
-scale = Vector2(1, 1)
 tile_map_data = PackedByteArray("AAAFAP7/AAAPAAIAAAAFAP//AAAPAAMAAAAFAAAAAAAPAAQAAAAFAAEAAAAPAAUAAAAFAAIAAAAPAAYAAAA=")
 tile_set = SubResource("TileSet_eon6f")
 
@@ -3613,7 +3611,6 @@ scale = Vector2(0.5, 0.5)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Button3/Lock3"]
 position = Vector2(19, 0)
-scale = Vector2(1, 1)
 tile_map_data = PackedByteArray("AAAFAP7/AAAPAAIAAAAFAP//AAAPAAMAAAAFAAAAAAAPAAQAAAAFAAEAAAAPAAUAAAAFAAIAAAAPAAYAAAA=")
 tile_set = SubResource("TileSet_eon6f")
 
@@ -3633,7 +3630,6 @@ rotation = -3.14159
 scale = Vector2(0.5, 0.5)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Button4/Lock4"]
-scale = Vector2(1, 1)
 tile_map_data = PackedByteArray("AAD9/wEAAAANAAQAAAD+/wEAAAAOAAQAAAD//wEAAAAPAAQAAAAAAAEAAAAPAAQAAAABAAEAAAAQAAQAAAACAAEAAAARAAQAAAA=")
 tile_set = SubResource("TileSet_eon6f")
 

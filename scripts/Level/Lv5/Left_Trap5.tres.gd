@@ -10,6 +10,7 @@ var moving_forward := true
 
 func _ready() -> void:
 	start_position = position
+	set_process(false)
 
 func _process(delta: float) -> void:
 	if direction == Vector2.ZERO:
@@ -26,3 +27,5 @@ func _process(delta: float) -> void:
 		position -= move_amount
 		if (position - start_position).length() <= 1.0:
 			moving_forward = true
+func start() :
+	set_process(true)
