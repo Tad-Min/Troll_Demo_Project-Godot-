@@ -9,7 +9,7 @@ func _ready() -> void:
 	max_value = 100
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if player:
 		# Map jump_charge (0.75 - 1.75) to percentage
 		var percent = (player.jump_charge - player.min_jc) / (player.max_jc - player.min_jc) * 100.0

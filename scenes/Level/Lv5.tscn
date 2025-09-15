@@ -12,9 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="9_gyu7e"]
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="9_ycfpd"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="10_b5mx3"]
-[ext_resource type="Script" uid="uid://kibhb3aeaw8j" path="res://scripts/Level/rotating_saw.gd" id="10_h0nj6"]
+[ext_resource type="Script" uid="uid://kibhb3aeaw8j" path="res://scripts/Level/Lv5/rotating_saw.gd" id="10_h0nj6"]
 [ext_resource type="PackedScene" uid="uid://c3p15mm8xfels" path="res://scenes/Trap/Shuriken.tscn" id="10_nq577"]
-[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="14_sskub"]
+[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="14_sskub"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="16_ipiet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atyod"]
@@ -3794,6 +3794,7 @@ texture = ExtResource("7_gyue2")
 sources/0 = SubResource("TileSetAtlasSource_b7kuw")
 
 [node name="Lv5" type="Node2D"]
+metadata/_edit_lock_ = true
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = 191.0

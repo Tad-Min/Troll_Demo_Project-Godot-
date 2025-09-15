@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://cgli08wsvmvi0"]
+[gd_scene load_steps=44 format=4 uid="uid://cgli08wsvmvi0"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_uxs65"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_obagd"]
@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://4ex8nd3vkga1" path="res://scenes/Button.tscn" id="12_epcp4"]
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="12_l6hvn"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="13_obagd"]
-[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="14_78xed"]
+[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="14_78xed"]
 [ext_resource type="Texture2D" uid="uid://bs46ixrcwq7vf" path="res://assets/Lock.png" id="14_l6hvn"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="16_bq8uq"]
 
@@ -25,7 +25,7 @@ size = Vector2(943.125, 10.5)
 size = Vector2(944, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bq8uq"]
-size = Vector2(1328.25, 16)
+size = Vector2(1096, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3jvrh"]
 size = Vector2(8, 144)
@@ -394,6 +394,9 @@ size = Vector2(144, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_obagd"]
 size = Vector2(117.333, 26.6667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txa1j"]
+size = Vector2(64, 112)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wd6eu"]
 size = Vector2(5, 93)
@@ -2540,18 +2543,25 @@ texture = ExtResource("5_3jvrh")
 [node name="Trapzone1" parent="." instance=ExtResource("6_epcp4")]
 position = Vector2(1248, 456)
 cooldown_time = 5.0
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="Trapzone1" index="0"]
 position = Vector2(-599.563, 0)
 shape = SubResource("RectangleShape2D_78xed")
+metadata/_edit_lock_ = true
+
+[node name="RightSpawner" parent="Trapzone1" index="1"]
+metadata/_edit_lock_ = true
 
 [node name="Trapzone2" parent="." instance=ExtResource("6_epcp4")]
-position = Vector2(1672, 368)
+position = Vector2(1936, 384)
 cooldown_time = 5.0
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="Trapzone2" index="0"]
-position = Vector2(-1024, 8)
+position = Vector2(-1280, 8)
 shape = SubResource("RectangleShape2D_dg2hs")
+metadata/_edit_lock_ = true
 
 [node name="RightSpawner" parent="Trapzone2" index="1"]
 metadata/_edit_lock_ = true
@@ -2559,10 +2569,15 @@ metadata/_edit_lock_ = true
 [node name="Trapzone3" parent="." instance=ExtResource("6_epcp4")]
 position = Vector2(1346, 279)
 cooldown_time = 5.0
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="Trapzone3" index="0"]
-position = Vector2(-657.875, 9)
+position = Vector2(-774, 9)
 shape = SubResource("RectangleShape2D_bq8uq")
+metadata/_edit_lock_ = true
+
+[node name="RightSpawner" parent="Trapzone3" index="1"]
+metadata/_edit_lock_ = true
 
 [node name="spike1_trap1" parent="." instance=ExtResource("9_obagd")]
 position = Vector2(328, 464)
@@ -2702,12 +2717,23 @@ position = Vector2(-16, 34.6667)
 shape = SubResource("RectangleShape2D_obagd")
 
 [node name="ComboTrap9" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="Trap9" type="Area2D" parent="ComboTrap9"]
-position = Vector2(192, 160)
+position = Vector2(200, 128)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap9/Trap9"]
+position = Vector2(-24, -48)
+shape = SubResource("RectangleShape2D_txa1j")
+metadata/_edit_lock_ = true
+
+[node name="Spike" parent="ComboTrap9" instance=ExtResource("9_obagd")]
+position = Vector2(160, 208)
 
 [node name="Shuriken" parent="ComboTrap9" instance=ExtResource("7_uxs65")]
-position = Vector2(104, 152)
+position = Vector2(120, 128)
+metadata/_edit_lock_ = true
 
 [node name="Spear3_Trap10" parent="." instance=ExtResource("12_l6hvn")]
 position = Vector2(84, 88)
@@ -2765,24 +2791,30 @@ metadata/_edit_lock_ = true
 
 [node name="Floor_Trap8" type="StaticBody2D" parent="."]
 position = Vector2(176, 272)
+metadata/_edit_lock_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Floor_Trap8"]
 tile_map_data = PackedByteArray("AAD6/wIAAQAMAAgAAAD6/wMAAQAMAAkAAAD7/wIAAQAMAAgAAAD7/wMAAQAMAAkAAAD8/wIAAQAMAAgAAAD8/wMAAQAMAAkAAAD9/wIAAQAMAAgAAAD9/wMAAQAMAAkAAAD+/wIAAQAMAAgAAAD+/wMAAQAMAAkAAAD//wIAAQAMAAgAAAD//wMAAQAMAAkAAAA=")
 tile_set = SubResource("TileSet_h33q4")
+metadata/_edit_lock_ = true
 
 [node name="Spike" parent="Floor_Trap8" instance=ExtResource("9_obagd")]
 position = Vector2(-56, 192)
+metadata/_edit_lock_ = true
 
 [node name="Trap8" type="Area2D" parent="Floor_Trap8"]
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor_Trap8/Trap8"]
 position = Vector2(-14.8, 1)
 scale = Vector2(0.400005, 1)
 shape = SubResource("RectangleShape2D_l6hvn")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor_Trap8"]
 position = Vector2(-49, 48)
 shape = SubResource("RectangleShape2D_b6xpa")
+metadata/_edit_lock_ = true
 
 [node name="Manager" parent="." instance=ExtResource("9_b6xpa")]
 
