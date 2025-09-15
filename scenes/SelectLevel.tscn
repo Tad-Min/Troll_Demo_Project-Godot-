@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://blnjmna71025t"]
+[gd_scene load_steps=20 format=3 uid="uid://blnjmna71025t"]
 
 [ext_resource type="Script" uid="uid://bqud0bqb2dq15" path="res://scenes/select_level.gd" id="1_adu0t"]
 [ext_resource type="Texture2D" uid="uid://6rflweclk7du" path="res://Jungle Asset Pack/parallax background/saddle-brown-color-solid-background-1920x1080.png" id="2_jjqxc"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://m6t1xsf4dqfu" path="res://Jungle Asset Pack/parallax background/Lv5.png" id="7_i1c1a"]
 [ext_resource type="Texture2D" uid="uid://btfe8eoe6ivjt" path="res://Jungle Asset Pack/parallax background/Lv6.png" id="8_ibsxg"]
 [ext_resource type="Texture2D" uid="uid://b2w8r71c3dg5" path="res://Jungle Asset Pack/parallax background/Lv7.png" id="9_xlyyc"]
+[ext_resource type="Texture2D" uid="uid://bkm8ls5d1j2gq" path="res://Jungle Asset Pack/parallax background/Lv10.png" id="10_i1c1a"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1c1a"]
 texture = ExtResource("2_jjqxc")
@@ -40,6 +41,10 @@ modulate_color = Color(0.252028, 0.252028, 0.252028, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ckuqx"]
 texture = ExtResource("9_xlyyc")
 modulate_color = Color(0.281187, 0.281187, 0.281187, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8gyec"]
+texture = ExtResource("10_i1c1a")
+modulate_color = Color(0.244776, 0.244776, 0.244776, 1)
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3
@@ -142,4 +147,15 @@ offset_bottom = 511.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_ckuqx")
 text = "LEVEL 7
+"
+
+[node name="btnlv10" type="Button" parent="."]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 537.0
+offset_right = 718.0
+offset_bottom = 648.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_8gyec")
+text = "LEVEL 10
 "
