@@ -35,20 +35,16 @@ func on_portal_entered() -> void:
 	_go_to_next_screen()
 
 func _go_to_next_screen() -> void:
-	await get_tree().create_timer(1.0).timeout
-
 	var current_index = GameData.current_level_index
 	var next_index = current_index + 1
 	if next_index < GameData.level_paths.size():
 		GameData.next_level_path = GameData.level_paths[next_index]
 		GameData.current_level_index = next_index  # ← cập nhật luôn index
-
 	get_tree().change_scene_to_file("res://scenes/Next.tscn")  # chỉ chuyển đến màn Next
 
 
 func on_player_died() -> void:
 	print("Manager: Player died → going to game over...")
-	GameData.death_count += 1  # Tăng số lần chết
 	_go_to_game_over()
 
 func _go_to_game_over() -> void:
@@ -60,5 +56,7 @@ func _go_to_game_over() -> void:
 	if current_scene:
 		get_tree().set_meta("last_level", current_scene.scene_file_path)
 		print(get_tree().get_meta("last_level", current_scene.scene_file_path))
-
+		
+	GameData.death_count = GameData.death_count+1
+	print(GameData.death_count)
 	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")

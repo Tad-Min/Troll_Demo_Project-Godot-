@@ -1,10 +1,12 @@
-[gd_scene load_steps=30 format=3 uid="uid://dhqdda1mfogu7"]
+[gd_scene load_steps=34 format=3 uid="uid://dhqdda1mfogu7"]
 
 [ext_resource type="Texture2D" uid="uid://bbjunvicfbbgg" path="res://assets/character.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://c27cqf6yfkjx5" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="AudioStream" uid="uid://c4clc60ywg7em" path="res://assets/cartoon-jump-6462.mp3" id="3_qhqgy"]
-[ext_resource type="PackedScene" uid="uid://bvngj0swsjsly" path="res://scenes/move_buttons.tscn" id="4_dqkch"]
+[ext_resource type="PackedScene" uid="uid://bvngj0swsjsly" path="res://scenes/Player/move_buttons.tscn" id="4_dqkch"]
 [ext_resource type="AudioStream" uid="uid://cvy1ls0r8b1w1" path="res://assets/male-death-scream-horror-352706.mp3" id="5_qlg0r"]
+[ext_resource type="PackedScene" uid="uid://kjekawpsm1pc" path="res://scenes/Player/death_count.tscn" id="6_tuyoq"]
+[ext_resource type="Script" uid="uid://cyr4gt8sv34wd" path="res://scenes/Player/progress_bar.gd" id="8_dl1wr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -224,6 +226,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_smehm"]
 radius = 6.08276
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a06cl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dl1wr"]
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_g2els")
 
@@ -245,5 +251,17 @@ stream = ExtResource("3_qhqgy")
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_qlg0r")
+
+[node name="deathcount_canva" parent="." instance=ExtResource("6_tuyoq")]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 2.0
+offset_top = -38.0
+offset_right = 6.0
+offset_bottom = -11.0
+scale = Vector2(0.71172, 0.71172)
+theme_override_styles/background = SubResource("StyleBoxEmpty_a06cl")
+theme_override_styles/fill = SubResource("StyleBoxEmpty_dl1wr")
+script = ExtResource("8_dl1wr")
 
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

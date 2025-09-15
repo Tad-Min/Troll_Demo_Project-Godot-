@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://Jungle Asset Pack/parallax background/plx-5.png" id="4_6fbnu"]
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="5_xoj35"]
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="6_6fbnu"]
-[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="6_38c72"]
+[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="6_38c72"]
 [ext_resource type="Script" uid="uid://dint8ef4wevy6" path="res://scripts/Level/LV3/rotate_spear_2.gd" id="7_38c72"]
 [ext_resource type="Script" uid="uid://xekxvdf482f5" path="res://scripts/Level/LV3/spear_trigger_1.gd" id="7_51hs2"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="7_rmfpm"]
@@ -16,15 +16,15 @@
 [ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="9_kp1uq"]
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="9_yjt2l"]
 [ext_resource type="Script" uid="uid://c2ys02ax1vno2" path="res://scripts/Level/LV3/spike1,2,6,7_trigger_2,4,8,9.gd" id="10_prk1d"]
-[ext_resource type="AudioStream" uid="uid://dyiwbd7rvcxf0" path="res://Trap asset/rasen-shuriken-sound-effect.mp3" id="10_tyqfo"]
 [ext_resource type="Script" uid="uid://b7ynttut3q54g" path="res://scripts/Level/LV3/trigger_1-6.gd" id="13_gjm0f"]
 [ext_resource type="Script" uid="uid://pevku8htii0y" path="res://scripts/Level/LV3/slide_back_trigger_6.gd" id="15_7vrde"]
 [ext_resource type="Script" uid="uid://bt6u63fquuj83" path="res://scripts/Level/LV3/drop_1_trigger_5.gd" id="17_2n02m"]
 [ext_resource type="Script" uid="uid://dyeb21ty11fol" path="res://scripts/Level/LV3/trigger_7.gd" id="19_tycxe"]
 [ext_resource type="Script" uid="uid://ds8wva3r4qcw2" path="res://scripts/Level/LV3/trigger_10.gd" id="20_w3web"]
 [ext_resource type="Script" uid="uid://dfswq1b7urkus" path="res://scripts/Level/LV3/floor_trap.gd" id="21_w3web"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="23_tyqfo"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_38c72"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkayq"]
 texture = ExtResource("5_xoj35")
 19:1/0 = 0
 21:1/0 = 0
@@ -366,7 +366,7 @@ texture = ExtResource("5_xoj35")
 38:20/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_rmfpm"]
-sources/0 = SubResource("TileSetAtlasSource_38c72")
+sources/0 = SubResource("TileSetAtlasSource_pkayq")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gjm0f"]
 size = Vector2(64, 32)
@@ -2084,7 +2084,7 @@ texture = ExtResource("5_xoj35")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6fbnu")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rmfpm"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tyqfo"]
 texture = ExtResource("5_xoj35")
 19:1/0 = 0
 21:1/0 = 0
@@ -2426,7 +2426,7 @@ texture = ExtResource("5_xoj35")
 38:20/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_gjm0f"]
-sources/0 = SubResource("TileSetAtlasSource_rmfpm")
+sources/0 = SubResource("TileSetAtlasSource_tyqfo")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vrde"]
 size = Vector2(256.243, 146.676)
@@ -2631,9 +2631,6 @@ metadata/_edit_lock_ = true
 position = Vector2(-7.6616, -32.1591)
 metadata/_edit_lock_ = true
 
-[node name="AudioStreamPlayer" parent="Rotate_Spear_2/Spear3" index="1"]
-volume_db = -80.0
-
 [node name="Spear4" parent="Rotate_Spear_2" instance=ExtResource("9_yjt2l")]
 position = Vector2(4.33839, -32.1591)
 rotation = 0.349066
@@ -2719,11 +2716,6 @@ position = Vector2(-17.6616, -28.1591)
 rotation = 5.93412
 metadata/_edit_lock_ = true
 
-[node name="RotateSP" type="AudioStreamPlayer" parent="Rotate_Spear_2"]
-stream = ExtResource("10_tyqfo")
-volume_db = -5.0
-pitch_scale = 0.65
-
 [node name="spike1" parent="." instance=ExtResource("6_6fbnu")]
 position = Vector2(208, 416)
 script = ExtResource("10_prk1d")
@@ -2731,8 +2723,8 @@ metadata/_edit_lock_ = true
 
 [node name="spike2" parent="." instance=ExtResource("6_6fbnu")]
 position = Vector2(47, 256)
-scale = Vector2(0.759999, 1)
 script = ExtResource("10_prk1d")
+metadata/_edit_lock_ = true
 
 [node name="spike3" parent="." instance=ExtResource("6_6fbnu")]
 position = Vector2(1071, 320)
@@ -2836,7 +2828,7 @@ position = Vector2(129.151, 85.4227)
 shape = SubResource("RectangleShape2D_7vrde")
 
 [node name="Player" parent="." instance=ExtResource("6_38c72")]
-position = Vector2(843, 124)
+position = Vector2(56, 416)
 scale = Vector2(1.5, 1.5)
 
 [node name="Manager" parent="." instance=ExtResource("8_gjm0f")]
@@ -2972,4 +2964,6 @@ metadata/_edit_group_ = true
 [node name="Pause" parent="." instance=ExtResource("9_kp1uq")]
 visible = false
 
-[editable path="Rotate_Spear_2/Spear3"]
+[node name="MusicBackground" parent="." instance=ExtResource("23_tyqfo")]
+
+[node name="Pause2" parent="." instance=ExtResource("9_kp1uq")]
