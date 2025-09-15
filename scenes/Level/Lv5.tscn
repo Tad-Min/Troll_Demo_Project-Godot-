@@ -3446,9 +3446,6 @@ sources/0 = SubResource("TileSetAtlasSource_215dr")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60cax"]
 size = Vector2(112, 176)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_co0gf"]
-size = Vector2(16, 300)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b7kuw"]
 texture = ExtResource("7_gyue2")
 19:1/0 = 0
@@ -3793,6 +3790,9 @@ texture = ExtResource("7_gyue2")
 [sub_resource type="TileSet" id="TileSet_ycfpd"]
 sources/0 = SubResource("TileSetAtlasSource_b7kuw")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_co0gf"]
+size = Vector2(16, 300)
+
 [node name="Lv5" type="Node2D"]
 metadata/_edit_lock_ = true
 
@@ -3929,32 +3929,36 @@ scale = Vector2(0.00603219, 0.00603219)
 texture = ExtResource("8_kwm4m")
 metadata/_edit_lock_ = true
 
-[node name="Spike_Trap1" parent="." instance=ExtResource("7_b7kuw")]
+[node name="ComboTrap1" type="Node2D" parent="."]
 position = Vector2(208, 448)
+
+[node name="Spike_Trap1" parent="ComboTrap1" instance=ExtResource("7_b7kuw")]
 metadata/_edit_lock_ = true
 
-[node name="Trap1" type="Area2D" parent="Spike_Trap1"]
+[node name="Trap1" type="Area2D" parent="ComboTrap1"]
 position = Vector2(-16, -64)
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike_Trap1/Trap1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap1/Trap1"]
 position = Vector2(-12, -28)
 shape = SubResource("RectangleShape2D_nq577")
 metadata/_edit_lock_ = true
 
-[node name="Spear1_trap3" parent="." instance=ExtResource("9_ycfpd")]
+[node name="ComboTrap3" type="Node2D" parent="."]
 position = Vector2(856, 368)
 rotation = 1.5708
 scale = Vector2(2, 2)
+
+[node name="Spear1_trap3" parent="ComboTrap3" instance=ExtResource("9_ycfpd")]
 metadata/_edit_lock_ = true
 
-[node name="Trap3" type="Area2D" parent="Spear1_trap3"]
+[node name="Trap3" type="Area2D" parent="ComboTrap3"]
 position = Vector2(-32, 24)
 rotation = -1.5708
 scale = Vector2(0.5, 0.5)
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spear1_trap3/Trap3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap3/Trap3"]
 position = Vector2(-2, -24)
 shape = SubResource("RectangleShape2D_h0nj6")
 metadata/_edit_lock_ = true
@@ -4158,28 +4162,30 @@ tile_map_data = PackedByteArray("AAABAB8AAAAFAAMAAAACAB8AAAABAA8AAAADAB4AAAACAA4
 tile_set = SubResource("TileSet_fqcln")
 metadata/_edit_lock_ = true
 
-[node name="Floor1_Trap2" type="StaticBody2D" parent="."]
+[node name="ComboTrap2" type="Node2D" parent="."]
 position = Vector2(536, 384)
+
+[node name="Floor1_Trap2" type="StaticBody2D" parent="ComboTrap2"]
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor1_Trap2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap2/Floor1_Trap2"]
 position = Vector2(88, 184)
 shape = SubResource("RectangleShape2D_60cax")
 metadata/_edit_lock_ = true
 
-[node name="Trap2" type="Area2D" parent="Floor1_Trap2"]
-position = Vector2(80, 48)
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor1_Trap2/Trap2"]
-position = Vector2(-40, -98)
-shape = SubResource("RectangleShape2D_co0gf")
-metadata/_edit_lock_ = true
-
-[node name="tl" type="TileMapLayer" parent="Floor1_Trap2"]
+[node name="tl" type="TileMapLayer" parent="ComboTrap2/Floor1_Trap2"]
 position = Vector2(-528, -384)
 tile_map_data = PackedByteArray("AAAkAB4AAAAEAA4AAAAkAB8AAAAEAA8AAAAlAB4AAAAFAA4AAAAlAB8AAAAFAA8AAAAmAB4AAAAGAA4AAAAmAB8AAAAGAA8AAAAnAB4AAAAHAA4AAAAnAB8AAAAHAA8AAAAoAB4AAAAIAA4AAAAoAB8AAAAIAA8AAAAjAB4AAAADAA4AAAAjAB8AAAADAA8AAAApAB4AAAADAA4AAAApAB8AAAADAA8AAAAjACAAAAAGAAQAAAAkACAAAAAGAAQAAAAlACAAAAAGAAQAAAAmACAAAAAGAAQAAAAnACEAAAAGAAQAAAAoACEAAAAGAAQAAAApACEAAAAGAAQAAAApACIAAAAGAAQAAAAjACEAAAAGAAQAAAAjACIAAAAGAAQAAAAjACMAAAAGAAQAAAAjACQAAAAGAAQAAAAjACUAAAAGAAQAAAAjACYAAAAGAAQAAAAjACcAAAAGAAQAAAAkACEAAAAGAAQAAAAkACIAAAAGAAQAAAAkACMAAAAGAAQAAAAkACQAAAAGAAQAAAAkACUAAAAGAAQAAAAkACYAAAAGAAQAAAAkACcAAAAGAAQAAAAlACEAAAAGAAQAAAAlACIAAAAGAAQAAAAlACMAAAAGAAQAAAAlACQAAAAGAAQAAAAlACUAAAAGAAQAAAAlACYAAAAGAAQAAAAlACcAAAAGAAQAAAAmACEAAAAGAAQAAAAmACIAAAAGAAQAAAAmACMAAAAGAAQAAAAmACQAAAAGAAQAAAAmACUAAAAGAAQAAAAmACYAAAAGAAQAAAAmACcAAAAGAAQAAAAnACAAAAAGAAQAAAAnACIAAAAGAAQAAAAnACMAAAAGAAQAAAAnACQAAAAGAAQAAAAnACUAAAAGAAQAAAAnACYAAAAGAAQAAAAnACcAAAAGAAQAAAAoACAAAAAGAAQAAAAoACIAAAAGAAQAAAAoACMAAAAGAAQAAAAoACQAAAAGAAQAAAAoACUAAAAGAAQAAAAoACYAAAAGAAQAAAAoACcAAAAGAAQAAAApACAAAAAGAAQAAAApACMAAAAGAAQAAAApACQAAAAGAAQAAAApACUAAAAGAAQAAAApACYAAAAGAAQAAAApACcAAAAGAAQAAAAjACgAAAAGAAQAAAAkACgAAAAGAAQAAAAlACgAAAAGAAQAAAAmACgAAAAGAAQAAAAnACgAAAAGAAQAAAAoACgAAAAGAAQAAAApACgAAAAGAAQAAAAhACAAAAAGAAQAAAAhACEAAAAGAAQAAAAhACIAAAAGAAQAAAAhACMAAAAGAAQAAAAhACQAAAAGAAQAAAAiACAAAAAGAAQAAAAiACEAAAAGAAQAAAAiACIAAAAGAAQAAAAiACMAAAAGAAQAAAAiACQAAAAGAAQAAAAqACAAAAAGAAQAAAAqACEAAAAGAAQAAAAqACIAAAAGAAQAAAAqACMAAAAGAAQAAAAqACQAAAAGAAQAAAArACAAAAAGAAQAAAArACEAAAAGAAQAAAArACIAAAAGAAQAAAArACMAAAAGAAQAAAArACQAAAAGAAQAAAAhACUAAAAGAAQAAAAhACYAAAAGAAQAAAAhACcAAAAGAAQAAAAhACgAAAAGAAQAAAAiACUAAAAGAAQAAAAiACYAAAAGAAQAAAAiACcAAAAGAAQAAAAiACgAAAAGAAQAAAAqACUAAAAGAAQAAAAqACYAAAAGAAQAAAAqACcAAAAGAAQAAAAqACgAAAAGAAQAAAArACUAAAAGAAQAAAArACYAAAAGAAQAAAArACcAAAAGAAQAAAArACgAAAAGAAQAAAAiAB8AAAADAA8AAAAqAB8AAAADAA8AAAA=")
 tile_set = SubResource("TileSet_ycfpd")
+metadata/_edit_lock_ = true
+
+[node name="Trap2" type="Area2D" parent="ComboTrap2"]
+position = Vector2(80, 48)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap2/Trap2"]
+position = Vector2(-40, -98)
+shape = SubResource("RectangleShape2D_co0gf")
 metadata/_edit_lock_ = true
 
 [node name="Manager" parent="." instance=ExtResource("9_gyu7e")]

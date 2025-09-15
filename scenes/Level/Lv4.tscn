@@ -2464,7 +2464,7 @@ size = Vector2(5.99988, 72)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6xpa"]
 size = Vector2(82, 32)
 
-[node name="Lv2" type="Node2D"]
+[node name="Lv4" type="Node2D"]
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = 191.0
@@ -2579,50 +2579,59 @@ metadata/_edit_lock_ = true
 [node name="RightSpawner" parent="Trapzone3" index="1"]
 metadata/_edit_lock_ = true
 
-[node name="spike1_trap1" parent="." instance=ExtResource("9_obagd")]
+[node name="ComboTrap1" type="Node2D" parent="."]
 position = Vector2(328, 464)
 metadata/_edit_lock_ = true
 
-[node name="Trap1" type="Area2D" parent="spike1_trap1"]
+[node name="spike1_trap1" parent="ComboTrap1" instance=ExtResource("9_obagd")]
+metadata/_edit_lock_ = true
+
+[node name="Trap1" type="Area2D" parent="ComboTrap1"]
 position = Vector2(-40, -40)
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="spike1_trap1/Trap1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap1/Trap1"]
 position = Vector2(4, -24)
 shape = SubResource("RectangleShape2D_3jvrh")
 metadata/_edit_lock_ = true
 
-[node name="Spike2_trap2" parent="." instance=ExtResource("9_obagd")]
+[node name="ComboTrap2" type="Node2D" parent="."]
 position = Vector2(608, 336)
 rotation = -3.14159
 metadata/_edit_lock_ = true
 
-[node name="Trap2" type="Area2D" parent="Spike2_trap2"]
-position = Vector2(32, -88)
-rotation = 3.14159
+[node name="Spike2_trap2" parent="ComboTrap2" instance=ExtResource("9_obagd")]
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike2_trap2/Trap2"]
-position = Vector2(8, -24)
-shape = SubResource("RectangleShape2D_ga6kf")
-metadata/_edit_lock_ = true
-
-[node name="Jumper2" parent="Spike2_trap2" instance=ExtResource("10_0cdfx")]
+[node name="Jumper2" parent="ComboTrap2" instance=ExtResource("10_0cdfx")]
 position = Vector2(8, -136)
 rotation = 3.14159
 metadata/_edit_lock_ = true
 
-[node name="Shuriken_Trap3" parent="." instance=ExtResource("7_uxs65")]
+[node name="Trap2" type="Area2D" parent="ComboTrap2"]
+position = Vector2(32, -88)
+rotation = 3.14159
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap2/Trap2"]
+position = Vector2(8, -24)
+shape = SubResource("RectangleShape2D_ga6kf")
+metadata/_edit_lock_ = true
+
+[node name="ComboTrap3" type="Node2D" parent="."]
 position = Vector2(824, 344)
 scale = Vector2(0.5, 0.5)
 metadata/_edit_lock_ = true
 
-[node name="Trap3" type="Area2D" parent="Shuriken_Trap3"]
+[node name="Shuriken_Trap3" parent="ComboTrap3" instance=ExtResource("7_uxs65")]
+metadata/_edit_lock_ = true
+
+[node name="Trap3" type="Area2D" parent="ComboTrap3"]
 position = Vector2(-48, 160)
 scale = Vector2(2, 2)
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Shuriken_Trap3/Trap3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap3/Trap3"]
 position = Vector2(20, -24)
 shape = SubResource("RectangleShape2D_h33q4")
 metadata/_edit_lock_ = true
@@ -2676,45 +2685,57 @@ position = Vector2(-64, 172)
 shape = SubResource("RectangleShape2D_1pkgt")
 metadata/_edit_lock_ = true
 
-[node name="Spear1_Trap5" parent="." instance=ExtResource("12_l6hvn")]
+[node name="ComboTrap5" type="Node2D" parent="."]
 position = Vector2(661, 256)
 scale = Vector2(2, 1.6)
 metadata/_edit_lock_ = true
 
-[node name="Trap5" type="Area2D" parent="Spear1_Trap5"]
+[node name="Spear1_Trap5" parent="ComboTrap5" instance=ExtResource("12_l6hvn")]
+metadata/_edit_lock_ = true
+
+[node name="Trap5" type="Area2D" parent="ComboTrap5"]
 position = Vector2(21.5, -4)
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spear1_Trap5/Trap5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap5/Trap5"]
 position = Vector2(-12, -19.5)
 shape = SubResource("RectangleShape2D_xtdpl")
 metadata/_edit_lock_ = true
 
-[node name="Shuriken2_trap6" parent="." instance=ExtResource("7_uxs65")]
-position = Vector2(475, 190)
+[node name="ComboTrap6" type="Node2D" parent="."]
+position = Vector2(496, 168)
 metadata/_edit_lock_ = true
 
-[node name="Trap6" type="Area2D" parent="Shuriken2_trap6"]
-position = Vector2(101, -62)
+[node name="Shuriken2_trap6" parent="ComboTrap6" instance=ExtResource("7_uxs65")]
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Shuriken2_trap6/Trap6"]
+[node name="Trap6" type="Area2D" parent="ComboTrap6"]
+position = Vector2(80, -40)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap6/Trap6"]
 position = Vector2(0, 24)
 shape = SubResource("RectangleShape2D_eev68")
 metadata/_edit_lock_ = true
 
-[node name="Spear2_Trap7" parent="." instance=ExtResource("12_l6hvn")]
+[node name="ComboTrap7" type="Node2D" parent="."]
 position = Vector2(344, 224)
 rotation = 1.5708
 scale = Vector2(1.5, 1.5)
+metadata/_edit_lock_ = true
 
-[node name="Trap7" type="Area2D" parent="Spear2_Trap7"]
+[node name="Spear2_Trap7" parent="ComboTrap7" instance=ExtResource("12_l6hvn")]
+metadata/_edit_lock_ = true
+
+[node name="Trap7" type="Area2D" parent="ComboTrap7"]
 position = Vector2(-48, -48)
 rotation = -1.5708
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spear2_Trap7/Trap7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap7/Trap7"]
 position = Vector2(-16, 34.6667)
 shape = SubResource("RectangleShape2D_obagd")
+metadata/_edit_lock_ = true
 
 [node name="ComboTrap9" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
@@ -2735,45 +2756,58 @@ position = Vector2(160, 208)
 position = Vector2(120, 128)
 metadata/_edit_lock_ = true
 
-[node name="Spear3_Trap10" parent="." instance=ExtResource("12_l6hvn")]
+[node name="ComboTrap10" type="Node2D" parent="."]
 position = Vector2(84, 88)
+metadata/_edit_lock_ = true
 
-[node name="Trap10" type="Area2D" parent="Spear3_Trap10"]
+[node name="Spear3_Trap10" parent="ComboTrap10" instance=ExtResource("12_l6hvn")]
+metadata/_edit_lock_ = true
+
+[node name="Trap10" type="Area2D" parent="ComboTrap10"]
 position = Vector2(28, -24)
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spear3_Trap10/Trap10"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap10/Trap10"]
 position = Vector2(-18.5, 6.5)
 shape = SubResource("RectangleShape2D_wd6eu")
+metadata/_edit_lock_ = true
 
 [node name="Portal" parent="." instance=ExtResource("13_obagd")]
 position = Vector2(48, 96)
 rotation = 3.14159
 scale = Vector2(1, -1)
+metadata/_edit_lock_ = true
 
 [node name="Lock" type="Node2D" parent="Portal"]
 position = Vector2(-32, -8)
 rotation = -3.14159
 scale = Vector2(0.496024, -0.486358)
+metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Portal/Lock"]
+metadata/_edit_lock_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Portal/Lock/StaticBody2D"]
 tile_map_data = PackedByteArray("AAAAAP7/AAAPAAQAAAAAAP3/AAAPAAMAAAAAAPz/AAAPAAMAAAAAAPv/AAAPAAMAAAAAAPr/AAAPAAMAAAAAAPn/AAAPAAMAAAAAAPj/AAAPAAIAAAAAAP//AAAPAAUAAAAAAAAAAAAPAAUAAAAAAAEAAAAPAAUAAAAAAAIAAAAPAAYAAAA=")
 tile_set = SubResource("TileSet_3jvrh")
+metadata/_edit_lock_ = true
 
 [node name="Lock" type="Sprite2D" parent="Portal/Lock/StaticBody2D"]
 position = Vector2(7.76074, -24.4512)
 scale = Vector2(0.0160619, 0.0147145)
 texture = ExtResource("14_l6hvn")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal/Lock/StaticBody2D"]
 position = Vector2(8, -33.9769)
 shape = SubResource("RectangleShape2D_rbl7s")
+metadata/_edit_lock_ = true
 
 [node name="Button" parent="Portal" instance=ExtResource("12_epcp4")]
 position = Vector2(7.99998, 208)
 rotation = -3.14159
 scale = Vector2(1, -1)
+metadata/_edit_lock_ = true
 
 [node name="Pad" type="TileMap" parent="."]
 format = 2
