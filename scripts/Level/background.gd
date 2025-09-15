@@ -11,7 +11,7 @@ func _ready() -> void:
 	for bg in bgs:
 		base_positions.append(bg.position)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var t = Time.get_ticks_msec() / 1000.0 * speed
 	for i in bgs.size():
 		var bg = bgs[i]
