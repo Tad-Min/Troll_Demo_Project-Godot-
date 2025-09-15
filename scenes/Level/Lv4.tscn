@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://cgli08wsvmvi0"]
+[gd_scene load_steps=43 format=4 uid="uid://cgli08wsvmvi0"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_uxs65"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_obagd"]
@@ -17,6 +17,15 @@
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/player.tscn" id="14_78xed"]
 [ext_resource type="Texture2D" uid="uid://bs46ixrcwq7vf" path="res://assets/Lock.png" id="14_l6hvn"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="16_bq8uq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78xed"]
+size = Vector2(943.125, 10.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dg2hs"]
+size = Vector2(944, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bq8uq"]
+size = Vector2(1328.25, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3jvrh"]
 size = Vector2(8, 144)
@@ -2530,12 +2539,30 @@ texture = ExtResource("5_3jvrh")
 
 [node name="Trapzone1" parent="." instance=ExtResource("6_epcp4")]
 position = Vector2(1248, 456)
+cooldown_time = 5.0
+
+[node name="CollisionShape2D" parent="Trapzone1" index="0"]
+position = Vector2(-599.563, 0)
+shape = SubResource("RectangleShape2D_78xed")
 
 [node name="Trapzone2" parent="." instance=ExtResource("6_epcp4")]
-position = Vector2(1288, 368)
+position = Vector2(1672, 368)
+cooldown_time = 5.0
+
+[node name="CollisionShape2D" parent="Trapzone2" index="0"]
+position = Vector2(-1024, 8)
+shape = SubResource("RectangleShape2D_dg2hs")
+
+[node name="RightSpawner" parent="Trapzone2" index="1"]
+metadata/_edit_lock_ = true
 
 [node name="Trapzone3" parent="." instance=ExtResource("6_epcp4")]
 position = Vector2(1346, 279)
+cooldown_time = 5.0
+
+[node name="CollisionShape2D" parent="Trapzone3" index="0"]
+position = Vector2(-657.875, 9)
+shape = SubResource("RectangleShape2D_bq8uq")
 
 [node name="spike1_trap1" parent="." instance=ExtResource("9_obagd")]
 position = Vector2(328, 464)
@@ -2772,3 +2799,7 @@ position = Vector2(48, 464)
 scale = Vector2(1.5, 1.5)
 
 [node name="MusicBackground" parent="." instance=ExtResource("16_bq8uq")]
+
+[editable path="Trapzone1"]
+[editable path="Trapzone2"]
+[editable path="Trapzone3"]
