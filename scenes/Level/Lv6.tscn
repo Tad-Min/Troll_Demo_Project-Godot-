@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://dr18coxufyuep"]
+[gd_scene load_steps=60 format=4 uid="uid://dr18coxufyuep"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_ejisw"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_aistd"]
@@ -7,15 +7,31 @@
 [ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://Jungle Asset Pack/parallax background/plx-5.png" id="5_ob4cf"]
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="7_lck16"]
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="7_p0wg5"]
+[ext_resource type="Script" uid="uid://o34nfyimrupc" path="res://scripts/Level/Lv6/Button_maplv6.gd" id="8_eon6f"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="9_oeyta"]
 [ext_resource type="PackedScene" uid="uid://c3p15mm8xfels" path="res://scenes/Trap/Shuriken.tscn" id="10_8o3fb"]
 [ext_resource type="PackedScene" uid="uid://4ex8nd3vkga1" path="res://scenes/Button.tscn" id="10_b7suj"]
+[ext_resource type="Script" uid="uid://bayebyvjl0far" path="res://scripts/Level/Lv6/DeadBtn.tres.gd" id="10_wh7kg"]
+[ext_resource type="Script" uid="uid://bxv45ml5v8hig" path="res://scripts/Level/Touch_showNodeHaveArea2D.gd" id="11_ctkcn"]
 [ext_resource type="Texture2D" uid="uid://bs46ixrcwq7vf" path="res://assets/Lock.png" id="11_ejisw"]
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="12_aistd"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="13_ye8g6"]
+[ext_resource type="Script" uid="uid://c6twyy65im4f7" path="res://scripts/Level/Lv6/shuriken1.gd" id="14_eon6f"]
+[ext_resource type="Script" uid="uid://blnwkhd64oml4" path="res://scripts/Level/Lv6/shuriken_Trap2,3.gd" id="14_ob4cf"]
 [ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="14_ye8g6"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="14_ygmnw"]
+[ext_resource type="Script" uid="uid://c4ug731hdc3ux" path="res://scripts/Level/Lv6/trap_2.gd" id="15_1avii"]
+[ext_resource type="Script" uid="uid://benvxyjou6als" path="res://scripts/Level/Lv6/trap_3.gd" id="16_p0wg5"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="16_wh7kg"]
+[ext_resource type="Script" uid="uid://itvm4i5kn8g6" path="res://scripts/Level/Lv6/Drop_Trap4.gd" id="17_rfqhc"]
+[ext_resource type="Script" uid="uid://bwqj5is8nxbg0" path="res://scripts/Level/Lv6/trap_4.gd" id="18_oeyta"]
+[ext_resource type="Script" uid="uid://cwecketj33ft7" path="res://scripts/Level/Lv6/trap_5.gd" id="20_68dnq"]
+[ext_resource type="Script" uid="uid://2i8k0d1o335o" path="res://scripts/Level/Lv6/trap_6.gd" id="21_wdtcm"]
+[ext_resource type="Script" uid="uid://k1plhkluwmjf" path="res://scripts/Level/Lv6/affter_Trap6.gd" id="22_k5ipr"]
+[ext_resource type="Script" uid="uid://cuc5br4mb2tgw" path="res://scripts/Level/Lv6/trap_7.gd" id="23_302gt"]
+[ext_resource type="Script" uid="uid://bhm5w67ecfycp" path="res://scripts/Level/Lv6/trap_8.gd" id="24_eqxdb"]
+[ext_resource type="Script" uid="uid://d4b8s2mgt2237" path="res://scripts/Level/Lv6/trap_9.gd" id="24_ygmnw"]
+[ext_resource type="Script" uid="uid://q65q3uvu5x0x" path="res://scripts/Level/Lv6/shuriken_Trap10.gd" id="27_yeuku"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8o3fb"]
 texture = ExtResource("7_p0wg5")
@@ -1730,12 +1746,6 @@ sources/0 = SubResource("TileSetAtlasSource_215dr")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejisw"]
 size = Vector2(50, 58)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aistd"]
-size = Vector2(26, 114)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctkcn"]
-size = Vector2(16, 122)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eon6f"]
 texture = ExtResource("7_p0wg5")
 19:1/0 = 0
@@ -2419,6 +2429,12 @@ texture = ExtResource("7_p0wg5")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_eon6f")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aistd"]
+size = Vector2(26, 114)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctkcn"]
+size = Vector2(16, 122)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ob4cf"]
 texture = ExtResource("7_p0wg5")
 19:1/0 = 0
@@ -2766,6 +2782,9 @@ sources/0 = SubResource("TileSetAtlasSource_ob4cf")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0wg5"]
 size = Vector2(48, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygmnw"]
+size = Vector2(53, 20)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1avii"]
 size = Vector2(16, 64)
 
@@ -2783,6 +2802,24 @@ size = Vector2(64, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k5ipr"]
 size = Vector2(2, 50)
+
+[sub_resource type="GDScript" id="GDScript_yeuku"]
+script/source = "extends Area2D
+
+@export var Trap: NodePath
+
+func _ready() -> void:
+	if Trap:
+		connect(\"body_entered\",Callable(self, \"_on_body_entered\"))
+	else:
+		print(\"Error \"+ name + \" Assign null\")
+
+func _on_body_entered(body: Node) -> void:
+	if body.is_in_group(\"Player\"):
+		get_node(Trap).start()
+		queue_free()
+	
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_302gt"]
 size = Vector2(8, 48)
@@ -3471,7 +3508,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_oskok")
 
 [sub_resource type="Gradient" id="Gradient_ir354"]
-offsets = PackedFloat32Array(0, 0.00364964, 0.649635, 1)
+offsets = PackedFloat32Array(0, 0.00364964, 0.616788, 1)
 colors = PackedColorArray(0.814544, 0.814544, 0.814544, 1, 0.839416, 0.839416, 0.839416, 1, 0.455068, 0.455068, 0.455068, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_8o3fb"]
@@ -3483,7 +3520,6 @@ fill_to = Vector2(1, 0.5)
 [node name="Lv6" type="Node2D"]
 
 [node name="Night" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.00820203, 0.00820202, 0.00820202, 1)
 
 [node name="Background" type="TextureRect" parent="."]
@@ -3568,80 +3604,115 @@ metadata/_edit_lock_ = true
 [node name="Button1" parent="." instance=ExtResource("10_b7suj")]
 position = Vector2(585, 223)
 scale = Vector2(2, 2)
+script = ExtResource("8_eon6f")
+increase_amount = 1.5
+light_path = NodePath("../Player/PointLight2D")
+Lock = NodePath("Lock1")
+metadata/_edit_lock_ = true
 
 [node name="Lock1" type="Node2D" parent="Button1"]
 position = Vector2(2, 68.5)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Button1/Lock1"]
 tile_map_data = PackedByteArray("AAAFAP7/AAAPAAIAAAAFAP//AAAPAAMAAAAFAAAAAAAPAAQAAAAFAAEAAAAPAAUAAAAFAAIAAAAPAAYAAAA=")
 tile_set = SubResource("TileSet_eon6f")
+metadata/_edit_lock_ = true
 
 [node name="Lock" type="Sprite2D" parent="Button1/Lock1"]
 position = Vector2(88, 1.71661e-05)
 scale = Vector2(0.014075, 0.014075)
 texture = ExtResource("11_ejisw")
+metadata/_edit_lock_ = true
 
 [node name="Button2" parent="." instance=ExtResource("10_b7suj")]
 position = Vector2(1112, 448)
 rotation = -1.5708
 scale = Vector2(2, 2)
+script = ExtResource("8_eon6f")
+increase_amount = 1.5
+light_path = NodePath("../Player/PointLight2D")
+Lock = NodePath("Lock2")
+metadata/_edit_lock_ = true
 
 [node name="Lock2" type="Node2D" parent="Button2"]
 position = Vector2(44.0009, -252)
 rotation = 1.5708
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Button2/Lock2"]
 tile_map_data = PackedByteArray("AAAFAP7/AAAPAAIAAAAFAP//AAAPAAMAAAAFAAAAAAAPAAQAAAAFAAEAAAAPAAUAAAAFAAIAAAAPAAYAAAA=")
 tile_set = SubResource("TileSet_eon6f")
+metadata/_edit_lock_ = true
 
 [node name="Lock" type="Sprite2D" parent="Button2/Lock2"]
 position = Vector2(88, 1.71661e-05)
 scale = Vector2(0.014075, 0.014075)
 texture = ExtResource("11_ejisw")
+metadata/_edit_lock_ = true
 
 [node name="Button3" parent="." instance=ExtResource("10_b7suj")]
 position = Vector2(360, 296)
 scale = Vector2(2, 2)
+script = ExtResource("8_eon6f")
+increase_amount = 1.5
+light_path = NodePath("../Player/PointLight2D")
+Lock = NodePath("Lock3")
+metadata/_edit_lock_ = true
 
 [node name="Lock3" type="Node2D" parent="Button3"]
 position = Vector2(124, 32)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Button3/Lock3"]
 position = Vector2(19, 0)
 tile_map_data = PackedByteArray("AAAFAP7/AAAPAAIAAAAFAP//AAAPAAMAAAAFAAAAAAAPAAQAAAAFAAEAAAAPAAUAAAAFAAIAAAAPAAYAAAA=")
 tile_set = SubResource("TileSet_eon6f")
+metadata/_edit_lock_ = true
 
 [node name="Lock" type="Sprite2D" parent="Button3/Lock3"]
 position = Vector2(107, 0)
 scale = Vector2(0.014075, 0.014075)
 texture = ExtResource("11_ejisw")
+metadata/_edit_lock_ = true
 
 [node name="Button4" parent="." instance=ExtResource("10_b7suj")]
 position = Vector2(368, 536)
 rotation = 3.14159
 scale = Vector2(2, 2)
+script = ExtResource("8_eon6f")
+increase_amount = 1.5
+light_path = NodePath("../Player/PointLight2D")
+Lock = NodePath("Lock4")
+metadata/_edit_lock_ = true
 
 [node name="Lock4" type="Node2D" parent="Button4"]
 position = Vector2(-256, 123.999)
 rotation = -3.14159
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Button4/Lock4"]
 tile_map_data = PackedByteArray("AAD9/wEAAAANAAQAAAD+/wEAAAAOAAQAAAD//wEAAAAPAAQAAAAAAAEAAAAPAAQAAAABAAEAAAAQAAQAAAACAAEAAAARAAQAAAA=")
 tile_set = SubResource("TileSet_eon6f")
+metadata/_edit_lock_ = true
 
 [node name="Lock" type="Sprite2D" parent="Button4/Lock4"]
 position = Vector2(-4.57764e-05, 24)
 scale = Vector2(0.014075, 0.014075)
 texture = ExtResource("11_ejisw")
+metadata/_edit_lock_ = true
 
 [node name="ButtonDead" parent="." instance=ExtResource("10_b7suj")]
 position = Vector2(420, 536)
 rotation = 3.14159
 scale = Vector2(2, 2)
+script = ExtResource("10_wh7kg")
+map = NodePath("Floor")
+metadata/_edit_lock_ = true
 
 [node name="Floor" type="TileMapLayer" parent="ButtonDead"]
 position = Vector2(209.999, 268.001)
@@ -3655,81 +3726,125 @@ metadata/_edit_lock_ = true
 
 [node name="ComboTrap1" type="Node2D" parent="."]
 position = Vector2(48, 224)
+metadata/_edit_lock_ = true
 
 [node name="Spike_Trap1" parent="ComboTrap1" instance=ExtResource("7_lck16")]
+metadata/_edit_lock_ = true
 
 [node name="Trap1" type="Area2D" parent="ComboTrap1"]
 position = Vector2(0, 40)
+script = ExtResource("11_ctkcn")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap1/Trap1"]
 position = Vector2(55, -59)
 shape = SubResource("RectangleShape2D_ejisw")
+metadata/_edit_lock_ = true
 
 [node name="ComboTrap2,3" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
 
 [node name="Shuriken1" parent="ComboTrap2,3" instance=ExtResource("10_8o3fb")]
-position = Vector2(24, 88)
+position = Vector2(-40, 88)
 scale = Vector2(2, 2)
+script = ExtResource("14_ob4cf")
+move_distance = 450.0
+speed_move = 90.0
+loop = false
+direction = Vector2(1, 0)
 metadata/_edit_lock_ = true
-
-[node name="Trap2" type="Area2D" parent="ComboTrap2,3/Shuriken1"]
-position = Vector2(80, -4)
-scale = Vector2(0.5, 0.5)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap2,3/Shuriken1/Trap2"]
-position = Vector2(21, 9)
-shape = SubResource("RectangleShape2D_aistd")
 
 [node name="Shuriken2" parent="ComboTrap2,3" instance=ExtResource("10_8o3fb")]
-position = Vector2(856, 88)
+position = Vector2(1032, 88)
 scale = Vector2(2, 2)
+script = ExtResource("14_ob4cf")
+move_distance = 900.0
+speed_move = 90.0
+loop = false
+direction = Vector2(-1, 0)
 metadata/_edit_lock_ = true
-
-[node name="Trap3" type="Area2D" parent="ComboTrap2,3/Shuriken2"]
-position = Vector2(-108, 0)
-scale = Vector2(0.5, 0.5)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap2,3/Shuriken2/Trap3"]
-position = Vector2(120, -3)
-shape = SubResource("RectangleShape2D_ctkcn")
 
 [node name="Spike1" parent="ComboTrap2,3" instance=ExtResource("7_lck16")]
 position = Vector2(328, 144)
+metadata/_edit_lock_ = true
 
 [node name="Spike2" parent="ComboTrap2,3" instance=ExtResource("7_lck16")]
 position = Vector2(536, 144)
+metadata/_edit_lock_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="ComboTrap2,3"]
 tile_map_data = PackedByteArray("AAAZAAkAAAAJAAgAAAAZAAoAAAAJAAkAAAAaAAkAAAAJAAgAAAAaAAoAAAAJAAkAAAAbAAkAAAAJAAgAAAAbAAoAAAAJAAkAAAAcAAkAAAAJAAgAAAAcAAoAAAAJAAkAAAA=")
 tile_set = SubResource("TileSet_ob4cf")
+metadata/_edit_lock_ = true
+
+[node name="Trap2" type="Area2D" parent="ComboTrap2,3"]
+position = Vector2(184, 80)
+script = ExtResource("15_1avii")
+Trap = NodePath("../Shuriken1")
+Spike1 = NodePath("../Spike1")
+Spike2 = NodePath("../Spike2")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap2,3/Trap2"]
+position = Vector2(-18, 9)
+shape = SubResource("RectangleShape2D_aistd")
+metadata/_edit_lock_ = true
+
+[node name="Trap3" type="Area2D" parent="ComboTrap2,3"]
+position = Vector2(824, 88)
+script = ExtResource("16_p0wg5")
+Trap = NodePath("../Shuriken2")
+Map = NodePath("../TileMapLayer")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap2,3/Trap3"]
+position = Vector2(120, -3)
+shape = SubResource("RectangleShape2D_ctkcn")
+metadata/_edit_lock_ = true
 
 [node name="ComboTrap4" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="ComboTrap4"]
+position = Vector2(0, -14)
+script = ExtResource("17_rfqhc")
+move_distance = 200.0
+speed_move = 400.0
+direction = Vector2(0, 1)
+metadata/_edit_lock_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="ComboTrap4/StaticBody2D"]
 tile_map_data = PackedByteArray("AABFAAEAAAAMAAkAAABEAAEAAAAMAAkAAABDAAEAAAAMAAkAAABFAAAAAAAGAAUAAABEAAAAAAAGAAUAAABDAAAAAAAGAAUAAAA=")
 tile_set = SubResource("TileSet_1avii")
+metadata/_edit_lock_ = true
 
 [node name="Spike" parent="ComboTrap4/StaticBody2D" instance=ExtResource("7_lck16")]
 position = Vector2(1096, 35)
 rotation = -3.14159
 scale = Vector2(0.75, 1)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap4/StaticBody2D"]
 position = Vector2(1096, 16)
 shape = SubResource("RectangleShape2D_p0wg5")
+metadata/_edit_lock_ = true
 
 [node name="Trap4" type="Area2D" parent="ComboTrap4"]
 position = Vector2(1136, 272)
+script = ExtResource("18_oeyta")
+Trap = NodePath("../StaticBody2D")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap4/Trap4"]
+position = Vector2(-40, 96)
+shape = SubResource("RectangleShape2D_ygmnw")
+metadata/_edit_lock_ = true
 
 [node name="ComboTrap5" type="Node2D" parent="."]
 position = Vector2(688, 240)
 rotation = -1.5708
 scale = Vector2(1, 1.6)
+metadata/_edit_lock_ = true
 
 [node name="Spear1_Trap5" parent="ComboTrap5" instance=ExtResource("12_aistd")]
 
@@ -3737,86 +3852,133 @@ scale = Vector2(1, 1.6)
 position = Vector2(48, 15)
 rotation = 1.5708
 scale = Vector2(0.625, 1)
+script = ExtResource("20_68dnq")
+Trap = NodePath("../Spear1_Trap5")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap5/Trap5"]
 position = Vector2(24, 8)
 shape = SubResource("RectangleShape2D_1avii")
+metadata/_edit_lock_ = true
 
 [node name="ComboTrap6" type="Node2D" parent="."]
 position = Vector2(480, 304)
+metadata/_edit_lock_ = true
 
 [node name="Spike1_Trap6" parent="ComboTrap6" instance=ExtResource("7_lck16")]
+scale = Vector2(0.2, 2)
+metadata/_edit_lock_ = true
 
 [node name="Trap6" type="Area2D" parent="ComboTrap6"]
 position = Vector2(-32, -16)
+script = ExtResource("21_wdtcm")
+Trap = NodePath("../Spike1_Trap6")
+Area = NodePath("../Affter")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap6/Trap6"]
-position = Vector2(-5, -4)
+position = Vector2(-24, -8)
 shape = SubResource("RectangleShape2D_rfqhc")
+metadata/_edit_lock_ = true
 
 [node name="Affter" type="Area2D" parent="ComboTrap6"]
+script = ExtResource("22_k5ipr")
+Trap = NodePath("../Spike1_Trap6")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap6/Affter"]
-position = Vector2(0, -30.5)
+position = Vector2(8, -32)
 shape = SubResource("RectangleShape2D_oeyta")
+metadata/_edit_lock_ = true
 
 [node name="ComboTrap7" type="Node2D" parent="."]
 position = Vector2(960, 392)
 rotation = 1.5708
+metadata/_edit_lock_ = true
 
 [node name="Spike_L" parent="ComboTrap7" instance=ExtResource("7_lck16")]
 scale = Vector2(1, 2)
+metadata/_edit_lock_ = true
 
 [node name="Spike_R" parent="ComboTrap7" instance=ExtResource("7_lck16")]
 position = Vector2(0, -80)
 rotation = -3.14159
 scale = Vector2(1, 2)
+metadata/_edit_lock_ = true
 
 [node name="Trap7" type="Area2D" parent="ComboTrap7"]
 position = Vector2(-8, -16)
 rotation = -1.5708
+script = ExtResource("23_302gt")
+TrapL = NodePath("../Spike_L")
+TrapR = NodePath("../Spike_R")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap7/Trap7"]
 position = Vector2(23, -32)
 shape = SubResource("RectangleShape2D_68dnq")
+metadata/_edit_lock_ = true
 
 [node name="ComboTrap8" type="Node2D" parent="."]
 position = Vector2(992, 592)
 scale = Vector2(1.5, 1)
+metadata/_edit_lock_ = true
 
 [node name="Spike2_Trap8" parent="ComboTrap8" instance=ExtResource("7_lck16")]
+metadata/_edit_lock_ = true
 
 [node name="Trap8" type="Area2D" parent="ComboTrap8"]
 position = Vector2(32, -48)
+script = ExtResource("24_eqxdb")
+Trap = NodePath("../Spike2_Trap8")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap8/Trap8"]
 position = Vector2(-32, 8)
 shape = SubResource("RectangleShape2D_wdtcm")
+metadata/_edit_lock_ = true
 
 [node name="ComboTrap9" type="Node2D" parent="."]
 position = Vector2(592, 472)
+metadata/_edit_lock_ = true
 
 [node name="Spear" parent="ComboTrap9" instance=ExtResource("12_aistd")]
+metadata/_edit_lock_ = true
 
 [node name="Trap9" type="Area2D" parent="ComboTrap9"]
 position = Vector2(24, -24)
+script = ExtResource("24_ygmnw")
+Trap = NodePath("../Spear")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap9/Trap9"]
 position = Vector2(-15, 24)
 shape = SubResource("RectangleShape2D_k5ipr")
+metadata/_edit_lock_ = true
 
 [node name="ComboTrap10" type="Node2D" parent="."]
 position = Vector2(528, 360)
+metadata/_edit_lock_ = true
 
 [node name="Trap10" type="Area2D" parent="ComboTrap10"]
+script = SubResource("GDScript_yeuku")
+Trap = NodePath("../Shuriken")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComboTrap10/Trap10"]
 position = Vector2(-12, 0)
 shape = SubResource("RectangleShape2D_302gt")
+metadata/_edit_lock_ = true
 
 [node name="Shuriken" parent="ComboTrap10" instance=ExtResource("10_8o3fb")]
 position = Vector2(120, 34)
 scale = Vector2(0.5, 0.5)
+script = ExtResource("27_yeuku")
+move_distance = 200.0
+speed_move = 90.0
+loop = true
+direction = Vector2(-1, 0)
+metadata/_edit_lock_ = true
 
 [node name="Pad" type="TileMap" parent="."]
 format = 2
@@ -3835,14 +3997,19 @@ metadata/_edit_lock_ = true
 [node name="Shuriken1" parent="." instance=ExtResource("10_8o3fb")]
 position = Vector2(321, 232)
 scale = Vector2(0.5, 0.5)
+script = ExtResource("14_eon6f")
+move_distance = 275.0
+speed_move = 50.0
+loop = true
+direction = Vector2(1, 0)
 
 [node name="Player" parent="." instance=ExtResource("14_ygmnw")]
-position = Vector2(144, 352)
+position = Vector2(136, 344)
 scale = Vector2(1.5, 1.5)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
 texture = SubResource("GradientTexture2D_8o3fb")
-texture_scale = 1.91
+texture_scale = 1.5
 metadata/_edit_lock_ = true
 
 [node name="MusicBackground" parent="." instance=ExtResource("16_wh7kg")]

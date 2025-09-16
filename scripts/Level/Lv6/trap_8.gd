@@ -18,5 +18,7 @@ func _on_body_entered(body: Node) -> void:
 		get_node(Trap).set_physics_process(true)
 		get_node(Trap).visible  = true
 		get_node(Trap).get_node("Area2D").monitoring = true
+		await get_tree().create_timer(2).timeout
+		get_node(Trap).queue_free()
 		queue_free()
 	
