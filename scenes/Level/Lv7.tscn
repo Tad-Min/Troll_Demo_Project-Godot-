@@ -17,9 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="16_rykfc"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="17_2vpdl"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="19_heubl"]
-[ext_resource type="PackedScene" path="res://scenes/Trap/hidden_jumper.tscn" id="21_xqnkm"]
+[ext_resource type="PackedScene" uid="uid://d8sfk2gyygn4" path="res://scenes/Trap/hidden_jumper.tscn" id="21_xqnkm"]
 [ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="22_cqj4n"]
-[ext_resource type="PackedScene" path="res://scenes/MusicBackground.tscn" id="23_f1njk"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="23_f1njk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
 texture = ExtResource("14_1mhdt")
@@ -1696,7 +1696,7 @@ metadata/_edit_group_ = true
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone" index="0"]
-position = Vector2(-343, -29)
+position = Vector2(-343, -36)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone" index="1"]
 position = Vector2(562, -4)
@@ -1705,7 +1705,7 @@ position = Vector2(562, -4)
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone3" index="0"]
-position = Vector2(-199, -29)
+position = Vector2(-199, -35)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone3" index="1"]
 position = Vector2(562, -4)
@@ -1714,7 +1714,7 @@ position = Vector2(562, -4)
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone2" index="0"]
-position = Vector2(-294, -29)
+position = Vector2(-294, -35)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone2" index="1"]
 position = Vector2(562, -91)
@@ -1723,7 +1723,7 @@ position = Vector2(562, -91)
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone4" index="0"]
-position = Vector2(-243, -29)
+position = Vector2(-243, -35)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone4" index="1"]
 position = Vector2(562, -91)
@@ -1732,7 +1732,7 @@ position = Vector2(562, -91)
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone5" index="0"]
-position = Vector2(-126, -29)
+position = Vector2(-126, -35)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone5" index="1"]
 position = Vector2(562, -4)
@@ -1741,7 +1741,7 @@ position = Vector2(562, -4)
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone6" index="0"]
-position = Vector2(18, -29)
+position = Vector2(18, -34)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone6" index="1"]
 position = Vector2(562, -4)
@@ -1750,7 +1750,7 @@ position = Vector2(562, -4)
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone7" index="0"]
-position = Vector2(-77, -29)
+position = Vector2(-77, -35)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone7" index="1"]
 position = Vector2(562, -91)
@@ -1759,7 +1759,7 @@ position = Vector2(562, -91)
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone8" index="0"]
-position = Vector2(-26, -29)
+position = Vector2(-26, -35)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone8" index="1"]
 position = Vector2(562, -91)
@@ -1768,7 +1768,7 @@ position = Vector2(562, -91)
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone9" index="0"]
-position = Vector2(114, -29)
+position = Vector2(114, -34)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone9" index="1"]
 position = Vector2(562, -4)
@@ -1777,7 +1777,7 @@ position = Vector2(562, -4)
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone10" index="0"]
-position = Vector2(258, -29)
+position = Vector2(258, -35)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone10" index="1"]
 position = Vector2(562, -4)
@@ -1786,7 +1786,7 @@ position = Vector2(562, -4)
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone11" index="0"]
-position = Vector2(163, -29)
+position = Vector2(163, -36)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone11" index="1"]
 position = Vector2(562, -91)
@@ -1795,7 +1795,7 @@ position = Vector2(562, -91)
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone12" index="0"]
-position = Vector2(214, -29)
+position = Vector2(214, -34)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone12" index="1"]
 position = Vector2(562, -91)
@@ -1804,7 +1804,7 @@ position = Vector2(562, -91)
 position = Vector2(664, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone13" index="0"]
-position = Vector2(163, -29)
+position = Vector2(163, -35)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone13" index="1"]
 position = Vector2(562, -91)
@@ -1813,7 +1813,7 @@ position = Vector2(562, -91)
 position = Vector2(664, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone14" index="0"]
-position = Vector2(214, -29)
+position = Vector2(214, -35)
 
 [node name="RightSpawner" parent="DodgeTraps/Trapzone14" index="1"]
 position = Vector2(562, -91)

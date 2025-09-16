@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="11_wbeki"]
 [ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="12_mq66r"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="13_ubacb"]
-[ext_resource type="PackedScene" path="res://scenes/MusicBackground.tscn" id="15_xmj81"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="15_xmj81"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jteh"]
 texture = ExtResource("7_t7e6a")
