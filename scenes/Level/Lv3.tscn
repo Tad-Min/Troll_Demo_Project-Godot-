@@ -2754,8 +2754,8 @@ script = ExtResource("10_prk1d")
 position = Vector2(1088, 384)
 rotation = -3.14159
 scale = Vector2(1.98156, -2.09472)
-next_level_path = "res://scenes/Level/Lv3.tscn"
-stage_to_unlock = 2
+next_level_path = "res://scenes/Level/Lv4.tscn"
+stage_to_unlock = 3
 
 [node name="Drop_1" type="StaticBody2D" parent="."]
 position = Vector2(120, 56)

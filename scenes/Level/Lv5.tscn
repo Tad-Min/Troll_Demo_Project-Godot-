@@ -4269,3 +4269,5 @@ scale = Vector2(1.5, 1.5)
 [node name="Portal" parent="." instance=ExtResource("10_b5mx3")]
 position = Vector2(964, 56)
 scale = Vector2(-1.5, 1.5)
+next_level_path = "res://scenes/Level/Lv6.tscn"
+stage_to_unlock = 5

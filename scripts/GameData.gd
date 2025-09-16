@@ -12,7 +12,7 @@ var current_level_index: int = 0
 var next_level_path: String = ""
 
 # Default: unlock lv1
-var unlocked_stages: Array = [true, false, false]
+var unlocked_stages: Array = [true, false, false, false, false, false, false, false, false, false]
 
 # Unlock stage base on index
 func unlock_stage(stage_index: int) -> void:
@@ -41,4 +41,4 @@ func load_progress() -> void:
 			unlocked_stages = data["unlocked"]
 	else:
 		# If file save not found
-		unlocked_stages = [true, false, false]
+		unlocked_stages = [true, false, false, false, false, false, false, false, false, false]
