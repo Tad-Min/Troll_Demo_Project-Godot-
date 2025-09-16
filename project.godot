@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="Troll_Demo"
-run/main_scene="uid://mlem4f31wu2r"
+run/main_scene="uid://dr18coxufyuep"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
 
 [autoload]
 
