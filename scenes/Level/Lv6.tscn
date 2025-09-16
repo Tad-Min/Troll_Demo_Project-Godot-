@@ -3729,7 +3729,7 @@ position = Vector2(48, 224)
 metadata/_edit_lock_ = true
 
 [node name="Spike_Trap1" parent="ComboTrap1" instance=ExtResource("7_lck16")]
-metadata/_edit_lock_ = true
+position = Vector2(-1, 4)
 
 [node name="Trap1" type="Area2D" parent="ComboTrap1"]
 position = Vector2(0, 40)
@@ -4004,7 +4004,7 @@ loop = true
 direction = Vector2(1, 0)
 
 [node name="Player" parent="." instance=ExtResource("14_ygmnw")]
-position = Vector2(136, 344)
+position = Vector2(144, 344)
 scale = Vector2(1.5, 1.5)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
