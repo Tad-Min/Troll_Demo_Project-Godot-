@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://blnjmna71025t"]
 
-[ext_resource type="Script" uid="uid://bqud0bqb2dq15" path="res://scenes/select_level.gd" id="1_adu0t"]
+[ext_resource type="Script" uid="uid://bqud0bqb2dq15" path="res://scripts/select_level.gd" id="1_adu0t"]
 [ext_resource type="Texture2D" uid="uid://6rflweclk7du" path="res://Jungle Asset Pack/parallax background/saddle-brown-color-solid-background-1920x1080.png" id="2_jjqxc"]
 [ext_resource type="Texture2D" uid="uid://b6y5vkou3j877" path="res://Jungle Asset Pack/parallax background/Lv1.png" id="3_uo0xe"]
 [ext_resource type="Texture2D" uid="uid://dwdnu5osgy8ne" path="res://Jungle Asset Pack/parallax background/Lv2.png" id="4_vp03w"]

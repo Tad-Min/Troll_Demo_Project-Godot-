@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="10_780e2"]
 [ext_resource type="PackedScene" uid="uid://bxp61qk2u4v2e" path="res://scenes/Trap/HiddenSpike.tscn" id="11_s4tf2"]
 [ext_resource type="PackedScene" uid="uid://dnhhenxrpugyn" path="res://scenes/Trap/Portal/FPortal1.tscn" id="12_i24th"]
-[ext_resource type="Script" path="res://scripts/portmanage.gd" id="13_01fw5"]
+[ext_resource type="Script" uid="uid://ytpbsyii5x3b" path="res://scripts/portmanage.gd" id="13_01fw5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i24th"]
 texture = ExtResource("1_1vld2")

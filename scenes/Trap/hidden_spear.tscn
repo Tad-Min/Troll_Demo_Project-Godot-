@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://blxb0o4p0ex0b"]
+
+[ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="1_ujrba"]
+[ext_resource type="Script" uid="uid://b7ynttut3q54g" path="res://scripts/Level/LV3/trigger_1-6.gd" id="2_n83p5"]
+[ext_resource type="Script" uid="uid://xekxvdf482f5" path="res://scripts/Level/LV3/spear_trigger_1.gd" id="2_wmmnb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmmnb"]
+size = Vector2(29.5, 93)
+
+[node name="HiddenSpear" type="Node2D"]
+
+[node name="Spear" parent="." instance=ExtResource("1_ujrba")]
+script = ExtResource("2_wmmnb")
+
+[node name="Trigger_1" type="Area2D" parent="."]
+position = Vector2(112, 368)
+script = ExtResource("2_n83p5")
+trap_node = NodePath("../Spear")
+metadata/_edit_lock_ = true
+
+[node name="Touch_1" type="CollisionShape2D" parent="Trigger_1"]
+position = Vector2(-116.25, -383)
+shape = SubResource("RectangleShape2D_wmmnb")
