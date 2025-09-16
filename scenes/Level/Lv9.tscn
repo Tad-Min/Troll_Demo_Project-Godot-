@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://dwtkrv5f85c6n"]
+[gd_scene load_steps=21 format=4 uid="uid://dwtkrv5f85c6n"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_qqljh"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_6ghfu"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bxp61qk2u4v2e" path="res://scenes/Trap/HiddenSpike.tscn" id="13_qqljh"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="13_ydrgs"]
 [ext_resource type="PackedScene" uid="uid://d8sfk2gyygn4" path="res://scenes/Trap/hidden_jumper.tscn" id="14_6ghfu"]
+[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="16_hgotg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p8at8"]
 texture = ExtResource("6_ctp4x")
@@ -1022,6 +1023,8 @@ rotation = 3.14159
 scale = Vector2(2.01603, -2.0561)
 next_level_path = "res://scenes/Level/Lv10.tscn"
 stage_to_unlock = 1
+
+[node name="Pause" parent="." instance=ExtResource("16_hgotg")]
 
 [editable path="Jumper3/Trapzone"]
 [editable path="Jumper3/Trapzone2"]

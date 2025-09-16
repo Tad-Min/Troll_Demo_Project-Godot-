@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://cgli08wsvmvi0"]
+[gd_scene load_steps=57 format=4 uid="uid://cgli08wsvmvi0"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_uxs65"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_obagd"]
@@ -29,6 +29,7 @@
 [ext_resource type="Script" uid="uid://dwem457v8e7s2" path="res://scripts/Level/Lv4/trap_10.gd" id="21_78xed"]
 [ext_resource type="Script" uid="uid://00e4m2q8aj1f" path="res://scripts/Level/Button_toUnlockDoor.tres.gd" id="23_eev68"]
 [ext_resource type="Script" uid="uid://dhjasgc7gd1de" path="res://scripts/Level/Lv4/trap_8.gd" id="23_xtdpl"]
+[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="30_dg2hs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_78xed"]
 size = Vector2(943.125, 10.5)
@@ -2917,6 +2918,8 @@ position = Vector2(56, 464)
 scale = Vector2(1.5, 1.5)
 
 [node name="MusicBackground" parent="." instance=ExtResource("16_bq8uq")]
+
+[node name="Pause" parent="." instance=ExtResource("30_dg2hs")]
 
 [editable path="Trapzone1"]
 [editable path="Trapzone2"]

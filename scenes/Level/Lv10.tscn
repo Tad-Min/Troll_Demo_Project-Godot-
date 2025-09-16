@@ -2886,7 +2886,6 @@ text = "LV 10"
 [node name="MusicBackground" parent="." instance=ExtResource("15_xmj81")]
 
 [node name="Pause" parent="." instance=ExtResource("12_mq66r")]
-visible = false
 
 [node name="Drop_1" type="StaticBody2D" parent="."]
 position = Vector2(189, 84)
