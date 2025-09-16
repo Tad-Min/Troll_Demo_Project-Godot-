@@ -2820,6 +2820,8 @@ metadata/_edit_lock_ = true
 position = Vector2(48, 96)
 rotation = 3.14159
 scale = Vector2(1, -1)
+next_level_path = "res://scenes/Level/Lv5.tscn"
+stage_to_unlock = 4
 metadata/_edit_lock_ = true
 
 [node name="Lock" type="Node2D" parent="Portal"]
