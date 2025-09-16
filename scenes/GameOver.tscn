@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://1bof6obh3yvu"]
 
-[ext_resource type="Script" uid="uid://5maxewdhu0r" path="res://scenes/GameOver.gd" id="1_6bcno"]
+[ext_resource type="Script" uid="uid://5maxewdhu0r" path="res://scripts/GameOver.gd" id="1_6bcno"]
 [ext_resource type="Texture2D" uid="uid://btk83wkub78j5" path="res://Jungle Asset Pack/parallax background/cranfield-traditional-etching-ink-mid-black-400x221.jpg" id="1_vuicl"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://Jungle Asset Pack/Pixeled.ttf" id="3_4noiy"]
 [ext_resource type="AudioStream" uid="uid://o35vrtv5r07q" path="res://assets/titanic-flute-music-1736313719587.mp3" id="4_4noiy"]
@@ -60,11 +60,13 @@ vertical_alignment = 1
 
 [node name="DeathLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 435.0
-offset_top = 200.0
-offset_right = 547.0
-offset_bottom = 314.0
-theme_override_colors/font_color = Color(0.815686, 0.109804, 0.203922, 1)
+offset_left = 367.0
+offset_top = 215.0
+offset_right = 772.0
+offset_bottom = 264.0
+theme_override_colors/font_color = Color(0, 1, 0.203922, 1)
+theme_override_font_sizes/font_size = 35
+text = "Pro tip: Not dying helps."
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4noiy")

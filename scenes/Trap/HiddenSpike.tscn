@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://b7ynttut3q54g" path="res://scripts/Level/LV3/trigger_1-6.gd" id="3_dky80"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uv04w"]
-size = Vector2(44, 8)
+size = Vector2(50.7837, 19.5857)
 
 [node name="HiddenSpike" type="Node2D"]
 
@@ -18,4 +18,5 @@ script = ExtResource("3_dky80")
 trap_node = NodePath("../spike1")
 
 [node name="Touch_2" type="CollisionShape2D" parent="Trigger_2"]
+position = Vector2(-0.391846, -19)
 shape = SubResource("RectangleShape2D_uv04w")

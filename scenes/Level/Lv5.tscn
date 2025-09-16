@@ -31,7 +31,7 @@
 [ext_resource type="Script" uid="uid://bgqgmvv1fxgyi" path="res://scripts/Level/Lv5/Trap_9.gd" id="23_xmyog"]
 [ext_resource type="Script" uid="uid://cstwlbm4cl8f8" path="res://scripts/Level/Lv5/Trap_10.gd" id="25_aqdf8"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atyod"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sskub"]
 texture = ExtResource("7_gyue2")
 19:1/0 = 0
 21:1/0 = 0
@@ -373,7 +373,7 @@ texture = ExtResource("7_gyue2")
 38:20/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_b5mx3"]
-sources/0 = SubResource("TileSetAtlasSource_atyod")
+sources/0 = SubResource("TileSetAtlasSource_sskub")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xmyog"]
 size = Vector2(8, 48)
@@ -1434,7 +1434,7 @@ sources/0 = SubResource("TileSetAtlasSource_0dri2")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ysdfc"]
 size = Vector2(160, 128)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gyue2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqdf8"]
 texture = ExtResource("7_gyue2")
 19:1/0 = 0
 19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -2115,7 +2115,7 @@ texture = ExtResource("7_gyue2")
 
 [sub_resource type="TileSet" id="TileSet_0dri2"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_gyue2")
+sources/0 = SubResource("TileSetAtlasSource_aqdf8")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwm4m"]
 size = Vector2(296, 56)
