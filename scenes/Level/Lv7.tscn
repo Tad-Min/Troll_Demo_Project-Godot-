@@ -1837,6 +1837,9 @@ position = Vector2(1002, 506)
 
 [node name="Pause2" parent="." instance=ExtResource("22_cqj4n")]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1153, 323)
+
 [editable path="DodgeTraps/Trapzone"]
 [editable path="DodgeTraps/Trapzone3"]
 [editable path="DodgeTraps/Trapzone2"]

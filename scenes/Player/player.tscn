@@ -264,4 +264,11 @@ theme_override_styles/background = SubResource("StyleBoxEmpty_a06cl")
 theme_override_styles/fill = SubResource("StyleBoxEmpty_dl1wr")
 script = ExtResource("8_dl1wr")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.5, 2.5)
+limit_left = 0
+limit_top = 0
+limit_right = 1153
+limit_bottom = 649
+
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

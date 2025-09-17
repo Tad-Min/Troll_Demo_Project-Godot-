@@ -2921,6 +2921,9 @@ scale = Vector2(1.5, 1.5)
 
 [node name="Pause" parent="." instance=ExtResource("30_dg2hs")]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1153, 323)
+
 [editable path="Trapzone1"]
 [editable path="Trapzone2"]
 [editable path="Trapzone3"]

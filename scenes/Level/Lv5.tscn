@@ -4281,3 +4281,6 @@ next_level_path = "res://scenes/Level/Lv6.tscn"
 stage_to_unlock = 5
 
 [node name="Pause" parent="." instance=ExtResource("31_ipiet")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1153, 323)

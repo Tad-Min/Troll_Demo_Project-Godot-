@@ -1026,6 +1026,9 @@ stage_to_unlock = 1
 
 [node name="Pause" parent="." instance=ExtResource("16_hgotg")]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1153, 323)
+
 [editable path="Jumper3/Trapzone"]
 [editable path="Jumper3/Trapzone2"]
 [editable path="Jumper3/Trapzone3"]

@@ -1520,4 +1520,7 @@ scale = Vector2(1.24656, 1.13822)
 
 [node name="MusicBackground" parent="." instance=ExtResource("15_8r58q")]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1153, 323)
+
 [editable path="Trapzone"]

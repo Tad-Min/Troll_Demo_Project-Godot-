@@ -4038,3 +4038,6 @@ position = Vector2(1110, 424)
 position = Vector2(1016, 488)
 
 [node name="Pause" parent="." instance=ExtResource("33_c33wk")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1153, 323)

@@ -965,6 +965,9 @@ script = ExtResource("13_01fw5")
 
 [node name="Pause" parent="." instance=ExtResource("14_pxsjd")]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1153, 323)
+
 [editable path="HiddenSpike"]
 [editable path="HiddenSpike2"]
 [editable path="Trapzone"]
