@@ -6,7 +6,7 @@ signal died
 @export var jump_velocity: float = -400.0
 var min_jc = 0.75
 var max_jc = 1.25
-var jump_charge = 0.75
+var jump_charge = min_jc
 const GRAVITY : int = 4200
 var is_on_jumper : bool = false
 var last_direction = 0
@@ -79,7 +79,10 @@ func _physics_process(delta: float) -> void:
 	last_direction=direction
 
 	if direction:
-		velocity.x = direction * speed
+		if jump_charge == min_jc:
+			velocity.x = direction * speed
+		else:
+			velocity.x = direction * speed * 0.25
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
