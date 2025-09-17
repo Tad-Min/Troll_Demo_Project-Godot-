@@ -1656,6 +1656,10 @@ position = Vector2(676, 305)
 [node name="MusicBackground" parent="." instance=ExtResource("16_ychvn")]
 
 [node name="Pause" parent="." instance=ExtResource("17_4o0sl")]
+offset_left = -5.0
+offset_top = 96.0
+offset_right = -5.0
+offset_bottom = 96.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1153, 323)

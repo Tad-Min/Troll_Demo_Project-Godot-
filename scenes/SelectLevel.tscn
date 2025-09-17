@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://blnjmna71025t"]
+[gd_scene load_steps=27 format=3 uid="uid://blnjmna71025t"]
 
 [ext_resource type="Script" uid="uid://bqud0bqb2dq15" path="res://scripts/select_level.gd" id="1_adu0t"]
 [ext_resource type="Texture2D" uid="uid://6rflweclk7du" path="res://Jungle Asset Pack/parallax background/saddle-brown-color-solid-background-1920x1080.png" id="2_jjqxc"]
@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://btfe8eoe6ivjt" path="res://Jungle Asset Pack/parallax background/Lv6.png" id="8_ibsxg"]
 [ext_resource type="Texture2D" uid="uid://b2w8r71c3dg5" path="res://Jungle Asset Pack/parallax background/Lv7.png" id="9_xlyyc"]
 [ext_resource type="Texture2D" uid="uid://bkm8ls5d1j2gq" path="res://Jungle Asset Pack/parallax background/Lv10.png" id="10_i1c1a"]
+[ext_resource type="Texture2D" uid="uid://ci1w865vhjd4h" path="res://Jungle Asset Pack/parallax background/Lv8.png" id="11_xlyyc"]
+[ext_resource type="Texture2D" uid="uid://xovk1ahe08aq" path="res://Jungle Asset Pack/parallax background/Lv9.png" id="12_iw11j"]
+[ext_resource type="Texture2D" uid="uid://0dfcqssi1j8w" path="res://Jungle Asset Pack/parallax background/Lv11.png" id="13_iw11j"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1c1a"]
 texture = ExtResource("2_jjqxc")
@@ -42,9 +45,28 @@ modulate_color = Color(0.252028, 0.252028, 0.252028, 1)
 texture = ExtResource("9_xlyyc")
 modulate_color = Color(0.281187, 0.281187, 0.281187, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_85wt0"]
+texture = ExtResource("11_xlyyc")
+modulate_color = Color(0.306923, 0.306923, 0.306923, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rtkmm"]
+texture = ExtResource("12_iw11j")
+modulate_color = Color(0.277528, 0.277528, 0.277528, 1)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8gyec"]
 texture = ExtResource("10_i1c1a")
 modulate_color = Color(0.244776, 0.244776, 0.244776, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8p21l"]
+texture = ExtResource("13_iw11j")
+modulate_color = Color(0.230315, 0.230315, 0.230315, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iw11j"]
+bg_color = Color(0.894922, 0.894922, 0.894922, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3
@@ -64,10 +86,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -16.0
-offset_top = 1.0
-offset_right = -16.0
-offset_bottom = 1.0
+offset_left = -17.0
+offset_top = 5.0
+offset_right = -17.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_i1c1a")
@@ -118,10 +140,10 @@ text = "LEVEL 4
 
 [node name="btnlv5" type="Button" parent="."]
 layout_mode = 0
-offset_left = 381.0
-offset_top = 184.0
-offset_right = 726.0
-offset_bottom = 330.0
+offset_left = 380.0
+offset_top = 167.0
+offset_right = 725.0
+offset_bottom = 313.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_f3alr")
 text = "LEVEL 5
@@ -129,10 +151,10 @@ text = "LEVEL 5
 
 [node name="btnlv6" type="Button" parent="."]
 layout_mode = 0
-offset_left = 791.0
-offset_top = 185.0
-offset_right = 1133.0
-offset_bottom = 333.0
+offset_left = 788.0
+offset_top = 173.0
+offset_right = 1130.0
+offset_bottom = 321.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_1b177")
 text = "LEVEL 6
@@ -140,22 +162,66 @@ text = "LEVEL 6
 
 [node name="btnlv7" type="Button" parent="."]
 layout_mode = 0
-offset_left = -18.0
-offset_top = 365.0
-offset_right = 331.0
-offset_bottom = 511.0
+offset_left = -19.0
+offset_top = 345.0
+offset_right = 330.0
+offset_bottom = 491.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_ckuqx")
 text = "LEVEL 7
 "
 
+[node name="btnlv8" type="Button" parent="."]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 346.0
+offset_right = 731.0
+offset_bottom = 498.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_85wt0")
+text = "LEVEL 8
+"
+
+[node name="btnlv9" type="Button" parent="."]
+layout_mode = 0
+offset_left = 788.0
+offset_top = 349.0
+offset_right = 1138.0
+offset_bottom = 498.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_rtkmm")
+text = "LEVEL 9
+"
+
 [node name="btnlv10" type="Button" parent="."]
 layout_mode = 0
-offset_left = 373.0
-offset_top = 537.0
-offset_right = 718.0
-offset_bottom = 648.0
+offset_left = -16.0
+offset_top = 520.0
+offset_right = 340.0
+offset_bottom = 660.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_8gyec")
 text = "LEVEL 10
 "
+
+[node name="btnlv11" type="Button" parent="."]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 521.0
+offset_right = 738.0
+offset_bottom = 662.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_8p21l")
+text = "LEVEL 11
+"
+
+[node name="btnNext" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1045.0
+offset_top = 300.0
+offset_right = 1133.0
+offset_bottom = 379.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_iw11j")
+text = "->"

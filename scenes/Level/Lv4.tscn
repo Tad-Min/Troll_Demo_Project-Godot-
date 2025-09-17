@@ -2920,6 +2920,10 @@ scale = Vector2(1.5, 1.5)
 [node name="MusicBackground" parent="." instance=ExtResource("16_bq8uq")]
 
 [node name="Pause" parent="." instance=ExtResource("30_dg2hs")]
+offset_left = 0.0
+offset_top = 337.0
+offset_right = 0.0
+offset_bottom = 337.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1153, 323)

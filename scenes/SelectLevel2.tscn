@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqji2w44moiqg"]
+
+[ext_resource type="Texture2D" uid="uid://6rflweclk7du" path="res://Jungle Asset Pack/parallax background/saddle-brown-color-solid-background-1920x1080.png" id="2_sn6pr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x6o1n"]
+texture = ExtResource("2_sn6pr")
+
+[node name="SelectLevel2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_x6o1n")
