@@ -15,6 +15,12 @@ func _ready():
 	restart_button.pressed.connect(_on_restart_pressed)
 	menu_button.pressed.connect(_on_menu_pressed)
 
+# 👇 Public method you can call from other scripts
+func open_pause_menu():
+	get_tree().paused = true
+	pause_panel.visible = true
+	pause_button.disabled = true
+
 func _on_pause_pressed():
 	get_tree().paused = true
 	pause_panel.visible = true

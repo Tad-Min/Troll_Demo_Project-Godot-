@@ -17,10 +17,14 @@ const MAX_AIR_JUMPS = 1   # only 1 allowed in air
 var air_jump_done = 0
 
 
+var stopmove: bool = false;
+
+
 func _physics_process(delta: float) -> void:
 	if is_dead:
 		$CollisionShape2D.disabled = true
 		air_jump_done = MAX_AIR_JUMPS
+	
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -45,7 +49,7 @@ func _physics_process(delta: float) -> void:
 				if jump_charge<max_jc:
 					jump_charge += 0.02
 					
-	if not is_on_jumper and Input.is_action_just_pressed("jump") and not is_on_floor() and air_jump_done==0:
+	if not stopmove and not is_on_jumper and Input.is_action_just_pressed("jump") and not is_on_floor() and air_jump_done==0:
 		velocity.y = jump_velocity
 		air_jump_done+=1
 		$JumpSound.play()
@@ -62,12 +66,12 @@ func _physics_process(delta: float) -> void:
 	if position.y > 900:
 		emit_signal("died")
 
-
-
+	if is_on_jumper:
+		stop_move_1_sec()
 
 	# Handle movement A-D
 	var direction := Input.get_axis("move_left", "move_right")
-	if(is_dead): 
+	if is_dead or stopmove: 
 		direction=0
 	if last_direction != direction and lr_anim:
 		if direction == -1:
@@ -78,7 +82,9 @@ func _physics_process(delta: float) -> void:
 			$AnimatedSprite2D.play("idle")	
 	last_direction=direction
 
-	if direction:
+	#disable movement for an instant if on jumper
+
+	if direction and !stopmove:
 		if jump_charge == min_jc:
 			velocity.x = direction * speed
 		else:
@@ -116,3 +122,8 @@ func die() -> bool:
 	$DeathSound.play()
 	print("Player died")
 	return true
+
+func stop_move_1_sec() -> void:
+	stopmove = true
+	await get_tree().create_timer(0.3).timeout
+	stopmove = false
