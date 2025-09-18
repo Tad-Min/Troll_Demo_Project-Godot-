@@ -3,6 +3,7 @@ extends Area2D
 @export var player_message: RichTextLabel
 @export var pause: Control
 @export var portal_scene: PackedScene = preload("res://scenes/portal.tscn")
+@export var spike_scene: PackedScene = preload("res://scenes/Trap/spike.tscn")
 @export var player : Node2D
 
 var timer = 0
@@ -55,6 +56,9 @@ func _on_body_entered(body: Node):
 	if timer == 110:
 		player_message.text ="Nahhh just kidding."
 		
+	if timer >120:
+		_spawn_spike(player)
+		
 	
 
 func _spawn_portal(player: Node2D):
@@ -73,4 +77,9 @@ func _spawn_portal(player: Node2D):
 		var offset = Vector2(cos(angle), sin(angle)) * dist
 		portal_instance.scale = Vector2(0.7, 0.7)
 		portal_instance.global_position = player.global_position + offset
+
+func _spawn_spike(player: Node2D):
+	if spike_scene:
+		var spike_instance = spike_scene.instantiate()
+		spike_instance.global_position = player.global_position
 		

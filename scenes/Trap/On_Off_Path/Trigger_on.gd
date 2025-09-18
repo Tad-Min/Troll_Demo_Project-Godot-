@@ -6,9 +6,6 @@ extends Area2D
 func _ready() -> void:
 	connect("body_entered", Callable(self, "_on_body_entered"))
 	var path = get_node(path_node)
-	if path is TileMapLayer:
-		path.collision_enabled = default
-		path.visible = default
 	if path is Area2D:
 		path.monitoring = default
 		path.monitorable = default
@@ -16,7 +13,6 @@ func _ready() -> void:
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("Player"):
 		var path = get_node(path_node)
-		print("collided")
 		if path is TileMapLayer:
 			path.collision_enabled = true
 			path.visible = true
