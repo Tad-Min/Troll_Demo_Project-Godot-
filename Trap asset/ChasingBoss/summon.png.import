@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi1b6ujka475v"
-path="res://.godot/imported/Wood.png-1fb504ba2de6995c737322b4836a9139.ctex"
+uid="uid://d30ui5wgtxjib"
+path="res://.godot/imported/summon.png-c77feba6103f2f48e26541d75032b4b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Trap asset/Wood.png"
-dest_files=["res://.godot/imported/Wood.png-1fb504ba2de6995c737322b4836a9139.ctex"]
+source_file="res://Trap asset/ChasingBoss/summon.png"
+dest_files=["res://.godot/imported/summon.png-c77feba6103f2f48e26541d75032b4b7.ctex"]
 
 [params]
 
