@@ -15,3 +15,4 @@ shuriken_scene = ExtResource("2_1jf2o")
 shape = SubResource("RectangleShape2D_1jf2o")
 
 [node name="RightSpawner" type="Marker2D" parent="."]
+position = Vector2(104, 1)
