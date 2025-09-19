@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://vkdc4x8qsa10"]
+[gd_scene load_steps=63 format=4 uid="uid://vkdc4x8qsa10"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_kwm4m"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_0vflr"]
@@ -30,7 +30,6 @@
 [ext_resource type="Script" uid="uid://cu5i52m48i6sg" path="res://scripts/Level/Lv5/shuriken_Trap9.gd" id="23_sskub"]
 [ext_resource type="Script" uid="uid://bgqgmvv1fxgyi" path="res://scripts/Level/Lv5/Trap_9.gd" id="23_xmyog"]
 [ext_resource type="Script" uid="uid://cstwlbm4cl8f8" path="res://scripts/Level/Lv5/Trap_10.gd" id="25_aqdf8"]
-[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="31_ipiet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sskub"]
 texture = ExtResource("7_gyue2")
@@ -4279,12 +4278,6 @@ position = Vector2(964, 56)
 scale = Vector2(-1.5, 1.5)
 next_level_path = "res://scenes/Level/Lv6.tscn"
 stage_to_unlock = 5
-
-[node name="Pause" parent="." instance=ExtResource("31_ipiet")]
-offset_left = -1.0
-offset_top = 349.0
-offset_right = -1.0
-offset_bottom = 349.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1153, 323)

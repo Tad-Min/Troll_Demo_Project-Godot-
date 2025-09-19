@@ -10,7 +10,9 @@ extends Control
 @onready var btn_lv9: Button = $btnlv9
 @onready var btn_lv10: Button = $btnlv10
 @onready var btn_lv11: Button = $btnlv11
+@onready var btn_lv12: Button = $btnlv12
 @onready var btn_next: Button = $btnNext
+
 
 func _ready():
 	btn_lv1.pressed.connect(_on_btn_lv1_pressed)
@@ -24,7 +26,9 @@ func _ready():
 	btn_lv9.pressed.connect(_on_btn_lv9_pressed)
 	btn_lv10.pressed.connect(_on_btn_lv10_pressed)
 	btn_lv11.pressed.connect(_on_btn_lv11_pressed)
+	btn_lv12.pressed.connect(_on_btn_lv12_pressed)
 	btn_next.pressed.connect(_on_btn_next_pressed)
+
 func _on_btn_lv1_pressed():
 	get_tree().change_scene_to_file("res://scenes/Level/Lv1.tscn")
 
@@ -58,5 +62,9 @@ func _on_btn_lv10_pressed():
 func _on_btn_lv11_pressed():
 	get_tree().change_scene_to_file("res://scenes/Level/Lv11.tscn")
 	
+func _on_btn_lv12_pressed():
+	get_tree().change_scene_to_file("res://scenes/Level/Lv12.tscn")
+	
 func _on_btn_next_pressed():
 	get_tree().change_scene_to_file("res://scenes/SelectLevel2.tscn")
+	

@@ -2966,11 +2966,5 @@ visible = false
 
 [node name="MusicBackground" parent="." instance=ExtResource("23_tyqfo")]
 
-[node name="Pause2" parent="." instance=ExtResource("9_kp1uq")]
-offset_left = -5.0
-offset_top = 282.0
-offset_right = -5.0
-offset_bottom = 282.0
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1153, 323)

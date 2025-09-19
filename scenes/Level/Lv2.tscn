@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bdyykv77g4ky6"]
+[gd_scene load_steps=23 format=4 uid="uid://bdyykv77g4ky6"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_7e7dt"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="1_dugty"]
@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="14_va34t"]
 [ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="15_ckrnp"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="16_ychvn"]
-[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="17_4o0sl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
 texture = ExtResource("5_w6d4j")
@@ -1654,12 +1653,6 @@ position = Vector2(444, 277)
 position = Vector2(676, 305)
 
 [node name="MusicBackground" parent="." instance=ExtResource("16_ychvn")]
-
-[node name="Pause" parent="." instance=ExtResource("17_4o0sl")]
-offset_left = -5.0
-offset_top = 96.0
-offset_right = -5.0
-offset_bottom = 96.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1153, 323)

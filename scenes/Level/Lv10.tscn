@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://d3c6ju3byjtws"]
+[gd_scene load_steps=43 format=4 uid="uid://d3c6ju3byjtws"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_mq66r"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_0ef5c"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="8_y5vvw"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="9_bmwe1"]
 [ext_resource type="Script" uid="uid://bt6u63fquuj83" path="res://scripts/Level/LV3/drop_1_trigger_5.gd" id="11_lxyw0"]
-[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="12_mq66r"]
 [ext_resource type="Script" uid="uid://b7ynttut3q54g" path="res://scripts/Level/LV3/trigger_1-6.gd" id="13_ubacb"]
 [ext_resource type="PackedScene" uid="uid://bxp61qk2u4v2e" path="res://scenes/Trap/HiddenSpike.tscn" id="14_0mr8k"]
 [ext_resource type="PackedScene" uid="uid://dnhhenxrpugyn" path="res://scenes/Trap/Portal/FPortal1.tscn" id="15_getou"]
@@ -2884,8 +2883,6 @@ offset_bottom = 56.0
 text = "LV 10"
 
 [node name="MusicBackground" parent="." instance=ExtResource("15_xmj81")]
-
-[node name="Pause" parent="." instance=ExtResource("12_mq66r")]
 
 [node name="Drop_1" type="StaticBody2D" parent="."]
 position = Vector2(189, 84)

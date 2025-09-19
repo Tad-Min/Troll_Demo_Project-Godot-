@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cmi7ot6afrax"]
+[gd_scene load_steps=18 format=4 uid="uid://cmi7ot6afrax"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_mq66r"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_0ef5c"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="9_bmwe1"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="10_nelmb"]
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="11_wbeki"]
-[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="12_mq66r"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="13_ubacb"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="15_xmj81"]
 
@@ -1743,11 +1742,5 @@ position = Vector2(834, 8)
 [node name="Spear11" parent="." instance=ExtResource("11_wbeki")]
 position = Vector2(-224, -388)
 rotation = 2.60633
-
-[node name="Pause" parent="." instance=ExtResource("12_mq66r")]
-offset_left = -1.0
-offset_top = 265.0
-offset_right = -1.0
-offset_bottom = 265.0
 
 [editable path="Trapzone"]

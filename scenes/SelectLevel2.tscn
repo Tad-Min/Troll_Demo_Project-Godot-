@@ -1,9 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqji2w44moiqg"]
+[gd_scene load_steps=7 format=3 uid="uid://bqji2w44moiqg"]
 
+[ext_resource type="Script" uid="uid://uwb3lip6eosh" path="res://scripts/select_level_2.gd" id="1_brqsk"]
 [ext_resource type="Texture2D" uid="uid://6rflweclk7du" path="res://Jungle Asset Pack/parallax background/saddle-brown-color-solid-background-1920x1080.png" id="2_sn6pr"]
+[ext_resource type="Texture2D" uid="uid://l1fmgsmh67y2" path="res://Jungle Asset Pack/parallax background/Lv13.png" id="3_b1ewi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x6o1n"]
 texture = ExtResource("2_sn6pr")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1ewi"]
+bg_color = Color(0.964742, 0.964742, 0.964742, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6tc2i"]
+texture = ExtResource("3_b1ewi")
+modulate_color = Color(0.381703, 0.381703, 0.381703, 1)
 
 [node name="SelectLevel2" type="Control"]
 layout_mode = 3
@@ -12,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_brqsk")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -21,3 +35,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_x6o1n")
+
+[node name="btnReturn" type="Button" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 277.0
+offset_right = 72.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_b1ewi")
+text = "<--
+"
+
+[node name="btnlv13" type="Button" parent="."]
+layout_mode = 0
+offset_right = 323.0
+offset_bottom = 132.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_6tc2i")
+text = "LEVEL 13
+"
