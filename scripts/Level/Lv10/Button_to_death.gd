@@ -14,4 +14,4 @@ func _on_body_entered(body: Node) -> void:
 		if has_node("AnimatedSprite2D"):
 			$AnimatedSprite2D.play("default")
 		if body.has_method("die"):
-			body.die()
+			body.die("button")

@@ -43,8 +43,10 @@ func _go_to_next_screen() -> void:
 	get_tree().change_scene_to_file("res://scenes/Next.tscn")  # chỉ chuyển đến màn Next
 
 
-func on_player_died() -> void:
-	print("Manager: Player died → going to game over...")
+func on_player_died(cause: String = "") -> void:
+	if cause != "":
+		GameData.last_death_cause = cause
+	print("Manager: Player died (", GameData.last_death_cause, ") → going to game over...")
 	_go_to_game_over()
 
 func _go_to_game_over() -> void:

@@ -1,5 +1,6 @@
 extends Node
 var death_count: int = 0
+var last_death_cause: String = ""
 
 
 var level_paths: Array = [
