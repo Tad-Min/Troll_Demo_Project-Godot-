@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bdwe8bkp7ptxe"]
+[gd_scene load_steps=18 format=4 uid="uid://bdwe8bkp7ptxe"]
 
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="1_1vld2"]
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="2_uld1g"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://bxp61qk2u4v2e" path="res://scenes/Trap/HiddenSpike.tscn" id="11_s4tf2"]
 [ext_resource type="PackedScene" uid="uid://dnhhenxrpugyn" path="res://scenes/Trap/Portal/FPortal1.tscn" id="12_i24th"]
 [ext_resource type="Script" uid="uid://ytpbsyii5x3b" path="res://scripts/portmanage.gd" id="13_01fw5"]
-[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="14_pxsjd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i24th"]
 texture = ExtResource("1_1vld2")
@@ -962,8 +961,6 @@ position = Vector2(585.227, -247.674)
 
 [node name="PortalManager" type="Node2D" parent="."]
 script = ExtResource("13_01fw5")
-
-[node name="Pause" parent="." instance=ExtResource("14_pxsjd")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1153, 323)
