@@ -1732,9 +1732,6 @@ position = Vector2(887, 236)
 [node name="CollisionShape2D" parent="Trapzone" index="0"]
 position = Vector2(58, 7)
 
-[node name="RightSpawner" parent="Trapzone" index="1"]
-position = Vector2(834, 8)
-
 [node name="MusicBackground" parent="." instance=ExtResource("15_xmj81")]
 
 [node name="Node2D" parent="." instance=ExtResource("6_bkvqr")]

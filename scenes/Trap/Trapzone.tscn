@@ -4,14 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://c3p15mm8xfels" path="res://scenes/Trap/Shuriken.tscn" id="2_1jf2o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jf2o"]
-size = Vector2(12.5, 5)
+size = Vector2(11.25, 37.6354)
 
 [node name="Trapzone" type="Area2D"]
-position = Vector2(2, -1)
 script = ExtResource("1_35auq")
 shuriken_scene = ExtResource("2_1jf2o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_1jf2o")
 
-[node name="RightSpawner" type="Marker2D" parent="."]
+[node name="Spawner" type="Marker2D" parent="."]

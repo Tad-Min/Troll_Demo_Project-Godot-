@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://co2ayiytafwtl"]
+[gd_scene load_steps=42 format=3 uid="uid://co2ayiytafwtl"]
 
 [ext_resource type="Script" uid="uid://dduvcvi44m417" path="res://scenes/Trap/Chasing Boss/chasingboss.gd" id="1_pblkk"]
 [ext_resource type="Texture2D" uid="uid://dlaxtmy4ag3x8" path="res://Trap asset/ChasingBoss/attacking.png" id="1_yoxmy"]
@@ -267,12 +267,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Chasing Boss" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_pblkk"]
+radius = 17.0
+
+[node name="Chasing Boss" type="Area2D"]
 script = ExtResource("1_pblkk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dqsfx")
 animation = &"idle"
-frame_progress = 0.57563
+frame_progress = 0.0393364
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 2)
+shape = SubResource("CircleShape2D_pblkk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="ready" from="AnimatedSprite2D" to="AnimatedSprite2D" method="_on_ready"]
