@@ -59,6 +59,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DeathLabel" type="Label" parent="."]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 367.0
 offset_top = 215.0
@@ -66,10 +67,24 @@ offset_right = 772.0
 offset_bottom = 264.0
 theme_override_colors/font_color = Color(0, 1, 0.203922, 1)
 theme_override_font_sizes/font_size = 35
-text = "Pro tip: Not dying helps."
+text = "Something"
+horizontal_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4noiy")
 volume_db = -3.748
 autoplay = true
 parameters/looping = true
+
+[node name="CauseLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 192.0
+offset_top = 264.0
+offset_right = 575.0
+offset_bottom = 313.0
+scale = Vector2(2, 2)
+text = "Something
+"
+horizontal_alignment = 1
+uppercase = true

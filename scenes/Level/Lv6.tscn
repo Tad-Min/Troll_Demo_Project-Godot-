@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=4 uid="uid://dr18coxufyuep"]
+[gd_scene load_steps=60 format=4 uid="uid://dr18coxufyuep"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_ejisw"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_aistd"]
@@ -32,7 +32,6 @@
 [ext_resource type="Script" uid="uid://bhm5w67ecfycp" path="res://scripts/Level/Lv6/trap_8.gd" id="24_eqxdb"]
 [ext_resource type="Script" uid="uid://d4b8s2mgt2237" path="res://scripts/Level/Lv6/trap_9.gd" id="24_ygmnw"]
 [ext_resource type="Script" uid="uid://q65q3uvu5x0x" path="res://scripts/Level/Lv6/shuriken_Trap10.gd" id="27_yeuku"]
-[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="33_c33wk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8o3fb"]
 texture = ExtResource("7_p0wg5")
@@ -4036,8 +4035,6 @@ position = Vector2(1110, 424)
 
 [node name="Jumper3" parent="." instance=ExtResource("14_ye8g6")]
 position = Vector2(1016, 488)
-
-[node name="Pause" parent="." instance=ExtResource("33_c33wk")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1153, 323)

@@ -4,6 +4,7 @@ extends Node
 var unlocked_stages: Array
 
 var death_count: int = 0
+var last_death_cause: String = ""
 
 var current_level_index: int = 0
 var next_level_path: String = ""

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-signal died
+signal died(cause: String)
 
 @export var speed: float = 100.0
 @export var jump_velocity: float = 400.0
@@ -73,7 +73,8 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("jump_right")
 	
 	if position.y > 900:
-		emit_signal("died")
+		GameData.last_death_cause = "fell_out"
+		emit_signal("died", GameData.last_death_cause)
 
 	if is_on_jumper:
 		stop_move_1_sec()
@@ -124,11 +125,14 @@ func _on_animated_sprite_2d_frame_changed():
 			velocity.y = get_jump_velocity() * jump_charge
 			$JumpSound.play()
 
-func die() -> bool:
+
+func die(cause: String = "trap") -> bool:
 	is_dead = true
 	velocity.y = jump_velocity
 	$DeathSound.play()
-	print("Player died")
+	GameData.last_death_cause = cause
+	emit_signal("died", GameData.last_death_cause)
+	print("Player died: ", GameData.last_death_cause)
 	return true
 
 func stop_move_1_sec() -> void:
