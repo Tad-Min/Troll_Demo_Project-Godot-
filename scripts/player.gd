@@ -3,7 +3,8 @@ extends CharacterBody2D
 signal died
 
 @export var speed: float = 100.0
-@export var jump_velocity: float = -400.0
+@export var jump_velocity: float = 400.0
+@export var gravity_inverted: bool = false
 var min_jc = 0.75
 var max_jc = 1.25
 var jump_charge = min_jc
@@ -16,9 +17,14 @@ var is_dead: bool = false
 const MAX_AIR_JUMPS = 1   # only 1 allowed in air
 var air_jump_done = 0
 
-
 var stopmove: bool = false;
 
+func get_jump_velocity() -> float:
+	if gravity_inverted:
+		return jump_velocity
+	else:
+		return -jump_velocity
+	
 
 func _physics_process(delta: float) -> void:
 	if is_dead:
@@ -28,7 +34,10 @@ func _physics_process(delta: float) -> void:
 	
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		var gravity_dir = 1
+		if gravity_inverted:
+			gravity_dir = -1
+		velocity += get_gravity() * delta * gravity_dir
 		jump_charge = min_jc
 	else:
 		air_jump_done = 0
@@ -50,8 +59,8 @@ func _physics_process(delta: float) -> void:
 					jump_charge += 0.02
 					
 	if not stopmove and not is_on_jumper and Input.is_action_just_pressed("jump") and not is_on_floor() and air_jump_done==0:
-		velocity.y = jump_velocity
-		air_jump_done+=1
+		velocity.y = get_jump_velocity()
+		air_jump_done += 1
 		$JumpSound.play()
 	
 	if Input.is_action_just_released("jump"):
@@ -108,13 +117,12 @@ func _physics_process(delta: float) -> void:
 func _on_animated_sprite_2d_frame_changed():
 	if $AnimatedSprite2D.animation == "jump_right":
 		if $AnimatedSprite2D.frame == 4 and is_on_floor():
-			velocity.y = jump_velocity*jump_charge
+			velocity.y = get_jump_velocity() * jump_charge
 			$JumpSound.play()
 	if $AnimatedSprite2D.animation == "jump_left":
 		if $AnimatedSprite2D.frame == 4 and is_on_floor():
-			velocity.y = jump_velocity*jump_charge
+			velocity.y = get_jump_velocity() * jump_charge
 			$JumpSound.play()
-
 
 func die() -> bool:
 	is_dead = true

@@ -1,6 +1,12 @@
 extends Node
+
+@export var LvSize: int = 12
+var unlocked_stages: Array
+
 var death_count: int = 0
 
+var current_level_index: int = 0
+var next_level_path: String = ""
 
 var level_paths: Array = [
 	"res://scenes/Level/Lv1.tscn",
@@ -8,11 +14,11 @@ var level_paths: Array = [
 	"res://scenes/Level/Lv3.tscn"
 ]
 
-var current_level_index: int = 0
-var next_level_path: String = ""
-
-# Default: unlock lv1
-var unlocked_stages: Array = [true, false, false, false, false, false, false, false, false, false]
+func _ready() -> void:
+	if not load_progress():
+		unlocked_stages.resize(LvSize)
+		unlocked_stages.fill(false)
+		unlocked_stages[0] = true
 
 # Unlock stage base on index
 func unlock_stage(stage_index: int) -> void:
@@ -33,12 +39,16 @@ func save_progress() -> void:
 	file.store_string(JSON.stringify(data))
 
 # Load progress
-func load_progress() -> void:
+func load_progress() -> bool:
 	if FileAccess.file_exists("user://save.json"):
 		var file = FileAccess.open("user://save.json", FileAccess.READ)
 		var data = JSON.parse_string(file.get_as_text())
 		if typeof(data) == TYPE_DICTIONARY and data.has("unlocked"):
 			unlocked_stages = data["unlocked"]
-	else:
-		# If file save not found
-		unlocked_stages = [true, false, false, false, false, false, false, false, false, false]
+			if unlocked_stages.size() < LvSize:
+				var old_size = unlocked_stages.size()
+				unlocked_stages.resize(LvSize)
+				for i in range(old_size, LvSize):
+					unlocked_stages[i] = false
+			return true
+	return false
