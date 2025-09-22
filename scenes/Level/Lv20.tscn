@@ -1468,5 +1468,5 @@ metadata/_edit_lock_ = true
 position = Vector2(536, 496)
 
 [node name="Player" parent="." instance=ExtResource("7_uwjmi")]
-position = Vector2(264, 464)
+position = Vector2(208, 504)
 gravity_inverted = true

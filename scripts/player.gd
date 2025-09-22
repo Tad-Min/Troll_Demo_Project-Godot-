@@ -25,15 +25,19 @@ func get_jump_velocity() -> float:
 	else:
 		return -jump_velocity
 	
-
+func is_on_ground() -> bool:
+	if gravity_inverted:
+		return is_on_ceiling()
+	else:
+		return is_on_floor()
+		
 func _physics_process(delta: float) -> void:
 	if is_dead:
 		$CollisionShape2D.disabled = true
 		air_jump_done = MAX_AIR_JUMPS
 	
-	
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_ground():
 		var gravity_dir = 1
 		if gravity_inverted:
 			gravity_dir = -1
@@ -44,7 +48,7 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if not is_on_jumper and Input.is_action_pressed("jump"):
-		if is_on_floor():
+		if is_on_ground():
 			if last_direction == -1.0:
 				lr_anim=false
 				$AnimatedSprite2D.play("jump_left")
@@ -58,13 +62,13 @@ func _physics_process(delta: float) -> void:
 				if jump_charge<max_jc:
 					jump_charge += 0.02
 					
-	if not stopmove and not is_on_jumper and Input.is_action_just_pressed("jump") and not is_on_floor() and air_jump_done==0:
+	if not stopmove and not is_on_jumper and Input.is_action_just_pressed("jump") and not is_on_ground() and air_jump_done == 0:
 		velocity.y = get_jump_velocity()
 		air_jump_done += 1
 		$JumpSound.play()
 	
 	if Input.is_action_just_released("jump"):
-		if is_on_floor():
+		if is_on_ground():
 			if last_direction == -1.0:
 				lr_anim=false
 				$AnimatedSprite2D.play("jump_left")
@@ -93,7 +97,6 @@ func _physics_process(delta: float) -> void:
 	last_direction=direction
 
 	#disable movement for an instant if on jumper
-
 	if direction and !stopmove:
 		if jump_charge == min_jc:
 			velocity.x = direction * speed
@@ -117,11 +120,11 @@ func _physics_process(delta: float) -> void:
 
 func _on_animated_sprite_2d_frame_changed():
 	if $AnimatedSprite2D.animation == "jump_right":
-		if $AnimatedSprite2D.frame == 4 and is_on_floor():
+		if $AnimatedSprite2D.frame == 4 and is_on_ground():
 			velocity.y = get_jump_velocity() * jump_charge
 			$JumpSound.play()
 	if $AnimatedSprite2D.animation == "jump_left":
-		if $AnimatedSprite2D.frame == 4 and is_on_floor():
+		if $AnimatedSprite2D.frame == 4 and is_on_ground():
 			velocity.y = get_jump_velocity() * jump_charge
 			$JumpSound.play()
 
