@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://d3c6ju3byjtws"]
+[gd_scene load_steps=44 format=4 uid="uid://d3c6ju3byjtws"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_mq66r"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_0ef5c"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bxp61qk2u4v2e" path="res://scenes/Trap/HiddenSpike.tscn" id="14_0mr8k"]
 [ext_resource type="PackedScene" uid="uid://dnhhenxrpugyn" path="res://scenes/Trap/Portal/FPortal1.tscn" id="15_getou"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="15_xmj81"]
+[ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="16_0mr8k"]
 [ext_resource type="Script" uid="uid://ytpbsyii5x3b" path="res://scripts/portmanage.gd" id="16_jo0gb"]
 [ext_resource type="Script" uid="uid://ov8ltcncjpjy" path="res://scripts/Level/Lv10/fakeportLv10.gd" id="16_ubacb"]
 [ext_resource type="PackedScene" uid="uid://vr0cp86s7yb0" path="res://scenes/Trap/falling_spike.tscn" id="17_q8e8i"]
@@ -2933,13 +2934,14 @@ scale = Vector2(2.06119, 2.09318)
 position = Vector2(1093, 102)
 scale = Vector2(1.76, 1.72)
 script = ExtResource("16_ubacb")
+portal_scene = ExtResource("16_0mr8k")
 target_level_path = "res://scenes/Level/Lv11.tscn"
 
 [node name="AnimatedSprite2D" parent="FPortal1" index="0"]
 frame_progress = 0.499264
 
 [node name="Marker2D" parent="FPortal1" index="1"]
-position = Vector2(-17.0454, 229.07)
+position = Vector2(-401.705, 7.55814)
 
 [node name="PortalManager" type="Node2D" parent="."]
 script = ExtResource("16_jo0gb")

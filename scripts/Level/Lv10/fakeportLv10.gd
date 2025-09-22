@@ -27,9 +27,10 @@ func _on_body_entered(body: Node) -> void:
 		return
 
 	if is_real:
-		# Cổng thật → chuyển cảnh luôn
+		# Cổng thật → mở UI Next, lưu level đích
 		_consumed = true
-		get_tree().change_scene_to_file(target_level_path)
+		GameData.next_level_path = target_level_path
+		get_tree().change_scene_to_file("res://scenes/Next.tscn")
 		return
 
 	# Cổng giả 2 bước
@@ -40,10 +41,13 @@ func _on_body_entered(body: Node) -> void:
 			var new_portal := portal_scene.instantiate()
 			get_tree().current_scene.add_child(new_portal)
 			new_portal.global_position = marker.global_position
+			# Đảm bảo lần chạm kế tiếp mở UI Next
+			GameData.next_level_path = target_level_path
 	else:
-		# Bước 2: chạm cổng tại điểm 2 → qua màn và reset trạng thái
+		# Bước 2: chạm cổng tại điểm 2 → mở UI Next và reset trạng thái
 		_consumed = true
 		manager.reset()
-		get_tree().change_scene_to_file(target_level_path)
+		GameData.next_level_path = target_level_path
+		get_tree().change_scene_to_file("res://scenes/Next.tscn")
 
 	queue_free()
