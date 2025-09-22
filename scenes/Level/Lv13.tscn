@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=4 uid="uid://bixs4xtb0mnpa"]
+[gd_scene load_steps=64 format=4 uid="uid://bixs4xtb0mnpa"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_vu6yu"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_vlgp0"]
@@ -26,7 +26,6 @@
 [ext_resource type="Script" uid="uid://c7c77mo6dvn2t" path="res://scripts/Level/Lv13/trap_6_1.gd" id="19_xqhtk"]
 [ext_resource type="Script" uid="uid://depnd8pt7010f" path="res://scripts/Level/Lv13/trap_6_2.gd" id="20_0jm0w"]
 [ext_resource type="Script" uid="uid://0ofjcb6j21hp" path="res://scripts/Level/Lv13/trap_6_2_spike.gd" id="20_h3ikn"]
-[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="22_mtked"]
 [ext_resource type="Script" uid="uid://8r5ccpcpmshh" path="res://scripts/Level/Lv13/trap_7_shuriken.gd" id="23_0l4hh"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="23_4ycd7"]
 [ext_resource type="Script" uid="uid://tjgpwrksrqtx" path="res://scripts/Level/Lv13/trap_7.gd" id="25_ylr1h"]
@@ -3590,9 +3589,6 @@ scale = Vector2(1.5, 1.5)
 speed = 150.0
 
 [node name="MusicBackground" parent="." instance=ExtResource("23_4ycd7")]
-
-[node name="Pause" parent="." instance=ExtResource("22_mtked")]
-visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1153, 323)

@@ -25,5 +25,7 @@ func _process(delta: float) -> void:
 
 	if scale == scaleMax:
 		set_process(false)
+		await get_tree().create_timer(2).timeout
+		queue_free()
 func start():
 	set_process(true)

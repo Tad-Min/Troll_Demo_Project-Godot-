@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://damf22lmf180i"]
+
+[ext_resource type="Texture2D" uid="uid://cp6m42eosjuv4" path="res://Trap asset/Spike_simple.png" id="1_hw87m"]
+[ext_resource type="Script" uid="uid://bxek752vwxubd" path="res://scripts/spike_simple.gd" id="1_uli81"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uli81"]
+atlas = ExtResource("1_hw87m")
+region = Rect2(0, 0, 19, 28)
+
+[node name="SpikeSimple" type="Node2D"]
+script = ExtResource("1_uli81")
+
+[node name="SpikeSimple" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_uli81")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-9.49219, 14.0156, -9.49219, 12.0156, -8.53435, 12.026, -8.50229, 9.02043, -7.45866, 8.97658, -7.49219, 5.00781, -6.50781, 5.00781, -6.47656, 2.01563, -5.47656, 2.01563, -5.49219, 0.0078125, -4.4853, -0.0183969, -4.48438, -3, -3.5, -3.00781, -3.49219, -5.99219, -2.49219, -5.99219, -2.49219, -8.99219, -1.48438, -8.99219, -1.48438, -10.9844, -0.507813, -10.9922, -0.484375, -13, 0.484375, -13.0313, 0.484375, -12, 1.5, -12, 1.49219, -9.97656, 2.48438, -10, 2.49219, -6.98438, 3.49219, -6.99219, 3.51305, -3.98234, 4.49219, -4.00781, 4.46875, -0.976563, 5.48438, -0.992188, 5.47656, 2.01563, 6.5, 2.01563, 6.48438, 5.00781, 7.5, 4.99219, 7.5, 8.00781, 8.5, 8, 8.5, 11, 9.49219, 11.0078, 9.48438, 13.9922)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
