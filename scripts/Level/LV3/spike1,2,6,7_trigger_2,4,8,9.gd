@@ -1,4 +1,4 @@
-extends "res://scripts/spike.gd"
+extends "res://scripts/.gd"
 
 func _ready() -> void:
 	set_process(false)
