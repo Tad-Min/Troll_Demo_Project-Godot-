@@ -24,7 +24,8 @@ func _start_rotation() -> void:
 	set_process(false)
 	visible = false
 	_set_shurikens_active(false)
-	await get_tree().create_timer(sleep_time).timeout
+	if get_tree():
+		await get_tree().create_timer(rotate_time).timeout
 	_start_rotation()
 
 func _set_shurikens_active(active: bool) -> void:

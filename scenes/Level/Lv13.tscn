@@ -3579,7 +3579,7 @@ metadata/_edit_lock_ = true
 [node name="Manager" parent="." instance=ExtResource("17_p1vqh")]
 
 [node name="Player" parent="." instance=ExtResource("16_q2qt0")]
-position = Vector2(24, 456)
+position = Vector2(40, 456)
 scale = Vector2(1.5, 1.5)
 speed = 150.0
 

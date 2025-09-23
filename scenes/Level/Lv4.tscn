@@ -2555,6 +2555,7 @@ texture = ExtResource("5_3jvrh")
 [node name="Trapzone1" parent="." instance=ExtResource("6_epcp4")]
 position = Vector2(1248, 456)
 cooldown_time = 5.0
+shuriken_speed = 400.0
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="Trapzone1" index="0"]
@@ -2565,6 +2566,7 @@ metadata/_edit_lock_ = true
 [node name="Trapzone2" parent="." instance=ExtResource("6_epcp4")]
 position = Vector2(1936, 384)
 cooldown_time = 5.0
+shuriken_speed = 400.0
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="Trapzone2" index="0"]
@@ -2575,6 +2577,7 @@ metadata/_edit_lock_ = true
 [node name="Trapzone3" parent="." instance=ExtResource("6_epcp4")]
 position = Vector2(1936, 280)
 cooldown_time = 5.0
+shuriken_speed = 400.0
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="Trapzone3" index="0"]
