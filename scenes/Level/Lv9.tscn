@@ -924,20 +924,11 @@ position = Vector2(631, 379)
 [node name="Trapzone" parent="Jumper3" instance=ExtResource("13_6ghfu")]
 position = Vector2(-1, -13)
 
-[node name="RightSpawner" parent="Jumper3/Trapzone" index="1"]
-position = Vector2(82, -124)
-
 [node name="Trapzone2" parent="Jumper3" instance=ExtResource("13_6ghfu")]
 position = Vector2(-1, -13)
 
-[node name="RightSpawner" parent="Jumper3/Trapzone2" index="1"]
-position = Vector2(83, -76)
-
 [node name="Trapzone3" parent="Jumper3" instance=ExtResource("13_6ghfu")]
 position = Vector2(-1, -13)
-
-[node name="RightSpawner" parent="Jumper3/Trapzone3" index="1"]
-position = Vector2(80, -17)
 
 [node name="Jumper6" parent="." instance=ExtResource("7_kwb8q")]
 position = Vector2(688, 380)
@@ -945,20 +936,11 @@ position = Vector2(688, 380)
 [node name="Trapzone" parent="Jumper6" instance=ExtResource("13_6ghfu")]
 position = Vector2(-1, -13)
 
-[node name="RightSpawner" parent="Jumper6/Trapzone" index="1"]
-position = Vector2(82, -124)
-
 [node name="Trapzone2" parent="Jumper6" instance=ExtResource("13_6ghfu")]
 position = Vector2(-1, -13)
 
-[node name="RightSpawner" parent="Jumper6/Trapzone2" index="1"]
-position = Vector2(83, -76)
-
 [node name="Trapzone3" parent="Jumper6" instance=ExtResource("13_6ghfu")]
 position = Vector2(-1, -13)
-
-[node name="RightSpawner" parent="Jumper6/Trapzone3" index="1"]
-position = Vector2(80, -17)
 
 [node name="Jumper7" parent="." instance=ExtResource("7_kwb8q")]
 position = Vector2(714, 380)
@@ -966,20 +948,11 @@ position = Vector2(714, 380)
 [node name="Trapzone" parent="Jumper7" instance=ExtResource("13_6ghfu")]
 position = Vector2(-1, -13)
 
-[node name="RightSpawner" parent="Jumper7/Trapzone" index="1"]
-position = Vector2(82, -124)
-
 [node name="Trapzone2" parent="Jumper7" instance=ExtResource("13_6ghfu")]
 position = Vector2(-1, -13)
 
-[node name="RightSpawner" parent="Jumper7/Trapzone2" index="1"]
-position = Vector2(83, -76)
-
 [node name="Trapzone3" parent="Jumper7" instance=ExtResource("13_6ghfu")]
 position = Vector2(-1, -13)
-
-[node name="RightSpawner" parent="Jumper7/Trapzone3" index="1"]
-position = Vector2(80, -17)
 
 [node name="Jumper4" parent="." instance=ExtResource("7_kwb8q")]
 position = Vector2(659, 379)
@@ -1007,14 +980,8 @@ position = Vector2(1045, 212)
 [node name="Trapzone4" parent="HiddenJumper" instance=ExtResource("13_6ghfu")]
 position = Vector2(-2, -111)
 
-[node name="RightSpawner" parent="HiddenJumper/Trapzone4" index="1"]
-position = Vector2(35, 1)
-
 [node name="Trapzone5" parent="HiddenJumper" instance=ExtResource("13_6ghfu")]
 position = Vector2(-2, -111)
-
-[node name="RightSpawner" parent="HiddenJumper/Trapzone5" index="1"]
-position = Vector2(34, -24)
 
 [node name="Portal" parent="." instance=ExtResource("9_j5q3b")]
 position = Vector2(1100, 176)

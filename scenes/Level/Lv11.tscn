@@ -549,7 +549,6 @@ position = Vector2(1853, 319)
 [node name="Player" parent="." instance=ExtResource("8_y5vvw")]
 position = Vector2(22, 542)
 speed = 125.0
-jump_velocity = -415.0
 
 [node name="Camera2D" parent="Player" index="7"]
 limit_right = 2306
@@ -593,7 +592,6 @@ scale = Vector2(-0.98, 1)
 [node name="Trapzone" parent="." instance=ExtResource("13_ubacb")]
 position = Vector2(2086, 254)
 shuriken_size = 0.25
-spawner = NodePath("Spawner")
 
 [node name="CollisionShape2D" parent="Trapzone" index="0"]
 position = Vector2(0.625, -7.87001)
@@ -606,7 +604,6 @@ position = Vector2(115, 4)
 position = Vector2(1990, 102)
 shuriken_speed = 500.0
 shuriken_size = 0.25
-spawner = NodePath("Spawner")
 
 [node name="Spawner" parent="Trapzone6" index="1"]
 position = Vector2(115, 4)
@@ -614,7 +611,6 @@ position = Vector2(115, 4)
 [node name="Trapzone7" parent="." instance=ExtResource("13_ubacb")]
 position = Vector2(1989, 103)
 shuriken_size = 0.25
-spawner = NodePath("Spawner")
 
 [node name="Spawner" parent="Trapzone7" index="1"]
 position = Vector2(115, 4)
@@ -623,7 +619,6 @@ position = Vector2(115, 4)
 position = Vector2(1185, 420)
 shuriken_speed = 300.0
 shuriken_size = 0.75
-spawner = NodePath("Spawner")
 
 [node name="Spawner" parent="Trapzone5" index="1"]
 position = Vector2(225, 4)
@@ -631,7 +626,6 @@ position = Vector2(225, 4)
 [node name="Trapzone2" parent="." instance=ExtResource("13_ubacb")]
 position = Vector2(1039, 453)
 shuriken_speed = 300.0
-spawner = NodePath("Spawner")
 shoot_direction = Vector2(0, -1)
 
 [node name="CollisionShape2D" parent="Trapzone2" index="0"]
@@ -643,7 +637,6 @@ position = Vector2(95, 276)
 [node name="Trapzone3" parent="." instance=ExtResource("13_ubacb")]
 position = Vector2(1039, 453)
 shuriken_speed = 300.0
-spawner = NodePath("Spawner")
 shoot_direction = Vector2(0, -1)
 
 [node name="CollisionShape2D" parent="Trapzone3" index="0"]
@@ -655,7 +648,6 @@ position = Vector2(76, 292)
 [node name="Trapzone4" parent="." instance=ExtResource("13_ubacb")]
 position = Vector2(1039, 453)
 shuriken_speed = 300.0
-spawner = NodePath("Spawner")
 shoot_direction = Vector2(0, -1)
 
 [node name="CollisionShape2D" parent="Trapzone4" index="0"]

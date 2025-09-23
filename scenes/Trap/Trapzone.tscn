@@ -9,8 +9,10 @@ size = Vector2(11.25, 37.6354)
 [node name="Trapzone" type="Area2D"]
 script = ExtResource("1_35auq")
 shuriken_scene = ExtResource("2_1jf2o")
+spawner = NodePath("Spawner")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_1jf2o")
 
 [node name="Spawner" type="Marker2D" parent="."]
+position = Vector2(204, 0)
