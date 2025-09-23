@@ -17,8 +17,18 @@ func _on_body_entered(body: Node) -> void:
 	emit_signal("player_entered")
 	# Nếu GameData đã thiết lập level kế tiếp, mở UI Next
 	if GameData.next_level_path != "":
-		get_tree().change_scene_to_file("res://scenes/Next.tscn")
+		_request_scene_change("res://scenes/Next.tscn")
 		return
 	# Fallback: nếu không dùng UI Next, có thể chuyển thẳng
 	if next_level_path != "":
-		get_tree().change_scene_to_file(next_level_path)
+		_request_scene_change(next_level_path)
+
+
+# Yêu cầu đổi scene an toàn, kể cả khi get_tree() tạm thời null
+func _request_scene_change(path: String) -> void:
+	var tree := get_tree()
+	if tree == null:
+		# Fallback: lấy SceneTree từ main loop
+		tree = Engine.get_main_loop()
+	# Gọi deferred để tránh đổi scene ngay trong lúc đang xử lý tín hiệu va chạm
+	tree.call_deferred("change_scene_to_file", path)
