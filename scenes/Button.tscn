@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://4ex8nd3vkga1"]
+[gd_scene load_steps=11 format=3 uid="uid://4ex8nd3vkga1"]
 
 [ext_resource type="Texture2D" uid="uid://brfihle0bdckc" path="res://assets/Button.png" id="1_1xt0e"]
 [ext_resource type="Script" uid="uid://vtww5p86k2v4" path="res://scripts/button.gd" id="1_rtit6"]
+[ext_resource type="AudioStream" uid="uid://b8avqynvucolw" path="res://assets/Button.mp3" id="3_ywcaw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hmbh2"]
 atlas = ExtResource("1_1xt0e")
@@ -52,6 +53,10 @@ script = ExtResource("1_rtit6")
 sprite_frames = SubResource("SpriteFrames_rtit6")
 metadata/_edit_lock_ = true
 
+[node name="Button" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ywcaw")
+metadata/_edit_lock_ = true
+
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -63,3 +68,5 @@ position = Vector2(0, 2)
 rotation = 3.14159
 scale = Vector2(0.845156, -1.8)
 shape = SubResource("RectangleShape2D_sejoc")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

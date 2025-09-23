@@ -876,71 +876,41 @@ scale = Vector2(1.48874, 3.2452)
 position = Vector2(108, 337)
 scale = Vector2(14.68, 5.44)
 
-[node name="RightSpawner" parent="Trapzone" index="1"]
-position = Vector2(-3.26975, 0.735295)
-
 [node name="Trapzone2" parent="." instance=ExtResource("10_780e2")]
 position = Vector2(107, 359)
 scale = Vector2(14.68, 5.44)
-
-[node name="RightSpawner" parent="Trapzone2" index="1"]
-position = Vector2(-3.20163, 5.60985e-06)
 
 [node name="Trapzone3" parent="." instance=ExtResource("10_780e2")]
 position = Vector2(108, 384)
 scale = Vector2(14.68, 5.44)
 
-[node name="RightSpawner" parent="Trapzone3" index="1"]
-position = Vector2(-3.26975, -0.183824)
-
 [node name="Trapzone4" parent="." instance=ExtResource("10_780e2")]
 position = Vector2(175, 337)
 scale = Vector2(14.68, 5.44)
-
-[node name="RightSpawner" parent="Trapzone4" index="1"]
-position = Vector2(-0.408719, 0)
 
 [node name="Trapzone5" parent="." instance=ExtResource("10_780e2")]
 position = Vector2(175, 366)
 scale = Vector2(14.68, 5.44)
 
-[node name="RightSpawner" parent="Trapzone5" index="1"]
-position = Vector2(-0.408719, -0.183824)
-
 [node name="Trapzone6" parent="." instance=ExtResource("10_780e2")]
 position = Vector2(175, 387)
 scale = Vector2(14.68, 5.44)
-
-[node name="RightSpawner" parent="Trapzone6" index="1"]
-position = Vector2(-0.476839, -0.183824)
 
 [node name="Trapzone7" parent="." instance=ExtResource("10_780e2")]
 position = Vector2(267, 348)
 scale = Vector2(19.8812, 5.44)
 
-[node name="RightSpawner" parent="Trapzone7" index="1"]
-position = Vector2(-1.40836, -0.367647)
-
 [node name="Trapzone8" parent="." instance=ExtResource("10_780e2")]
 position = Vector2(270, 375)
 scale = Vector2(20.04, 5.44)
-
-[node name="RightSpawner" parent="Trapzone8" index="1"]
-position = Vector2(-0.898203, -5.60284e-06)
 
 [node name="Trapzone9" parent="." instance=ExtResource("10_780e2")]
 position = Vector2(272, 403)
 scale = Vector2(19.4, 5.44)
 
-[node name="RightSpawner" parent="Trapzone9" index="1"]
-position = Vector2(-0.876288, 7.01721e-09)
-
 [node name="Trapzone10" parent="." instance=ExtResource("10_780e2")]
 position = Vector2(322, 454)
 scale = Vector2(19.4, 5.44)
-
-[node name="RightSpawner" parent="Trapzone10" index="1"]
-position = Vector2(1.59794, 1.10294)
 
 [node name="Trapzone11" parent="." instance=ExtResource("10_780e2")]
 position = Vector2(322, 481)
@@ -948,9 +918,6 @@ scale = Vector2(19.4, 5.44)
 
 [node name="CollisionShape2D" parent="Trapzone11" index="0"]
 position = Vector2(0, 2.6103)
-
-[node name="RightSpawner" parent="Trapzone11" index="1"]
-position = Vector2(1.59794, 1.10294)
 
 [node name="FPortal1" parent="." instance=ExtResource("12_i24th")]
 position = Vector2(56, 547)

@@ -131,7 +131,7 @@ func _on_animated_sprite_2d_frame_changed():
 
 func die(cause: String = "trap") -> bool:
 	is_dead = true
-	velocity.y = jump_velocity
+	velocity.y = get_jump_velocity()
 	$DeathSound.play()
 	GameData.last_death_cause = cause
 	emit_signal("died", GameData.last_death_cause)

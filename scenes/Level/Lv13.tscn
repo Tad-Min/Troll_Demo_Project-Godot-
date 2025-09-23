@@ -3583,11 +3583,11 @@ offset_left = 32.0
 offset_top = 32.0
 offset_right = 82.0
 offset_bottom = 56.0
-text = "LV 13"
+text = "LV 20"
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." instance=ExtResource("16_q2qt0")]
-position = Vector2(56, 464)
+position = Vector2(24, 456)
 scale = Vector2(1.5, 1.5)
 speed = 150.0
 
