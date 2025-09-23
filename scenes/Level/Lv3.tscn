@@ -2728,33 +2728,38 @@ metadata/_edit_lock_ = true
 [node name="spike3" parent="." instance=ExtResource("6_6fbnu")]
 position = Vector2(1071, 320)
 scale = Vector2(1.64, 1)
+metadata/_edit_lock_ = true
 
 [node name="spike4" parent="." instance=ExtResource("6_6fbnu")]
 position = Vector2(928, 288)
 scale = Vector2(2.08, 1)
+metadata/_edit_lock_ = true
 
 [node name="spike5" parent="." instance=ExtResource("6_6fbnu")]
 position = Vector2(624, 360)
 rotation = 1.5708
 scale = Vector2(2.08, 1)
 script = ExtResource("10_prk1d")
+metadata/_edit_lock_ = true
 
 [node name="spike6" parent="." instance=ExtResource("6_6fbnu")]
 position = Vector2(736, 416)
 scale = Vector2(2.08, 1)
 script = ExtResource("10_prk1d")
+metadata/_edit_lock_ = true
 
 [node name="spike7" parent="." instance=ExtResource("6_6fbnu")]
 position = Vector2(896, 416)
 scale = Vector2(1, 0.481)
 script = ExtResource("10_prk1d")
+metadata/_edit_lock_ = true
 
 [node name="Real_Portal" parent="." instance=ExtResource("7_rmfpm")]
 position = Vector2(1088, 384)
-rotation = -3.14159
-scale = Vector2(1.98156, -2.09472)
+scale = Vector2(2, 2)
 next_level_path = "res://scenes/Level/Lv4.tscn"
 stage_to_unlock = 3
+metadata/_edit_lock_ = true
 
 [node name="Drop_1" type="StaticBody2D" parent="."]
 position = Vector2(120, 56)
@@ -2841,8 +2846,6 @@ scale = Vector2(1.96, 1.96)
 text = "LV 3
 "
 tab_size = 7
-
-[node name="Manager" parent="." instance=ExtResource("8_gjm0f")]
 
 [node name="Trigger_1" type="Area2D" parent="."]
 position = Vector2(112, 368)
@@ -2964,6 +2967,8 @@ metadata/_edit_group_ = true
 position = Vector2(40, 40)
 shape = SubResource("RectangleShape2D_tyqfo")
 metadata/_edit_group_ = true
+
+[node name="Manager" parent="." instance=ExtResource("8_gjm0f")]
 
 [node name="MusicBackground" parent="." instance=ExtResource("23_tyqfo")]
 
