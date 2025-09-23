@@ -1,20 +1,34 @@
 extends Node2D
 
-signal player_entered  # custom signal for the game center
+signal player_entered
 
-@export var next_level_path: String #Change in Inspector
-@export var stage_to_unlock: int #Change in Inspector 
+@export var next_level_path: String
+@export var stage_to_unlock: int
 
 func _ready() -> void:
-	# connect the Area2D's built-in signal to our handler
 	$Area2D.connect("body_entered", Callable(self, "_on_body_entered"))
 	print("portal ready")
 	$AnimatedSprite2D.play("idle")
 
 func _on_body_entered(body: Node) -> void:
-	if body.is_in_group("Player"):  # only trigger for the player
-		print("Player entered the portal!")
-		emit_signal("player_entered")  # notify GameManager
-		#GameData.unlock_stage(stage_to_unlock)
-		#get_tree().change_scene_to_file(next_level_path)
-		
+	if not body.is_in_group("Player"):
+		return
+	print("Player entered the portal!")
+	emit_signal("player_entered")
+	# Nếu GameData đã thiết lập level kế tiếp, mở UI Next
+	if GameData.next_level_path != "":
+		_request_scene_change("res://scenes/Next.tscn")
+		return
+	# Fallback: nếu không dùng UI Next, có thể chuyển thẳng
+	if next_level_path != "":
+		_request_scene_change(next_level_path)
+
+
+# Yêu cầu đổi scene an toàn, kể cả khi get_tree() tạm thời null
+func _request_scene_change(path: String) -> void:
+	var tree := get_tree()
+	if tree == null:
+		# Fallback: lấy SceneTree từ main loop
+		tree = Engine.get_main_loop()
+	# Gọi deferred để tránh đổi scene ngay trong lúc đang xử lý tín hiệu va chạm
+	tree.call_deferred("change_scene_to_file", path)
