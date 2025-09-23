@@ -1,6 +1,6 @@
 extends Node
 
-@export var LvSize: int = 12
+@export var LvSize: int = 14
 var unlocked_stages: Array
 
 var death_count: int = 0
@@ -12,7 +12,18 @@ var next_level_path: String = ""
 var level_paths: Array = [
 	"res://scenes/Level/Lv1.tscn",
 	"res://scenes/Level/Lv2.tscn",
-	"res://scenes/Level/Lv3.tscn"
+	"res://scenes/Level/Lv3.tscn",
+	"res://scenes/Level/Lv4.tscn",
+	"res://scenes/Level/Lv5.tscn",
+	"res://scenes/Level/Lv6.tscn",
+	"res://scenes/Level/Lv7.tscn",
+	"res://scenes/Level/Lv8.tscn",
+	"res://scenes/Level/Lv9.tscn",
+	"res://scenes/Level/Lv10.tscn",
+	"res://scenes/Level/Lv11.tscn",
+	"res://scenes/Level/Lv12.tscn",
+	"res://scenes/Level/Lv13.tscn",
+	"res://scenes/Level/Lv14.tscn"
 ]
 
 func _ready() -> void:

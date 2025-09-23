@@ -3292,7 +3292,7 @@ tile_set = SubResource("TileSet_fqcln")
 
 [node name="Portal" parent="." instance=ExtResource("7_iqlsl")]
 position = Vector2(626, 498)
-next_level_path = "res://scenes/Level/Lv7.tscn"
+next_level_path = "res://scenes/Level/Lv13.tscn"
 stage_to_unlock = 12
 
 [node name="Manager" parent="." instance=ExtResource("8_t5jtx")]
