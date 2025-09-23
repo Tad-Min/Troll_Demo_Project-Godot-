@@ -3587,7 +3587,7 @@ text = "LV 20"
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." instance=ExtResource("16_q2qt0")]
-position = Vector2(24, 456)
+position = Vector2(40, 456)
 scale = Vector2(1.5, 1.5)
 speed = 150.0
 
