@@ -4012,14 +4012,18 @@ texture = SubResource("GradientTexture2D_8o3fb")
 texture_scale = 1.5
 metadata/_edit_lock_ = true
 
-[node name="MusicBackground" parent="." instance=ExtResource("16_wh7kg")]
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
 
-[node name="LevelLabel" type="RichTextLabel" parent="."]
-offset_left = 32.0
-offset_top = 32.0
-offset_right = 64.0
-offset_bottom = 56.0
+[node name="LevelLabel" type="RichTextLabel" parent="Player/CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 139.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
 text = "LV 6"
+tab_size = 7
+
+[node name="MusicBackground" parent="." instance=ExtResource("16_wh7kg")]
 
 [node name="Portal" parent="." instance=ExtResource("13_ye8g6")]
 position = Vector2(776, 360)

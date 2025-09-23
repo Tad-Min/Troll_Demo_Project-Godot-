@@ -2830,14 +2830,19 @@ shape = SubResource("RectangleShape2D_7vrde")
 position = Vector2(56, 416)
 scale = Vector2(1.5, 1.5)
 
-[node name="Manager" parent="." instance=ExtResource("8_gjm0f")]
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
 
-[node name="LevelLabel" type="RichTextLabel" parent="."]
-offset_left = 32.0
-offset_top = 32.0
-offset_right = 72.0
-offset_bottom = 64.0
-text = "LV 3"
+[node name="LevelLabel" type="RichTextLabel" parent="Player/CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 139.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "LV 3
+"
+tab_size = 7
+
+[node name="Manager" parent="." instance=ExtResource("8_gjm0f")]
 
 [node name="Trigger_1" type="Area2D" parent="."]
 position = Vector2(112, 368)

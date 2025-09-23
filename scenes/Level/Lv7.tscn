@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://c7np11tiq8x0f"]
+[gd_scene load_steps=27 format=4 uid="uid://c7np11tiq8x0f"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_k3s88"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_5xy3k"]
@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="17_2vpdl"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="19_heubl"]
 [ext_resource type="PackedScene" uid="uid://d8sfk2gyygn4" path="res://scenes/Trap/hidden_jumper.tscn" id="21_xqnkm"]
-[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="22_cqj4n"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="23_f1njk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
@@ -1492,22 +1491,23 @@ stage_to_unlock = 2
 
 [node name="Manager" parent="." instance=ExtResource("17_2vpdl")]
 
-[node name="LevelLabel" type="RichTextLabel" parent="."]
-offset_left = 93.0
-offset_top = 33.0
-offset_right = 125.0
-offset_bottom = 57.0
-text = "LV 7
-"
-
 [node name="Player" parent="." instance=ExtResource("16_rykfc")]
 position = Vector2(76, 364)
 scale = Vector2(1.5, 1.5)
 
-[node name="MusicBackground" parent="." instance=ExtResource("23_f1njk")]
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
 
-[node name="Pause" parent="." instance=ExtResource("22_cqj4n")]
-visible = false
+[node name="LevelLabel" type="RichTextLabel" parent="Player/CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 139.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "LV 7
+"
+tab_size = 7
+
+[node name="MusicBackground" parent="." instance=ExtResource("23_f1njk")]
 
 [node name="Trigger_Hidden_Path" type="Area2D" parent="."]
 position = Vector2(1000, 88)
@@ -1698,17 +1698,11 @@ position = Vector2(613, 532)
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone" index="0"]
 position = Vector2(-343, -36)
 
-[node name="RightSpawner" parent="DodgeTraps/Trapzone" index="1"]
-position = Vector2(562, -4)
-
 [node name="Trapzone3" parent="DodgeTraps" instance=ExtResource("19_heubl")]
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone3" index="0"]
 position = Vector2(-199, -35)
-
-[node name="RightSpawner" parent="DodgeTraps/Trapzone3" index="1"]
-position = Vector2(562, -4)
 
 [node name="Trapzone2" parent="DodgeTraps" instance=ExtResource("19_heubl")]
 position = Vector2(613, 532)
@@ -1716,17 +1710,11 @@ position = Vector2(613, 532)
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone2" index="0"]
 position = Vector2(-294, -35)
 
-[node name="RightSpawner" parent="DodgeTraps/Trapzone2" index="1"]
-position = Vector2(562, -91)
-
 [node name="Trapzone4" parent="DodgeTraps" instance=ExtResource("19_heubl")]
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone4" index="0"]
 position = Vector2(-243, -35)
-
-[node name="RightSpawner" parent="DodgeTraps/Trapzone4" index="1"]
-position = Vector2(562, -91)
 
 [node name="Trapzone5" parent="DodgeTraps" instance=ExtResource("19_heubl")]
 position = Vector2(613, 532)
@@ -1734,17 +1722,11 @@ position = Vector2(613, 532)
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone5" index="0"]
 position = Vector2(-126, -35)
 
-[node name="RightSpawner" parent="DodgeTraps/Trapzone5" index="1"]
-position = Vector2(562, -4)
-
 [node name="Trapzone6" parent="DodgeTraps" instance=ExtResource("19_heubl")]
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone6" index="0"]
 position = Vector2(18, -34)
-
-[node name="RightSpawner" parent="DodgeTraps/Trapzone6" index="1"]
-position = Vector2(562, -4)
 
 [node name="Trapzone7" parent="DodgeTraps" instance=ExtResource("19_heubl")]
 position = Vector2(613, 532)
@@ -1752,17 +1734,11 @@ position = Vector2(613, 532)
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone7" index="0"]
 position = Vector2(-77, -35)
 
-[node name="RightSpawner" parent="DodgeTraps/Trapzone7" index="1"]
-position = Vector2(562, -91)
-
 [node name="Trapzone8" parent="DodgeTraps" instance=ExtResource("19_heubl")]
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone8" index="0"]
 position = Vector2(-26, -35)
-
-[node name="RightSpawner" parent="DodgeTraps/Trapzone8" index="1"]
-position = Vector2(562, -91)
 
 [node name="Trapzone9" parent="DodgeTraps" instance=ExtResource("19_heubl")]
 position = Vector2(613, 532)
@@ -1770,17 +1746,11 @@ position = Vector2(613, 532)
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone9" index="0"]
 position = Vector2(114, -34)
 
-[node name="RightSpawner" parent="DodgeTraps/Trapzone9" index="1"]
-position = Vector2(562, -4)
-
 [node name="Trapzone10" parent="DodgeTraps" instance=ExtResource("19_heubl")]
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone10" index="0"]
 position = Vector2(258, -35)
-
-[node name="RightSpawner" parent="DodgeTraps/Trapzone10" index="1"]
-position = Vector2(562, -4)
 
 [node name="Trapzone11" parent="DodgeTraps" instance=ExtResource("19_heubl")]
 position = Vector2(613, 532)
@@ -1788,17 +1758,11 @@ position = Vector2(613, 532)
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone11" index="0"]
 position = Vector2(163, -36)
 
-[node name="RightSpawner" parent="DodgeTraps/Trapzone11" index="1"]
-position = Vector2(562, -91)
-
 [node name="Trapzone12" parent="DodgeTraps" instance=ExtResource("19_heubl")]
 position = Vector2(613, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone12" index="0"]
 position = Vector2(214, -34)
-
-[node name="RightSpawner" parent="DodgeTraps/Trapzone12" index="1"]
-position = Vector2(562, -91)
 
 [node name="Trapzone13" parent="DodgeTraps" instance=ExtResource("19_heubl")]
 position = Vector2(664, 532)
@@ -1806,17 +1770,11 @@ position = Vector2(664, 532)
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone13" index="0"]
 position = Vector2(163, -35)
 
-[node name="RightSpawner" parent="DodgeTraps/Trapzone13" index="1"]
-position = Vector2(562, -91)
-
 [node name="Trapzone14" parent="DodgeTraps" instance=ExtResource("19_heubl")]
 position = Vector2(664, 532)
 
 [node name="CollisionShape2D" parent="DodgeTraps/Trapzone14" index="0"]
 position = Vector2(214, -35)
-
-[node name="RightSpawner" parent="DodgeTraps/Trapzone14" index="1"]
-position = Vector2(562, -91)
 
 [node name="HiddenJumpers" type="Node" parent="."]
 

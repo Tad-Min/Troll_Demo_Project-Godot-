@@ -3578,18 +3578,21 @@ metadata/_edit_lock_ = true
 
 [node name="Manager" parent="." instance=ExtResource("17_p1vqh")]
 
-[node name="LevelLabel" type="RichTextLabel" parent="."]
-offset_left = 32.0
-offset_top = 32.0
-offset_right = 82.0
-offset_bottom = 56.0
-text = "LV 20"
-metadata/_edit_use_anchors_ = true
-
 [node name="Player" parent="." instance=ExtResource("16_q2qt0")]
 position = Vector2(24, 456)
 scale = Vector2(1.5, 1.5)
 speed = 150.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+
+[node name="LevelLabel" type="RichTextLabel" parent="Player/CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 155.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "LV 13"
+tab_size = 7
 
 [node name="MusicBackground" parent="." instance=ExtResource("23_4ycd7")]
 

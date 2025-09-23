@@ -844,6 +844,18 @@ tile_set = SubResource("TileSet_uld1g")
 [node name="Player" parent="." instance=ExtResource("7_uld1g")]
 position = Vector2(56, 59)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+
+[node name="LevelLabel" type="RichTextLabel" parent="Player/CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 139.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "LV 8
+"
+tab_size = 7
+
 [node name="Manager" parent="." instance=ExtResource("8_c7wi2")]
 
 [node name="MusicBackground" parent="." instance=ExtResource("9_dys6o")]

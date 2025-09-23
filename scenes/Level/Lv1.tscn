@@ -1476,19 +1476,24 @@ tile_set = SubResource("TileSet_1jteh")
 position = Vector2(60, 324)
 scale = Vector2(2, 2)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+
+[node name="LevelLabel" type="RichTextLabel" parent="Player/CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 139.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "LV 1
+"
+tab_size = 7
+
 [node name="Manager" parent="." instance=ExtResource("8_215dr")]
 
 [node name="Portal" parent="." instance=ExtResource("9_fqcln")]
 position = Vector2(981, 119)
 next_level_path = "res://scenes/Level/Lv2.tscn"
 stage_to_unlock = 1
-
-[node name="LevelLabel" type="RichTextLabel" parent="."]
-offset_left = 32.0
-offset_top = 32.0
-offset_right = 64.0
-offset_bottom = 56.0
-text = "LV 1"
 
 [node name="Spear" parent="." instance=ExtResource("10_3u6yt")]
 position = Vector2(152, 343)
@@ -1498,9 +1503,6 @@ position = Vector2(372, 264)
 
 [node name="CollisionShape2D" parent="Trapzone" index="0"]
 position = Vector2(-8.375, -1.75)
-
-[node name="RightSpawner" parent="Trapzone" index="1"]
-position = Vector2(834, 8)
 
 [node name="Jumper" parent="." instance=ExtResource("14_ccrv4")]
 position = Vector2(951, 148)

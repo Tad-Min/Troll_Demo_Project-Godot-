@@ -908,6 +908,18 @@ rotation = 1.5708
 [node name="Player" parent="." instance=ExtResource("11_22qcq")]
 position = Vector2(95, 72)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+
+[node name="LevelLabel" type="RichTextLabel" parent="Player/CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 139.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "LV 9
+"
+tab_size = 7
+
 [node name="Manager" parent="." instance=ExtResource("12_1q7t0")]
 
 [node name="MusicBackground" parent="." instance=ExtResource("13_ydrgs")]

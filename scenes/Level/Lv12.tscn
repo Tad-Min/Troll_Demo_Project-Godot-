@@ -3297,23 +3297,20 @@ stage_to_unlock = 12
 
 [node name="Manager" parent="." instance=ExtResource("8_t5jtx")]
 
-[node name="LevelLabel" type="RichTextLabel" parent="."]
-offset_left = 93.0
-offset_top = 33.0
-offset_right = 153.0
-offset_bottom = 57.0
-text = "LV 12
-"
-
 [node name="Player" parent="." instance=ExtResource("9_ve145")]
 position = Vector2(42, 497)
 scale = Vector2(0.94, 0.94)
 
-[node name="deathcount_canva" parent="Player" index="5"]
-visible = false
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
 
-[node name="Message" parent="Player" index="8"]
-visible = false
+[node name="LevelLabel" type="RichTextLabel" parent="Player/CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 155.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "LV 12"
+tab_size = 7
 
 [node name="MusicBackground" parent="." instance=ExtResource("10_ut43x")]
 
