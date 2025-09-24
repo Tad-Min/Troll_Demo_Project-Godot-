@@ -9,7 +9,7 @@ func _ready() -> void:
 	$Trap8/SpikeSimple8/Area2D.monitoring = false
 	
 func start() -> void:
-	$Button7_1.visible = true
-	$Button7_2.visible = true
+	$Button8.visible = true
+	$Button8/Area2D.monitoring = true
 	
 	$Trap8.monitoring = true

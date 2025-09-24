@@ -1,6 +1,4 @@
 extends Node2D
-
-@export var nextCbTrap:NodePath
 var isActive := false
 
 func _on_area_2d_body_entered(body: Node) -> void:
@@ -10,4 +8,3 @@ func _on_area_2d_body_entered(body: Node) -> void:
 		isActive = true
 		if body.has_method("die"):
 			body.die("trap")
-		get_node(nextCbTrap).start()
