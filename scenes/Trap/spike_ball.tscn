@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://8oftca5oo1lr"]
+[gd_scene load_steps=5 format=3 uid="uid://8oftca5oo1lr"]
 
+[ext_resource type="Script" uid="uid://c4ym3rd5bnw88" path="res://scripts/Trap/spike_ball.gd" id="1_8ulkm"]
 [ext_resource type="Texture2D" uid="uid://btarffrxrkr54" path="res://Trap asset/Ball_Spike.png" id="1_cmxf0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8ulkm"]
@@ -9,6 +10,7 @@ bounce = 1.0
 radius = 52.1728
 
 [node name="Spike_Ball" type="Node2D"]
+script = ExtResource("1_8ulkm")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_8ulkm")
@@ -20,3 +22,5 @@ texture = ExtResource("1_cmxf0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource("CircleShape2D_kbj5m")
+
+[connection signal="body_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_entered"]

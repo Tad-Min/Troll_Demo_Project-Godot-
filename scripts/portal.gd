@@ -30,5 +30,5 @@ func _request_scene_change(path: String) -> void:
 	if tree is SceneTree:
 		tree.call_deferred("change_scene_to_file", path)
 	else:
-		print("Not found SceneTree to change Scene" + path)
+		push_error("Not found SceneTree to change Scene" + path)
 	

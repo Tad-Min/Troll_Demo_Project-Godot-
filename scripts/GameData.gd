@@ -1,6 +1,6 @@
 extends Node
 
-@export var LvSize: int = 14
+@export var LvSize: int = 15
 var unlocked_stages: Array
 
 var death_count: int = 0
