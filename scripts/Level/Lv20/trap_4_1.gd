@@ -10,4 +10,4 @@ func _on_body_entered(body: Node) -> void:
 		$SpikeSimple4_1.visible = true
 		$SpikeSimple4_1/Area2D.monitoring = true
 		floortrap4.queue_free()
-		monitoring = false
+		set_deferred("monitoring", false)

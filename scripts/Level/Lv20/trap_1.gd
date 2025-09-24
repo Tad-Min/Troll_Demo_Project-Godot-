@@ -9,4 +9,4 @@ func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("Player"):
 		$SpikeSimple1_0.visible = true
 		$SpikeSimple1_1.visible = true
-		monitoring = false
+		set_deferred("monitoring", false)

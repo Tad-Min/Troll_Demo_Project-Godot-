@@ -7,4 +7,4 @@ func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("Player"):
 		$SpikeSimple8.visible = true
 		$SpikeSimple8/Area2D.monitoring = true
-		monitoring = false
+		set_deferred("monitoring", false)

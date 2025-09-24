@@ -8,4 +8,4 @@ func _on_body_entered(body: Node) -> void:
 		$SpikeSimple5.visible = true
 		$SpikeSimple5/Area2D.monitoring = true
 		$SpikeSimple5.start()
-		monitoring = false
+		set_deferred("monitoring", false)

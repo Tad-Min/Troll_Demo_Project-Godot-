@@ -11,4 +11,4 @@ func _on_body_entered(body: Node) -> void:
 		$SpikeSimple6_2/Area2D.monitoring = true
 		$SpikeSimple6_1.start()
 		$SpikeSimple6_2.start()
-		monitoring = false
+		set_deferred("monitoring", false)
