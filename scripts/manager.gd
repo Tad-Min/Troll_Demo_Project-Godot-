@@ -1,5 +1,7 @@
 extends Node
 
+@export var Portal: NodePath = "../Portal"
+
 func _ready() -> void:
 	print("Manager ready!")
 
@@ -7,7 +9,7 @@ func _ready() -> void:
 	_set_current_level_index()
 
 	# connect to portal
-	var portal = get_node_or_null("../Portal")
+	var portal = get_node_or_null(Portal)
 	if portal:
 		portal.connect("player_entered", Callable(self, "on_portal_entered"))
 	else:
@@ -40,7 +42,7 @@ func _go_to_next_screen() -> void:
 	if next_index < GameData.level_paths.size():
 		GameData.next_level_path = GameData.level_paths[next_index]
 		GameData.current_level_index = next_index  # ← cập nhật luôn index
-	get_tree().change_scene_to_file("res://scenes/Next.tscn")  # chỉ chuyển đến màn Next
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/Next.tscn")  # chỉ chuyển đến màn Next
 
 
 func on_player_died(cause: String = "") -> void:

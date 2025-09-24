@@ -1473,7 +1473,7 @@ tile_map_data = PackedByteArray("AAACACYAAAAGAAUAAAADACUAAAAGAAQAAAAEACQAAAAGAAM
 tile_set = SubResource("TileSet_1jteh")
 
 [node name="Player" parent="." instance=ExtResource("6_oskok")]
-position = Vector2(60, 324)
+position = Vector2(56, 320)
 scale = Vector2(2, 2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]

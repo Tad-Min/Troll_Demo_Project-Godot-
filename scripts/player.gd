@@ -76,7 +76,7 @@ func _physics_process(delta: float) -> void:
 				lr_anim=false
 				$AnimatedSprite2D.play("jump_right")
 	
-	if position.y > 900:
+	if position.y > 900 or position.y < -900:
 		GameData.last_death_cause = "fell_out"
 		emit_signal("died", GameData.last_death_cause)
 

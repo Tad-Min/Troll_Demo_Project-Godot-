@@ -232,6 +232,9 @@ radius = 6.08276
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_g2els")
+speed = null
+jump_velocity = null
+gravity_inverted = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -10)

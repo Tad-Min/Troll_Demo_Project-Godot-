@@ -2919,9 +2919,6 @@ tab_size = 7
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1153, 323)
 
-[node name="Portal2" parent="." instance=ExtResource("13_obagd")]
-position = Vector2(104, 440)
-
 [editable path="Trapzone1"]
 [editable path="Trapzone2"]
 [editable path="Trapzone3"]
