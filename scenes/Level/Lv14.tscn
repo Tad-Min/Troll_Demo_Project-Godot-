@@ -1385,7 +1385,7 @@ sources/0 = SubResource("TileSetAtlasSource_trgvg")
 bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kbj5m"]
-radius = 16.492422
+radius = 16.4924
 
 [node name="Lv10" type="Node2D"]
 
