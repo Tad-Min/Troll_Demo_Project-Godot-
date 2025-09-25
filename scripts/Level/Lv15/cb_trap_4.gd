@@ -2,7 +2,7 @@ extends Node2D
 
 func _ready() -> void:
 	$Button4.visible = false
-	$Button4/Area2D.visible = false
+	$Button4/Area2D.monitoring = false
 	
 	$Trap4_1.monitoring = false
 	$Trap4_1/SpikeSimple4_1.visible = false
@@ -14,7 +14,7 @@ func _ready() -> void:
 	
 func start() -> void:
 	$Button4.visible = true
-	$Button4/Area2D.visible = true
+	$Button4/Area2D.monitoring = true
 	
 	$Trap4_1.monitoring = true
 	$Trap4_2.monitoring = true

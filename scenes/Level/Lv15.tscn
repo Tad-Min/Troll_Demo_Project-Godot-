@@ -62,10 +62,10 @@ size = Vector2(66, 50)
 size = Vector2(137, 66)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wirxr"]
-size = Vector2(84, 120)
+size = Vector2(90, 120)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5d5q"]
-size = Vector2(42, 26)
+size = Vector2(48, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8v4p"]
 size = Vector2(512, 18)
@@ -1532,9 +1532,9 @@ grow_vertical = 2
 texture = ExtResource("5_v6870")
 
 [node name="Shu1" type="Node2D" parent="."]
-position = Vector2(32, 304)
+position = Vector2(576, 304)
 script = ExtResource("6_qtuis")
-move_distance = 1088.0
+move_distance = 544.0
 move_speed = 100.0
 loop = true
 direction = Vector2(1, 0)
@@ -1548,7 +1548,7 @@ metadata/_edit_lock_ = true
 position = Vector2(32, 400)
 script = ExtResource("6_qtuis")
 move_distance = 1088.0
-move_speed = 120.0
+move_speed = 100.0
 loop = true
 direction = Vector2(1, 0)
 metadata/_edit_lock_ = true
@@ -1558,9 +1558,9 @@ speed = 200.0
 metadata/_edit_lock_ = true
 
 [node name="Shu3" type="Node2D" parent="."]
-position = Vector2(1120, 304)
+position = Vector2(576, 304)
 script = ExtResource("6_qtuis")
-move_distance = 1088.0
+move_distance = 544.0
 move_speed = 100.0
 loop = true
 direction = Vector2(-1, 0)
@@ -1574,7 +1574,7 @@ metadata/_edit_lock_ = true
 position = Vector2(1120, 400)
 script = ExtResource("6_qtuis")
 move_distance = 1088.0
-move_speed = 120.0
+move_speed = 100.0
 loop = true
 direction = Vector2(-1, 0)
 metadata/_edit_lock_ = true
@@ -1766,10 +1766,12 @@ metadata/_edit_lock_ = true
 
 [node name="Trap6" type="Area2D" parent="CbTrap6"]
 script = ExtResource("25_qosfm")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap6/Trap6"]
 position = Vector2(0, -101)
 shape = SubResource("RectangleShape2D_l5d5q")
+metadata/_edit_lock_ = true
 
 [node name="SpikeSimple6_1" parent="CbTrap6/Trap6" instance=ExtResource("11_gduur")]
 position = Vector2(-11, -104)
@@ -1779,6 +1781,7 @@ move_distance = 30.0
 speed = 50.0
 loop = false
 direction = Vector2(1, 0)
+metadata/_edit_lock_ = true
 
 [node name="SpikeSimple6_2" parent="CbTrap6/Trap6" instance=ExtResource("11_gduur")]
 position = Vector2(11, -104)
@@ -1788,6 +1791,7 @@ move_distance = 30.0
 speed = 50.0
 loop = false
 direction = Vector2(-1, 0)
+metadata/_edit_lock_ = true
 
 [node name="CbTrap7" type="Node2D" parent="."]
 position = Vector2(704, 192)
