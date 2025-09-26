@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.4", "Mobile")
 [autoload]
 
 GameData="*res://scripts/GameData.gd"
+Session="*res://scripts/Session.gd"
 
 [display]
 
