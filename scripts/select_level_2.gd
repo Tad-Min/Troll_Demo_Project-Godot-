@@ -8,14 +8,7 @@ extends Control
 @onready var lock14: TextureRect = $btnlv14/lock14
 @onready var lock15: TextureRect = $btnlv15/lock15
 func _ready():
-	btn_lv13.disabled = !GameData.is_stage_unlocked(12)
-	lock13.visible = !GameData.is_stage_unlocked(12)
 	
-	btn_lv14.disabled = !GameData.is_stage_unlocked(13)
-	lock14.visible = !GameData.is_stage_unlocked(13)
-	
-	btn_lv15.disabled = !GameData.is_stage_unlocked(14)
-	lock15.visible = !GameData.is_stage_unlocked(14)
 	
 	btn_return.pressed.connect(_on_btn_return_pressed)
 	btn_lv13.pressed.connect(_on_btn_lv13_pressed)

@@ -33,39 +33,7 @@ func _ready():
 	# Không cần ổ khoá cho lv1
 
 	# Level 2–12: Khóa nếu chưa unlock, mở nếu đã unlock
-	btn_lv2.disabled = !GameData.is_stage_unlocked(1)
-	lock2.visible = !GameData.is_stage_unlocked(1)
-
-	btn_lv3.disabled = !GameData.is_stage_unlocked(2)
-	lock3.visible = !GameData.is_stage_unlocked(2)
 	
-	btn_lv4.disabled = !GameData.is_stage_unlocked(3)
-	lock4.visible = !GameData.is_stage_unlocked(3)
-	
-	btn_lv5.disabled = !GameData.is_stage_unlocked(4)
-	lock5.visible = !GameData.is_stage_unlocked(4)
-	
-	btn_lv6.disabled = !GameData.is_stage_unlocked(5)
-	lock6.visible = !GameData.is_stage_unlocked(5)
-	
-	btn_lv7.disabled = !GameData.is_stage_unlocked(6)
-	lock7.visible = !GameData.is_stage_unlocked(6)
-	
-	btn_lv8.disabled = !GameData.is_stage_unlocked(7)
-	lock8.visible = !GameData.is_stage_unlocked(7)
-	
-	btn_lv9.disabled = !GameData.is_stage_unlocked(8)
-	lock9.visible = !GameData.is_stage_unlocked(8)
-	
-	btn_lv10.disabled = !GameData.is_stage_unlocked(9)
-	lock10.visible = !GameData.is_stage_unlocked(9)
-	
-	btn_lv11.disabled = !GameData.is_stage_unlocked(10)
-	lock11.visible = !GameData.is_stage_unlocked(10)
-	
-	btn_lv12.disabled = !GameData.is_stage_unlocked(11)
-	lock12.visible = !GameData.is_stage_unlocked(11)
-
 
 	
 	# Kết nối pressed
