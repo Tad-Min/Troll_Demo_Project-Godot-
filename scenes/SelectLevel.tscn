@@ -1,10 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://blnjmna71025t"]
+[gd_scene load_steps=30 format=3 uid="uid://blnjmna71025t"]
 
 [ext_resource type="Script" uid="uid://bqud0bqb2dq15" path="res://scripts/select_level.gd" id="1_adu0t"]
 [ext_resource type="Texture2D" uid="uid://6rflweclk7du" path="res://Jungle Asset Pack/parallax background/saddle-brown-color-solid-background-1920x1080.png" id="2_jjqxc"]
 [ext_resource type="Texture2D" uid="uid://b6y5vkou3j877" path="res://Jungle Asset Pack/parallax background/Lv1.png" id="3_uo0xe"]
 [ext_resource type="Texture2D" uid="uid://dwdnu5osgy8ne" path="res://Jungle Asset Pack/parallax background/Lv2.png" id="4_vp03w"]
 [ext_resource type="Texture2D" uid="uid://k6rlbh1o1qen" path="res://Jungle Asset Pack/parallax background/Lv3.png" id="5_82unp"]
+[ext_resource type="Texture2D" uid="uid://cpdroaybjaacl" path="res://Jungle Asset Pack/parallax background/Ổ Khóa.png" id="5_f3alr"]
 [ext_resource type="Texture2D" uid="uid://dqtxwy55uhmdk" path="res://Jungle Asset Pack/parallax background/Lv4.png" id="6_82unp"]
 [ext_resource type="Texture2D" uid="uid://m6t1xsf4dqfu" path="res://Jungle Asset Pack/parallax background/Lv5.png" id="7_i1c1a"]
 [ext_resource type="Texture2D" uid="uid://btfe8eoe6ivjt" path="res://Jungle Asset Pack/parallax background/Lv6.png" id="8_ibsxg"]
@@ -121,6 +122,17 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_xlyyc")
 text = "LEVEL 2
 "
 
+[node name="lock2" type="TextureRect" parent="btnlv2"]
+modulate = Color(0.960351, 0.960351, 0.960351, 1)
+self_modulate = Color(0.270222, 0.270222, 0.270222, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 345.0
+offset_bottom = 138.0
+texture = ExtResource("5_f3alr")
+expand_mode = 3
+
 [node name="btnlv3" type="Button" parent="."]
 layout_mode = 0
 offset_left = 778.0
@@ -132,16 +144,34 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_iw11j")
 text = "LEVEL 3
 "
 
+[node name="lock3" type="TextureRect" parent="btnlv3"]
+modulate = Color(0.252028, 0.252028, 0.252028, 1)
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 137.0
+texture = ExtResource("5_f3alr")
+expand_mode = 3
+
 [node name="btnlv4" type="Button" parent="."]
 layout_mode = 0
-offset_left = -20.0
-offset_top = 179.0
-offset_right = 326.0
-offset_bottom = 325.0
+offset_left = -23.0
+offset_top = 167.0
+offset_right = 323.0
+offset_bottom = 313.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_peair")
 text = "LEVEL 4
 "
+
+[node name="lock4" type="TextureRect" parent="btnlv4"]
+modulate = Color(0.255659, 0.255659, 0.255659, 1)
+layout_mode = 0
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 346.0
+offset_bottom = 149.0
+texture = ExtResource("5_f3alr")
+expand_mode = 3
 
 [node name="btnlv5" type="Button" parent="."]
 layout_mode = 0
@@ -154,6 +184,16 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_f3alr")
 text = "LEVEL 5
 "
 
+[node name="lock5" type="TextureRect" parent="btnlv5"]
+modulate = Color(0.255659, 0.255659, 0.255659, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 343.0
+offset_bottom = 151.0
+texture = ExtResource("5_f3alr")
+expand_mode = 3
+
 [node name="btnlv6" type="Button" parent="."]
 layout_mode = 0
 offset_left = 788.0
@@ -164,6 +204,14 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_1b177")
 text = "LEVEL 6
 "
+
+[node name="lock6" type="TextureRect" parent="btnlv6"]
+modulate = Color(0.252028, 0.252028, 0.252028, 1)
+layout_mode = 0
+offset_right = 341.0
+offset_bottom = 150.0
+texture = ExtResource("5_f3alr")
+expand_mode = 3
 
 [node name="btnlv7" type="Button" parent="."]
 layout_mode = 0
@@ -176,6 +224,14 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ckuqx")
 text = "LEVEL 7
 "
 
+[node name="lock7" type="TextureRect" parent="btnlv7"]
+modulate = Color(0.325441, 0.325441, 0.325441, 1)
+layout_mode = 0
+offset_right = 349.0
+offset_bottom = 148.0
+texture = ExtResource("5_f3alr")
+expand_mode = 3
+
 [node name="btnlv8" type="Button" parent="."]
 layout_mode = 0
 offset_left = 382.0
@@ -186,6 +242,14 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_85wt0")
 text = "LEVEL 8
 "
+
+[node name="lock8" type="TextureRect" parent="btnlv8"]
+modulate = Color(0.310617, 0.310617, 0.310617, 1)
+layout_mode = 0
+offset_right = 351.0
+offset_bottom = 154.0
+texture = ExtResource("5_f3alr")
+expand_mode = 3
 
 [node name="btnlv9" type="Button" parent="."]
 layout_mode = 0
@@ -198,6 +262,14 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_rtkmm")
 text = "LEVEL 9
 "
 
+[node name="lock9" type="TextureRect" parent="btnlv9"]
+modulate = Color(0.288518, 0.288518, 0.288518, 1)
+layout_mode = 0
+offset_right = 349.0
+offset_bottom = 152.0
+texture = ExtResource("5_f3alr")
+expand_mode = 3
+
 [node name="btnlv10" type="Button" parent="."]
 layout_mode = 0
 offset_left = -16.0
@@ -208,6 +280,14 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_8gyec")
 text = "LEVEL 10
 "
+
+[node name="lock10" type="TextureRect" parent="btnlv10"]
+modulate = Color(0.321728, 0.321728, 0.321728, 1)
+layout_mode = 0
+offset_right = 354.0
+offset_bottom = 140.0
+texture = ExtResource("5_f3alr")
+expand_mode = 3
 
 [node name="btnlv11" type="Button" parent="."]
 layout_mode = 0
@@ -220,10 +300,18 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_8p21l")
 text = "LEVEL 11
 "
 
+[node name="lock11" type="TextureRect" parent="btnlv11"]
+modulate = Color(0.321728, 0.321728, 0.321728, 1)
+layout_mode = 0
+offset_right = 355.0
+offset_bottom = 142.0
+texture = ExtResource("5_f3alr")
+expand_mode = 3
+
 [node name="btnNext" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1045.0
-offset_top = 300.0
+offset_left = 1064.0
+offset_top = 310.0
 offset_right = 1133.0
 offset_bottom = 379.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -241,3 +329,11 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_joqlv")
 text = "LEVEL 12
 "
+
+[node name="lock12" type="TextureRect" parent="btnlv12"]
+modulate = Color(0.306923, 0.306923, 0.306923, 1)
+layout_mode = 0
+offset_right = 339.0
+offset_bottom = 152.0
+texture = ExtResource("5_f3alr")
+expand_mode = 3

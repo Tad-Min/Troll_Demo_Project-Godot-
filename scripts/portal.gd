@@ -15,6 +15,8 @@ func _on_body_entered(body: Node) -> void:
 		return
 	print("Player entered the portal!")
 	emit_signal("player_entered")
+	if stage_to_unlock > 0:      # Đảm bảo không unlock lv1
+		GameData.unlock_stage(stage_to_unlock)
 	# Nếu GameData đã thiết lập level kế tiếp, mở UI Next
 	if GameData.next_level_path != "":
 		call_deferred("_request_scene_change", "res://scenes/Next.tscn")

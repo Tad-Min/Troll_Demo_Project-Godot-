@@ -27,10 +27,18 @@ var level_paths: Array = [
 ]
 
 func _ready() -> void:
-	if not load_progress():
-		unlocked_stages.resize(LvSize)
-		unlocked_stages.fill(false)
-		unlocked_stages[0] = true
+	if Engine.is_editor_hint():
+		reset_progress()
+	else:
+		if not load_progress():
+			reset_progress()
+
+# ⚡ Hàm reset về mặc định (chỉ mở level 1)
+func reset_progress():
+	unlocked_stages.resize(LvSize)
+	unlocked_stages.fill(false)
+	unlocked_stages[0] = true
+	save_progress()
 
 # Unlock stage base on index
 func unlock_stage(stage_index: int) -> void:

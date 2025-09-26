@@ -13,8 +13,62 @@ extends Control
 @onready var btn_lv12: Button = $btnlv12
 @onready var btn_next: Button = $btnNext
 
+# Nếu hình ổ khoá là TextureRect đặt cùng cấp với từng btn:
+@onready var lock2: TextureRect = $btnlv2/lock2
+@onready var lock3: TextureRect = $btnlv3/lock3
+@onready var lock4: TextureRect = $btnlv4/lock4
+@onready var lock5: TextureRect = $btnlv5/lock5
+@onready var lock6: TextureRect = $btnlv6/lock6
+@onready var lock7: TextureRect = $btnlv7/lock7
+@onready var lock8: TextureRect = $btnlv8/lock8
+@onready var lock9: TextureRect = $btnlv9/lock9
+@onready var lock10: TextureRect = $btnlv10/lock10
+@onready var lock11: TextureRect = $btnlv11/lock11
+@onready var lock12: TextureRect = $btnlv12/lock12
+
 
 func _ready():
+	# Level 1 luôn mở
+	btn_lv1.disabled = false
+	# Không cần ổ khoá cho lv1
+
+	# Level 2–12: Khóa nếu chưa unlock, mở nếu đã unlock
+	btn_lv2.disabled = !GameData.is_stage_unlocked(1)
+	lock2.visible = !GameData.is_stage_unlocked(1)
+
+	btn_lv3.disabled = !GameData.is_stage_unlocked(2)
+	lock3.visible = !GameData.is_stage_unlocked(2)
+	
+	btn_lv4.disabled = !GameData.is_stage_unlocked(3)
+	lock4.visible = !GameData.is_stage_unlocked(3)
+	
+	btn_lv5.disabled = !GameData.is_stage_unlocked(4)
+	lock5.visible = !GameData.is_stage_unlocked(4)
+	
+	btn_lv6.disabled = !GameData.is_stage_unlocked(5)
+	lock6.visible = !GameData.is_stage_unlocked(5)
+	
+	btn_lv7.disabled = !GameData.is_stage_unlocked(6)
+	lock7.visible = !GameData.is_stage_unlocked(6)
+	
+	btn_lv8.disabled = !GameData.is_stage_unlocked(7)
+	lock8.visible = !GameData.is_stage_unlocked(7)
+	
+	btn_lv9.disabled = !GameData.is_stage_unlocked(8)
+	lock9.visible = !GameData.is_stage_unlocked(8)
+	
+	btn_lv10.disabled = !GameData.is_stage_unlocked(9)
+	lock10.visible = !GameData.is_stage_unlocked(9)
+	
+	btn_lv11.disabled = !GameData.is_stage_unlocked(10)
+	lock11.visible = !GameData.is_stage_unlocked(10)
+	
+	btn_lv12.disabled = !GameData.is_stage_unlocked(11)
+	lock12.visible = !GameData.is_stage_unlocked(11)
+
+
+	
+	# Kết nối pressed
 	btn_lv1.pressed.connect(_on_btn_lv1_pressed)
 	btn_lv2.pressed.connect(_on_btn_lv2_pressed)
 	btn_lv3.pressed.connect(_on_btn_lv3_pressed)
@@ -29,42 +83,17 @@ func _ready():
 	btn_lv12.pressed.connect(_on_btn_lv12_pressed)
 	btn_next.pressed.connect(_on_btn_next_pressed)
 
-func _on_btn_lv1_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv1.tscn")
 
-func _on_btn_lv2_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv2.tscn")
-
-func _on_btn_lv3_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv3.tscn")
-	
-func _on_btn_lv4_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv4.tscn")
-	
-func _on_btn_lv5_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv5.tscn")
-	
-func _on_btn_lv6_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv6.tscn")
-	
-func _on_btn_lv7_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv7.tscn")
-	
-func _on_btn_lv8_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv8.tscn")
-	
-func _on_btn_lv9_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv9.tscn")
-	
-func _on_btn_lv10_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv10.tscn")
-	
-func _on_btn_lv11_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv11.tscn")
-	
-func _on_btn_lv12_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv12.tscn")
-	
-func _on_btn_next_pressed():
-	get_tree().change_scene_to_file("res://scenes/SelectLevel2.tscn")
-	
+func _on_btn_lv1_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv1.tscn")
+func _on_btn_lv2_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv2.tscn")
+func _on_btn_lv3_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv3.tscn")
+func _on_btn_lv4_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv4.tscn")
+func _on_btn_lv5_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv5.tscn")
+func _on_btn_lv6_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv6.tscn")
+func _on_btn_lv7_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv7.tscn")
+func _on_btn_lv8_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv8.tscn")
+func _on_btn_lv9_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv9.tscn")
+func _on_btn_lv10_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv10.tscn")
+func _on_btn_lv11_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv11.tscn")
+func _on_btn_lv12_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv12.tscn")
+func _on_btn_next_pressed(): get_tree().change_scene_to_file("res://scenes/SelectLevel2.tscn")
