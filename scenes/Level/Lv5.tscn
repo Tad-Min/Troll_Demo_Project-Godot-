@@ -4261,7 +4261,7 @@ metadata/_edit_lock_ = true
 [node name="Manager" parent="." instance=ExtResource("9_gyu7e")]
 
 [node name="Player" parent="." instance=ExtResource("14_sskub")]
-position = Vector2(984, 56)
+position = Vector2(58, 470)
 scale = Vector2(1.5, 1.5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]

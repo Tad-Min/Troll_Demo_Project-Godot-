@@ -23,7 +23,8 @@ var level_paths: Array = [
 	"res://scenes/Level/Lv11.tscn",
 	"res://scenes/Level/Lv12.tscn",
 	"res://scenes/Level/Lv13.tscn",
-	"res://scenes/Level/Lv14.tscn"
+	"res://scenes/Level/Lv14.tscn",
+	"res://scenes/Level/Lv15.tscn"
 ]
 
 func _ready() -> void:
