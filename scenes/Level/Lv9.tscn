@@ -907,6 +907,7 @@ rotation = 1.5708
 
 [node name="Player" parent="." instance=ExtResource("11_22qcq")]
 position = Vector2(95, 72)
+jump_velocity = 600.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
 
@@ -1000,7 +1001,7 @@ position = Vector2(1100, 176)
 rotation = 3.14159
 scale = Vector2(2.01603, -2.0561)
 next_level_path = "res://scenes/Level/Lv10.tscn"
-stage_to_unlock = 1
+stage_to_unlock = 9
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1153, 323)
