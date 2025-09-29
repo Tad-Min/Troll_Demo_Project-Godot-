@@ -1386,7 +1386,7 @@ friction = 0.0
 bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m183f"]
-radius = 5.7142944
+radius = 5.71429
 
 [node name="Lv14" type="Node2D"]
 
@@ -1491,7 +1491,7 @@ scale = Vector2(0.1, 0.1)
 metadata/_edit_lock_ = true
 
 [node name="Spike_Ball2" parent="." instance=ExtResource("11_e6t11")]
-position = Vector2(168.00002, 224)
+position = Vector2(168, 224)
 scale = Vector2(0.05, 0.05)
 metadata/_edit_lock_ = true
 
