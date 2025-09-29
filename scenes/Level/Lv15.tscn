@@ -1454,7 +1454,7 @@ size = Vector2(1149.5, 80)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcgwp"]
 size = Vector2(40, 144)
 
-[node name="Lv20" type="Node2D"]
+[node name="Lv15" type="Node2D"]
 metadata/_edit_lock_ = true
 
 [node name="Background" type="TextureRect" parent="."]
