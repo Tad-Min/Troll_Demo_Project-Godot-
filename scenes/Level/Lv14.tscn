@@ -6,11 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://Jungle Asset Pack/parallax background/plx-4.png" id="4_sukam"]
 [ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://Jungle Asset Pack/parallax background/plx-5.png" id="5_ribyg"]
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="6_41jg5"]
-[ext_resource type="Script" uid="uid://cgna7vxxocmbr" path="res://scripts/Level/Lv14/Spike_Ball.gd" id="8_0tu4g"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="8_hrvyc"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="9_bnfrj"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="10_cvrhe"]
 [ext_resource type="PackedScene" uid="uid://8oftca5oo1lr" path="res://scenes/Trap/spike_ball.tscn" id="11_e6t11"]
+[ext_resource type="Script" uid="uid://w0g3mhlw8465" path="res://scripts/Level/Lv14/portal.gd" id="11_m183f"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="12_m183f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jteh"]
@@ -693,8 +693,8 @@ texture = ExtResource("6_41jg5")
 38:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_l3d6l"]
-physics_layer_0/collision_layer = 3
-physics_layer_0/collision_mask = 3
+physics_layer_0/collision_layer = 7
+physics_layer_0/collision_mask = 7
 sources/1 = SubResource("TileSetAtlasSource_1jteh")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trgvg"]
@@ -1377,17 +1377,18 @@ texture = ExtResource("6_41jg5")
 38:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_1jteh"]
-physics_layer_0/collision_layer = 3
-physics_layer_0/collision_mask = 3
+physics_layer_0/collision_layer = 7
+physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_trgvg")
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8ulkm"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0tu4g"]
+friction = 0.0
 bounce = 1.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_kbj5m"]
-radius = 16.4924
+[sub_resource type="CircleShape2D" id="CircleShape2D_m183f"]
+radius = 5.7142944
 
-[node name="Lv10" type="Node2D"]
+[node name="Lv14" type="Node2D"]
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = 191.0
@@ -1410,6 +1411,7 @@ offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_m183f")
+metadata/_edit_lock_ = true
 
 [node name="Bg_layer2" type="TextureRect" parent="Background"]
 layout_mode = 1
@@ -1423,6 +1425,7 @@ offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_xoor8")
+metadata/_edit_lock_ = true
 
 [node name="Bg_layer3" type="TextureRect" parent="Background"]
 layout_mode = 1
@@ -1436,6 +1439,7 @@ offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_xoor8")
+metadata/_edit_lock_ = true
 
 [node name="Bg_layer4" type="TextureRect" parent="Background"]
 layout_mode = 1
@@ -1449,6 +1453,7 @@ offset_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_sukam")
+metadata/_edit_lock_ = true
 
 [node name="Bg_layer5" type="TextureRect" parent="Background"]
 layout_mode = 1
@@ -1462,101 +1467,78 @@ offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_ribyg")
+metadata/_edit_lock_ = true
 
 [node name="Pad" type="TileMap" parent="."]
 format = 2
+metadata/_edit_lock_ = true
 
 [node name="Ground" type="TileMapLayer" parent="Pad"]
 tile_map_data = PackedByteArray("AABGACcAAQAsAAkAAABGACgAAQAsAAkAAABHACcAAQARABEAAABHACgAAQARABIAAAAAACcAAQAHAAQAAAAAACgAAQAMABIAAAABACcAAQAIAAQAAAABACgAAQAIAAQAAAABACYAAQAIAAQAAAABACUAAQAqAAkAAAABAAEAAQAqAAgAAAABAAIAAQAqAAkAAAABAAMAAQAqAAkAAAABAAQAAQAqAAkAAAABAAUAAQAqAAkAAAABAAYAAQAqAAkAAAABAAcAAQAqAAkAAAABAAgAAQAqAAkAAAABAAkAAQAqAAkAAAABAAoAAQAqAAkAAAABAAsAAQAqAAkAAAABAAwAAQAqAAkAAAABAA0AAQAqAAkAAAABAA4AAQAqAAkAAAABAA8AAQAqAAkAAAABABAAAQAqAAkAAAABABEAAQAqAAkAAAABABIAAQAqAAkAAAABABMAAQAqAAkAAAABABQAAQAqAAkAAAABABUAAQAqAAkAAAABABkAAQAGAAkAAAABABoAAQAqAAkAAAABABsAAQAqAAkAAAABABwAAQAqAAkAAAABACAAAQAqAAkAAAABACEAAQAqAAkAAAABACIAAQAqAAkAAAABACMAAQAqAAkAAAABACQAAQAqAAkAAAAFAAEAAQArAAgAAAAGAAEAAQArAAgAAAAHAAEAAQArAAgAAAAIAAEAAQArAAgAAAAJAAEAAQArAAgAAAAKAAEAAQArAAgAAAALAAEAAQArAAgAAAAMAAEAAQArAAgAAAANAAEAAQArAAgAAAAOAAEAAQArAAgAAAAPAAEAAQArAAgAAAAQAAEAAQArAAgAAAARAAEAAQArAAgAAAASAAEAAQArAAgAAAATAAEAAQArAAgAAAAUAAEAAQArAAgAAAAVAAEAAQArAAgAAAAWAAEAAQArAAgAAAAXAAEAAQArAAgAAAAYAAEAAQArAAgAAAAZAAEAAQArAAgAAAAaAAEAAQArAAgAAAAbAAEAAQArAAgAAAAcAAEAAQArAAgAAAAdAAEAAQArAAgAAAAeAAEAAQArAAgAAAAfAAEAAQArAAgAAAAgAAEAAQArAAgAAAAhAAEAAQArAAgAAAA8AAEAAQArAAgAAAA9AAEAAQArAAgAAAA+AAEAAQArAAgAAAA/AAEAAQArAAgAAABAAAEAAQArAAgAAABBAAEAAQArAAgAAABCAAEAAQArAAgAAABDAAEAAQArAAgAAABEAAEAAQArAAgAAABFAAEAAQArAAgAAABGAAEAAQAsAAgAAABGAAIAAQAsAAkAAABGAAMAAQAsAAkAAABGAAQAAQAsAAkAAABGAAUAAQAsAAkAAABGAAYAAQAsAAkAAABGAAcAAQAsAAkAAABGAAgAAQAsAAkAAABGAAkAAQAsAAkAAABGAAoAAQAsAAkAAABGAAsAAQAsAAkAAABGAAwAAQAsAAkAAABGAA0AAQAsAAkAAABGAA4AAQAsAAkAAABGAA8AAQAsAAkAAABGABAAAQAsAAkAAABGABEAAQAsAAkAAABGABIAAQAsAAkAAABGABMAAQAsAAkAAABGABQAAQAsAAkAAABGABUAAQAsAAkAAABGABYAAQAsAAkAAABGABcAAQAsAAkAAABGABgAAQAsAAkAAABGABkAAQAsAAkAAABGABoAAQAsAAkAAABGABsAAQAsAAkAAABGABwAAQAsAAkAAABGAB0AAQAsAAkAAABGAB4AAQAsAAkAAABGAB8AAQAsAAkAAABGACAAAQAsAAkAAABGACEAAQAsAAkAAABGACIAAQAsAAkAAABGACMAAQAsAAkAAABGACQAAQAsAAkAAABGACUAAQAsAAkAAABGACYAAQAsAAkAAAAAACYAAQAHAAQAAAAAACUAAQAHAAQAAAAAACQAAQAHAAQAAAAAACMAAQAHAAQAAAAAACIAAQAHAAQAAAAAACEAAQAHAAQAAAAAACAAAQAHAAQAAAAAAB8AAQAHAAQAAAAAAB4AAQAHAAQAAAAAAB0AAQAHAAQAAAAAABwAAQAHAAQAAAAAABsAAQAHAAQAAAAAABoAAQAHAAQAAAAAABkAAQAHAAQAAAAAABgAAQAHAAQAAAAAABcAAQAHAAQAAAAAABYAAQAHAAQAAAAAABUAAQAHAAQAAAAAABQAAQAHAAQAAAAAABMAAQAHAAQAAAAAABIAAQAHAAQAAAAAABEAAQAHAAQAAAAAABAAAQAHAAQAAAAAAA8AAQAHAAQAAAAAAA4AAQAHAAQAAAAAAA0AAQAHAAQAAAAAAAwAAQAHAAQAAAAAAAsAAQAHAAQAAAAAAAoAAQAHAAQAAAAAAAkAAQAHAAQAAAAAAAgAAQAHAAQAAAAAAAcAAQAHAAQAAAAAAAYAAQAHAAQA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")
 tile_set = SubResource("TileSet_l3d6l")
+metadata/_edit_lock_ = true
 
 [node name="Floor" type="TileMapLayer" parent="Pad"]
 position = Vector2(3, -231)
 tile_set = SubResource("TileSet_1jteh")
-
-[node name="Manager" parent="." instance=ExtResource("8_hrvyc")]
-Portal = NodePath("../Node2D/RigidBody2D/Portal")
-
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(1048, 328)
-
-[node name="RigidBody2D" type="RigidBody2D" parent="Node2D"]
-scale = Vector2(2, 2)
-physics_material_override = SubResource("PhysicsMaterial_8ulkm")
-script = ExtResource("8_0tu4g")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/RigidBody2D"]
-shape = SubResource("CircleShape2D_kbj5m")
-
-[node name="Portal" parent="Node2D/RigidBody2D" instance=ExtResource("9_bnfrj")]
-scale = Vector2(2, 2)
-next_level_path = "res://scenes/Level/Lv2.tscn"
-stage_to_unlock = 1
+metadata/_edit_lock_ = true
 
 [node name="MusicBackground" parent="." instance=ExtResource("10_cvrhe")]
 
 [node name="Spike_Ball" parent="." instance=ExtResource("11_e6t11")]
-position = Vector2(856, 184)
-
-[node name="RigidBody2D" parent="Spike_Ball" index="0"]
-script = ExtResource("8_0tu4g")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" parent="Spike_Ball/RigidBody2D" index="0"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="Spike_Ball/RigidBody2D" index="1"]
+position = Vector2(688, 312)
+scale = Vector2(0.1, 0.1)
 metadata/_edit_lock_ = true
 
 [node name="Spike_Ball2" parent="." instance=ExtResource("11_e6t11")]
-position = Vector2(704, 272)
-
-[node name="RigidBody2D" parent="Spike_Ball2" index="0"]
-script = ExtResource("8_0tu4g")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" parent="Spike_Ball2/RigidBody2D" index="0"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="Spike_Ball2/RigidBody2D" index="1"]
+position = Vector2(168.00002, 224)
+scale = Vector2(0.05, 0.05)
 metadata/_edit_lock_ = true
 
 [node name="Spike_Ball3" parent="." instance=ExtResource("11_e6t11")]
 position = Vector2(544, 168)
-
-[node name="RigidBody2D" parent="Spike_Ball3" index="0"]
-script = ExtResource("8_0tu4g")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" parent="Spike_Ball3/RigidBody2D" index="0"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="Spike_Ball3/RigidBody2D" index="1"]
+scale = Vector2(0.05, 0.05)
 metadata/_edit_lock_ = true
 
 [node name="Spike_Ball4" parent="." instance=ExtResource("11_e6t11")]
-position = Vector2(912, 296)
-
-[node name="RigidBody2D" parent="Spike_Ball4" index="0"]
-script = ExtResource("8_0tu4g")
+position = Vector2(944, 216)
+scale = Vector2(0.05, 0.05)
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" parent="Spike_Ball4/RigidBody2D" index="0"]
+[node name="Spike_Ball5" parent="." instance=ExtResource("11_e6t11")]
+position = Vector2(824, 256)
+scale = Vector2(0.05, 0.05)
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" parent="Spike_Ball4/RigidBody2D" index="1"]
+[node name="Portal" type="RigidBody2D" parent="."]
+position = Vector2(1064, 72)
+physics_material_override = SubResource("PhysicsMaterial_0tu4g")
+contact_monitor = true
+max_contacts_reported = 1
+linear_damp = -0.01
+script = ExtResource("11_m183f")
+
+[node name="Portal" parent="Portal" instance=ExtResource("9_bnfrj")]
+scale = Vector2(2, 2)
+stage_to_unlock = 14
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]
+scale = Vector2(2.8, 2.8)
+shape = SubResource("CircleShape2D_m183f")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("12_m183f")]
-position = Vector2(96, 360)
+position = Vector2(336, 368)
 scale = Vector2(2, 2)
-speed = 200.0
+speed = 250.0
+jump_velocity = 600.0
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" parent="Player" index="7"]
 zoom = Vector2(1.5, 1.5)
 
-[editable path="Spike_Ball"]
-[editable path="Spike_Ball2"]
-[editable path="Spike_Ball3"]
-[editable path="Spike_Ball4"]
+[node name="Manager" parent="." instance=ExtResource("8_hrvyc")]
+Portal = NodePath("../Portal/Portal")
+
 [editable path="Player"]
