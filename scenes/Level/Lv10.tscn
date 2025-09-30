@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bxp61qk2u4v2e" path="res://scenes/Trap/HiddenSpike.tscn" id="14_0mr8k"]
 [ext_resource type="PackedScene" uid="uid://dnhhenxrpugyn" path="res://scenes/Trap/Portal/FPortal1.tscn" id="15_getou"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="15_xmj81"]
-[ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="16_0mr8k"]
+[ext_resource type="PackedScene" uid="uid://bak735etd5s7k" path="res://scenes/Trap/Portal/RPortal2.tscn" id="16_0mr8k"]
 [ext_resource type="Script" uid="uid://ytpbsyii5x3b" path="res://scripts/portmanage.gd" id="16_jo0gb"]
 [ext_resource type="Script" uid="uid://ov8ltcncjpjy" path="res://scripts/Level/Lv10/fakeportLv10.gd" id="16_ubacb"]
 [ext_resource type="PackedScene" uid="uid://vr0cp86s7yb0" path="res://scenes/Trap/falling_spike.tscn" id="17_q8e8i"]
@@ -2940,12 +2940,13 @@ scale = Vector2(1.76, 1.72)
 script = ExtResource("16_ubacb")
 portal_scene = ExtResource("16_0mr8k")
 target_level_path = "res://scenes/Level/Lv11.tscn"
+next_level = 11
 
 [node name="AnimatedSprite2D" parent="FPortal1" index="0"]
 frame_progress = 0.499264
 
 [node name="Marker2D" parent="FPortal1" index="1"]
-position = Vector2(-4.54546, 227.907)
+position = Vector2(-388.068, 1.7442)
 
 [node name="PortalManager" type="Node2D" parent="."]
 script = ExtResource("16_jo0gb")
