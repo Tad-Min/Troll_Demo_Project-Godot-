@@ -6,7 +6,8 @@ extends Control
 func _ready() -> void:
 	print("DeathLabel is: ", death_label)
 	if death_label:
-		death_label.text = "Death: %d times" % GameData.death_count
+		death_label.text = "Death: %d times" % GameData.Levels[GameData.current_level].countDie
+		GameData.save_progress()
 	else:
 		push_error("DeathLabel is null. Check node path or scene structure.")
 	if cause_label:
@@ -16,14 +17,8 @@ func _ready() -> void:
 		push_error("CauseLabel is null. Add Label/ CauseLabel in GameOver scene.")
 
 func _pressed():
-	var last_level = get_tree().get_meta("last_level", "")
-	print("last level is: ")
-	print(last_level)
-	if last_level != "":
-		get_tree().change_scene_to_file(last_level)
-	else:
-		push_error("No last_level meta found! Reloading default Lv1.")
-		get_tree().change_scene_to_file("res://scenes/Level/Lv1.tscn")
+	get_tree().change_scene_to_file("res://scenes/Level/Lv%d.tscn" % (GameData.current_level + 1))
+
 
 func _format_cause(cause: String) -> String:
 	match cause:

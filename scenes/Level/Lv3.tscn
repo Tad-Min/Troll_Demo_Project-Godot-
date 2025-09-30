@@ -2757,8 +2757,7 @@ metadata/_edit_lock_ = true
 [node name="Real_Portal" parent="." instance=ExtResource("7_rmfpm")]
 position = Vector2(1088, 384)
 scale = Vector2(2, 2)
-next_level_path = "res://scenes/Level/Lv4.tscn"
-stage_to_unlock = 3
+next_level = 4
 metadata/_edit_lock_ = true
 
 [node name="Drop_1" type="StaticBody2D" parent="."]
@@ -2819,8 +2818,6 @@ metadata/_edit_lock_ = true
 position = Vector2(179.388, -4.0199)
 rotation = -3.14159
 scale = Vector2(0.995709, -1.05257)
-next_level_path = "res://scenes/Level/Lv3.tscn"
-stage_to_unlock = 2
 metadata/_edit_lock_ = true
 
 [node name="Floor" type="TileMapLayer" parent="Trap_door"]

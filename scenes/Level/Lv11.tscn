@@ -599,6 +599,7 @@ scale = Vector2(0.491922, 0.972823)
 [node name="Portal" parent="." instance=ExtResource("10_nelmb")]
 position = Vector2(2286, 259)
 scale = Vector2(-0.98, 1)
+next_level = 12
 
 [node name="Trapzone" parent="." instance=ExtResource("13_ubacb")]
 position = Vector2(2086, 254)

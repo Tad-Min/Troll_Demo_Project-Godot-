@@ -1520,7 +1520,7 @@ script = ExtResource("11_m183f")
 
 [node name="Portal" parent="Portal" instance=ExtResource("9_bnfrj")]
 scale = Vector2(2, 2)
-stage_to_unlock = 14
+next_level = 15
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]

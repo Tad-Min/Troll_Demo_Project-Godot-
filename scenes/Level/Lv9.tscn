@@ -1000,8 +1000,7 @@ position = Vector2(-2, -111)
 position = Vector2(1100, 176)
 rotation = 3.14159
 scale = Vector2(2.01603, -2.0561)
-next_level_path = "res://scenes/Level/Lv10.tscn"
-stage_to_unlock = 9
+next_level = 10
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1153, 323)

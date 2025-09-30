@@ -5,10 +5,5 @@ extends Control
 func _ready() -> void:
 	btn_next.pressed.connect(_on_btn_next_pressed)
 
-
 func _on_btn_next_pressed() -> void:
-	if GameData.next_level_path != "":
-		GameData.death_count = 0
-		get_tree().change_scene_to_file(GameData.next_level_path)
-	else:
-		push_error("❌ Không có đường dẫn level tiếp theo trong GameData!")
+	get_tree().change_scene_to_file("res://scenes/Level/Lv%d.tscn" % (GameData.current_level+1))

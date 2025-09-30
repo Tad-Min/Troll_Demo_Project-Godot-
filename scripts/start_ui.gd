@@ -21,9 +21,9 @@ func _ready():
 	
 func _on_btn_play_pressed():
 	print("Play button clicked.")
-	var result = get_tree().change_scene_to_file("res://scenes/Level/Lv1.tscn")
+	var result = get_tree().change_scene_to_file("res://scenes/Level/Lv%d.tscn" % (GameData.current_level + 1))
 	if result != OK:
-		push_error("❌ Failed to load scene: res://scenes/Level/Lv1.tscn")
+		push_error("❌ Failed to load scene: res://scenes/Level/Lv%d.tscn" % (GameData.current_level + 1))
 
 func _on_btn_select_level_pressed():
 	get_tree().change_scene_to_file("res://scenes/SelectLevel.tscn")

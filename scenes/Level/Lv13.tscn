@@ -3561,8 +3561,7 @@ shape = SubResource("RectangleShape2D_vlgp0")
 position = Vector2(1088, 80)
 rotation = 3.14159
 scale = Vector2(2.01603, -2.0561)
-next_level_path = "res://scenes/Level/Lv14.tscn"
-stage_to_unlock = 13
+next_level = 14
 
 [node name="Pad" type="TileMap" parent="."]
 format = 2

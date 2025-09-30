@@ -4280,8 +4280,7 @@ tab_size = 7
 [node name="Portal" parent="." instance=ExtResource("10_b5mx3")]
 position = Vector2(964, 56)
 scale = Vector2(-1.5, 1.5)
-next_level_path = "res://scenes/Level/Lv6.tscn"
-stage_to_unlock = 5
+next_level = 6
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1153, 323)

@@ -1918,6 +1918,7 @@ metadata/_edit_lock_ = true
 [node name="Portal" parent="CbTrap10" instance=ExtResource("37_7alsn")]
 position = Vector2(136, -80)
 scale = Vector2(2.01603, -2.0561)
+next_level = 15
 
 [node name="Pad" type="TileMap" parent="."]
 format = 2

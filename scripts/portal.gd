@@ -2,8 +2,7 @@ extends Node2D
 
 signal player_entered
 
-@export var next_level_path: String
-@export var stage_to_unlock: int
+@export var next_level: int
 
 func _ready() -> void:
 	$Area2D.connect("body_entered", Callable(self, "_on_body_entered"))
@@ -15,22 +14,8 @@ func _on_body_entered(body: Node) -> void:
 		return
 	print("Player entered the portal!")
 	emit_signal("player_entered")
-	if stage_to_unlock > 0:      # Đảm bảo không unlock lv1
-		GameData.unlock_stage(stage_to_unlock)
-	# Nếu GameData đã thiết lập level kế tiếp, mở UI Next
-	if GameData.next_level_path != "":
-		call_deferred("_request_scene_change", "res://scenes/Next.tscn")
-		return
-	# Fallback: nếu không dùng UI Next, có thể chuyển thẳng
-	if next_level_path != "":
-		call_deferred("_request_scene_change", next_level_path)
-
-
-# Yêu cầu đổi scene an toàn, kể cả khi get_tree() tạm thời null
-func _request_scene_change(path: String) -> void:
-	var tree := Engine.get_main_loop()
-	if tree is SceneTree:
-		tree.call_deferred("change_scene_to_file", path)
-	else:
-		push_error("Not found SceneTree to change Scene" + path)
 	
+	GameData.current_level = next_level-1
+	GameData.Levels[GameData.current_level].isUnlock = true
+	GameData.save_progress()
+	return

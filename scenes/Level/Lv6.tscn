@@ -4027,8 +4027,7 @@ tab_size = 7
 [node name="Portal" parent="." instance=ExtResource("13_ye8g6")]
 position = Vector2(776, 360)
 scale = Vector2(-1.5, 1.53)
-next_level_path = "res://scenes/Level/Lv7.tscn"
-stage_to_unlock = 6
+next_level = 7
 
 [node name="Jumper" parent="." instance=ExtResource("14_ye8g6")]
 position = Vector2(1080, 616)
