@@ -1,5 +1,13 @@
 extends Node
 
+class Level: 
+	var unlock: bool = false
+	var countDie: int = 0
+	
+	func _init(u:= false, cd: int = 0 ) -> void:
+		unlock = u
+		countDie = cd
+		
 @export var LvSize: int = 15
 var unlocked_stages: Array
 
