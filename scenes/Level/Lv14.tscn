@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="10_cvrhe"]
 [ext_resource type="PackedScene" uid="uid://8oftca5oo1lr" path="res://scenes/Trap/spike_ball.tscn" id="11_e6t11"]
 [ext_resource type="Script" uid="uid://w0g3mhlw8465" path="res://scripts/Level/Lv14/portal.gd" id="11_m183f"]
-[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="12_m183f"]
+[ext_resource type="PackedScene" uid="uid://b75pvvfxrgeth" path="res://scenes/Player/Player_withoutCamera.tscn" id="12_m183f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jteh"]
 texture = ExtResource("6_41jg5")
@@ -1528,18 +1528,10 @@ scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_m183f")
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." instance=ExtResource("12_m183f")]
-position = Vector2(336, 368)
-scale = Vector2(2, 2)
-speed = 250.0
-jump_velocity = 600.0
-metadata/_edit_lock_ = true
-
-[node name="Camera2D" parent="Player" index="7"]
-zoom = Vector2(1.5, 1.5)
-
 [node name="Manager" parent="." instance=ExtResource("8_hrvyc")]
 Portal = NodePath("../Portal/Portal")
 current_level = 14
 
-[editable path="Player"]
+[node name="Player" parent="." instance=ExtResource("12_m183f")]
+position = Vector2(67, 394)
+scale = Vector2(2, 2)

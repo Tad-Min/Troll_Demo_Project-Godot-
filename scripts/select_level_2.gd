@@ -13,8 +13,10 @@ func _ready():
 	btn_lv13.pressed.connect(func(): _on_choose_level(13))
 	btn_lv14.pressed.connect(func(): _on_choose_level(14))
 	btn_lv15.pressed.connect(func(): _on_choose_level(15))
-	
+	btn_return.pressed.connect(_on_btn_return_pressed)
 	
 func _on_choose_level(lv: int) -> void:
 	GameData.current_level = lv-1
 	get_tree().change_scene_to_file("res://scenes/Level/Lv%d.tscn" % lv)
+
+func _on_btn_return_pressed(): get_tree().change_scene_to_file("res://scenes/SelectLevel.tscn")
