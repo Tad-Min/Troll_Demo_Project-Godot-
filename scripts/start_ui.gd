@@ -29,6 +29,5 @@ func _on_btn_select_level_pressed():
 	get_tree().change_scene_to_file("res://scenes/SelectLevel.tscn")
 
 func _on_btn_exit_pressed():
-	var file = FileAccess.open("user://just_exited.txt", FileAccess.WRITE)
-	file.store_string("exit")
-	get_tree().quit()
+	if get_tree() != null:
+		get_tree().quit()
