@@ -35,33 +35,26 @@ func _ready():
 	# Level 2–12: Khóa nếu chưa unlock, mở nếu đã unlock
 	
 
-	
+		
 	# Kết nối pressed
-	btn_lv1.pressed.connect(_on_btn_lv1_pressed)
-	btn_lv2.pressed.connect(_on_btn_lv2_pressed)
-	btn_lv3.pressed.connect(_on_btn_lv3_pressed)
-	btn_lv4.pressed.connect(_on_btn_lv4_pressed)
-	btn_lv5.pressed.connect(_on_btn_lv5_pressed)
-	btn_lv6.pressed.connect(_on_btn_lv6_pressed)
-	btn_lv7.pressed.connect(_on_btn_lv7_pressed)
-	btn_lv8.pressed.connect(_on_btn_lv8_pressed)
-	btn_lv9.pressed.connect(_on_btn_lv9_pressed)
-	btn_lv10.pressed.connect(_on_btn_lv10_pressed)
-	btn_lv11.pressed.connect(_on_btn_lv11_pressed)
-	btn_lv12.pressed.connect(_on_btn_lv12_pressed)
+	btn_lv1.pressed.connect(func(): _on_choose_level(1))
+	btn_lv2.pressed.connect(func(): _on_choose_level(2))
+	btn_lv3.pressed.connect(func(): _on_choose_level(3))
+	btn_lv4.pressed.connect(func(): _on_choose_level(4))
+	btn_lv5.pressed.connect(func(): _on_choose_level(5))
+	btn_lv6.pressed.connect(func(): _on_choose_level(6))
+	btn_lv7.pressed.connect(func(): _on_choose_level(7))
+	btn_lv8.pressed.connect(func(): _on_choose_level(8))
+	btn_lv9.pressed.connect(func(): _on_choose_level(9))
+	btn_lv10.pressed.connect(func(): _on_choose_level(10))
+	btn_lv11.pressed.connect(func(): _on_choose_level(11))
+	btn_lv12.pressed.connect(func(): _on_choose_level(12))
+
 	btn_next.pressed.connect(_on_btn_next_pressed)
+	
+	
+func _on_choose_level(lv: int) -> void:
+	GameData.current_level = lv-1
+	get_tree().change_scene_to_file("res://scenes/Level/Lv%d.tscn" % lv)
 
-
-func _on_btn_lv1_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv1.tscn")
-func _on_btn_lv2_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv2.tscn")
-func _on_btn_lv3_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv3.tscn")
-func _on_btn_lv4_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv4.tscn")
-func _on_btn_lv5_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv5.tscn")
-func _on_btn_lv6_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv6.tscn")
-func _on_btn_lv7_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv7.tscn")
-func _on_btn_lv8_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv8.tscn")
-func _on_btn_lv9_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv9.tscn")
-func _on_btn_lv10_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv10.tscn")
-func _on_btn_lv11_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv11.tscn")
-func _on_btn_lv12_pressed(): get_tree().change_scene_to_file("res://scenes/Level/Lv12.tscn")
 func _on_btn_next_pressed(): get_tree().change_scene_to_file("res://scenes/SelectLevel2.tscn")

@@ -10,19 +10,11 @@ extends Control
 func _ready():
 	
 	
-	btn_return.pressed.connect(_on_btn_return_pressed)
-	btn_lv13.pressed.connect(_on_btn_lv13_pressed)
-	btn_lv14.pressed.connect(_on_btn_lv14_pressed)
-	btn_lv15.pressed.connect(_on_btn_lv15_pressed)
+	btn_lv13.pressed.connect(func(): _on_choose_level(13))
+	btn_lv14.pressed.connect(func(): _on_choose_level(14))
+	btn_lv15.pressed.connect(func(): _on_choose_level(15))
 	
-func _on_btn_return_pressed():
-	get_tree().change_scene_to_file("res://scenes/SelectLevel.tscn")
 	
-func _on_btn_lv13_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv13.tscn")
-	
-func _on_btn_lv14_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv14.tscn")
-	
-func _on_btn_lv15_pressed():
-	get_tree().change_scene_to_file("res://scenes/Level/Lv15.tscn")
+func _on_choose_level(lv: int) -> void:
+	GameData.current_level = lv-1
+	get_tree().change_scene_to_file("res://scenes/Level/Lv%d.tscn" % lv)

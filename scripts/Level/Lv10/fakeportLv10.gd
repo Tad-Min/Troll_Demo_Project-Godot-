@@ -3,6 +3,7 @@ extends Area2D
 @export var is_real: bool = false
 @export var portal_scene: PackedScene
 @export var target_level_path: String = "res://scenes/Level/Lv11.tscn"
+@export var next_level: int = 11
 @onready var marker: Marker2D = $Marker2D
 
 # Lấy PortalManager trong scene gốc
@@ -27,9 +28,11 @@ func _on_body_entered(body: Node) -> void:
 		return
 
 	if is_real:
-		# Cổng thật → mở UI Next, lưu level đích
+		# Cổng thật → cập nhật level hiện tại và mở UI Next
 		_consumed = true
-		GameData.next_level_path = target_level_path
+		GameData.current_level = max(0, next_level - 1)
+		GameData.unlock_level(GameData.current_level)
+		GameData.save_progress()
 		get_tree().change_scene_to_file("res://scenes/Next.tscn")
 		return
 
@@ -41,13 +44,13 @@ func _on_body_entered(body: Node) -> void:
 			var new_portal := portal_scene.instantiate()
 			get_tree().current_scene.add_child(new_portal)
 			new_portal.global_position = marker.global_position
-			# Đảm bảo lần chạm kế tiếp mở UI Next
-			GameData.next_level_path = target_level_path
 	else:
 		# Bước 2: chạm cổng tại điểm 2 → mở UI Next và reset trạng thái
 		_consumed = true
 		manager.reset()
-		GameData.next_level_path = target_level_path
+		GameData.current_level = max(0, next_level - 1)
+		GameData.unlock_level(GameData.current_level)
+		GameData.save_progress()
 		get_tree().change_scene_to_file("res://scenes/Next.tscn")
 
 	queue_free()
