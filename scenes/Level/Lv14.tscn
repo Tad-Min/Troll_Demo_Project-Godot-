@@ -1540,5 +1540,6 @@ zoom = Vector2(1.5, 1.5)
 
 [node name="Manager" parent="." instance=ExtResource("8_hrvyc")]
 Portal = NodePath("../Portal/Portal")
+current_level = 14
 
 [editable path="Player"]

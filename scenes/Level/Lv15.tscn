@@ -1981,6 +1981,7 @@ metadata/_edit_lock_ = true
 
 [node name="Manager" parent="." instance=ExtResource("42_8vequ")]
 Portal = NodePath("../CbTrap10/Portal")
+current_level = 15
 
 [node name="Player" parent="." instance=ExtResource("41_u0inc")]
 position = Vector2(408, 288)

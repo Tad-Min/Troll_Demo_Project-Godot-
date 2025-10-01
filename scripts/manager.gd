@@ -1,9 +1,12 @@
 extends Node
 
 @export var Portal: NodePath = "../Portal"
+@export var current_level: int
 
 func _ready() -> void:
 	print("Manager ready!")
+	print("current level: %d",current_level)
+	GameData.current_level = current_level - 1;
 
 	# connect to portal
 	var portal = get_node_or_null(Portal)

@@ -4259,6 +4259,7 @@ shape = SubResource("RectangleShape2D_co0gf")
 metadata/_edit_lock_ = true
 
 [node name="Manager" parent="." instance=ExtResource("9_gyu7e")]
+current_level = 5
 
 [node name="Player" parent="." instance=ExtResource("14_sskub")]
 position = Vector2(58, 470)

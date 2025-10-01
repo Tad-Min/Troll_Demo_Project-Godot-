@@ -593,6 +593,7 @@ position = Vector2(1251, 239)
 scale = Vector2(0.491922, 0.972823)
 
 [node name="Manager" parent="." instance=ExtResource("9_bmwe1")]
+current_level = 11
 
 [node name="MusicBackground" parent="." instance=ExtResource("15_xmj81")]
 

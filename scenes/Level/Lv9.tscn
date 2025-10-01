@@ -922,6 +922,7 @@ text = "LV 9
 tab_size = 7
 
 [node name="Manager" parent="." instance=ExtResource("12_1q7t0")]
+current_level = 9
 
 [node name="MusicBackground" parent="." instance=ExtResource("13_ydrgs")]
 
