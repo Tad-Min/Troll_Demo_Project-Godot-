@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="9_bnfrj"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="10_cvrhe"]
 [ext_resource type="PackedScene" uid="uid://8oftca5oo1lr" path="res://scenes/Trap/spike_ball.tscn" id="11_e6t11"]
-[ext_resource type="Script" path="res://scripts/Level/Lv14/portal.gd" id="11_m183f"]
-[ext_resource type="PackedScene" path="res://scenes/Player/Player_withoutCamera.tscn" id="12_m183f"]
+[ext_resource type="Script" uid="uid://w0g3mhlw8465" path="res://scripts/Level/Lv14/portal.gd" id="11_m183f"]
+[ext_resource type="PackedScene" uid="uid://b75pvvfxrgeth" path="res://scenes/Player/Player_withoutCamera.tscn" id="12_m183f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jteh"]
 texture = ExtResource("6_41jg5")
