@@ -1489,6 +1489,7 @@ text = "LV 1
 tab_size = 7
 
 [node name="Manager" parent="." instance=ExtResource("8_215dr")]
+current_level = 1
 
 [node name="Portal" parent="." instance=ExtResource("9_fqcln")]
 position = Vector2(982, 108)

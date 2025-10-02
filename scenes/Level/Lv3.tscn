@@ -2972,6 +2972,7 @@ metadata/_edit_group_ = true
 
 [node name="Manager" parent="." instance=ExtResource("8_gjm0f")]
 Portal = NodePath("../Real_Portal")
+current_level = 3
 
 [node name="MusicBackground" parent="." instance=ExtResource("23_tyqfo")]
 

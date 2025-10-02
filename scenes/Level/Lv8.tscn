@@ -857,6 +857,7 @@ text = "LV 8
 tab_size = 7
 
 [node name="Manager" parent="." instance=ExtResource("8_c7wi2")]
+current_level = 8
 
 [node name="MusicBackground" parent="." instance=ExtResource("9_dys6o")]
 
@@ -934,8 +935,6 @@ position = Vector2(0, 2.6103)
 [node name="FPortal1" parent="." instance=ExtResource("12_i24th")]
 position = Vector2(56, 547)
 scale = Vector2(1.76, 1.72)
-next_level_path = "res://scenes/Level/Lv9.tscn"
-stage_to_unlock = 8
 
 [node name="Marker2D" parent="FPortal1" index="1"]
 position = Vector2(585.227, -247.674)

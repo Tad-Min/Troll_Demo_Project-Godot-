@@ -3983,6 +3983,7 @@ scale = Vector2(2, 2)
 next_level = 13
 
 [node name="Manager" parent="." instance=ExtResource("8_t5jtx")]
+current_level = 12
 
 [node name="Player" parent="." instance=ExtResource("9_ve145")]
 position = Vector2(42, 497)

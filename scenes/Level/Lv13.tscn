@@ -3578,6 +3578,7 @@ tile_set = SubResource("TileSet_fqcln")
 metadata/_edit_lock_ = true
 
 [node name="Manager" parent="." instance=ExtResource("17_p1vqh")]
+current_level = 13
 
 [node name="Player" parent="." instance=ExtResource("16_q2qt0")]
 position = Vector2(40, 456)

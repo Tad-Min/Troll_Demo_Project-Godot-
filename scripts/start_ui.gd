@@ -5,16 +5,7 @@ extends Control
 @onready var btn_exit: Button = $btnExit
 
 func _ready():
-	# Check nếu vừa thoát (bị Android restart lại app)
-	if Session.is_cold_start:
-		Session.is_cold_start = false  # reset để những lần sau không auto quit
-		if FileAccess.file_exists("user://just_exited.txt"):
-			var f := FileAccess.open("user://just_exited.txt", FileAccess.READ)
-			var flag := f.get_as_text()
-			DirAccess.remove_absolute("user://just_exited.txt") # xoá cờ
-			if flag == "exit":
-				get_tree().quit()
-				return
+	# Không còn cơ chế auto-quit khi khởi động lại
 	btn_play.pressed.connect(_on_btn_play_pressed)
 	btn_exit.pressed.connect(_on_btn_exit_pressed)
 	btn_select_level.pressed.connect(_on_btn_select_level_pressed)
@@ -29,5 +20,17 @@ func _on_btn_select_level_pressed():
 	get_tree().change_scene_to_file("res://scenes/SelectLevel.tscn")
 
 func _on_btn_exit_pressed():
-	if get_tree() != null:
-		get_tree().quit()
+	# Thoát trực tiếp, không ghi bất kỳ cờ nào
+
+	# Use Engine.get_main_loop() to avoid cases where data.tree is null
+	var tree := Engine.get_main_loop() as SceneTree
+	if tree:
+		tree.quit()
+	else:
+		# Fallback: if for some reason there is no SceneTree, try deferred quit next frame
+		call_deferred("_deferred_quit")
+
+func _deferred_quit():
+	var tree := Engine.get_main_loop() as SceneTree
+	if tree:
+		tree.quit()

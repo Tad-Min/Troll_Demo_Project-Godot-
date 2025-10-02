@@ -3723,6 +3723,7 @@ tile_set = SubResource("TileSet_fqcln")
 metadata/_edit_lock_ = true
 
 [node name="Manager" parent="." instance=ExtResource("9_oeyta")]
+current_level = 6
 
 [node name="ComboTrap1" type="Node2D" parent="."]
 position = Vector2(48, 224)
