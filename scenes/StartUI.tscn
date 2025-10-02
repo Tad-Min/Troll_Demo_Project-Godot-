@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://mlem4f31wu2r"]
+[gd_scene load_steps=11 format=3 uid="uid://mlem4f31wu2r"]
 
 [ext_resource type="Script" uid="uid://b11k6hhlf3rex" path="res://scripts/start_ui.gd" id="1_31gsc"]
 [ext_resource type="Texture2D" uid="uid://r4j0omiy308f" path="res://Jungle Asset Pack/mockup.png" id="1_yubl7"]
+[ext_resource type="Texture2D" uid="uid://dg2efpqtq8cuk" path="res://Jungle Asset Pack/parallax background/istockphoto-1164341008-612x612.jpg" id="3_6msbp"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://Jungle Asset Pack/Pixeled.ttf" id="3_31gsc"]
 [ext_resource type="AudioStream" uid="uid://ddw1rjri1yin7" path="res://assets/undertale-shop-1736313719592.mp3" id="4_31gsc"]
 
@@ -9,26 +10,15 @@
 texture = ExtResource("1_yubl7")
 modulate_color = Color(0.288518, 0.288518, 0.288518, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1bwx"]
-bg_color = Color(0.986752, 0.986752, 0.986752, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o1bwx"]
+texture = ExtResource("3_6msbp")
+modulate_color = Color(0.804743, 0.804743, 0.804743, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31gsc"]
-bg_color = Color(0.964742, 0.964742, 0.964742, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uo54s"]
+texture = ExtResource("3_6msbp")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uo54s"]
-bg_color = Color(0.969137, 0.969137, 0.969137, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eyerg"]
+texture = ExtResource("3_6msbp")
 
 [sub_resource type="GDScript" id="GDScript_6msbp"]
 script/source = "extends Button
@@ -57,36 +47,38 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_6msbp")
 
 [node name="btnPlay" type="Button" parent="."]
 layout_mode = 0
-offset_left = 464.0
-offset_top = 178.0
-offset_right = 706.0
-offset_bottom = 312.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 476.0
+offset_top = 209.0
+offset_right = 718.0
+offset_bottom = 320.0
+theme_override_colors/font_color = Color(0.0813472, 0.00141478, 0.00857236, 1)
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_o1bwx")
-text = "Play"
+theme_override_styles/normal = SubResource("StyleBoxTexture_o1bwx")
+text = "PLAY
+"
 
 [node name="btnselectlevel" type="Button" parent="."]
 layout_mode = 0
-offset_left = 459.0
-offset_top = 343.0
-offset_right = 726.0
-offset_bottom = 468.0
+offset_left = 473.0
+offset_top = 359.0
+offset_right = 720.0
+offset_bottom = 491.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_31gsc")
-text = "SELECT LEVEL
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxTexture_uo54s")
+text = "SELECT
+ LEVEL
 "
 
 [node name="btnExit" type="Button" parent="."]
 layout_mode = 0
-offset_left = 474.0
-offset_top = 492.0
-offset_right = 716.0
-offset_bottom = 626.0
+offset_left = 469.0
+offset_top = 533.0
+offset_right = 723.0
+offset_bottom = 642.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_uo54s")
+theme_override_styles/normal = SubResource("StyleBoxTexture_eyerg")
 text = "EXIT"
 script = SubResource("GDScript_6msbp")
 
