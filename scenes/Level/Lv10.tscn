@@ -2947,7 +2947,7 @@ next_level = 11
 frame_progress = 0.499264
 
 [node name="Marker2D" parent="FPortal1" index="1"]
-position = Vector2(-11.9318, 226.744)
+position = Vector2(-11.9318, 224.419)
 
 [node name="PortalManager" type="Node2D" parent="."]
 script = ExtResource("16_jo0gb")

@@ -36,7 +36,7 @@ func _on_body_entered(body):
 		if portal_scene:
 			var new_portal = portal_scene.instantiate()
 			# truyền tiếp cấu hình level nếu prefab dùng chung script
-			if "next_level" in new_portal:
+			if new_portal.has_variable("next_level"):
 				new_portal.next_level = next_level
 			get_tree().current_scene.add_child(new_portal)
 
