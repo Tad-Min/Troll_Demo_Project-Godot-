@@ -3,16 +3,19 @@ extends Control
 @onready var btn_lv13: Button = $btnlv13
 @onready var btn_lv14: Button = $btnlv14
 @onready var btn_lv15: Button = $btnlv15
+@onready var btn_lv16: Button = $btnlv16
 
 @onready var lock13: TextureRect = $btnlv13/lock13
 @onready var lock14: TextureRect = $btnlv14/lock14
 @onready var lock15: TextureRect = $btnlv15/lock15
+@onready var lock16: TextureRect = $btnlv15/lock16
 func _ready():
 	
 	
 	btn_lv13.pressed.connect(func(): _on_choose_level(13))
 	btn_lv14.pressed.connect(func(): _on_choose_level(14))
 	btn_lv15.pressed.connect(func(): _on_choose_level(15))
+	btn_lv16.pressed.connect(func(): _on_choose_level(16))
 	btn_return.pressed.connect(_on_btn_return_pressed)
 	
 func _on_choose_level(lv: int) -> void:

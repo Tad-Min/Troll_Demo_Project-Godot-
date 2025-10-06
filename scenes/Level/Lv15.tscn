@@ -40,7 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="38_4564b"]
 [ext_resource type="Script" uid="uid://bypwsrc5mmvdx" path="res://scripts/Level/Lv15/ceiling.gd" id="39_7vau0"]
 [ext_resource type="Script" uid="uid://b23wljbvm21t1" path="res://scripts/Level/Lv15/floor.gd" id="40_66wln"]
-[ext_resource type="PackedScene" uid="uid://b75pvvfxrgeth" path="res://scenes/Player/Player_withoutCamera.tscn" id="42_4wf13"]
+[ext_resource type="PackedScene" path="res://scenes/Player/Player_withoutCamera.tscn" id="42_4wf13"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="42_8vequ"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ww4u"]

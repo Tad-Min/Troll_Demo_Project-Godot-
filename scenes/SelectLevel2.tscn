@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bqji2w44moiqg"]
+[gd_scene load_steps=17 format=3 uid="uid://bqji2w44moiqg"]
 
 [ext_resource type="Script" uid="uid://uwb3lip6eosh" path="res://scripts/select_level_2.gd" id="1_brqsk"]
 [ext_resource type="Texture2D" uid="uid://cwnk0n2t6kdcn" path="res://Jungle Asset Pack/parallax background/background pixel.png" id="2_srw1n"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cpdroaybjaacl" path="res://Jungle Asset Pack/parallax background/Ổ Khóa.png" id="4_f2irv"]
 [ext_resource type="Texture2D" uid="uid://cosg55cva7ehn" path="res://Jungle Asset Pack/parallax background/Lv15.png" id="5_f2irv"]
 [ext_resource type="Texture2D" uid="uid://cly6utkoyhvpw" path="res://Jungle Asset Pack/select level.png" id="8_4vvy1"]
+[ext_resource type="Texture2D" uid="uid://c4dui4uh2y3oi" path="res://Jungle Asset Pack/parallax background/Lv16.png" id="8_7aeyt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x6o1n"]
 texture = ExtResource("2_srw1n")
@@ -26,6 +27,10 @@ modulate_color = Color(0.325441, 0.325441, 0.325441, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_srw1n"]
 texture = ExtResource("5_f2irv")
 modulate_color = Color(0.266575, 0.266575, 0.266575, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4vvy1"]
+texture = ExtResource("8_7aeyt")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1v1xw"]
 texture = ExtResource("8_4vvy1")
@@ -61,10 +66,9 @@ text = "
 
 [node name="btnlv13" type="Button" parent="."]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 106.0
-offset_right = 251.0
-offset_bottom = 207.0
+offset_top = 140.0
+offset_right = 249.0
+offset_bottom = 212.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_6tc2i")
 text = "LEVEL 13
@@ -73,19 +77,19 @@ text = "LEVEL 13
 [node name="lock13" type="TextureRect" parent="btnlv13"]
 modulate = Color(0.252028, 0.252028, 0.252028, 1)
 layout_mode = 0
-offset_left = 1.0
-offset_top = -1.0
-offset_right = 257.0
-offset_bottom = 101.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 254.0
+offset_bottom = 72.0
 texture = ExtResource("4_f2irv")
 expand_mode = 3
 
 [node name="btnlv14" type="Button" parent="."]
 layout_mode = 0
-offset_left = 324.0
-offset_top = 111.0
-offset_right = 577.0
-offset_bottom = 214.0
+offset_left = 292.0
+offset_top = 141.0
+offset_right = 535.0
+offset_bottom = 212.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_1neio")
 text = "LEVEL 14
@@ -94,19 +98,19 @@ text = "LEVEL 14
 [node name="lock14" type="TextureRect" parent="btnlv14"]
 modulate = Color(0.241156, 0.241156, 0.241156, 1)
 layout_mode = 0
-offset_left = -1.0
-offset_top = 3.0
-offset_right = 254.0
-offset_bottom = 103.0
+offset_left = -5.0
+offset_top = 1.0
+offset_right = 246.0
+offset_bottom = 74.0
 texture = ExtResource("4_f2irv")
 expand_mode = 3
 
 [node name="btnlv15" type="Button" parent="."]
 layout_mode = 0
-offset_left = 666.0
-offset_top = 111.0
-offset_right = 922.0
-offset_bottom = 212.0
+offset_left = 594.0
+offset_top = 140.0
+offset_right = 837.0
+offset_bottom = 209.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_srw1n")
 text = "LEVEL 15"
@@ -114,10 +118,27 @@ text = "LEVEL 15"
 [node name="lock15" type="TextureRect" parent="btnlv15"]
 modulate = Color(0.244776, 0.244776, 0.244776, 1)
 layout_mode = 0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 256.0
-offset_bottom = 103.0
+offset_left = -7.0
+offset_right = 244.0
+offset_bottom = 69.0
+texture = ExtResource("4_f2irv")
+expand_mode = 3
+
+[node name="btnlv16" type="Button" parent="."]
+layout_mode = 0
+offset_left = 881.0
+offset_top = 141.0
+offset_right = 1126.0
+offset_bottom = 208.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_4vvy1")
+text = "LEVEL 16"
+
+[node name="lock16" type="TextureRect" parent="btnlv16"]
+modulate = Color(0.281187, 0.281187, 0.281187, 1)
+layout_mode = 0
+offset_right = 253.0
+offset_bottom = 69.0
 texture = ExtResource("4_f2irv")
 expand_mode = 3
 

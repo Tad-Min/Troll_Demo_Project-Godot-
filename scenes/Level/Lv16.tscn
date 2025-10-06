@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://rfnj7jcp8tc8"]
+[gd_scene load_steps=26 format=4 uid="uid://kmk03emjeyj6"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_ebxxb"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_u2jrh"]
@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://Jungle Asset Pack/parallax background/plx-5.png" id="5_krrd3"]
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="6_843sl"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="7_510ib"]
-[ext_resource type="PackedScene" uid="uid://ckjhjpinjx6ik" path="res://scenes/coin_animation.tscn" id="10_4fxqv"]
-[ext_resource type="PackedScene" uid="uid://cdspq3xdjkyl" path="res://scenes/Fake_coin.tscn" id="11_7rr26"]
+[ext_resource type="PackedScene" path="res://scenes/coin_animation.tscn" id="10_4fxqv"]
+[ext_resource type="PackedScene" path="res://scenes/Fake_coin.tscn" id="11_7rr26"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="11_kuexx"]
 [ext_resource type="Script" uid="uid://biuyh3ke8ltwv" path="res://scripts/Level/Lv7/trigger_hidden_path.gd" id="12_ebxxb"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="12_u2jrh"]

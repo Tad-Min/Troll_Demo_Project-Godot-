@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="6_41jg5"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="8_hrvyc"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="9_bnfrj"]
-[ext_resource type="Script" uid="uid://dfdwga473gspb" path="res://scripts/Level/Lv14/area_2d.gd" id="9_m183f"]
+[ext_resource type="Script" path="res://scripts/Level/Lv14/area_2d.gd" id="9_m183f"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="10_cvrhe"]
 [ext_resource type="PackedScene" uid="uid://8oftca5oo1lr" path="res://scenes/Trap/spike_ball.tscn" id="11_e6t11"]
-[ext_resource type="PackedScene" uid="uid://b75pvvfxrgeth" path="res://scenes/Player/Player_withoutCamera.tscn" id="12_m183f"]
+[ext_resource type="PackedScene" path="res://scenes/Player/Player_withoutCamera.tscn" id="12_m183f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jteh"]
 texture = ExtResource("6_41jg5")
@@ -1506,7 +1506,6 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap1/Area2D"]
 position = Vector2(0, 1120)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0tu4g")
 metadata/_edit_lock_ = true
 
