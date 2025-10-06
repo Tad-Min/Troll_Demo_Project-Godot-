@@ -40,7 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="38_4564b"]
 [ext_resource type="Script" uid="uid://bypwsrc5mmvdx" path="res://scripts/Level/Lv15/ceiling.gd" id="39_7vau0"]
 [ext_resource type="Script" uid="uid://b23wljbvm21t1" path="res://scripts/Level/Lv15/floor.gd" id="40_66wln"]
-[ext_resource type="PackedScene" path="res://scenes/Player/Player_withoutCamera.tscn" id="42_4wf13"]
+[ext_resource type="PackedScene" uid="uid://b75pvvfxrgeth" path="res://scenes/Player/Player_withoutCamera.tscn" id="42_4wf13"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="42_8vequ"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ww4u"]
@@ -1987,3 +1987,14 @@ current_level = 15
 position = Vector2(406, 302)
 scale = Vector2(2, 2)
 jump_velocity = 1400.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+
+[node name="LevelLabel" type="RichTextLabel" parent="Player/CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 155.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "LV 15"
+tab_size = 7

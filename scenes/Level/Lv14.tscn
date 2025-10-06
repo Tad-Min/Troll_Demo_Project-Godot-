@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://scripts/Level/Lv14/area_2d.gd" id="9_m183f"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="10_cvrhe"]
 [ext_resource type="PackedScene" uid="uid://8oftca5oo1lr" path="res://scenes/Trap/spike_ball.tscn" id="11_e6t11"]
-[ext_resource type="PackedScene" path="res://scenes/Player/Player_withoutCamera.tscn" id="12_m183f"]
+[ext_resource type="PackedScene" uid="uid://b75pvvfxrgeth" path="res://scenes/Player/Player_withoutCamera.tscn" id="12_m183f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jteh"]
 texture = ExtResource("6_41jg5")
@@ -1605,3 +1605,14 @@ position = Vector2(96, 328)
 scale = Vector2(2, 2)
 speed = 100.0
 jump_velocity = 500.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+
+[node name="LevelLabel" type="RichTextLabel" parent="Player/CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 155.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "LV 14"
+tab_size = 7
