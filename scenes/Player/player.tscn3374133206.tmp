@@ -264,11 +264,17 @@ radius = 6.08276
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_g2els")
+speed = null
+jump_velocity = null
+gravity_inverted = null
+min_jc = null
+max_jc = null
+MAX_AIR_JUMPS = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_fjrip")
-animation = &"charge_left"
+animation = &"jump_right"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
