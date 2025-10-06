@@ -7,6 +7,7 @@ func _ready() -> void:
 	print("Manager ready!")
 	print("current level: %d",current_level)
 	GameData.current_level = current_level - 1;
+	GameData.reset_gems(3)
 
 	# connect to portal
 	var portal = get_node_or_null(Portal)

@@ -54,7 +54,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_b58q5")
 animation = &"new_animation"
 autoplay = "new_animation"
-frame_progress = 0.38195
+frame_progress = 0.83737
 script = ExtResource("2_32cjf")
 
 [node name="Area2D" type="Area2D" parent="."]

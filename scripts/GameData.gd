@@ -18,13 +18,27 @@ class Level:
 		isUnlock = data.get("isUnlock", false)
 		countDie = data.get("countDie", 0)
 
-var LvSize: int = 15
+var LvSize: int = 20
 var Levels: Array[Level]
 
 # Save current level
 var current_level: int = 0
 
 var last_death_cause: String = ""
+
+# UI: per-level gem counter (transient, not persisted)
+signal gem_count_changed(current: int, required: int)
+var gem_current: int = 0
+var gem_required: int = 3
+
+func reset_gems(required: int = 3) -> void:
+	gem_required = required
+	gem_current = 0
+	emit_signal("gem_count_changed", gem_current, gem_required)
+
+func add_gem() -> void:
+	gem_current += 1
+	emit_signal("gem_count_changed", gem_current, gem_required)
 
 func _ready() -> void:
 	if Engine.is_editor_hint():

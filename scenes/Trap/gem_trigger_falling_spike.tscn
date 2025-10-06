@@ -1,12 +1,14 @@
-[gd_scene load_steps=9 format=4 uid="uid://vr0cp86s7yb0"]
+[gd_scene load_steps=16 format=4 uid="uid://do0eynuxtr3xx"]
 
-[ext_resource type="Script" uid="uid://bt6u63fquuj83" path="res://scripts/Level/LV3/drop_1_trigger_5.gd" id="1_krupe"]
-[ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="2_anp2o"]
-[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="3_paqg4"]
-[ext_resource type="Script" uid="uid://b7ynttut3q54g" path="res://scripts/Level/LV3/trigger_1-6.gd" id="4_r75h8"]
+[ext_resource type="Script" uid="uid://bt6u63fquuj83" path="res://scripts/Level/LV3/drop_1_trigger_5.gd" id="1_rmls8"]
+[ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="2_p3gy6"]
+[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="3_mdbkn"]
+[ext_resource type="Texture2D" uid="uid://b86fyo4vcaqgv" path="res://Coin_Gems/spr_coin_strip4.png" id="4_48fqi"]
+[ext_resource type="Script" uid="uid://c04dl76hqwnv4" path="res://scripts/coin_animation.gd" id="5_mdbkn"]
+[ext_resource type="Script" uid="uid://bsx5vph8rqdcr" path="res://scripts/Level/Lv16/gem_and_falling_spike.gd" id="6_48fqi"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_krupe"]
-texture = ExtResource("3_paqg4")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jlg44"]
+texture = ExtResource("3_mdbkn")
 19:1/0 = 0
 21:1/0 = 0
 25:1/0 = 0
@@ -346,43 +348,85 @@ texture = ExtResource("3_paqg4")
 37:20/0 = 0
 38:20/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_e8nk3"]
-sources/0 = SubResource("TileSetAtlasSource_krupe")
+[sub_resource type="TileSet" id="TileSet_v0a1k"]
+sources/0 = SubResource("TileSetAtlasSource_jlg44")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j55mp"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t74tn"]
 size = Vector2(64, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yqwi"]
-size = Vector2(8, 152)
+[sub_resource type="AtlasTexture" id="AtlasTexture_srscs"]
+atlas = ExtResource("4_48fqi")
+region = Rect2(0, 0, 16, 16)
 
-[node name="Falling_Spike" type="Node2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jt2oy"]
+atlas = ExtResource("4_48fqi")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4fln"]
+atlas = ExtResource("4_48fqi")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdb1x"]
+atlas = ExtResource("4_48fqi")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7mu5b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srscs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jt2oy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4fln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdb1x")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ok5uc"]
+radius = 5.0
+height = 16.0
+
+[node name="Gem_Trigger_Falling_Spike" type="Node2D"]
 
 [node name="Drop_1" type="StaticBody2D" parent="."]
-position = Vector2(189, 84)
-script = ExtResource("1_krupe")
+position = Vector2(-63, -4)
+script = ExtResource("1_rmls8")
 move_distance = 150.0
 speed = 400.0
 direction = Vector2(0, 1)
 
-[node name="spike_drop" parent="Drop_1" instance=ExtResource("2_anp2o")]
+[node name="spike_drop" parent="Drop_1" instance=ExtResource("2_p3gy6")]
 position = Vector2(64, -22)
 rotation = 3.14159
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Drop_1"]
 position = Vector2(0, 8)
 tile_map_data = PackedByteArray("AAACAP3/AAArAAgAAAADAP3/AAArAAgAAAAEAP3/AAArAAgAAAAFAP3/AAArAAgAAAACAPz/AAAGAAUAAAADAPz/AAAGAAUAAAAEAPz/AAAGAAUAAAAFAPz/AAAGAAUAAAA=")
-tile_set = SubResource("TileSet_e8nk3")
+tile_set = SubResource("TileSet_v0a1k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Drop_1"]
 position = Vector2(64, -40)
-shape = SubResource("RectangleShape2D_j55mp")
+shape = SubResource("RectangleShape2D_t74tn")
 
-[node name="Trigger_5" type="Area2D" parent="."]
-position = Vector2(216, 200)
-script = ExtResource("4_r75h8")
-trap_node = NodePath("../Drop_1")
-metadata/_edit_lock_ = true
+[node name="Gem" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_7mu5b")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.208692
+script = ExtResource("5_mdbkn")
 
-[node name="Touch_5" type="CollisionShape2D" parent="Trigger_5"]
-position = Vector2(1, -76)
-shape = SubResource("RectangleShape2D_5yqwi")
+[node name="Area2D" type="Area2D" parent="Gem"]
+script = ExtResource("6_48fqi")
+trap_node = NodePath("../../Drop_1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gem/Area2D"]
+shape = SubResource("CapsuleShape2D_ok5uc")
