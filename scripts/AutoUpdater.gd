@@ -3,7 +3,7 @@ extends Node
 const CURRENT_VERSION = "1.0.1"  # phiên bản trong file .apk hiện tại
 const VERSION_URL = "https://raw.githubusercontent.com/Tad-Min/Troll_Demo_Project-Godot-/main/Export_file/version.txt"
 const UPDATE_URL = "https://raw.githubusercontent.com/Tad-Min/Troll_Demo_Project-Godot-/main/Export_file/Game_Troll_Vi_en_lastest.pck"
-const LOCAL_PCK_PATH = "user://update.pck"
+const LOCAL_PCK_PATH = "user://Game_Troll_Vi_en_lastest.pck"
 
 var http := HTTPRequest.new()
 
