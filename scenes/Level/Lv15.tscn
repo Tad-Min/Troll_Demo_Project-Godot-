@@ -1986,7 +1986,9 @@ current_level = 15
 [node name="Player" parent="." instance=ExtResource("42_4wf13")]
 position = Vector2(406, 302)
 scale = Vector2(2, 2)
+speed = 100.0
 jump_velocity = 1400.0
+gravity_inverted = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
 
