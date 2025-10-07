@@ -1,7 +1,7 @@
 extends Node
 
 const UPDATE_URL = "https://raw.githubusercontent.com/Tad-Min/Troll_Demo_Project-Godot-/main/Export_file/Game_Troll_Vi_en_lastest.pck"
-const LOCAL_PCK_PATH = "E:/Git_Push/Troll_Demo_Project-Godot-/Export_file/Game_Troll_Vi_en.pck"
+const LOCAL_PCK_PATH = "user://update.pck"
 const VERSION_URL = "https://raw.githubusercontent.com/Tad-Min/Troll_Demo_Project-Godot-/main/Export_file/version.txt"
 
 var http: HTTPRequest
