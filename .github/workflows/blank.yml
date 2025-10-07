@@ -28,24 +28,44 @@ jobs:
       - name: Saving to workflow
         uses: actions/checkout@v4
       # Install godot4.4
-      - name: Download Godot 4.4 Headless
+      - name: Download Godot 4.4.1
         run: |
-          wget https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_linux_headless.64.zip -O godot.zip
-          unzip godot.zip -d godot
-          sudo mv godot/Godot_v4.4-stable_linux_headless.64 /usr/local/bin/godot
-          chmod +x /usr/local/bin/godot
+          wget https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip -O godot.zip
+          unzip -q godot.zip -d godot
+          sudo mv godot/Godot_v4.4.1-stable_linux.x86_64 /usr/local/bin/godot
+          sudo chmod +x /usr/local/bin/godot
+
       #  Download Export Templates
       - name: Download Export Templates
         run: |
-          wget https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_export_templates.tpz -O templates.tpz
-          mkdir -p ~/.local/share/godot/export_templates/4.4.stable/
-          unzip -q templates.tpz -d ~/.local/share/godot/export_templates/4.4.stable/
-      #  Build APK
-      - name: Build APK
+          wget https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_export_templates.tpz -O templates.tpz
+          mkdir -p ~/.local/share/godot/export_templates/4.4.1.stable/
+          unzip -q templates.tpz -d ~/.local/share/godot/export_templates/4.4.1.stable/
+          # Move templates from subfolder to correct location
+          if [ -d ~/.local/share/godot/export_templates/4.4.1.stable/templates ]; then
+            mv ~/.local/share/godot/export_templates/4.4.1.stable/templates/* ~/.local/share/godot/export_templates/4.4.1.stable/
+            rm -rf ~/.local/share/godot/export_templates/4.4.1.stable/templates
+          fi
+      # Generate keystore
+      - name: Generate temporary keystore
         run: |
-          godot --headless --export-release "Android" build/Game_Cho_Tro_Choi.apk
-            # Runs a set of commands using the runners shell
-      
+          keytool -genkey -v -keystore my-release-key.keystore \
+            -alias Admin -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass 123456789 -keypass 123456789 \
+            -dname "CN=User, OU=Dev, O=Company, L=City, S=State, C=VN"
+
+      - name: Build Android APK (Release)
+        run: |
+          mkdir -p build
+          godot --headless --export-release "Android" Game_Cho_Tro_Choi.apk
+
+        # Upload APK
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Game_Cho_Tro_Choi
+          path: Game_Cho_Tro_Choi.apk
+          
       - name: End
         run: |
           echo Complete good luck,
