@@ -30,8 +30,9 @@ jobs:
       # Install godot4.4
       - name: Download Godot 4.4.1
         run: |
-          wget https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux_headless.64 -O godot
-          sudo mv godot /usr/local/bin/godot
+          wget https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip-O godot.zip
+          unzip -q godot.zip -d godot
+          sudo mv godot/Godot_v4.4.1-stable_linux.x86_64 /usr/local/bin/godot
           sudo chmod +x /usr/local/bin/godot
 
       #  Download Export Templates
