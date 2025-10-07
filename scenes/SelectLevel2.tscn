@@ -142,6 +142,42 @@ offset_bottom = 69.0
 texture = ExtResource("4_f2irv")
 expand_mode = 3
 
+[node name="btnlv17" type="Button" parent="."]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 293.0
+offset_right = 370.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_4vvy1")
+text = "LEVEL 16"
+
+[node name="lock17" type="TextureRect" parent="btnlv17"]
+modulate = Color(0.281187, 0.281187, 0.281187, 1)
+layout_mode = 0
+offset_right = 253.0
+offset_bottom = 69.0
+texture = ExtResource("4_f2irv")
+expand_mode = 3
+
+[node name="btnlv18" type="Button" parent="."]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 293.0
+offset_right = 699.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_4vvy1")
+text = "LEVEL 16"
+
+[node name="lock18" type="TextureRect" parent="btnlv18"]
+modulate = Color(0.281187, 0.281187, 0.281187, 1)
+layout_mode = 0
+offset_right = 253.0
+offset_bottom = 69.0
+texture = ExtResource("4_f2irv")
+expand_mode = 3
+
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 385.0

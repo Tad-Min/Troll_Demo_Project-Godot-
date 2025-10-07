@@ -19,9 +19,11 @@ config/icon="uid://cgk5wf30hxks8"
 
 GameData="*res://scripts/GameData.gd"
 Session="*res://scripts/Session.gd"
+AutoUpdater="*res://scripts/AutoUpdater.gd"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [dotnet]

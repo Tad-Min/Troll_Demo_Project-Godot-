@@ -11,10 +11,11 @@ on:
   pull_request:
     branches: 
     - "**"
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+  
+permissions:
+  contents: write
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -49,15 +50,32 @@ jobs:
       # Generate keystore
       - name: Generate temporary keystore
         run: |
+          rm -f my-release-key.keystore
           keytool -genkey -v -keystore my-release-key.keystore \
             -alias Admin -keyalg RSA -keysize 2048 -validity 10000 \
             -storepass 123456789 -keypass 123456789 \
             -dname "CN=User, OU=Dev, O=Company, L=City, S=State, C=VN"
+        
+
+      - name: Patch export_presets.cfg for signing
+        run: |
+          if [ ! -f export_presets.cfg ]; then
+            echo "[preset.0]
+                  name=\"Android\"
+                  platform=\"Android\"
+                  export_path=\"Game_Cho_Tro_Choi.apk\"
+                  " > export_presets.cfg
+          fi
+          echo "
+                keystore/release=\"res://my-release-key.keystore\"
+                keystore/release_user=\"Admin\"
+                keystore/release_password=\"123456789\"
+                " >> export_presets.cfg
 
       - name: Build Android APK (Release)
         run: |
           mkdir -p build
-          godot --headless --export-release "Android" Game_Cho_Tro_Choi.apk
+          godot --headless --export-release "Android" Game_Cho_Tro_Choi.apk 
 
         # Upload APK
       - name: Upload APK artifact
@@ -65,6 +83,20 @@ jobs:
         with:
           name: Game_Cho_Tro_Choi
           path: Game_Cho_Tro_Choi.apk
+
+      - name: Commit & push APK to current branch
+        run: |
+          BRANCH_NAME=$(echo "${GITHUB_REF#refs/heads/}")
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # copy file vào thư mục bạn muốn (ví dụ /release)
+          mkdir -p release
+          cp Game_Cho_Tro_Choi.apk release/
+
+          git add release/Game_Cho_Tro_Choi.apk
+          git commit -m "Update APK build from GitHub Actions"
+          git push origin "$BRANCH_NAME"
           
       - name: End
         run: |

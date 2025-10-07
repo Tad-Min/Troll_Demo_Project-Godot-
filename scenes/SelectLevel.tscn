@@ -258,10 +258,10 @@ expand_mode = 3
 
 [node name="btnlv9" type="Button" parent="."]
 layout_mode = 0
-offset_left = -24.0
-offset_top = 420.0
-offset_right = 225.0
-offset_bottom = 525.0
+offset_left = -19.0
+offset_top = 467.0
+offset_right = 230.0
+offset_bottom = 572.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_rtkmm")
 text = "LEVEL 9
@@ -280,9 +280,9 @@ expand_mode = 3
 [node name="btnlv10" type="Button" parent="."]
 layout_mode = 0
 offset_left = 274.0
-offset_top = 422.0
+offset_top = 469.0
 offset_right = 519.0
-offset_bottom = 525.0
+offset_bottom = 572.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_8gyec")
 text = "LEVEL 10
@@ -300,10 +300,10 @@ expand_mode = 3
 
 [node name="btnlv11" type="Button" parent="."]
 layout_mode = 0
-offset_left = 586.0
-offset_top = 414.0
-offset_right = 832.0
-offset_bottom = 518.0
+offset_left = 594.0
+offset_top = 461.0
+offset_right = 840.0
+offset_bottom = 565.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_8p21l")
 text = "LEVEL 11
@@ -321,20 +321,20 @@ expand_mode = 3
 
 [node name="btnNext" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1039.0
-offset_top = 409.0
-offset_right = 1132.0
-offset_bottom = 495.0
+offset_left = 1032.0
+offset_top = 356.0
+offset_right = 1125.0
+offset_bottom = 442.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxTexture_ykhhf")
 
 [node name="btnlv12" type="Button" parent="."]
 layout_mode = 0
-offset_left = 435.0
-offset_top = 559.0
-offset_right = 681.0
-offset_bottom = 664.0
+offset_left = 878.0
+offset_top = 459.0
+offset_right = 1124.0
+offset_bottom = 564.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_joqlv")
 text = "LEVEL 12
