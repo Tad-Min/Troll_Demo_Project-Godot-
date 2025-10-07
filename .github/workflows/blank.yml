@@ -41,6 +41,11 @@ jobs:
           wget https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_export_templates.tpz -O templates.tpz
           mkdir -p ~/.local/share/godot/export_templates/4.4.1.stable/
           unzip -q templates.tpz -d ~/.local/share/godot/export_templates/4.4.1.stable/
+          # Move templates from subfolder to correct location
+          if [ -d ~/.local/share/godot/export_templates/4.4.1.stable/templates ]; then
+            mv ~/.local/share/godot/export_templates/4.4.1.stable/templates/* ~/.local/share/godot/export_templates/4.4.1.stable/
+            rm -rf ~/.local/share/godot/export_templates/4.4.1.stable/templates
+          fi
           
       #  Build APK
       - name: Build Android APK
