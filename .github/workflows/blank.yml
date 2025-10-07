@@ -58,7 +58,8 @@ jobs:
       - name: Build Android APK (Release)
         run: |
           mkdir -p build
-          godot --headless --export-release "Android" Game_Cho_Tro_Choi.apk --no-sign
+          godot --headless --export-release "Android" Game_Cho_Tro_Choi.apk \
+            --export-options "keystore/release=my-release-key.keystore;keystore/release_user=Admin;keystore/release_password=123456789"
 
         # Upload APK
       - name: Upload APK artifact
