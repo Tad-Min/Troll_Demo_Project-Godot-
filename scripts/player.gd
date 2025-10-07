@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-#signling
+#signaling
 signal died(cause: String)
 
 #adjustable section
