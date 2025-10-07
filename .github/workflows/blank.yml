@@ -30,14 +30,14 @@ jobs:
       # Install godot4.4
       - name: Download Godot 4.4 Headless
         run: |
-          wget https://release-assets.githubusercontent.com/github-production-release-asset/688986521/6be2ef2f-67ff-49ab-8e51-fdedbaf65faf -O godot.zip
+          wget https://downloads.godotengine.org/?version=4.4&flavor=stable&slug=mono_linux_x86_64.zip&platform=linux.64 -O godot.zip
           unzip godot.zip -d godot
           sudo mv godot/Godot_v4.4-stable_linux_headless.64 /usr/local/bin/godot
           chmod +x /usr/local/bin/godot
       #  Download Export Templates
       - name: Download Export Templates
         run: |
-          wget https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_export_templates.tpz -O templates.tpz
+          wget https://downloads.godotengine.org/?version=4.4&flavor=stable&slug=mono_export_templates.tpz&platform=templates -O templates.tpz
           mkdir -p ~/.local/share/godot/export_templates/4.4.stable/
           unzip -q templates.tpz -d ~/.local/share/godot/export_templates/4.4.stable/
       #  Build APK
