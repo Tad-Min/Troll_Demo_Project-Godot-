@@ -38,15 +38,22 @@ jobs:
       #  Download Export Templates
       - name: Download Export Templates
         run: |
-          wget https://downloads.godotengine.org/?version=4.4&flavor=stable&slug=mono_export_templates.tpz&platform=templates -O templates.tpz
-          mkdir -p ~/.local/share/godot/export_templates/4.4.stable/
-          unzip -q templates.tpz -d ~/.local/share/godot/export_templates/4.4.stable/
+          wget https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_export_templates.tpz -O templates.tpz
+          mkdir -p ~/.local/share/godot/export_templates/4.4.1.stable/
+          unzip -q templates.tpz -d ~/.local/share/godot/export_templates/4.4.1.stable/
       #  Build APK
-      - name: Build APK
+      - name: Build Android APK
         run: |
+          mkdir -p build
           godot --headless --export-release "Android" build/Game_Cho_Tro_Choi.apk
-            # Runs a set of commands using the runners shell
-      
+
+        # Upload APK
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Game_Cho_Tro_Choi
+          path: build/Game_Cho_Tro_Choi.apk
+          
       - name: End
         run: |
           echo Complete good luck,
