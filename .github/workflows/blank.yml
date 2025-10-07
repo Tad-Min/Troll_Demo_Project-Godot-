@@ -54,12 +54,27 @@ jobs:
             -alias Admin -keyalg RSA -keysize 2048 -validity 10000 \
             -storepass 123456789 -keypass 123456789 \
             -dname "CN=User, OU=Dev, O=Company, L=City, S=State, C=VN"
+          cp my-release-key.keystore android/my-release-key.keystore || cp my-release-key.keystore my-release-key.keystore
+
+      - name: Patch export_presets.cfg for signing
+        run: |
+          if [ ! -f export_presets.cfg ]; then
+            echo "[preset.0]
+                  name=\"Android\"
+                  platform=\"Android\"
+                  export_path=\"Game_Cho_Tro_Choi.apk\"
+                  " > export_presets.cfg
+          fi
+          echo "
+                keystore/release=\"res://my-release-key.keystore\"
+                keystore/release_user=\"Admin\"
+                keystore/release_password=\"123456789\"
+                " >> export_presets.cfg
 
       - name: Build Android APK (Release)
         run: |
           mkdir -p build
-          godot --headless --export-release "Android" Game_Cho_Tro_Choi.apk \
-            --export-options "keystore/release=my-release-key.keystore;keystore/release_user=Admin;keystore/release_password=123456789"
+          godot --headless --export-release "Android" Game_Cho_Tro_Choi.apk 
 
         # Upload APK
       - name: Upload APK artifact
