@@ -30,7 +30,7 @@ jobs:
       # Install godot4.4
       - name: Download Godot 4.4 Headless
         run: |
-          wget https://release-assets.githubusercontent.com/github-production-release-asset/688986521/6be2ef2f-67ff-49ab-8e51-fdedbaf65faf?sp=r&sv=2018-11-09&sr=b&spr=https&se=2025-10-07T09%3A11%3A30Z&rscd=attachment%3B+filename%3DGodot_v4.4-stable_mono_linux_x86_64.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2025-10-07T08%3A11%3A06Z&ske=2025-10-07T09%3A11%3A30Z&sks=b&skv=2018-11-09&sig=mbK2rP7ghpAJ6ezB%2F84wfWWfh5916zHuvBdR21JYWYc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc1OTgyNjc2MSwibmJmIjoxNzU5ODI0OTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.nMu520HsViRm8qP0LE_30T6ohdxTePVbsx20r7wx9ok&response-content-disposition=attachment%3B%20filename%3DGodot_v4.4-stable_mono_linux_x86_64.zip&response-content-type=application%2Foctet-stream -O godot.zip
+          wget https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip -O godot.zip
           unzip godot.zip -d godot
           sudo mv godot/Godot_v4.4-stable_linux_headless.64 /usr/local/bin/godot
           chmod +x /usr/local/bin/godot
