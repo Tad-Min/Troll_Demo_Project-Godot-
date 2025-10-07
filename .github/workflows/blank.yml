@@ -58,7 +58,7 @@ jobs:
       - name: Build Android APK (Release)
         run: |
           mkdir -p build
-          godot --headless --export-release "Android" Game_Cho_Tro_Choi.apk
+          godot --headless --export-release "Android" Game_Cho_Tro_Choi.apk --no-sign
 
         # Upload APK
       - name: Upload APK artifact
