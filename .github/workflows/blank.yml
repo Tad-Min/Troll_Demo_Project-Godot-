@@ -49,6 +49,7 @@ jobs:
       # Generate keystore
       - name: Generate temporary keystore
         run: |
+          rm -f my-release-key.keystore
           keytool -genkey -v -keystore my-release-key.keystore \
             -alias Admin -keyalg RSA -keysize 2048 -validity 10000 \
             -storepass 123456789 -keypass 123456789 \
