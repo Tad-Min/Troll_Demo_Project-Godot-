@@ -46,9 +46,15 @@ jobs:
             mv ~/.local/share/godot/export_templates/4.4.1.stable/templates/* ~/.local/share/godot/export_templates/4.4.1.stable/
             rm -rf ~/.local/share/godot/export_templates/4.4.1.stable/templates
           fi
-          
-      #  Build APK
-      - name: Build Android APK
+      # Generate keystore
+      - name: Generate temporary keystore
+        run: |
+          keytool -genkey -v -keystore my-release-key.keystore \
+            -alias Admin -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass 123456789 -keypass 123456789 \
+            -dname "CN=User, OU=Dev, O=Company, L=City, S=State, C=VN"
+
+      - name: Build Android APK (Release)
         run: |
           mkdir -p build
           godot --headless --export-release "Android" Game_Cho_Tro_Choi.apk
