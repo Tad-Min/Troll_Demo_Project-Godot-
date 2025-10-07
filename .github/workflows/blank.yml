@@ -11,10 +11,11 @@ on:
   pull_request:
     branches: 
     - "**"
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+  
+permissions:
+  contents: write
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -82,6 +83,20 @@ jobs:
         with:
           name: Game_Cho_Tro_Choi
           path: Game_Cho_Tro_Choi.apk
+
+      - name: Commit & push APK to current branch
+        run: |
+          BRANCH_NAME=$(echo "${GITHUB_REF#refs/heads/}")
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # copy file vào thư mục bạn muốn (ví dụ /release)
+          mkdir -p release
+          cp Game_Cho_Tro_Choi.apk release/
+
+          git add release/Game_Cho_Tro_Choi.apk
+          git commit -m "Update APK build from GitHub Actions"
+          git push origin "$BRANCH_NAME"
           
       - name: End
         run: |
