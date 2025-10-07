@@ -46,14 +46,14 @@ jobs:
       - name: Build Android APK
         run: |
           mkdir -p build
-          godot --headless --export-release "Android" build/Game_Cho_Tro_Choi.apk
+          godot --headless --export-release "Android" Game_Cho_Tro_Choi.apk
 
         # Upload APK
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: Game_Cho_Tro_Choi
-          path: build/Game_Cho_Tro_Choi.apk
+          path: Game_Cho_Tro_Choi.apk
           
       - name: End
         run: |
