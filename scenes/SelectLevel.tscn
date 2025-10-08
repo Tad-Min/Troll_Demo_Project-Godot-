@@ -147,7 +147,6 @@ text = "LEVEL 3
 "
 
 [node name="lock3" type="TextureRect" parent="btnlv3"]
-visible = false
 modulate = Color(0.252028, 0.252028, 0.252028, 1)
 layout_mode = 0
 offset_left = 1.0
