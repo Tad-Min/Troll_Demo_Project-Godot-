@@ -82,7 +82,8 @@ func _on_pck_downloaded(result, response_code, headers, body):
 
 func load_pck():
 	if Global.has_updated:
-		status_label.text = "✅ Đây là bản mới nhất! Chúc bạn chơi game zui zẻ"
+		if status_label:
+			status_label.text = "✅ Đây là bản mới nhất! Chúc bạn chơi game zui zẻ"
 		return
 	if ProjectSettings.load_resource_pack(LOCAL_PCK_PATH):
 		print("✅ Loaded update pack successfully!")
