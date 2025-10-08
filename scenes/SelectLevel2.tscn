@@ -153,7 +153,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_4vvy1")
 text = "LEVEL 16"
 
 [node name="lock17" type="TextureRect" parent="btnlv17"]
-visible = false
 modulate = Color(0.281187, 0.281187, 0.281187, 1)
 layout_mode = 0
 offset_right = 253.0
