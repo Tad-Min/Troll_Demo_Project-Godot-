@@ -124,6 +124,7 @@ text = "LEVEL 2
 "
 
 [node name="lock2" type="TextureRect" parent="btnlv2"]
+visible = false
 modulate = Color(0.960351, 0.960351, 0.960351, 1)
 self_modulate = Color(0.270222, 0.270222, 0.270222, 1)
 layout_mode = 0
@@ -146,6 +147,7 @@ text = "LEVEL 3
 "
 
 [node name="lock3" type="TextureRect" parent="btnlv3"]
+visible = false
 modulate = Color(0.252028, 0.252028, 0.252028, 1)
 layout_mode = 0
 offset_left = 1.0

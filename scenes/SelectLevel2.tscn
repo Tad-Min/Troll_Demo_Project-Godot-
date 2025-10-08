@@ -75,7 +75,6 @@ text = "LEVEL 13
 "
 
 [node name="lock13" type="TextureRect" parent="btnlv13"]
-visible = false
 modulate = Color(0.252028, 0.252028, 0.252028, 1)
 layout_mode = 0
 offset_left = -1.0
@@ -97,7 +96,6 @@ text = "LEVEL 14
 "
 
 [node name="lock14" type="TextureRect" parent="btnlv14"]
-visible = false
 modulate = Color(0.241156, 0.241156, 0.241156, 1)
 layout_mode = 0
 offset_left = -5.0
@@ -118,7 +116,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_srw1n")
 text = "LEVEL 15"
 
 [node name="lock15" type="TextureRect" parent="btnlv15"]
-visible = false
 modulate = Color(0.244776, 0.244776, 0.244776, 1)
 layout_mode = 0
 offset_left = -7.0
@@ -138,7 +135,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_4vvy1")
 text = "LEVEL 16"
 
 [node name="lock16" type="TextureRect" parent="btnlv16"]
-visible = false
 modulate = Color(0.281187, 0.281187, 0.281187, 1)
 layout_mode = 0
 offset_right = 253.0
