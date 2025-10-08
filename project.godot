@@ -20,6 +20,7 @@ config/icon="uid://cgk5wf30hxks8"
 GameData="*res://scripts/GameData.gd"
 Session="*res://scripts/Session.gd"
 AutoUpdater="*res://scripts/AutoUpdater.gd"
+Global="*res://scripts/Global.gd"
 
 [display]
 
