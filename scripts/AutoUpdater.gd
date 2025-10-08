@@ -8,7 +8,7 @@ const LOCAL_PCK_PATH = "user://Game_Troll_Vi_en_lastest.pck"
 var http := HTTPRequest.new()
 var http_download
 var status_label
-
+var has_updated := false
 
 func _ready():
 	# Tìm các node UI trong scene (nếu bạn đặt khác tên thì sửa lại)
@@ -86,6 +86,8 @@ func load_pck():
 		print("✅ Loaded update pack successfully!")
 		if status_label:
 			status_label.text = "✅ Cập nhật thành công! Khởi động lại game để áp dụng."
+			
+			has_updated = true
 			await get_tree().create_timer(1.0).timeout
 			get_tree().reload_current_scene()
 	else:
