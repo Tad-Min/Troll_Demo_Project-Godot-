@@ -107,7 +107,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		last_direction=direction
 		
-	print(last_direction)
 	
 
 	#disable movement for an instant if on jumper
@@ -121,7 +120,6 @@ func _physics_process(delta: float) -> void:
 
 	#animation reset after jump
 	if is_on_ground() and jump_charge==min_jc:
-		print("can move and on ground")
 		last_direction = null
 
 	move_and_slide()

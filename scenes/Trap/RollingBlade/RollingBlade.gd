@@ -4,7 +4,6 @@ extends RigidBody2D
 @export var stick_force: float = 50.0
 
 func _ready() -> void:
-	$AnimatedSprite2D.play("spin")
 	connect("body_entered", Callable(self, "_on_body_entered"))
 		
 func _on_body_entered(body: Node) -> void:
