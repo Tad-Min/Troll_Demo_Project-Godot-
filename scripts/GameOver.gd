@@ -30,3 +30,7 @@ func _format_cause(cause: String) -> String:
 			return "Fell out of the world"
 		_:
 			return "Unknown"
+
+
+func _on_btn_home_pressed() -> void:
+		get_tree().change_scene_to_file("res://scenes/StartUI.tscn")
