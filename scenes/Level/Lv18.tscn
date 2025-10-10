@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://ccutf1jfjqssp"]
+[gd_scene load_steps=28 format=4 uid="uid://dq5qxflggkpfo"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_d36sr"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_arqxs"]
@@ -14,10 +14,10 @@
 [ext_resource type="Script" uid="uid://xbi61u8el3rg" path="res://scenes/Trap/On_Off_Path/Switch.gd" id="12_d36sr"]
 [ext_resource type="Script" uid="uid://cc330yibm4qdr" path="res://scenes/Trap/On_Off_Path/Trigger_off.gd" id="12_jkl2x"]
 [ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="13_jkl2x"]
-[ext_resource type="Script" uid="uid://bqajoujgnr1cr" path="res://scenes/Trap/On_Off_Path/SwitchDelay.gd" id="13_qgxox"]
+[ext_resource type="Script" path="res://scenes/Trap/On_Off_Path/SwitchDelay.gd" id="13_qgxox"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="14_bju1v"]
 [ext_resource type="PackedScene" uid="uid://dp01a8j277211" path="res://scenes/Trap/RollingBlade/rolling_blade.tscn" id="15_arqxs"]
-[ext_resource type="PackedScene" uid="uid://bcq0or65kkdhs" path="res://scenes/Trap/Spear_pausable.tscn" id="16_uyekv"]
+[ext_resource type="PackedScene" path="res://scenes/Trap/Spear_pausable.tscn" id="16_uyekv"]
 [ext_resource type="Script" uid="uid://cim0ct16ubxsy" path="res://scripts/Level/Lv18/floor_1.gd" id="17_jkl2x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trgvg"]

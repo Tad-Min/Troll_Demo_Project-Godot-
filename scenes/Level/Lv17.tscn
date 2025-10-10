@@ -8,15 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="6_d70jy"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="7_lde4g"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="8_xua10"]
-[ext_resource type="PackedScene" uid="uid://ckjhjpinjx6ik" path="res://scenes/coin_animation.tscn" id="9_ik2t3"]
-[ext_resource type="PackedScene" uid="uid://cdspq3xdjkyl" path="res://scenes/Fake_coin.tscn" id="10_8cv6a"]
+[ext_resource type="PackedScene" path="res://scenes/coin_animation.tscn" id="9_ik2t3"]
+[ext_resource type="PackedScene" path="res://scenes/Fake_coin.tscn" id="10_8cv6a"]
 [ext_resource type="Script" uid="uid://biuyh3ke8ltwv" path="res://scripts/Level/Lv7/trigger_hidden_path.gd" id="11_7bbm0"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="12_dcy8i"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="13_iicjj"]
 [ext_resource type="PackedScene" uid="uid://bxp61qk2u4v2e" path="res://scenes/Trap/HiddenSpike.tscn" id="14_xef0i"]
 [ext_resource type="PackedScene" uid="uid://dnhhenxrpugyn" path="res://scenes/Trap/Portal/FPortal1.tscn" id="15_mh000"]
 [ext_resource type="Script" uid="uid://ov8ltcncjpjy" path="res://scripts/Level/Lv10/fakeportLv10.gd" id="16_fh0ec"]
-[ext_resource type="PackedScene" uid="uid://bak735etd5s7k" path="res://scenes/Trap/Portal/RPortal2.tscn" id="17_nru0v"]
+[ext_resource type="PackedScene" path="res://scenes/Trap/Portal/RPortal2.tscn" id="17_nru0v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jteh"]
 texture = ExtResource("6_d70jy")
