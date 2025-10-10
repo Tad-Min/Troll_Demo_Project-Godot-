@@ -3598,7 +3598,4 @@ tab_size = 7
 
 [node name="MusicBackground" parent="." instance=ExtResource("23_4ycd7")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1153, 323)
-
 [editable path="ComboTrap1/Jumper"]
