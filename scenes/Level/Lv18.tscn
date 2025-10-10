@@ -15,7 +15,7 @@
 [ext_resource type="Script" uid="uid://xbi61u8el3rg" path="res://scenes/Trap/On_Off_Path/Switch.gd" id="12_d36sr"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="14_bju1v"]
 [ext_resource type="PackedScene" uid="uid://dp01a8j277211" path="res://scripts/Trap/RollingBlade/rolling_blade.tscn" id="15_arqxs"]
-[ext_resource type="Script" path="res://scripts/Trap/Rotate_Floor.gd" id="15_ydc3h"]
+[ext_resource type="Script" uid="uid://dhxqoexp40hno" path="res://scripts/Trap/Rotate_Floor.gd" id="15_ydc3h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trgvg"]
 texture = ExtResource("7_we23n")

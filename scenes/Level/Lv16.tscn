@@ -3684,9 +3684,6 @@ tile_set = SubResource("TileSet_f7v5k")
 [node name="Player" parent="." instance=ExtResource("12_u2jrh")]
 position = Vector2(61, 398)
 scale = Vector2(1.75, 1.75)
-speed = 100.0
-jump_velocity = 400.0
-gravity_inverted = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
 
