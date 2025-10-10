@@ -59,3 +59,7 @@ func _on_choose_level(lv: int) -> void:
 
 func _on_btn_next_pressed():
 	get_tree().change_scene_to_file("res://scenes/SelectLevel2.tscn")
+
+
+func _on_back_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/StartUI.tscn")

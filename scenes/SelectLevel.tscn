@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://blnjmna71025t"]
+[gd_scene load_steps=38 format=3 uid="uid://blnjmna71025t"]
 
 [ext_resource type="Script" uid="uid://bqud0bqb2dq15" path="res://scripts/select_level.gd" id="1_adu0t"]
 [ext_resource type="Texture2D" uid="uid://cwnk0n2t6kdcn" path="res://Jungle Asset Pack/parallax background/background pixel.png" id="2_1b177"]
@@ -17,6 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://b53auwfsla30i" path="res://Jungle Asset Pack/parallax background/Lv12.png" id="14_peair"]
 [ext_resource type="Texture2D" uid="uid://cf7l454ydcbfk" path="res://Jungle Asset Pack/parallax background/green-circle-next-button-pixel-art-vector.jpg" id="15_ckuqx"]
 [ext_resource type="Texture2D" uid="uid://cly6utkoyhvpw" path="res://Jungle Asset Pack/select level.png" id="17_ckuqx"]
+[ext_resource type="Texture2D" uid="uid://byfthgul7cnvj" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/343px/back01.png" id="18_joqlv"]
+[ext_resource type="Texture2D" uid="uid://bp7noh00vvhot" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/343px/back02.png" id="19_ykhhf"]
+[ext_resource type="Texture2D" uid="uid://bc0k4bbfk5fcg" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/343px/back03.png" id="20_7tjtq"]
+[ext_resource type="Texture2D" uid="uid://cgux2glasfdco" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/343px/back04.png" id="21_sgi3x"]
+[ext_resource type="Texture2D" uid="uid://dnqre7d056rce" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/343px/back05.png" id="22_io17y"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1c1a"]
 texture = ExtResource("2_1b177")
@@ -358,3 +363,19 @@ offset_top = 2.0
 offset_right = 724.0
 offset_bottom = 100.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_7tjtq")
+
+[node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 584.0
+offset_right = 1269.0
+offset_bottom = 927.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("18_joqlv")
+texture_pressed = ExtResource("19_ykhhf")
+texture_hover = ExtResource("20_7tjtq")
+texture_disabled = ExtResource("21_sgi3x")
+texture_focused = ExtResource("22_io17y")
+stretch_mode = 0
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
