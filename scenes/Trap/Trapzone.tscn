@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw0nh2pakk3la"]
+
+[ext_resource type="Script" uid="uid://c6p05k41breur" path="res://scripts/trapzone.gd" id="1_35auq"]
+[ext_resource type="PackedScene" uid="uid://c3p15mm8xfels" path="res://scenes/Trap/Shuriken.tscn" id="2_1jf2o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jf2o"]
+size = Vector2(11.25, 37.6354)
+
+[node name="Trapzone" type="Area2D"]
+script = ExtResource("1_35auq")
+shuriken_scene = ExtResource("2_1jf2o")
+spawner = NodePath("Spawner")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1jf2o")
+
+[node name="Spawner" type="Marker2D" parent="."]
+position = Vector2(204, 0)
