@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://kjekawpsm1pc"]
+
+[ext_resource type="Script" uid="uid://b6wu156a174rn" path="res://scripts/death_count.gd" id="1_xbo0e"]
+[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="2_v4ihc"]
+
+[node name="deathcount_canva" type="CanvasLayer"]
+script = ExtResource("1_xbo0e")
+
+[node name="death_text" type="TextEdit" parent="."]
+offset_left = 991.0
+offset_top = 28.0
+offset_right = 1119.0
+offset_bottom = 71.0
+text = "Death:"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+self_modulate = Color(1, 0.211765, 0.0509804, 1)
+offset_left = 1052.0
+offset_top = 35.0
+offset_right = 1118.0
+offset_bottom = 60.0
+text = "000000"
+
+[node name="Pause" parent="." instance=ExtResource("2_v4ihc")]

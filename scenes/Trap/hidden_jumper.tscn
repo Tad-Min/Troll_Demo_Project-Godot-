@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://d8sfk2gyygn4"]
+
+[ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="1_p6gy3"]
+[ext_resource type="Script" uid="uid://c6dnpo0cqeqrw" path="res://scripts/hidden_jumper.gd" id="2_0li2d"]
+[ext_resource type="Script" uid="uid://bwf385f755trf" path="res://scripts/trigger_jumper.gd" id="3_p6gy3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfnqv"]
+size = Vector2(19, 21)
+
+[node name="HiddenJumper" type="Node2D"]
+
+[node name="Jumper" parent="." instance=ExtResource("1_p6gy3")]
+script = ExtResource("2_0li2d")
+jump_force = 700.0
+
+[node name="Trigger_jumper" type="Area2D" parent="."]
+script = ExtResource("3_p6gy3")
+trap_node = NodePath("../Jumper")
+
+[node name="Touch" type="CollisionShape2D" parent="Trigger_jumper"]
+position = Vector2(0.5, -10.5)
+shape = SubResource("RectangleShape2D_tfnqv")
