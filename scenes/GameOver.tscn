@@ -1,19 +1,43 @@
-[gd_scene load_steps=7 format=3 uid="uid://1bof6obh3yvu"]
+[gd_scene load_steps=23 format=3 uid="uid://1bof6obh3yvu"]
 
 [ext_resource type="Script" uid="uid://5maxewdhu0r" path="res://scripts/GameOver.gd" id="1_6bcno"]
 [ext_resource type="Texture2D" uid="uid://btk83wkub78j5" path="res://Jungle Asset Pack/parallax background/cranfield-traditional-etching-ink-mid-black-400x221.jpg" id="1_vuicl"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://Jungle Asset Pack/Pixeled.ttf" id="3_4noiy"]
 [ext_resource type="AudioStream" uid="uid://o35vrtv5r07q" path="res://assets/titanic-flute-music-1736313719587.mp3" id="4_4noiy"]
+[ext_resource type="Texture2D" uid="uid://btafcfrrk2638" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/restart/343px/restart01.png" id="5_skdqa"]
+[ext_resource type="Texture2D" uid="uid://cscpt23w0khhp" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/restart/343px/restart02.png" id="6_8dkuh"]
+[ext_resource type="Texture2D" uid="uid://0fwiytc2qenh" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/restart/343px/restart03.png" id="7_0icj0"]
+[ext_resource type="Texture2D" uid="uid://b1qcxkb7ius7r" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/restart/343px/restart04.png" id="8_5fq7v"]
+[ext_resource type="Texture2D" uid="uid://b4ya6l1nme8ft" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/restart/343px/restart05.png" id="9_1ye5n"]
+[ext_resource type="Texture2D" uid="uid://cy45r4j38td7" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/home/343px/home01.png" id="10_5dsns"]
+[ext_resource type="Texture2D" uid="uid://fmhamdteb2y7" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/home/343px/home02.png" id="11_xlh57"]
+[ext_resource type="Texture2D" uid="uid://xcmuv4ytx4vo" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/home/343px/home03.png" id="12_kjj73"]
+[ext_resource type="Texture2D" uid="uid://dfoq4a18dgx5n" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/home/343px/home04.png" id="13_otmnh"]
+[ext_resource type="Texture2D" uid="uid://bgqvb0e0iny5c" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/home/343px/home05.png" id="14_k2h4m"]
+[ext_resource type="Texture2D" uid="uid://n6bs2gvjd2ui" path="res://assets/Ếch_buồn_no_Background/frame_0_delay-0.5s-removebg-preview.png" id="15_spr6i"]
+[ext_resource type="Texture2D" uid="uid://bor0wxgcl1xxd" path="res://assets/Ếch_buồn_no_Background/frame_1_delay-0.2s-removebg-preview.png" id="16_6yffd"]
+[ext_resource type="Texture2D" uid="uid://cnf2gvu1a1rdr" path="res://assets/Ếch_buồn_no_Background/frame_2_delay-0.2s-removebg-preview.png" id="17_jsyru"]
+[ext_resource type="Texture2D" uid="uid://dxnvn7r7xmgcb" path="res://assets/Ếch_buồn_no_Background/frame_3_delay-0.2s-removebg-preview.png" id="18_4h8ls"]
+[ext_resource type="Texture2D" uid="uid://bnwhexnw08dem" path="res://assets/Ếch_buồn_no_Background/frame_4_delay-0.5s-removebg-preview.png" id="19_m0y6l"]
+[ext_resource type="Texture2D" uid="uid://bvp52wnjvsn7k" path="res://assets/Ếch_buồn_no_Background/frame_5_delay-2s-removebg-preview.png" id="20_x0efx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gijjb"]
 texture = ExtResource("1_vuicl")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88ekj"]
-bg_color = Color(0.969137, 0.969137, 0.969137, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ya815"]
+frames = 6
+speed_scale = 4.0
+frame_0/texture = ExtResource("15_spr6i")
+frame_1/texture = ExtResource("16_6yffd")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("17_jsyru")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("18_4h8ls")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("19_m0y6l")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("20_x0efx")
+frame_5/duration = 1.0
 
 [node name="Control2" type="Control"]
 layout_mode = 3
@@ -33,18 +57,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_gijjb")
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 431.0
-offset_top = 377.0
-offset_right = 689.0
-offset_bottom = 477.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_88ekj")
-text = "Play Again"
-script = ExtResource("1_6bcno")
-
 [node name="GameOver" type="Label" parent="."]
 layout_mode = 0
 offset_left = 198.0
@@ -54,7 +66,7 @@ offset_bottom = 200.0
 theme_override_colors/font_color = Color(0.882353, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_4noiy")
 theme_override_font_sizes/font_size = 80
-text = "GAME OVER !"
+text = "DIE AGAIN?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -88,3 +100,43 @@ text = "Something
 "
 horizontal_alignment = 1
 uppercase = true
+
+[node name="RestartButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 369.0
+offset_right = 1206.0
+offset_bottom = 712.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("5_skdqa")
+texture_pressed = ExtResource("6_8dkuh")
+texture_hover = ExtResource("7_0icj0")
+texture_disabled = ExtResource("8_5fq7v")
+texture_focused = ExtResource("9_1ye5n")
+stretch_mode = 0
+script = ExtResource("1_6bcno")
+
+[node name="BtnHome" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 422.0
+offset_top = 507.0
+offset_right = 1212.0
+offset_bottom = 850.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("10_5dsns")
+texture_pressed = ExtResource("11_xlh57")
+texture_hover = ExtResource("12_kjj73")
+texture_disabled = ExtResource("13_otmnh")
+texture_focused = ExtResource("14_k2h4m")
+stretch_mode = 0
+
+[node name="Sad_Meme" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 354.0
+offset_right = 502.0
+offset_bottom = 846.0
+scale = Vector2(0.6, 0.6)
+texture = SubResource("AnimatedTexture_ya815")
+
+[connection signal="pressed" from="BtnHome" to="." method="_on_btn_home_pressed"]

@@ -8,3 +8,5 @@ func _body_entered(body: Node) -> void:
 	if body.is_in_group("Player"):
 		set_deferred("monitoring", false)
 		$SpikeSimple.visible = true
+		await get_tree().create_timer(3.0).timeout
+		$SpikeSimple.queue_free()

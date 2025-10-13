@@ -146,17 +146,17 @@ expand_mode = 3
 layout_mode = 0
 offset_left = 125.0
 offset_top = 293.0
-offset_right = 433.0
-offset_bottom = 475.0
+offset_right = 370.0
+offset_bottom = 360.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_4vvy1")
-text = "LEVEL 16"
+text = "LEVEL 17"
 
 [node name="lock17" type="TextureRect" parent="btnlv17"]
 modulate = Color(0.281187, 0.281187, 0.281187, 1)
 layout_mode = 0
-offset_right = 309.0
-offset_bottom = 183.0
+offset_right = 253.0
+offset_bottom = 68.0
 texture = ExtResource("4_f2irv")
 expand_mode = 3
 
@@ -168,12 +168,31 @@ offset_right = 699.0
 offset_bottom = 360.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_4vvy1")
-text = "LEVEL 16"
+text = "LEVEL 18"
 
 [node name="lock18" type="TextureRect" parent="btnlv18"]
 modulate = Color(0.281187, 0.281187, 0.281187, 1)
 layout_mode = 0
 offset_right = 253.0
+offset_bottom = 69.0
+texture = ExtResource("4_f2irv")
+expand_mode = 3
+
+[node name="btnlv19" type="Button" parent="."]
+layout_mode = 0
+offset_left = 770.0
+offset_top = 293.0
+offset_right = 1015.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_4vvy1")
+text = "LEVEL 19"
+
+[node name="lock19" type="TextureRect" parent="btnlv19"]
+modulate = Color(0.281187, 0.281187, 0.281187, 1)
+layout_mode = 0
+offset_left = -3.0
+offset_right = 250.0
 offset_bottom = 69.0
 texture = ExtResource("4_f2irv")
 expand_mode = 3
