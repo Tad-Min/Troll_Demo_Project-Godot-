@@ -2696,6 +2696,7 @@ position = Vector2(40, 16)
 
 [node name="Portal" parent="." instance=ExtResource("11_8xrpd")]
 position = Vector2(1104, 128)
+next_level = 20
 
 [node name="Pad" type="TileMap" parent="."]
 format = 2
