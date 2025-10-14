@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dhqdda1mfogu7"]
+[gd_scene load_steps=35 format=3 uid="uid://dhqdda1mfogu7"]
 
 [ext_resource type="Texture2D" uid="uid://bbjunvicfbbgg" path="res://assets/character.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://c27cqf6yfkjx5" path="res://scripts/player.gd" id="1_g2els"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cvy1ls0r8b1w1" path="res://assets/male-death-scream-horror-352706.mp3" id="5_qlg0r"]
 [ext_resource type="PackedScene" uid="uid://kjekawpsm1pc" path="res://scenes/Player/death_count.tscn" id="6_tuyoq"]
 [ext_resource type="Script" uid="uid://cyr4gt8sv34wd" path="res://scenes/Player/progress_bar.gd" id="8_dl1wr"]
+[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/Pause.tscn" id="8_wwtew"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
 atlas = ExtResource("1_3vyb7")
@@ -281,12 +282,8 @@ stream = ExtResource("3_qhqgy")
 volume_db = -20.612
 pitch_scale = 0.96
 
-[node name="MobileControls" parent="." instance=ExtResource("4_dqkch")]
-
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_qlg0r")
-
-[node name="deathcount_canva" parent="." instance=ExtResource("6_tuyoq")]
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 offset_left = 2.0
@@ -313,5 +310,13 @@ offset_right = 252.0
 offset_bottom = 108.0
 fit_content = true
 horizontal_alignment = 1
+
+[node name="MobileControls" parent="." instance=ExtResource("4_dqkch")]
+
+[node name="deathcount_canva" parent="." instance=ExtResource("6_tuyoq")]
+
+[node name="Pause_canva" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="Pause_canva" instance=ExtResource("8_wwtew")]
 
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
