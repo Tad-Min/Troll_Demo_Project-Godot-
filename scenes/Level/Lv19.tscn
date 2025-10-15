@@ -2555,7 +2555,6 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTtrap2/Area2D"]
 shape = SubResource("RectangleShape2D_8xrpd")
-metadata/_edit_lock_ = true
 
 [node name="Spike" parent="CbTtrap2/Area2D" instance=ExtResource("7_sxkr2")]
 position = Vector2(0, 24)
