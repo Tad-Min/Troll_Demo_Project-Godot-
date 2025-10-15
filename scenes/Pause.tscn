@@ -33,6 +33,7 @@ anchors_preset = 0
 script = ExtResource("1_0ep5p")
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_right = 87.0
 offset_bottom = 63.0
 theme_override_colors/font_color = Color(0.960351, 0.960351, 0.960351, 1)
@@ -41,6 +42,7 @@ text = "||"
 
 [node name="Panel" type="Panel" parent="."]
 process_mode = 3
+layout_mode = 0
 offset_left = 317.0
 offset_top = 90.0
 offset_right = 821.0
@@ -84,6 +86,7 @@ text = "MENU
 "
 
 [node name="ZoomPanel" type="TextEdit" parent="Panel"]
+layout_mode = 0
 offset_left = 25.0
 offset_top = 130.0
 offset_right = 478.0
