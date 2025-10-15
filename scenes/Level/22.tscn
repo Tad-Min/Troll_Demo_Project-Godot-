@@ -1,37 +1,37 @@
 [gd_scene load_steps=48 format=4 uid="uid://ca1vbi38klrkk"]
 
-[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_763ab"]
-[ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_u8d3w"]
-[ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://Jungle Asset Pack/parallax background/plx-2.png" id="3_1mlgl"]
-[ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://Jungle Asset Pack/parallax background/plx-4.png" id="4_7cois"]
-[ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://Jungle Asset Pack/parallax background/plx-5.png" id="5_7a8bd"]
-[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="6_06fq7"]
-[ext_resource type="Script" uid="uid://cofbut5fxhtmu" path="res://scripts/Level/Lv19/cb_ttrap_2.gd" id="7_h0qo7"]
-[ext_resource type="PackedScene" uid="uid://damf22lmf180i" path="res://scenes/Trap/Spike_Simple.tscn" id="7_lyb4f"]
-[ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="7_sxkr2"]
-[ext_resource type="Script" uid="uid://b85t752pe5qh0" path="res://scripts/Level/Lv19/Trap2.gd" id="8_8bwxx"]
-[ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="9_pnedf"]
-[ext_resource type="Script" uid="uid://dygyi2uri2veg" path="res://scripts/Level/Lv19/cb_trap_3.gd" id="11_4uj1l"]
-[ext_resource type="PackedScene" uid="uid://8oftca5oo1lr" path="res://scenes/Trap/spike_ball.tscn" id="11_7ookp"]
-[ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="11_8xrpd"]
-[ext_resource type="Script" uid="uid://bttp7oqgllcg6" path="res://scripts/Level/Lv19/FlyFoorTrap3.gd" id="11_lfm6u"]
-[ext_resource type="Script" uid="uid://dataandynvo5s" path="res://scripts/Level/Lv19/Trap3.gd" id="12_ld75j"]
-[ext_resource type="Script" uid="uid://cp7ouyfsavgbu" path="res://scripts/Level/Lv19/Trap1.gd" id="13_tssql"]
-[ext_resource type="Script" uid="uid://cbvpawiiow2pd" path="res://scripts/Level/Lv19/FlyFoor.gd" id="14_gne2q"]
-[ext_resource type="Script" uid="uid://jlfjv61fo51w" path="res://scripts/Level/Lv19/cb_trap_4.gd" id="14_v3hj6"]
-[ext_resource type="Script" uid="uid://d1bilmjekrltg" path="res://scripts/Level/Lv19/Trap4.gd" id="15_l1o5m"]
-[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="15_suw5v"]
-[ext_resource type="Script" uid="uid://dx6dbjfp30olm" path="res://scripts/Level/Lv19/Trap5.gd" id="16_l1o5m"]
-[ext_resource type="Script" uid="uid://da6ew4evtogp5" path="res://scripts/Level/Lv19/Trap6.gd" id="18_v03sl"]
-[ext_resource type="Script" uid="uid://cujv3athh5a1m" path="res://scripts/Level/Lv19/Trap8.gd" id="20_tpgej"]
-[ext_resource type="Script" uid="uid://dw38y28b84yoh" path="res://scripts/Level/Lv19/Trap9.gd" id="21_scyrt"]
-[ext_resource type="Script" uid="uid://d1h4y11g43s0x" path="res://scripts/Level/Lv19/Trap10.gd" id="22_wq6pa"]
-[ext_resource type="Script" uid="uid://t46gguy4dbja" path="res://scripts/Level/Lv19/Trap7.gd" id="26_476eg"]
-[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="37_2hbd1"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="39_a5t5w"]
+[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_0vk1f"]
+[ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_7esmd"]
+[ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://Jungle Asset Pack/parallax background/plx-2.png" id="3_gqv18"]
+[ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://Jungle Asset Pack/parallax background/plx-4.png" id="4_v1xoy"]
+[ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://Jungle Asset Pack/parallax background/plx-5.png" id="5_nb3j1"]
+[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="6_ulacr"]
+[ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="7_hdber"]
+[ext_resource type="Script" uid="uid://cofbut5fxhtmu" path="res://scripts/Level/Lv19/cb_ttrap_2.gd" id="8_802fc"]
+[ext_resource type="Script" uid="uid://b85t752pe5qh0" path="res://scripts/Level/Lv19/Trap2.gd" id="9_ywj22"]
+[ext_resource type="PackedScene" uid="uid://damf22lmf180i" path="res://scenes/Trap/Spike_Simple.tscn" id="10_ogml2"]
+[ext_resource type="Script" uid="uid://cbvpawiiow2pd" path="res://scripts/Level/Lv19/FlyFoor.gd" id="11_tvq4e"]
+[ext_resource type="Script" uid="uid://dygyi2uri2veg" path="res://scripts/Level/Lv19/cb_trap_3.gd" id="12_1coq7"]
+[ext_resource type="Script" uid="uid://dataandynvo5s" path="res://scripts/Level/Lv19/Trap3.gd" id="13_mt1ag"]
+[ext_resource type="Script" uid="uid://bttp7oqgllcg6" path="res://scripts/Level/Lv19/FlyFoorTrap3.gd" id="14_lvwl6"]
+[ext_resource type="Script" uid="uid://jlfjv61fo51w" path="res://scripts/Level/Lv19/cb_trap_4.gd" id="15_oiqak"]
+[ext_resource type="Script" uid="uid://d1bilmjekrltg" path="res://scripts/Level/Lv19/Trap4.gd" id="16_tjdjw"]
+[ext_resource type="Script" uid="uid://dx6dbjfp30olm" path="res://scripts/Level/Lv19/Trap5.gd" id="17_g2iwe"]
+[ext_resource type="Script" uid="uid://da6ew4evtogp5" path="res://scripts/Level/Lv19/Trap6.gd" id="18_i0ow2"]
+[ext_resource type="PackedScene" uid="uid://8oftca5oo1lr" path="res://scenes/Trap/spike_ball.tscn" id="19_34u50"]
+[ext_resource type="Script" uid="uid://cujv3athh5a1m" path="res://scripts/Level/Lv19/Trap8.gd" id="20_5k4v8"]
+[ext_resource type="Script" uid="uid://dw38y28b84yoh" path="res://scripts/Level/Lv19/Trap9.gd" id="21_8ectn"]
+[ext_resource type="Script" uid="uid://d1h4y11g43s0x" path="res://scripts/Level/Lv19/Trap10.gd" id="22_udr4d"]
+[ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="23_0pehl"]
+[ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="24_0uwqh"]
+[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="25_3jpaj"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="26_mojsd"]
+[ext_resource type="Script" uid="uid://cp7ouyfsavgbu" path="res://scripts/Level/Lv19/Trap1.gd" id="27_qsesu"]
+[ext_resource type="Script" uid="uid://t46gguy4dbja" path="res://scripts/Level/Lv19/Trap7.gd" id="28_hfnrf"]
+[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="29_h7q65"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wq6pa"]
-texture = ExtResource("6_06fq7")
+texture = ExtResource("6_ulacr")
 19:1/0 = 0
 21:1/0 = 0
 25:1/0 = 0
@@ -378,7 +378,7 @@ sources/0 = SubResource("TileSetAtlasSource_wq6pa")
 size = Vector2(80, 66)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_215dr"]
-texture = ExtResource("6_06fq7")
+texture = ExtResource("6_ulacr")
 19:1/0 = 0
 19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:1/0 = 0
@@ -1082,7 +1082,7 @@ size = Vector2(80, 40)
 size = Vector2(50, 120)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
-texture = ExtResource("6_06fq7")
+texture = ExtResource("6_ulacr")
 19:1/0 = 0
 19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:1/0 = 0
@@ -1768,7 +1768,7 @@ sources/1 = SubResource("TileSetAtlasSource_oskok")
 size = Vector2(146, 80)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rdh6r"]
-texture = ExtResource("6_06fq7")
+texture = ExtResource("6_ulacr")
 19:1/0 = 0
 19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:1/0 = 0
@@ -2461,7 +2461,7 @@ offset_left = 191.0
 offset_top = 107.0
 offset_right = 1000.0
 offset_bottom = 584.0
-script = ExtResource("1_763ab")
+script = ExtResource("1_0vk1f")
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -2476,7 +2476,7 @@ offset_right = 152.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_u8d3w")
+texture = ExtResource("2_7esmd")
 
 [node name="Bg_layer2" type="TextureRect" parent="Background"]
 layout_mode = 1
@@ -2489,7 +2489,7 @@ offset_right = 152.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_1mlgl")
+texture = ExtResource("3_gqv18")
 
 [node name="Bg_layer3" type="TextureRect" parent="Background"]
 layout_mode = 1
@@ -2502,7 +2502,7 @@ offset_right = 152.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_1mlgl")
+texture = ExtResource("3_gqv18")
 
 [node name="Bg_layer4" type="TextureRect" parent="Background"]
 layout_mode = 1
@@ -2515,7 +2515,7 @@ offset_right = 152.0
 offset_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_7cois")
+texture = ExtResource("4_v1xoy")
 
 [node name="Bg_layer5" type="TextureRect" parent="Background"]
 layout_mode = 1
@@ -2528,45 +2528,45 @@ offset_right = 152.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_7a8bd")
+texture = ExtResource("5_nb3j1")
 
 [node name="Wall" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAHAB0AAAAXAA4AAAAIAB0AAAAXAA4AAAAGAB0AAAAXAA4AAAAGAB4AAAAXAA4AAAAJAB0AAAAXAA4AAAAFAB0AAAAXAA4AAAAKAB0AAAAXAA4AAAAEAB0AAAAXAA4AAAAEABwAAAAXAA4AAAAFABwAAAAXAA4AAAAGABwAAAAXAA4AAAAHAB4AAAAXAA4AAAAIAB4AAAAXAA4AAAAHABwAAAAXAA4AAAAJAB4AAAAXAA4AAAABABoAAAAXAA4AAAACABoAAAAXAA4AAAACABsAAAAXAA4AAAADABwAAAAXAA4AAAADAB0AAAAXAA4AAAACABwAAAAXAA4AAAACAB0AAAAXAA4AAAADABsAAAAXAA4AAAADABoAAAAXAA4AAAABABsAAAAXAA4AAAABABwAAAAXAA4AAAABAB0AAAAXAA4AAAABABkAAAAXAA4AAAACABkAAAAXAA4AAAACABgAAAAXAA4AAAABABgAAAAXAA4AAAABABcAAAAXAA4AAAACABcAAAAXAA4AAAASAB0AAAAXAA4AAAATAB0AAAAXAA4AAAATABwAAAAXAA4AAAAUABwAAAAXAA4AAAAVABwAAAAXAA4AAAAWABwAAAAXAA4AAAAXABwAAAAXAA4AAAAYABwAAAAXAA4AAAAYAB0AAAAXAA4AAAAXAB0AAAAXAA4AAAAWAB0AAAAXAA4AAAAVAB0AAAAXAA4AAAATABkAAAAXAA4AAAAUABkAAAAXAA4AAAATABcAAAAXAA4AAAAUABcAAAAXAA4AAAAUABgAAAAXAA4AAAAUABYAAAAXAA4AAAATABYAAAAXAA4AAAASABYAAAAXAA4AAAASABcAAAAXAA4AAAASABgAAAAXAA4AAAASABkAAAAXAA4AAAAVABcAAAAXAA4AAAAVABgAAAAXAA4AAAAZABwAAAAXAA4AAAAVABsAAAAXAA4AAAAUABsAAAAXAA4AAAATABsAAAAXAA4AAAASABwAAAAXAA4AAAAUAB0AAAAXAA4AAAAGABYAAAAXAA4AAAAGABUAAAAXAA4AAAAGABQAAAAXAA4AAAAHABQAAAAXAA4AAAAHABMAAAAXAA4AAAAIABMAAAAXAA4AAAAIABQAAAAXAA4AAAAIABUAAAAXAA4AAAABAAkAAAAXAA4AAAACAAkAAAAXAA4AAAACAAoAAAAXAA4AAAACAAsAAAAXAA4AAAACAAwAAAAXAA4AAAADAAwAAAAXAA4AAAADAA0AAAAXAA4AAAACAA0AAAAXAA4AAAAGAAEAAAAXAA4AAAAGAAIAAAAXAA4AAAAFAAIAAAAXAA4AAAAEAAIAAAAXAA4AAAADAAIAAAAXAA4AAAACAAMAAAAXAA4AAAABAAMAAAAXAA4AAAAAAAMAAAAXAA4AAAAAAAQAAAAXAA4AAAABAAQAAAAXAA4AAAACAAQAAAAXAA4AAAADAAMAAAAXAA4AAAAEAAMAAAAXAA4AAAAFAAEAAAAXAA4AAAAEAAEAAAAXAA4AAAADAAEAAAAXAA4AAAACAAEAAAAXAA4AAAABAAEAAAAXAA4AAAAAAAEAAAAXAA4AAAAAAAIAAAAXAA4AAAACAAIAAAAXAA4AAAABAAIAAAAXAA4AAAAOAAEAAAAXAA4AAAAOAAIAAAAXAA4AAAAOAAMAAAAXAA4AAAAPAAMAAAAXAA4AAAAPAAQAAAAXAA4AAAAQAAQAAAAXAA4AAAARAAQAAAAXAA4AAAASAAQAAAAXAA4AAAASAAMAAAAXAA4AAAARAAMAAAAXAA4AAAAQAAMAAAAXAA4AAAAQAAIAAAAXAA4AAAARAAIAAAAXAA4AAAASAAEAAAAXAA4AAAARAAEAAAAXAA4AAAAQAAEAAAAXAA4AAAAPAAEAAAAXAA4AAAAPAAIAAAAXAA4AAAASAAIAAAAXAA4AAAATAAIAAAAXAA4AAAAUAAIAAAAXAA4AAAAUAAMAAAAXAA4AAAATAAMAAAAXAA4AAAATAAQAAAAXAA4AAAAUAAQAAAAXAA4AAAAVAAMAAAAXAA4AAAAWAAMAAAAXAA4AAAAVAAIAAAAXAA4AAAAVAAEAAAAXAA4AAAAUAAEAAAAXAA4AAAATAAEAAAAXAA4AAAAWAAEAAAAXAA4AAAAWAAIAAAAXAA4AAAAXAAEAAAAXAA4AAAAYAAEAAAAXAA4AAAAZAAEAAAAXAA4AAAAXAAIAAAAXAA4AAAAYAAIAAAAXAA4AAAAZAAIAAAAXAA4AAAAaAAIAAAAXAA4AAAAaAAEAAAAXAA4AAAANAAIAAAAXAA4AAAAMAAIAAAAXAA4AAAAMAAEAAAAXAA4AAAAdAB0AAAAXAA4AAAAeAB0AAAAXAA4AAAAeABwAAAAXAA4AAAAfABwAAAAXAA4AAAAgABwAAAAXAA4AAAAgABsAAAAXAA4AAAAhABsAAAAXAA4AAAAhABwAAAAXAA4AAAAiABwAAAAXAA4AAAAjABwAAAAXAA4AAAAkABwAAAAXAA4AAAAhAB0AAAAXAA4AAAAiAB0AAAAXAA4AAAAkABsAAAAXAA4AAAAjABsAAAAXAA4AAAAiABsAAAAXAA4AAAAjAB0AAAAXAA4AAAAkAB0AAAAXAA4AAAAlABwAAAAXAA4AAAAmABwAAAAXAA4AAAAlAB0AAAAXAA4AAAAmAB0AAAAXAA4AAAAsAB0AAAAXAA4AAAAtAB0AAAAXAA4AAAAtABwAAAAXAA4AAAAsABwAAAAXAA4AAAArABwAAAAXAA4AAAAqABwAAAAXAA4AAAAqAB0AAAAXAA4AAAArAB0AAAAXAA4AAAAtABsAAAAXAA4AAAAsABsAAAAXAA4AAAA9AB0AAAAXAA4AAAA9ABwAAAAXAA4AAAA+ABwAAAAXAA4AAAA+ABsAAAAXAA4AAAA/ABsAAAAXAA4AAABAABsAAAAXAA4AAABAABwAAAAXAA4AAABBABwAAAAXAA4AAABAAB0AAAAXAA4AAAA/AB0AAAAXAA4AAABBAB0AAAAXAA4AAAA/ABwAAAAXAA4AAAA+AB0AAAAXAA4AAABCAB0AAAAXAA4AAABCABwAAAAXAA4AAABBABAAAAAXAA4AAABBABEAAAAXAA4AAABBABIAAAAXAA4AAABCABIAAAAXAA4AAABGABIAAAAXAA4AAABGABEAAAAXAA4AAABGABAAAAAXAA4AAABEABAAAAAXAA4AAABDABAAAAAXAA4AAABDABEAAAAXAA4AAABEAB0AAAAXAA4AAABEABwAAAAXAA4AAABFABwAAAAXAA4AAABFABsAAAAXAA4AAABGABwAAAAXAA4AAABFAB0AAAAXAA4AAABGAB0AAAAXAA4AAABGABsAAAAXAA4AAABGABoAAAAXAA4AAABGABkAAAAXAA4AAAA/AAgAAAAXAA4AAAA/AAkAAAAXAA4AAABAAAkAAAAXAA4AAABBAAoAAAAXAA4AAABBAAsAAAAXAA4AAABBAAwAAAAXAA4AAABBAA0AAAAXAA4AAABBAA4AAAAXAA4AAABAAA4AAAAXAA4AAABCAA4AAAAXAA4AAABBAA8AAAAXAA4AAABAAA8AAAAXAA4AAABAABAAAAAXAA4AAABCABAAAAAXAA4AAABCAA8AAAAXAA4AAABDAA8AAAAXAA4AAABAAAoAAAAXAA4AAABAAAsAAAAXAA4AAABAAAwAAAAXAA4AAABAAA0AAAAXAA4AAAATABUAAAAXAA4AAAATABQAAAAXAA4AAAAUABQAAAAXAA4AAAAVABQAAAAXAA4AAAAUABMAAAAXAA4AAAAVABIAAAAXAA4AAAAVABEAAAAXAA4AAAAUABEAAAAXAA4AAAAUABIAAAAXAA4AAAATABIAAAAXAA4AAAAVABMAAAAXAA4AAAATABMAAAAXAA4AAAATABEAAAAXAA4AAAATABAAAAAXAA4AAAATAA8AAAAXAA4AAAATAA4AAAAXAA4AAAAUABAAAAAXAA4AAAASABUAAAAXAA4AAAAUABUAAAAXAA4AAAAVABUAAAAXAA4AAAAIAAoAAAAXAA4AAAAIAAsAAAAXAA4AAAAHAAsAAAAXAA4AAAAHAAwAAAAXAA4AAAAHAA0AAAAXAA4AAAAHAA4AAAAXAA4AAAAHAA8AAAAXAA4AAAAIAA8AAAAXAA4AAAAIABAAAAAXAA4AAAAIAAwAAAAXAA4AAAAIAA0AAAAXAA4AAAAGAA4AAAAXAA4AAAAGAA8AAAAXAA4AAAAHABAAAAAXAA4AAAAHABEAAAAXAA4AAAAIABEAAAAXAA4AAAA=")
 tile_set = SubResource("TileSet_2ch2o")
 
-[node name="Spike" parent="." instance=ExtResource("7_sxkr2")]
+[node name="Spike" parent="." instance=ExtResource("7_hdber")]
 position = Vector2(224, 28)
 rotation = -3.14159
 scale = Vector2(2, 1)
 
-[node name="Spike2" parent="." instance=ExtResource("7_sxkr2")]
+[node name="Spike2" parent="." instance=ExtResource("7_hdber")]
 position = Vector2(848, 32)
 rotation = -3.14159
 scale = Vector2(4, 1)
 
 [node name="CbTtrap2" type="Node2D" parent="."]
 position = Vector2(360, 440)
-script = ExtResource("7_h0qo7")
+script = ExtResource("8_802fc")
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="CbTtrap2"]
-script = ExtResource("8_8bwxx")
+script = ExtResource("9_ywj22")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTtrap2/Area2D"]
 shape = SubResource("RectangleShape2D_8xrpd")
 
-[node name="Spike" parent="CbTtrap2/Area2D" instance=ExtResource("7_sxkr2")]
+[node name="Spike" parent="CbTtrap2/Area2D" instance=ExtResource("7_hdber")]
 position = Vector2(0, 24)
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple" parent="CbTtrap2/Area2D" instance=ExtResource("7_lyb4f")]
+[node name="SpikeSimple" parent="CbTtrap2/Area2D" instance=ExtResource("10_ogml2")]
 position = Vector2(-32, -34)
 rotation = 1.5708
 metadata/_edit_lock_ = true
 
 [node name="FLy" type="Node2D" parent="CbTtrap2/Area2D"]
-script = ExtResource("14_gne2q")
+script = ExtResource("11_tvq4e")
 move_distance = 500.0
 speed = 150.0
 direction = Vector2(0, -1)
@@ -2579,11 +2579,11 @@ metadata/_edit_lock_ = true
 
 [node name="CbTrap3" type="Node2D" parent="."]
 position = Vector2(80, 432)
-script = ExtResource("11_4uj1l")
+script = ExtResource("12_1coq7")
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="CbTrap3"]
-script = ExtResource("12_ld75j")
+script = ExtResource("13_mt1ag")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap3/Area2D"]
@@ -2592,7 +2592,7 @@ shape = SubResource("RectangleShape2D_pnedf")
 metadata/_edit_lock_ = true
 
 [node name="Fly" type="Node2D" parent="CbTrap3/Area2D"]
-script = ExtResource("11_lfm6u")
+script = ExtResource("14_lvwl6")
 move_distance = 100.0
 speed = 50.0
 direction = Vector2(0, 1)
@@ -2606,11 +2606,11 @@ metadata/_edit_lock_ = true
 
 [node name="CbTrap4" type="Node2D" parent="."]
 position = Vector2(104, 296)
-script = ExtResource("14_v3hj6")
+script = ExtResource("15_oiqak")
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="CbTrap4"]
-script = ExtResource("15_l1o5m")
+script = ExtResource("16_tjdjw")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap4/Area2D"]
@@ -2618,7 +2618,7 @@ position = Vector2(16, -104)
 shape = SubResource("RectangleShape2D_tssql")
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple" parent="CbTrap4/Area2D" instance=ExtResource("7_lyb4f")]
+[node name="SpikeSimple" parent="CbTrap4/Area2D" instance=ExtResource("10_ogml2")]
 position = Vector2(16, 48)
 metadata/_edit_lock_ = true
 
@@ -2627,7 +2627,7 @@ position = Vector2(384, 320)
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="CbTrap5"]
-script = ExtResource("16_l1o5m")
+script = ExtResource("17_g2iwe")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap5/Area2D"]
@@ -2640,7 +2640,7 @@ position = Vector2(544, 384)
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="CbTrap6"]
-script = ExtResource("18_v03sl")
+script = ExtResource("18_i0ow2")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap6/Area2D"]
@@ -2648,7 +2648,7 @@ position = Vector2(0, -33.5)
 shape = SubResource("RectangleShape2D_suw5v")
 metadata/_edit_lock_ = true
 
-[node name="Spike_Ball" parent="CbTrap6/Area2D" instance=ExtResource("11_7ookp")]
+[node name="Spike_Ball" parent="CbTrap6/Area2D" instance=ExtResource("19_34u50")]
 position = Vector2(0, -288)
 scale = Vector2(0.05, 0.05)
 metadata/_edit_lock_ = true
@@ -2657,26 +2657,26 @@ metadata/_edit_lock_ = true
 position = Vector2(1016, 448)
 
 [node name="Area2D" type="Area2D" parent="CbTrap8"]
-script = ExtResource("20_tpgej")
+script = ExtResource("20_5k4v8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap8/Area2D"]
 position = Vector2(16, -16)
 shape = SubResource("RectangleShape2D_8bwxx")
 
-[node name="SpikeSimple" parent="CbTrap8/Area2D" instance=ExtResource("7_lyb4f")]
+[node name="SpikeSimple" parent="CbTrap8/Area2D" instance=ExtResource("10_ogml2")]
 position = Vector2(16, 8)
 
 [node name="CbTrap9" type="Node2D" parent="."]
 position = Vector2(1064, 272)
 
 [node name="Area2D" type="Area2D" parent="CbTrap9"]
-script = ExtResource("21_scyrt")
+script = ExtResource("21_8ectn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap9/Area2D"]
 position = Vector2(16, 48)
 shape = SubResource("RectangleShape2D_lfm6u")
 
-[node name="SpikeSimple" parent="CbTrap9/Area2D" instance=ExtResource("7_lyb4f")]
+[node name="SpikeSimple" parent="CbTrap9/Area2D" instance=ExtResource("10_ogml2")]
 position = Vector2(32, 48)
 rotation = 1.5708
 
@@ -2684,16 +2684,16 @@ rotation = 1.5708
 position = Vector2(1048, 96)
 
 [node name="Area2D" type="Area2D" parent="CbTrap10"]
-script = ExtResource("22_wq6pa")
+script = ExtResource("22_udr4d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap10/Area2D"]
 position = Vector2(55, -12)
 shape = SubResource("RectangleShape2D_4uj1l")
 
-[node name="Spear" parent="CbTrap10/Area2D" instance=ExtResource("9_pnedf")]
+[node name="Spear" parent="CbTrap10/Area2D" instance=ExtResource("23_0pehl")]
 position = Vector2(40, 16)
 
-[node name="Portal" parent="." instance=ExtResource("11_8xrpd")]
+[node name="Portal" parent="." instance=ExtResource("24_0uwqh")]
 position = Vector2(1104, 128)
 next_level = 20
 
@@ -2711,17 +2711,17 @@ tile_map_data = PackedByteArray("AAAHABYAAAAJAAgAAAAHABcAAAAJAAkAAAAIABYAAAAQAAk
 tile_set = SubResource("TileSet_fqcln")
 metadata/_edit_lock_ = true
 
-[node name="Manager" parent="." instance=ExtResource("37_2hbd1")]
+[node name="Manager" parent="." instance=ExtResource("25_3jpaj")]
 current_level = 19
 
-[node name="MusicBackground" parent="." instance=ExtResource("39_a5t5w")]
+[node name="MusicBackground" parent="." instance=ExtResource("26_mojsd")]
 
 [node name="CbTrap1" type="Node2D" parent="."]
 position = Vector2(224, 400)
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="CbTrap1"]
-script = ExtResource("13_tssql")
+script = ExtResource("27_qsesu")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap1/Area2D"]
@@ -2730,7 +2730,7 @@ shape = SubResource("RectangleShape2D_7ookp")
 metadata/_edit_lock_ = true
 
 [node name="Float" type="Node2D" parent="CbTrap1/Area2D"]
-script = ExtResource("14_gne2q")
+script = ExtResource("11_tvq4e")
 move_distance = 500.0
 speed = 50.0
 direction = Vector2(0, -1)
@@ -2746,7 +2746,7 @@ position = Vector2(688, 432)
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="CbTrap7"]
-script = ExtResource("26_476eg")
+script = ExtResource("28_hfnrf")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap7/Area2D"]
@@ -2756,7 +2756,7 @@ metadata/_edit_lock_ = true
 
 [node name="Up" type="Node2D" parent="CbTrap7/Area2D"]
 position = Vector2(128, 0)
-script = ExtResource("14_gne2q")
+script = ExtResource("11_tvq4e")
 move_distance = 400.0
 speed = 200.0
 direction = Vector2(0, -1)
@@ -2768,7 +2768,7 @@ tile_set = SubResource("TileSet_fqcln")
 metadata/_edit_lock_ = true
 
 [node name="RighToLeft" type="Node2D" parent="CbTrap7/Area2D"]
-script = ExtResource("14_gne2q")
+script = ExtResource("11_tvq4e")
 move_distance = 500.0
 speed = 50.0
 direction = Vector2(-1, 0)
@@ -2779,6 +2779,6 @@ tile_map_data = PackedByteArray("AAA8AB0AAAABAA4AAAA8AB4AAAABAA8AAAA8AB8AAAAGAAQ
 tile_set = SubResource("TileSet_fqcln")
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." instance=ExtResource("15_suw5v")]
+[node name="Player" parent="." instance=ExtResource("29_h7q65")]
 position = Vector2(128, 464)
 metadata/_edit_lock_ = true
