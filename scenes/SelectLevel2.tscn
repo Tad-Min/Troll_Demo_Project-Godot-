@@ -235,3 +235,23 @@ offset_right = 251.0
 offset_bottom = 77.0
 texture = ExtResource("4_f2irv")
 expand_mode = 3
+
+[node name="btnlv21" type="Button" parent="."]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 425.0
+offset_right = 539.0
+offset_bottom = 501.0
+theme_override_font_sizes/font_size = 40
+text = "LEVEL 21
+"
+
+[node name="lock21" type="TextureRect" parent="btnlv21"]
+modulate = Color(0.288518, 0.288518, 0.288518, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 253.0
+offset_bottom = 79.0
+texture = ExtResource("4_f2irv")
+expand_mode = 3

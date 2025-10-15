@@ -14,6 +14,8 @@ var http_download: HTTPRequest
 func _ready():
 	# 🛑 Ngăn kiểm tra lại nếu đã cập nhật
 	if Global.has_updated:
+		if status_label:
+			status_label.text = "✅ Đây là bản mới nhất! Chúc bạn chơi game zui zẻ"
 		print("✅ Game đã cập nhật xong, bỏ qua kiểm tra lại.")
 		return
 
