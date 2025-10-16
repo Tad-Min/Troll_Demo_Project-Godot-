@@ -66,7 +66,7 @@ func _on_restart_pressed():
 
 func _on_menu_pressed():
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scenes/StartUI.tscn")
+	get_tree().change_scene_to_file("res://scenes/GameSceneUI/StartUI.tscn")
 
 func _on_sound_button_pressed():
 	audio_options.visible = !audio_options.visible

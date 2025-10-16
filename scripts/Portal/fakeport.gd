@@ -28,7 +28,7 @@ func _on_body_entered(body):
 		GameData.current_level = max(0, next_level - 1)
 		GameData.unlock_level(GameData.current_level)
 		GameData.save_progress()
-		get_tree().change_scene_to_file("res://scenes/Next.tscn")
+		get_tree().change_scene_to_file("res://scenes/GameSceneUI/Next.tscn")
 		return
 		
 	else:

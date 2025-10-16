@@ -29,7 +29,7 @@ func on_portal_entered() -> void:
 	_go_to_next_screen()
 
 func _go_to_next_screen() -> void:
-	get_tree().call_deferred("change_scene_to_file", "res://scenes/Next.tscn")  # chỉ chuyển đến màn Next
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/GameSceneUI/Next.tscn")  # chỉ chuyển đến màn Next
 
 
 func on_player_died(cause: String = "") -> void:
@@ -50,4 +50,4 @@ func _go_to_game_over() -> void:
 		
 	GameData.Levels[GameData.current_level].countDie +=1
 	print(GameData.Levels[GameData.current_level].countDie)
-	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
+	get_tree().change_scene_to_file("res://scenes/GameSceneUI/GameOver.tscn")

@@ -17,7 +17,7 @@ func _on_btn_play_pressed():
 		push_error("❌ Failed to load scene: res://scenes/Level/Lv%d.tscn" % (GameData.current_level + 1))
 
 func _on_btn_select_level_pressed():
-	get_tree().change_scene_to_file("res://scenes/SelectLevel.tscn")
+	get_tree().change_scene_to_file("res://scenes/GameSceneUI/SelectLevel.tscn")
 
 func _on_btn_exit_pressed():
 	# Thoát trực tiếp, không ghi bất kỳ cờ nào
