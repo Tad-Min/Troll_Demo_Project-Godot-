@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://blnjmna71025t"]
+[gd_scene load_steps=43 format=3 uid="uid://blnjmna71025t"]
 
 [ext_resource type="Script" uid="uid://bqud0bqb2dq15" path="res://scripts/UI_Scripts/select_level.gd" id="1_adu0t"]
 [ext_resource type="Texture2D" uid="uid://cwnk0n2t6kdcn" path="res://assets/Jungle Asset Pack/parallax background/background pixel.png" id="2_1b177"]
@@ -22,6 +22,11 @@
 [ext_resource type="Texture2D" uid="uid://bc0k4bbfk5fcg" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/343px/back03.png" id="20_7tjtq"]
 [ext_resource type="Texture2D" uid="uid://cgux2glasfdco" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/343px/back04.png" id="21_sgi3x"]
 [ext_resource type="Texture2D" uid="uid://dnqre7d056rce" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/343px/back05.png" id="22_io17y"]
+[ext_resource type="Texture2D" uid="uid://caucg16hpkgt0" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/next/343px/next01.png" id="23_bpt75"]
+[ext_resource type="Texture2D" uid="uid://t6fp21x1npd0" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/next/343px/next02.png" id="24_jumvx"]
+[ext_resource type="Texture2D" uid="uid://bkypxtyn5nhgs" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/next/343px/next03.png" id="25_33nje"]
+[ext_resource type="Texture2D" uid="uid://35d750ibyqvf" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/next/343px/next04.png" id="26_mjtpf"]
+[ext_resource type="Texture2D" uid="uid://bsfrouhqchryf" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/next/343px/next05.png" id="27_47xv2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1c1a"]
 texture = ExtResource("2_1b177")
@@ -152,7 +157,6 @@ text = "LEVEL 3
 "
 
 [node name="lock3" type="TextureRect" parent="btnlv3"]
-visible = false
 modulate = Color(0.252028, 0.252028, 0.252028, 1)
 layout_mode = 0
 offset_left = 1.0
@@ -327,6 +331,7 @@ texture = ExtResource("5_f3alr")
 expand_mode = 3
 
 [node name="btnNext" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 1032.0
 offset_top = 356.0
@@ -367,10 +372,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_7tjtq")
 
 [node name="BackButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 479.0
-offset_top = 584.0
-offset_right = 1269.0
-offset_bottom = 927.0
+offset_left = 373.0
+offset_top = 585.0
+offset_right = 1163.0
+offset_bottom = 928.0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("18_joqlv")
 texture_pressed = ExtResource("19_ykhhf")
@@ -379,4 +384,19 @@ texture_disabled = ExtResource("21_sgi3x")
 texture_focused = ExtResource("22_io17y")
 stretch_mode = 0
 
+[node name="NextButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 578.0
+offset_top = 585.0
+offset_right = 1368.0
+offset_bottom = 928.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("23_bpt75")
+texture_pressed = ExtResource("24_jumvx")
+texture_hover = ExtResource("25_33nje")
+texture_disabled = ExtResource("26_mjtpf")
+texture_focused = ExtResource("27_47xv2")
+stretch_mode = 0
+
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
