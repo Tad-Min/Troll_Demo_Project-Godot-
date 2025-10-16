@@ -20,7 +20,7 @@
 [ext_resource type="Script" uid="uid://bnf0u0e5txlvb" path="res://scripts/Level/Lv10/Button_to_death.gd" id="19_qb6bw"]
 [ext_resource type="PackedScene" uid="uid://d8sfk2gyygn4" path="res://scenes/Trap/hidden_jumper.tscn" id="20_agb32"]
 [ext_resource type="Script" uid="uid://srpyhg7wicp5" path="res://scripts/Level/Lv10/Button_Door_lv10.gd" id="20_jpkba"]
-[ext_resource type="Texture2D" uid="uid://bs46ixrcwq7vf" path="res://assets/Lock.png" id="21_ee78i"]
+[ext_resource type="Texture2D" uid="uid://bs46ixrcwq7vf" path="res://assets/Graphics&Sprites/Lock.png" id="21_ee78i"]
 [ext_resource type="Script" uid="uid://cdu1468kfj6yp" path="res://scripts/Level/Lv10/ReenableWallArea.gd" id="22_6o0wi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]

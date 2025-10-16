@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgyr0abvalt0u"
-path="res://.godot/imported/right.webp-f15901497f5b973b08fe39f6f31feb62.ctex"
+uid="uid://befmu440wgg3g"
+path="res://.godot/imported/portal.png-ddad8ec4aca05480893ecb76c27c9a4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/right.webp"
-dest_files=["res://.godot/imported/right.webp-f15901497f5b973b08fe39f6f31feb62.ctex"]
+source_file="res://assets/Graphics&Sprites/portal.png"
+dest_files=["res://.godot/imported/portal.png-ddad8ec4aca05480893ecb76c27c9a4a.ctex"]
 
 [params]
 

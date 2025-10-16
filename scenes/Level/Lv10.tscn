@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://blxb0o4p0ex0b" path="res://scenes/Trap/hidden_spear.tscn" id="18_g58i0"]
 [ext_resource type="PackedScene" uid="uid://4ex8nd3vkga1" path="res://scenes/Button.tscn" id="19_hf8tp"]
 [ext_resource type="Script" uid="uid://srpyhg7wicp5" path="res://scripts/Level/Lv10/Button_Door_lv10.gd" id="20_1mj1c"]
-[ext_resource type="Texture2D" uid="uid://bs46ixrcwq7vf" path="res://assets/Lock.png" id="21_y4ott"]
+[ext_resource type="Texture2D" uid="uid://bs46ixrcwq7vf" path="res://assets/Graphics&Sprites/Lock.png" id="21_y4ott"]
 [ext_resource type="Script" uid="uid://cdu1468kfj6yp" path="res://scripts/Level/Lv10/ReenableWallArea.gd" id="22_8wlpo"]
 [ext_resource type="Script" uid="uid://bnf0u0e5txlvb" path="res://scripts/Level/Lv10/Button_to_death.gd" id="23_y0uhw"]
 [ext_resource type="Script" uid="uid://boxc7y3kolov4" path="res://scripts/Level/Lv5/trap_6.gd" id="24_rbhlu"]

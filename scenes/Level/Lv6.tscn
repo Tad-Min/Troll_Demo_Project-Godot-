@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://4ex8nd3vkga1" path="res://scenes/Button.tscn" id="10_b7suj"]
 [ext_resource type="Script" uid="uid://bayebyvjl0far" path="res://scripts/Level/Lv6/DeadBtn.tres.gd" id="10_wh7kg"]
 [ext_resource type="Script" uid="uid://bxv45ml5v8hig" path="res://scripts/Level/Touch_showNodeHaveArea2D.gd" id="11_ctkcn"]
-[ext_resource type="Texture2D" uid="uid://bs46ixrcwq7vf" path="res://assets/Lock.png" id="11_ejisw"]
+[ext_resource type="Texture2D" uid="uid://bs46ixrcwq7vf" path="res://assets/Graphics&Sprites/Lock.png" id="11_ejisw"]
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="12_aistd"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="13_ye8g6"]
 [ext_resource type="Script" uid="uid://c6twyy65im4f7" path="res://scripts/Level/Lv6/shuriken1.gd" id="14_eon6f"]

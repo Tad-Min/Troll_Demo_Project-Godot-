@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxdkf4ivm60e7"
+path="res://.godot/imported/phonk-1736313719597_[cut_19sec].mp3-14cb0f79ac0c4287e8322a6fdf818a63.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio Files Asset/phonk-1736313719597_[cut_19sec].mp3"
+dest_files=["res://.godot/imported/phonk-1736313719597_[cut_19sec].mp3-14cb0f79ac0c4287e8322a6fdf818a63.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

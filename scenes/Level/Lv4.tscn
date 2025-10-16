@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="12_l6hvn"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="13_obagd"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="14_78xed"]
-[ext_resource type="Texture2D" uid="uid://bs46ixrcwq7vf" path="res://assets/Lock.png" id="14_l6hvn"]
+[ext_resource type="Texture2D" uid="uid://bs46ixrcwq7vf" path="res://assets/Graphics&Sprites/Lock.png" id="14_l6hvn"]
 [ext_resource type="Script" uid="uid://hps2rd6deucp" path="res://scripts/Level/Lv4/trap_4.gd" id="14_w5wfy"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="16_bq8uq"]
 [ext_resource type="Script" uid="uid://dpfaasa0ogiji" path="res://scripts/Level/Lv4/trap_5.gd" id="17_rbl7s"]

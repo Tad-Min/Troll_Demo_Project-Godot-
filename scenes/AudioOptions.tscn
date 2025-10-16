@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://cn0njjk7bw8dv"]
 
-[ext_resource type="Script" uid="uid://bfjf7qjqfal2a" path="res://scenes/audio_options.gd" id="1_5nj7l"]
-[ext_resource type="Texture2D" uid="uid://ctk0bjg512n06" path="res://Jungle Asset Pack/parallax background/plain-grey-background-ydlwqztavi78gl24.jpg" id="2_chgre"]
-[ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://Jungle Asset Pack/Pixeled.ttf" id="3_8tq7d"]
+[ext_resource type="Script" uid="uid://bfjf7qjqfal2a" path="res://scripts/audio_options.gd" id="1_5nj7l"]
+[ext_resource type="Texture2D" uid="uid://8i06glpw5ile" path="res://assets/Jungle Asset Pack/parallax background/plain-grey-background-ydlwqztavi78gl24.jpg" id="2_chgre"]
+[ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="3_8tq7d"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2kioo"]
 texture = ExtResource("2_chgre")

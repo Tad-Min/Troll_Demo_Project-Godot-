@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://4ex8nd3vkga1"]
 
-[ext_resource type="Texture2D" uid="uid://brfihle0bdckc" path="res://assets/Button.png" id="1_1xt0e"]
+[ext_resource type="Texture2D" uid="uid://cyqqrygfi7oh5" path="res://assets/Graphics&Sprites/Button.png" id="1_1xt0e"]
 [ext_resource type="Script" uid="uid://vtww5p86k2v4" path="res://scripts/button.gd" id="1_rtit6"]
-[ext_resource type="AudioStream" uid="uid://b8avqynvucolw" path="res://assets/Button.mp3" id="3_ywcaw"]
+[ext_resource type="AudioStream" uid="uid://b8avqynvucolw" path="res://assets/Audio Files Asset/Button.mp3" id="3_ywcaw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hmbh2"]
 atlas = ExtResource("1_1xt0e")

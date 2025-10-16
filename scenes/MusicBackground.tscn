@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://su8pavg7ap8i"]
 
-[ext_resource type="AudioStream" uid="uid://bd0inne73mkcv" path="res://assets/wii-go-ham-1736313719588.mp3" id="1_la5ve"]
+[ext_resource type="AudioStream" uid="uid://bd0inne73mkcv" path="res://assets/Audio Files Asset/wii-go-ham-1736313719588.mp3" id="1_la5ve"]
 
 [node name="MusicBackground" type="Node"]
 

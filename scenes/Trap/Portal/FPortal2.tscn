@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://kxssgjpq31hi"]
 
 [ext_resource type="Script" uid="uid://dx7y86i0yn7og" path="res://scripts/fakeport.gd" id="1_mwq70"]
-[ext_resource type="Texture2D" uid="uid://befmu440wgg3g" path="res://assets/portal.png" id="2_1rrw1"]
+[ext_resource type="Texture2D" uid="uid://befmu440wgg3g" path="res://assets/Graphics&Sprites/portal.png" id="2_1rrw1"]
 [ext_resource type="PackedScene" uid="uid://675s26e8ve4n" path="res://scenes/Trap/Portal/RPortal.tscn" id="2_vmk8a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aeo2m"]
