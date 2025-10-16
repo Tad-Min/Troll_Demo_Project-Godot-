@@ -1,20 +1,24 @@
 extends Node
 
 class Level: 
+	var mapId: int = 0
 	var isUnlock: bool = false
 	var countDie: int = 0
 	
-	func _init(u := false, cd: int = 0 ) -> void:
+	func _init(m:= 0, u := false, cd: int = 0 ) -> void:
+		mapId = m
 		isUnlock = u
 		countDie = cd
 		
 	func to_dict() -> Dictionary:
 		return {
+			"mapId" : mapId,
 			"isUnlock": isUnlock,
 			"countDie": countDie
 		}
 		
 	func from_dict(data: Dictionary) -> void:
+		mapId = data.get(mapId, 0)
 		isUnlock = data.get("isUnlock", false)
 		countDie = data.get("countDie", 0)
 
@@ -46,6 +50,8 @@ func _ready() -> void:
 	else:
 		if not load_progress():
 			reset_progress()
+	for i in range(LvSize):
+		Levels[i].mapId = i+1
 
 # Reset progress
 func reset_progress():
