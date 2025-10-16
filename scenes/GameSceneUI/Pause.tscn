@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://0wdfjha3x3yw"]
 
-[ext_resource type="Script" uid="uid://5bfql4ngr8yu" path="res://scripts/pause.gd" id="1_0ep5p"]
-[ext_resource type="PackedScene" uid="uid://cn0njjk7bw8dv" path="res://scenes/AudioOptions.tscn" id="2_wcpj6"]
+[ext_resource type="Script" uid="uid://5bfql4ngr8yu" path="res://scripts/UI_Scripts/pause.gd" id="1_0ep5p"]
+[ext_resource type="PackedScene" uid="uid://cn0njjk7bw8dv" path="res://scenes/GameSceneUI/AudioOptions.tscn" id="2_wcpj6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcpj6"]
 bg_color = Color(0.497474, 0.497474, 0.497474, 1)

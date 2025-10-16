@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://vh566w0ipk3h"]
 
-[ext_resource type="Script" uid="uid://cmf24wk1f1keu" path="res://scripts/jumper.gd" id="1_bss2r"]
+[ext_resource type="Script" uid="uid://cmf24wk1f1keu" path="res://scripts/Trap/jumper.gd" id="1_bss2r"]
 [ext_resource type="Texture2D" uid="uid://b33vhkmmci15u" path="res://assets/Trap asset/Jumper.png" id="2_xab5w"]
 [ext_resource type="AudioStream" uid="uid://cqiusmqk6x0vb" path="res://assets/Trap asset/land2-43790.mp3" id="3_xab5w"]
 

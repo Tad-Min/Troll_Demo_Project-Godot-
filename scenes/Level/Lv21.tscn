@@ -1,6 +1,6 @@
 [gd_scene load_steps=38 format=4 uid="uid://sjsx8l18h007"]
 
-[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_1bqlu"]
+[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="1_1bqlu"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://assets/Jungle Asset Pack/parallax background/plx-1.png" id="2_0g7dj"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://assets/Jungle Asset Pack/parallax background/plx-2.png" id="3_clw70"]
 [ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://assets/Jungle Asset Pack/parallax background/plx-4.png" id="4_ymvtp"]
@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://damf22lmf180i" path="res://scenes/Trap/Spike_Simple.tscn" id="7_1kpon"]
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="8_jfg4f"]
 [ext_resource type="Script" uid="uid://dqkt1qypboqbp" path="res://scripts/Level/Lv21/spike_Move.gd" id="9_rb3uf"]
-[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="10_ocg60"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="11_6gyp0"]
+[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="10_ocg60"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/GameSceneUI/MusicBackground.tscn" id="11_6gyp0"]
 [ext_resource type="Script" uid="uid://dby0l4j83yiia" path="res://scripts/Level/Lv21/rotate_simple_spike.gd" id="12_akbpt"]
 [ext_resource type="Script" uid="uid://ckmq4uawyl7bw" path="res://scripts/Level/Lv21/spike_simple_Move.gd" id="13_bfwrf"]
 [ext_resource type="Script" uid="uid://dad1lfkpqvc5g" path="res://scripts/Level/Lv21/trap_1.gd" id="14_3ecaf"]

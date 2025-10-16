@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://675s26e8ve4n"]
 
-[ext_resource type="Script" uid="uid://dx7y86i0yn7og" path="res://scripts/fakeport.gd" id="1_r4cjw"]
+[ext_resource type="Script" uid="uid://dx7y86i0yn7og" path="res://scripts/Portal/fakeport.gd" id="1_r4cjw"]
 [ext_resource type="Texture2D" uid="uid://befmu440wgg3g" path="res://assets/Graphics&Sprites/portal.png" id="2_mplwi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aeo2m"]

@@ -1,12 +1,12 @@
 [gd_scene load_steps=34 format=3 uid="uid://b75pvvfxrgeth"]
 
-[ext_resource type="Script" uid="uid://c27cqf6yfkjx5" path="res://scripts/player.gd" id="1_vumif"]
+[ext_resource type="Script" uid="uid://c27cqf6yfkjx5" path="res://scripts/CoreGame/player.gd" id="1_vumif"]
 [ext_resource type="Texture2D" uid="uid://bbjunvicfbbgg" path="res://assets/Graphics&Sprites/character.png" id="2_ykdy8"]
 [ext_resource type="AudioStream" uid="uid://c4clc60ywg7em" path="res://assets/Audio Files Asset/cartoon-jump-6462.mp3" id="3_8oasy"]
 [ext_resource type="PackedScene" uid="uid://bvngj0swsjsly" path="res://scenes/Player/move_buttons.tscn" id="4_4wf1y"]
 [ext_resource type="AudioStream" uid="uid://cvy1ls0r8b1w1" path="res://assets/Audio Files Asset/male-death-scream-horror-352706.mp3" id="5_axd14"]
 [ext_resource type="PackedScene" uid="uid://kjekawpsm1pc" path="res://scenes/Player/death_count.tscn" id="6_0sxyl"]
-[ext_resource type="Script" uid="uid://cyr4gt8sv34wd" path="res://scenes/Player/progress_bar.gd" id="7_frt2i"]
+[ext_resource type="Script" uid="uid://cyr4gt8sv34wd" path="res://scripts/Utility&FunctionalScripts/progress_bar.gd" id="7_frt2i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("2_ykdy8")

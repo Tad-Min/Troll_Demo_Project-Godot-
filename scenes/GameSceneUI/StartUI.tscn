@@ -1,25 +1,25 @@
 [gd_scene load_steps=12 format=3 uid="uid://mlem4f31wu2r"]
 
-[ext_resource type="Script" uid="uid://b11k6hhlf3rex" path="res://scripts/start_ui.gd" id="1_31gsc"]
-[ext_resource type="Texture2D" uid="uid://r4j0omiy308f" path="res://assets/Jungle Asset Pack/mockup.png" id="1_yubl7"]
-[ext_resource type="Texture2D" uid="uid://dg2efpqtq8cuk" path="res://assets/Jungle Asset Pack/parallax background/istockphoto-1164341008-612x612.jpg" id="3_6msbp"]
-[ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="3_31gsc"]
-[ext_resource type="AudioStream" uid="uid://ddw1rjri1yin7" path="res://assets/Audio Files Asset/undertale-shop-1736313719592.mp3" id="4_31gsc"]
-[ext_resource type="Script" uid="uid://opeuxeacjgrt" path="res://scripts/update_checker.gd" id="6_o1bwx"]
+[ext_resource type="Script" uid="uid://b11k6hhlf3rex" path="res://scripts/UI_Scripts/start_ui.gd" id="1_1tfgo"]
+[ext_resource type="Texture2D" uid="uid://r4j0omiy308f" path="res://assets/Jungle Asset Pack/mockup.png" id="2_i5vbi"]
+[ext_resource type="Texture2D" uid="uid://dg2efpqtq8cuk" path="res://assets/Jungle Asset Pack/parallax background/istockphoto-1164341008-612x612.jpg" id="3_ivy7f"]
+[ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="4_pgf3r"]
+[ext_resource type="AudioStream" uid="uid://ddw1rjri1yin7" path="res://assets/Audio Files Asset/undertale-shop-1736313719592.mp3" id="5_g627q"]
+[ext_resource type="Script" uid="uid://opeuxeacjgrt" path="res://scripts/CoreGame/update_checker.gd" id="6_abu1o"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6msbp"]
-texture = ExtResource("1_yubl7")
+texture = ExtResource("2_i5vbi")
 modulate_color = Color(0.288518, 0.288518, 0.288518, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o1bwx"]
-texture = ExtResource("3_6msbp")
+texture = ExtResource("3_ivy7f")
 modulate_color = Color(0.804743, 0.804743, 0.804743, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uo54s"]
-texture = ExtResource("3_6msbp")
+texture = ExtResource("3_ivy7f")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eyerg"]
-texture = ExtResource("3_6msbp")
+texture = ExtResource("3_ivy7f")
 
 [sub_resource type="GDScript" id="GDScript_6msbp"]
 script/source = "extends Button
@@ -35,7 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_31gsc")
+script = ExtResource("1_1tfgo")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -90,14 +90,14 @@ offset_top = 4.0
 offset_right = 896.0
 offset_bottom = 172.0
 theme_override_colors/font_color = Color(0.901961, 0.0823529, 0, 1)
-theme_override_fonts/font = ExtResource("3_31gsc")
+theme_override_fonts/font = ExtResource("4_pgf3r")
 theme_override_font_sizes/font_size = 60
 text = "TROLL GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_31gsc")
+stream = ExtResource("5_g627q")
 volume_db = -14.054
 autoplay = true
 parameters/looping = true
@@ -109,7 +109,7 @@ offset_top = 597.0
 offset_right = 49.0
 offset_bottom = 637.0
 alignment = 1
-script = ExtResource("6_o1bwx")
+script = ExtResource("6_abu1o")
 
 [node name="StatusLabel" type="Label" parent="AutoUpdater"]
 layout_mode = 2

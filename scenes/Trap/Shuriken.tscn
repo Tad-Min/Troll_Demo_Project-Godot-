@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://c3p15mm8xfels"]
 
 [ext_resource type="Texture2D" uid="uid://gmi6458r8qvy" path="res://assets/Trap asset/Suriken.png" id="1_8w178"]
-[ext_resource type="Script" uid="uid://cq70eu1dw6ggh" path="res://scripts/shuriken.gd" id="1_yd8s4"]
+[ext_resource type="Script" uid="uid://cq70eu1dw6ggh" path="res://scripts/Trap/shuriken.gd" id="1_yd8s4"]
 [ext_resource type="AudioStream" uid="uid://bob6w8het7cgg" path="res://assets/Trap asset/shuriken-fx_C.wav" id="3_0khlq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yd8s4"]

@@ -21,10 +21,10 @@ buses/default_bus_layout="res://assets/default_bus_layout.tres"
 
 [autoload]
 
-GameData="*res://scripts/GameData.gd"
-Session="*res://scripts/Session.gd"
-Global="*res://scripts/Global.gd"
-Update_Checking="*res://scripts/update_checker.gd"
+GameData="*res://scripts/CoreGame/GameData.gd"
+Session="*res://scripts/CoreGame/Session.gd"
+Global="*res://scripts/CoreGame/Global.gd"
+Update_Checking="*res://scripts/CoreGame/update_checker.gd"
 
 [display]
 

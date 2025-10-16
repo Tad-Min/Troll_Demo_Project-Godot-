@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=4 uid="uid://bdyykv77g4ky6"]
 
-[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_7e7dt"]
+[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="1_7e7dt"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://assets/Jungle Asset Pack/parallax background/plx-1.png" id="1_dugty"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://assets/Jungle Asset Pack/parallax background/plx-2.png" id="2_g4q3r"]
 [ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://assets/Jungle Asset Pack/parallax background/plx-4.png" id="3_ctqag"]
@@ -9,13 +9,13 @@
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="6_g4q3r"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="7_vyjv3"]
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="8_7e7dt"]
-[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="8_ctqag"]
+[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="8_ctqag"]
 [ext_resource type="Script" uid="uid://blahow7g0egwd" path="res://scripts/Level/Lv2/floor_trap_4.gd" id="11_vyjv3"]
-[ext_resource type="Script" uid="uid://b02shbfu0csf6" path="res://scripts/Level/floor_trap.gd" id="11_w6d4j"]
+[ext_resource type="Script" uid="uid://b02shbfu0csf6" path="res://scripts/Trap/floor_trap.gd" id="11_w6d4j"]
 [ext_resource type="Script" uid="uid://cjyl8pg3sef16" path="res://scripts/Level/Lv2/trigger_Floor_trap4.gd" id="12_vyjv3"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="14_va34t"]
 [ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="15_ckrnp"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="16_ychvn"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/GameSceneUI/MusicBackground.tscn" id="16_ychvn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oskok"]
 texture = ExtResource("5_w6d4j")

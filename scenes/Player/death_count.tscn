@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://kjekawpsm1pc"]
 
-[ext_resource type="Script" uid="uid://b6wu156a174rn" path="res://scripts/death_count.gd" id="1_xbo0e"]
+[ext_resource type="Script" uid="uid://b6wu156a174rn" path="res://scripts/Utility&FunctionalScripts/death_count.gd" id="1_xbo0e"]
 
 [node name="deathcount_canva" type="CanvasLayer"]
 script = ExtResource("1_xbo0e")

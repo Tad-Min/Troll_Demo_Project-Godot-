@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://ks8xbit106yy"]
 
-[ext_resource type="Script" uid="uid://c3kd61jx2g4wf" path="res://scripts/next.gd" id="1_xaiob"]
+[ext_resource type="Script" uid="uid://c3kd61jx2g4wf" path="res://scripts/UI_Scripts/next.gd" id="1_xaiob"]
 [ext_resource type="Texture2D" uid="uid://6rflweclk7du" path="res://assets/Jungle Asset Pack/parallax background/saddle-brown-color-solid-background-1920x1080.png" id="2_81q4e"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="3_tsohx"]
 [ext_resource type="AudioStream" uid="uid://dxdkf4ivm60e7" path="res://assets/Audio Files Asset/phonk-1736313719597_[cut_19sec].mp3" id="4_81q4e"]
