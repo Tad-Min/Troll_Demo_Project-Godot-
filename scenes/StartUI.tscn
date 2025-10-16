@@ -100,7 +100,6 @@ vertical_alignment = 1
 stream = ExtResource("4_31gsc")
 volume_db = -14.054
 autoplay = true
-bus = &"Music"
 parameters/looping = true
 
 [node name="AutoUpdater" type="VBoxContainer" parent="."]
