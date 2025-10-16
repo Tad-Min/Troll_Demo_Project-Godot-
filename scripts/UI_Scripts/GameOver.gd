@@ -33,4 +33,4 @@ func _format_cause(cause: String) -> String:
 
 
 func _on_btn_home_pressed() -> void:
-		get_tree().change_scene_to_file("res://scenes/StartUI.tscn")
+		get_tree().change_scene_to_file("res://scenes/GameSceneUI/StartUI.tscn")

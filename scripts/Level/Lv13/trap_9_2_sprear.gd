@@ -1,4 +1,4 @@
-extends "res://scripts/spear.gd"
+extends "res://scripts/Trap/spear.gd"
 
 @export var speed: float = 0.1
 @export var scaleMax: Vector2

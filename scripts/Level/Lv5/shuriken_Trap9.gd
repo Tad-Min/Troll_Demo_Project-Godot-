@@ -1,4 +1,4 @@
-extends "res://scripts/shuriken.gd"
+extends "res://scripts/Trap/shuriken.gd"
 
 @export var move_distance: float
 @export var speed_move: float

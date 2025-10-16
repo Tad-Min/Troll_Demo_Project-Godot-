@@ -1,4 +1,4 @@
-extends "res://scripts/jumper.gd"
+extends "res://scripts/Trap/jumper.gd"
 
 func _ready() -> void:
 	set_process(false)

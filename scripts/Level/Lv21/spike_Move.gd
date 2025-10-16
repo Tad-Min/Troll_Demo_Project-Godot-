@@ -1,4 +1,4 @@
-extends "res://scripts/spike.gd"
+extends "res://scripts/Trap/spike.gd"
 
 @export var move_distance: float
 @export var speed: float
