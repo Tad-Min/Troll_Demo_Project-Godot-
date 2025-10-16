@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://k3g3prw7dvgj"]
 
 [ext_resource type="Script" uid="uid://biuyh3ke8ltwv" path="res://scripts/Level/Lv7/trigger_hidden_path.gd" id="1_hjgwq"]
-[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="2_unhmw"]
+[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="2_unhmw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjgwq"]
 size = Vector2(64, 5)

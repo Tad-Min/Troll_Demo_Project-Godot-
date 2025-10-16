@@ -1,8 +1,8 @@
 [gd_scene load_steps=23 format=3 uid="uid://1bof6obh3yvu"]
 
 [ext_resource type="Script" uid="uid://5maxewdhu0r" path="res://scripts/GameOver.gd" id="1_6bcno"]
-[ext_resource type="Texture2D" uid="uid://btk83wkub78j5" path="res://Jungle Asset Pack/parallax background/cranfield-traditional-etching-ink-mid-black-400x221.jpg" id="1_vuicl"]
-[ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://Jungle Asset Pack/Pixeled.ttf" id="3_4noiy"]
+[ext_resource type="Texture2D" uid="uid://btk83wkub78j5" path="res://assets/Jungle Asset Pack/parallax background/cranfield-traditional-etching-ink-mid-black-400x221.jpg" id="1_vuicl"]
+[ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="3_4noiy"]
 [ext_resource type="AudioStream" uid="uid://o35vrtv5r07q" path="res://assets/titanic-flute-music-1736313719587.mp3" id="4_4noiy"]
 [ext_resource type="Texture2D" uid="uid://btafcfrrk2638" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/restart/343px/restart01.png" id="5_skdqa"]
 [ext_resource type="Texture2D" uid="uid://cscpt23w0khhp" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/restart/343px/restart02.png" id="6_8dkuh"]

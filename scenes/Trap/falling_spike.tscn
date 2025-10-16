@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bt6u63fquuj83" path="res://scripts/Level/LV3/drop_1_trigger_5.gd" id="1_krupe"]
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="2_anp2o"]
-[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="3_paqg4"]
+[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="3_paqg4"]
 [ext_resource type="Script" uid="uid://b7ynttut3q54g" path="res://scripts/Level/LV3/trigger_1-6.gd" id="4_r75h8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_krupe"]

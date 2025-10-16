@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://dp01a8j277211"]
 
 [ext_resource type="Script" uid="uid://dein7mlmqlhnf" path="res://scenes/Trap/RollingBlade/RollingBlade.gd" id="1_wjq0o"]
-[ext_resource type="Texture2D" uid="uid://gmi6458r8qvy" path="res://Trap asset/Suriken.png" id="2_uau1r"]
+[ext_resource type="Texture2D" uid="uid://gmi6458r8qvy" path="res://assets/Trap asset/Suriken.png" id="2_uau1r"]
 [ext_resource type="Script" uid="uid://c8labo5kg6y04" path="res://scenes/Trap/RollingBlade/Hitbox_RollingBlade.gd" id="3_fvnfb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_slesc"]

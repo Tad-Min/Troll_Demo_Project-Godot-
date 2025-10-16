@@ -1,10 +1,10 @@
 [gd_scene load_steps=42 format=3 uid="uid://co2ayiytafwtl"]
 
 [ext_resource type="Script" uid="uid://dduvcvi44m417" path="res://scenes/Trap/Chasing Boss/chasingboss.gd" id="1_pblkk"]
-[ext_resource type="Texture2D" uid="uid://dlaxtmy4ag3x8" path="res://Trap asset/ChasingBoss/attacking.png" id="1_yoxmy"]
-[ext_resource type="Texture2D" uid="uid://dg352yfcxu7vp" path="res://Trap asset/ChasingBoss/idle.png" id="2_pblkk"]
-[ext_resource type="Texture2D" uid="uid://bpqo0oi67bamg" path="res://Trap asset/ChasingBoss/skill1.png" id="3_kkx53"]
-[ext_resource type="Texture2D" uid="uid://d30ui5wgtxjib" path="res://Trap asset/ChasingBoss/summon.png" id="4_u57w8"]
+[ext_resource type="Texture2D" uid="uid://dlaxtmy4ag3x8" path="res://assets/Trap asset/ChasingBoss/attacking.png" id="1_yoxmy"]
+[ext_resource type="Texture2D" uid="uid://dg352yfcxu7vp" path="res://assets/Trap asset/ChasingBoss/idle.png" id="2_pblkk"]
+[ext_resource type="Texture2D" uid="uid://bpqo0oi67bamg" path="res://assets/Trap asset/ChasingBoss/skill1.png" id="3_kkx53"]
+[ext_resource type="Texture2D" uid="uid://d30ui5wgtxjib" path="res://assets/Trap asset/ChasingBoss/summon.png" id="4_u57w8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y6421"]
 atlas = ExtResource("1_yoxmy")

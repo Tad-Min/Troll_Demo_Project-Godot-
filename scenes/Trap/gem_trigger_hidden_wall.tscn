@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=4 uid="uid://xxcpa05oj5s8"]
 
-[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="3_68p1y"]
+[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="3_68p1y"]
 [ext_resource type="Script" uid="uid://3bo7wgidjdol" path="res://scripts/Level/Lv16/gem_and_hidden_wall.gd" id="3_o1ied"]
-[ext_resource type="Texture2D" uid="uid://b86fyo4vcaqgv" path="res://Coin_Gems/spr_coin_strip4.png" id="4_trseu"]
+[ext_resource type="Texture2D" uid="uid://b86fyo4vcaqgv" path="res://assets/Coin_Gems/spr_coin_strip4.png" id="4_trseu"]
 [ext_resource type="Script" uid="uid://c04dl76hqwnv4" path="res://scripts/coin_animation.gd" id="5_vvyvm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_argrn"]

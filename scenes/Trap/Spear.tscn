@@ -1,8 +1,8 @@
 [gd_scene load_steps=18 format=3 uid="uid://cv6o78ycwh72"]
 
-[ext_resource type="Texture2D" uid="uid://d0pofstry57gk" path="res://Trap asset/Spear.png" id="1_0v3sd"]
+[ext_resource type="Texture2D" uid="uid://d0pofstry57gk" path="res://assets/Trap asset/Spear.png" id="1_0v3sd"]
 [ext_resource type="Script" uid="uid://bjejw1gban41y" path="res://scripts/spear.gd" id="2_0l2kv"]
-[ext_resource type="AudioStream" uid="uid://de14xcytswd1d" path="res://Trap asset/423125__killersmurf96__spear_trap.wav" id="2_amuvo"]
+[ext_resource type="AudioStream" uid="uid://de14xcytswd1d" path="res://assets/Trap asset/423125__killersmurf96__spear_trap.wav" id="2_amuvo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_amuvo"]
 atlas = ExtResource("1_0v3sd")
