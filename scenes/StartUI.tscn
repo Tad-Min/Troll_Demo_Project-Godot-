@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dg2efpqtq8cuk" path="res://Jungle Asset Pack/parallax background/istockphoto-1164341008-612x612.jpg" id="3_6msbp"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://Jungle Asset Pack/Pixeled.ttf" id="3_31gsc"]
 [ext_resource type="AudioStream" uid="uid://ddw1rjri1yin7" path="res://assets/undertale-shop-1736313719592.mp3" id="4_31gsc"]
-[ext_resource type="Script" uid="uid://dbppp406m4ag7" path="res://scripts/AutoUpdater.gd" id="6_o1bwx"]
+[ext_resource type="Script" uid="uid://opeuxeacjgrt" path="res://scripts/update_checker.gd" id="6_o1bwx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6msbp"]
 texture = ExtResource("1_yubl7")

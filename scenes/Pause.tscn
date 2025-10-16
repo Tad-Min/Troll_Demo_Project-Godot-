@@ -29,13 +29,7 @@ corner_radius_bottom_left = 16
 [node name="Pause" type="Control"]
 process_mode = 3
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 3.0
-offset_right = 3.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 script = ExtResource("1_0ep5p")
 
 [node name="Button" type="Button" parent="."]
@@ -52,7 +46,7 @@ layout_mode = 0
 offset_left = 317.0
 offset_top = 90.0
 offset_right = 821.0
-offset_bottom = 416.0
+offset_bottom = 488.0
 
 [node name="ContinueButton" type="Button" parent="Panel"]
 process_mode = 3
@@ -69,10 +63,10 @@ text = "CONTINUE
 
 [node name="RestartButton" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 141.0
-offset_top = 123.0
-offset_right = 348.0
-offset_bottom = 199.0
+offset_left = 40.0
+offset_top = 301.0
+offset_right = 247.0
+offset_bottom = 377.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_hdb6x")
@@ -81,12 +75,58 @@ text = "RESTART
 
 [node name="MenuButton" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 142.0
-offset_top = 224.0
-offset_right = 354.0
-offset_bottom = 299.0
+offset_left = 262.0
+offset_top = 303.0
+offset_right = 474.0
+offset_bottom = 378.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_uc2tp")
 text = "MENU
+"
+
+[node name="ZoomPanel" type="TextEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 130.0
+offset_right = 478.0
+offset_bottom = 256.0
+text = "												Zoom
+"
+editable = false
+
+[node name="ZoomCloseButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 168.0
+offset_right = 160.0
+offset_bottom = 243.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_uc2tp")
+text = "Near
+"
+
+[node name="ZoomNormalButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 168.0
+offset_right = 310.0
+offset_bottom = 243.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_uc2tp")
+text = "Mid
+"
+
+[node name="ZoomFarButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 168.0
+offset_right = 460.0
+offset_bottom = 243.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_uc2tp")
+text = "Far
 "

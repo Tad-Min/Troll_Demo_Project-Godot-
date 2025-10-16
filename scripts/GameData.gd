@@ -18,7 +18,7 @@ class Level:
 		isUnlock = data.get("isUnlock", false)
 		countDie = data.get("countDie", 0)
 
-var LvSize: int = 20
+var LvSize: int = 30
 var Levels: Array[Level]
 
 # Save current level

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://ccutf1jfjqssp"]
+[gd_scene load_steps=28 format=4 uid="uid://dq5qxflggkpfo"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_d36sr"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://Jungle Asset Pack/parallax background/plx-1.png" id="2_arqxs"]
@@ -800,9 +800,6 @@ texture = ExtResource("5_qgxox")
 [node name="Player" parent="." instance=ExtResource("8_s2wpr")]
 position = Vector2(466, 187)
 scale = Vector2(1.76, 1.76)
-
-[node name="deathcount_canva" parent="Player" index="5"]
-visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
 

@@ -7,14 +7,18 @@ extends Control
 @onready var btn_lv17: Button = $btnlv17
 @onready var btn_lv18: Button = $btnlv18
 @onready var btn_lv19: Button = $btnlv19
+@onready var btn_lv20: Button = $btnlv20
+@onready var btn_lv21: Button = $btnlv21
 
 @onready var lock13: TextureRect = $btnlv13/lock13
 @onready var lock14: TextureRect = $btnlv14/lock14
 @onready var lock15: TextureRect = $btnlv15/lock15
-@onready var lock16: TextureRect = $btnlv15/lock16
+@onready var lock16: TextureRect = $btnlv16/lock16
 @onready var lock17: TextureRect = $btnlv17/lock17
 @onready var lock18: TextureRect = $btnlv18/lock18
-@onready var lock19: TextureRect = $btnlv18/lock19
+@onready var lock19: TextureRect = $btnlv19/lock19
+@onready var lock20: TextureRect = $btnlv20/lock20
+@onready var lock21: TextureRect = $btnlv21/lock21
 func _ready():
 	
 	
@@ -25,6 +29,8 @@ func _ready():
 	btn_lv17.pressed.connect(func(): _on_choose_level(17))
 	btn_lv18.pressed.connect(func(): _on_choose_level(18))
 	btn_lv19.pressed.connect(func(): _on_choose_level(19))
+	btn_lv20.pressed.connect(func(): _on_choose_level(20))
+	btn_lv21.pressed.connect(func(): _on_choose_level(21))
 	btn_return.pressed.connect(_on_btn_return_pressed)
 	
 func _on_choose_level(lv: int) -> void:
