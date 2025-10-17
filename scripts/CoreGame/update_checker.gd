@@ -12,7 +12,7 @@ var status_label
 func _ready():
 	# Tìm các node UI trong scene (nếu bạn đặt khác tên thì sửa lại)
 	status_label = get_node("StatusLabel")
-	var enable_auto_update = ProjectSettings.get_setting("autoupdate/enabled", true)
+	var enable_auto_update = ProjectSettings.get_setting("application/config/enable_auto_update", true)
 	if not enable_auto_update:
 		print("🚫 Auto update is disabled (via Project Settings).")
 		if status_label:
