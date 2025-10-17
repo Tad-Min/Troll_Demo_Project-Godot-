@@ -14,6 +14,7 @@ config/name="Troll_Troll_Viet_Nam"
 run/main_scene="uid://mlem4f31wu2r"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="uid://cgk5wf30hxks8"
+config/enable_auto_update=true
 
 [audio]
 

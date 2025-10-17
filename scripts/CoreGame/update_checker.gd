@@ -12,7 +12,13 @@ var status_label
 func _ready():
 	# Tìm các node UI trong scene (nếu bạn đặt khác tên thì sửa lại)
 	status_label = get_node("StatusLabel")
-
+	var enable_auto_update = ProjectSettings.get_setting("autoupdate/enabled", true)
+	if not enable_auto_update:
+		print("🚫 Auto update is disabled (via Project Settings).")
+		if status_label:
+			status_label.text = "🚫 Cập nhật đang tắt (Project Settings)."
+		return
+	
 	add_child(http)
 	http.connect("request_completed", Callable(self, "_on_version_request_completed"))
 

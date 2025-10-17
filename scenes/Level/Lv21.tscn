@@ -1885,8 +1885,7 @@ tile_set = SubResource("TileSet_fqcln")
 metadata/_edit_lock_ = true
 
 [node name="Manager" parent="." instance=ExtResource("10_ocg60")]
-Portal = NodePath("")
-current_level = 20
+current_level = 21
 
 [node name="MusicBackground" parent="." instance=ExtResource("11_6gyp0")]
 
@@ -2045,6 +2044,7 @@ metadata/_edit_lock_ = true
 
 [node name="Portal" parent="." instance=ExtResource("22_i5qxx")]
 position = Vector2(1024, 480)
+next_level = 22
 
 [node name="Player" parent="." instance=ExtResource("23_fjktp")]
 position = Vector2(128, 128)
