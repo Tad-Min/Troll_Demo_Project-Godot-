@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://8oftca5oo1lr"]
 
 [ext_resource type="Script" uid="uid://c4ym3rd5bnw88" path="res://scripts/Trap/spike_ball.gd" id="1_8ulkm"]
-[ext_resource type="Texture2D" uid="uid://btarffrxrkr54" path="res://Trap asset/Ball_Spike.png" id="1_cmxf0"]
+[ext_resource type="Texture2D" uid="uid://btarffrxrkr54" path="res://assets/Trap asset/Ball_Spike.png" id="1_cmxf0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8ulkm"]
 friction = 0.0

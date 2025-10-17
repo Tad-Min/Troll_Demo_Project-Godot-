@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://eg77j08qglt5"]
 
 [ext_resource type="Script" uid="uid://diwc227aqmnfd" path="res://scenes/Trap/On_Off_Path/Trigger_on.gd" id="1_2sgpl"]
-[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://Jungle Asset Pack/jungle tileset/jungle tileset.png" id="2_03pue"]
+[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="2_03pue"]
 [ext_resource type="Script" uid="uid://cc330yibm4qdr" path="res://scenes/Trap/On_Off_Path/Trigger_off.gd" id="2_os0nm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_os0nm"]
