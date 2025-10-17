@@ -2,12 +2,11 @@ extends "res://scripts/Trap/floor_trap.gd"
 
 
 func _ready() -> void:
-	start_position = position
+	super._ready()
 	set_process(false)
 	set_physics_process(false)
 
 func activate_trap() -> void:
-	set_process(true)
 	set_physics_process(true)
 	
 	var timer = Timer.new()
