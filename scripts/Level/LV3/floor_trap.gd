@@ -1,4 +1,4 @@
-extends "res://scripts/Level/floor_trap.gd"
+extends "res://scripts/Trap/floor_trap.gd"
 
 func _ready() -> void:
 	start_position = position

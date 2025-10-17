@@ -1,8 +1,8 @@
 [gd_scene load_steps=23 format=3 uid="uid://dnhhenxrpugyn"]
 
-[ext_resource type="Script" uid="uid://dx7y86i0yn7og" path="res://scripts/fakeport.gd" id="1_3kals"]
+[ext_resource type="Script" uid="uid://dx7y86i0yn7og" path="res://scripts/Portal/fakeport.gd" id="1_3kals"]
 [ext_resource type="PackedScene" uid="uid://kxssgjpq31hi" path="res://scenes/Trap/Portal/FPortal2.tscn" id="2_aeo2m"]
-[ext_resource type="Texture2D" uid="uid://befmu440wgg3g" path="res://assets/portal.png" id="2_ely28"]
+[ext_resource type="Texture2D" uid="uid://befmu440wgg3g" path="res://assets/Graphics&Sprites/portal.png" id="2_ely28"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aeo2m"]
 atlas = ExtResource("2_ely28")

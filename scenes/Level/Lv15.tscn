@@ -1,13 +1,13 @@
 [gd_scene load_steps=62 format=4 uid="uid://qic4f8vykoj0"]
 
-[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_o04cu"]
+[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="1_o04cu"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://assets/Jungle Asset Pack/parallax background/plx-1.png" id="2_8vequ"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://assets/Jungle Asset Pack/parallax background/plx-2.png" id="3_4wf13"]
 [ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://assets/Jungle Asset Pack/parallax background/plx-4.png" id="4_xhx7a"]
 [ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://assets/Jungle Asset Pack/parallax background/plx-5.png" id="5_v6870"]
 [ext_resource type="Script" uid="uid://ycs2geimmyht" path="res://scripts/Level/Lv15/shuriken.gd" id="6_qtuis"]
 [ext_resource type="PackedScene" uid="uid://c3p15mm8xfels" path="res://scenes/Trap/Shuriken.tscn" id="7_jd2j8"]
-[ext_resource type="PackedScene" uid="uid://4ex8nd3vkga1" path="res://scenes/Button.tscn" id="8_mxu7v"]
+[ext_resource type="PackedScene" uid="uid://4ex8nd3vkga1" path="res://scenes/GameSceneUI/Button.tscn" id="8_mxu7v"]
 [ext_resource type="Script" uid="uid://c6icujefggqfa" path="res://scripts/Level/Lv15/button.gd" id="9_hoa6x"]
 [ext_resource type="Script" uid="uid://brtjwsc0r5x0y" path="res://scripts/Level/Lv15/trap_1.gd" id="10_0oymn"]
 [ext_resource type="PackedScene" uid="uid://damf22lmf180i" path="res://scenes/Trap/Spike_Simple.tscn" id="11_gduur"]
@@ -41,7 +41,7 @@
 [ext_resource type="Script" uid="uid://bypwsrc5mmvdx" path="res://scripts/Level/Lv15/ceiling.gd" id="39_7vau0"]
 [ext_resource type="Script" uid="uid://b23wljbvm21t1" path="res://scripts/Level/Lv15/floor.gd" id="40_66wln"]
 [ext_resource type="PackedScene" uid="uid://b75pvvfxrgeth" path="res://scenes/Player/Player_withoutCamera.tscn" id="42_4wf13"]
-[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="42_8vequ"]
+[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="42_8vequ"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ww4u"]
 size = Vector2(67, 29)

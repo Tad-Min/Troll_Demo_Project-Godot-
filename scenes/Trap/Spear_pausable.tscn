@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://bcq0or65kkdhs"]
 
-[ext_resource type="Script" uid="uid://b05rgbjtgdfw8" path="res://scripts/spear_pausable.gd" id="1_ajepm"]
+[ext_resource type="Script" uid="uid://b05rgbjtgdfw8" path="res://scripts/Trap/spear_pausable.gd" id="1_ajepm"]
 [ext_resource type="Texture2D" uid="uid://d0pofstry57gk" path="res://assets/Trap asset/Spear.png" id="2_3p022"]
 [ext_resource type="AudioStream" uid="uid://de14xcytswd1d" path="res://assets/Trap asset/423125__killersmurf96__spear_trap.wav" id="3_yfnh0"]
 

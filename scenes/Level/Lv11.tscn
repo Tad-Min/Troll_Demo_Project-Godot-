@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=4 uid="uid://d4lhsoj0hufw0"]
 
-[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_mq66r"]
+[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="1_mq66r"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://assets/Jungle Asset Pack/parallax background/plx-1.png" id="2_0ef5c"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://assets/Jungle Asset Pack/parallax background/plx-2.png" id="3_srfb1"]
 [ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://assets/Jungle Asset Pack/parallax background/plx-4.png" id="4_kaowl"]
@@ -9,12 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://d8sfk2gyygn4" path="res://scenes/Trap/hidden_jumper.tscn" id="7_rlan2"]
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="7_t7e6a"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="8_y5vvw"]
-[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="9_bmwe1"]
+[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="9_bmwe1"]
 [ext_resource type="PackedScene" uid="uid://vr0cp86s7yb0" path="res://scenes/Trap/falling_spike.tscn" id="9_es8bb"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="10_nelmb"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="13_ubacb"]
 [ext_resource type="PackedScene" uid="uid://co2ayiytafwtl" path="res://scenes/Trap/Chasing Boss/Chasing.tscn" id="14_vki80"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="15_xmj81"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/GameSceneUI/MusicBackground.tscn" id="15_xmj81"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_shnji"]
 texture = ExtResource("7_t7e6a")

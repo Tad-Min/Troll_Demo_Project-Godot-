@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c8iwgaqagw2rc" path="res://scenes/Trap/Infinite_Map_Illusion/Trigger_move_map.gd" id="6_4g8k0"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="6_ej453"]
-[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="7_4v3dt"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="8_gmlk8"]
+[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="7_4v3dt"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/GameSceneUI/MusicBackground.tscn" id="8_gmlk8"]
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="9_7o1jx"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="17_ylgop"]
 

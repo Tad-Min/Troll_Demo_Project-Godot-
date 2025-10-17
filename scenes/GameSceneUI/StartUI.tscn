@@ -1,0 +1,118 @@
+[gd_scene load_steps=12 format=3 uid="uid://mlem4f31wu2r"]
+
+[ext_resource type="Script" uid="uid://b11k6hhlf3rex" path="res://scripts/UI_Scripts/start_ui.gd" id="1_1tfgo"]
+[ext_resource type="Texture2D" uid="uid://r4j0omiy308f" path="res://assets/Jungle Asset Pack/mockup.png" id="2_i5vbi"]
+[ext_resource type="Texture2D" uid="uid://dg2efpqtq8cuk" path="res://assets/Jungle Asset Pack/parallax background/istockphoto-1164341008-612x612.jpg" id="3_ivy7f"]
+[ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="4_pgf3r"]
+[ext_resource type="AudioStream" uid="uid://ddw1rjri1yin7" path="res://assets/Audio Files Asset/undertale-shop-1736313719592.mp3" id="5_g627q"]
+[ext_resource type="Script" uid="uid://opeuxeacjgrt" path="res://scripts/CoreGame/update_checker.gd" id="6_abu1o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6msbp"]
+texture = ExtResource("2_i5vbi")
+modulate_color = Color(0.288518, 0.288518, 0.288518, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o1bwx"]
+texture = ExtResource("3_ivy7f")
+modulate_color = Color(0.804743, 0.804743, 0.804743, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uo54s"]
+texture = ExtResource("3_ivy7f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eyerg"]
+texture = ExtResource("3_ivy7f")
+
+[sub_resource type="GDScript" id="GDScript_6msbp"]
+script/source = "extends Button
+
+func _pressed():
+	get_tree().change_scene_to_file(\"res://scenes/Level/Lv1.tscn\")
+"
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1tfgo")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6msbp")
+
+[node name="btnPlay" type="Button" parent="."]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 209.0
+offset_right = 718.0
+offset_bottom = 320.0
+theme_override_colors/font_color = Color(0.0813472, 0.00141478, 0.00857236, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_o1bwx")
+text = "PLAY
+"
+
+[node name="btnselectlevel" type="Button" parent="."]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 359.0
+offset_right = 720.0
+offset_bottom = 491.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxTexture_uo54s")
+text = "SELECT
+ LEVEL
+"
+
+[node name="btnExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 533.0
+offset_right = 723.0
+offset_bottom = 642.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_eyerg")
+text = "EXIT"
+script = SubResource("GDScript_6msbp")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 4.0
+offset_right = 896.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.901961, 0.0823529, 0, 1)
+theme_override_fonts/font = ExtResource("4_pgf3r")
+theme_override_font_sizes/font_size = 60
+text = "TROLL GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_g627q")
+volume_db = -14.054
+autoplay = true
+parameters/looping = true
+
+[node name="AutoUpdater" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 597.0
+offset_right = 49.0
+offset_bottom = 637.0
+alignment = 1
+script = ExtResource("6_abu1o")
+
+[node name="StatusLabel" type="Label" parent="AutoUpdater"]
+layout_mode = 2
+
+[connection signal="pressed" from="btnPlay" to="." method="_on_btn_play_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=48 format=4 uid="uid://bbgfyfgnfy6iu"]
 
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://assets/Jungle Asset Pack/parallax background/plx-1.png" id="1_mhow5"]
-[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="1_xoj35"]
+[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="1_xoj35"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://assets/Jungle Asset Pack/parallax background/plx-2.png" id="2_kp1uq"]
 [ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://assets/Jungle Asset Pack/parallax background/plx-4.png" id="3_yjt2l"]
 [ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://assets/Jungle Asset Pack/parallax background/plx-5.png" id="4_6fbnu"]
@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://xekxvdf482f5" path="res://scripts/Level/LV3/spear_trigger_1.gd" id="7_51hs2"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="7_rmfpm"]
 [ext_resource type="Script" uid="uid://bg777j5jqqh6n" path="res://scripts/Level/LV3/spear2_trigger_3.gd" id="8_38b03"]
-[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="8_gjm0f"]
+[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="8_gjm0f"]
 [ext_resource type="PackedScene" uid="uid://cv6o78ycwh72" path="res://scenes/Trap/Spear.tscn" id="9_yjt2l"]
 [ext_resource type="Script" uid="uid://c2ys02ax1vno2" path="res://scripts/Level/LV3/spike1,2,6,7_trigger_2,4,8,9.gd" id="10_prk1d"]
 [ext_resource type="Script" uid="uid://b7ynttut3q54g" path="res://scripts/Level/LV3/trigger_1-6.gd" id="13_gjm0f"]
@@ -21,7 +21,7 @@
 [ext_resource type="Script" uid="uid://dyeb21ty11fol" path="res://scripts/Level/LV3/trigger_7.gd" id="19_tycxe"]
 [ext_resource type="Script" uid="uid://ds8wva3r4qcw2" path="res://scripts/Level/LV3/trigger_10.gd" id="20_w3web"]
 [ext_resource type="Script" uid="uid://dfswq1b7urkus" path="res://scripts/Level/LV3/floor_trap.gd" id="21_w3web"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="23_tyqfo"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/GameSceneUI/MusicBackground.tscn" id="23_tyqfo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkayq"]
 texture = ExtResource("5_xoj35")

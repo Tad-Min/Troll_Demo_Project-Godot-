@@ -1,18 +1,18 @@
 [gd_scene load_steps=18 format=4 uid="uid://bdwe8bkp7ptxe"]
 
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="1_1vld2"]
-[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/Level/background.gd" id="2_uld1g"]
+[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="2_uld1g"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://assets/Jungle Asset Pack/parallax background/plx-1.png" id="3_c7wi2"]
 [ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://assets/Jungle Asset Pack/parallax background/plx-2.png" id="4_dys6o"]
 [ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://assets/Jungle Asset Pack/parallax background/plx-4.png" id="5_780e2"]
 [ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://assets/Jungle Asset Pack/parallax background/plx-5.png" id="6_s4tf2"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="7_uld1g"]
-[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/manager.tscn" id="8_c7wi2"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/MusicBackground.tscn" id="9_dys6o"]
+[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="8_c7wi2"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/GameSceneUI/MusicBackground.tscn" id="9_dys6o"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="10_780e2"]
 [ext_resource type="PackedScene" uid="uid://bxp61qk2u4v2e" path="res://scenes/Trap/HiddenSpike.tscn" id="11_s4tf2"]
 [ext_resource type="PackedScene" uid="uid://dnhhenxrpugyn" path="res://scenes/Trap/Portal/FPortal1.tscn" id="12_i24th"]
-[ext_resource type="Script" uid="uid://ytpbsyii5x3b" path="res://scripts/portmanage.gd" id="13_01fw5"]
+[ext_resource type="Script" uid="uid://ytpbsyii5x3b" path="res://scripts/Portal/portmanage.gd" id="13_01fw5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i24th"]
 texture = ExtResource("1_1vld2")

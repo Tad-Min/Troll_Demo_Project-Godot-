@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5pb4ghyv3nml" path="res://scripts/Level/Lv16/gem_manager.gd" id="1_wocyd"]
 [ext_resource type="Texture2D" uid="uid://b86fyo4vcaqgv" path="res://assets/Coin_Gems/spr_coin_strip4.png" id="2_0pqi3"]
-[ext_resource type="Script" uid="uid://c04dl76hqwnv4" path="res://scripts/coin_animation.gd" id="3_fvtbc"]
+[ext_resource type="Script" uid="uid://c04dl76hqwnv4" path="res://scripts/Utility&FunctionalScripts/coin_animation.gd" id="3_fvtbc"]
 [ext_resource type="Script" uid="uid://djel11q5djjmo" path="res://scripts/Level/Lv16/gem_pickup.gd" id="4_q2j77"]
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="5_g13cn"]
 

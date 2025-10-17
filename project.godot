@@ -11,16 +11,20 @@ config_version=5
 [application]
 
 config/name="Troll_Troll_Viet_Nam"
-run/main_scene="uid://ch12rgidooprk"
+run/main_scene="uid://mlem4f31wu2r"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="uid://cgk5wf30hxks8"
 
+[audio]
+
+buses/default_bus_layout="res://assets/default_bus_layout.tres"
+
 [autoload]
 
-GameData="*res://scripts/GameData.gd"
-Session="*res://scripts/Session.gd"
-Global="*res://scripts/Global.gd"
-Update_Checking="*res://scripts/update_checker.gd"
+GameData="*res://scripts/CoreGame/GameData.gd"
+Session="*res://scripts/CoreGame/Session.gd"
+Global="*res://scripts/CoreGame/Global.gd"
+Update_Checking="*res://scripts/CoreGame/update_checker.gd"
 
 [display]
 

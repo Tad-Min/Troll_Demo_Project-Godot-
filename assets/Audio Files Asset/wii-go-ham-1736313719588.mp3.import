@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bd0inne73mkcv"
+path="res://.godot/imported/wii-go-ham-1736313719588.mp3-617850e83d4590a930a098986cd284bb.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio Files Asset/wii-go-ham-1736313719588.mp3"
+dest_files=["res://.godot/imported/wii-go-ham-1736313719588.mp3-617850e83d4590a930a098986cd284bb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
