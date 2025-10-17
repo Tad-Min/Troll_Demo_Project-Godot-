@@ -302,15 +302,6 @@ limit_top = 0
 limit_right = 1153
 limit_bottom = 649
 
-[node name="Message" type="RichTextLabel" parent="."]
-z_index = 3
-offset_left = -250.0
-offset_top = -117.0
-offset_right = 252.0
-offset_bottom = 108.0
-fit_content = true
-horizontal_alignment = 1
-
 [node name="MobileControls" parent="." instance=ExtResource("4_dqkch")]
 
 [node name="deathcount_canva" parent="." instance=ExtResource("6_tuyoq")]
