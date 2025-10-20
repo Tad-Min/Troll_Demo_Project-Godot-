@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://uwb3lip6eosh" path="res://scripts/UI_Scripts/select_level_2.gd" id="1_brqsk"]
 [ext_resource type="Texture2D" uid="uid://vhuqpvtdr7h2" path="res://assets/Jungle Asset Pack/parallax background/BG.png" id="2_adhu8"]
-[ext_resource type="Shader" uid="uid://chfkq82vmvjuu" path="res://scenes/GameSceneUI/SelectLevel2.gdshader" id="2_tb5ri"]
+[ext_resource type="Shader" uid="uid://chfkq82vmvjuu" path="res://scenes/SelectLevel2.gdshader" id="2_tb5ri"]
 [ext_resource type="Texture2D" uid="uid://jeehyp7hpqns" path="res://assets/Jungle Asset Pack/parallax background/Window.png" id="3_tb5ri"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="4_bg6gg"]
 [ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/Screenshot 2025-10-17 152747.png" id="5_xv5ut"]
