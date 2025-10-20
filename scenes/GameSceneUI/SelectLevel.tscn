@@ -1,7 +1,7 @@
 [gd_scene load_steps=34 format=3 uid="uid://blnjmna71025t"]
 
 [ext_resource type="Script" uid="uid://bqud0bqb2dq15" path="res://scripts/UI_Scripts/select_level.gd" id="1_adu0t"]
-[ext_resource type="Shader" uid="uid://bjp3bnqe1dxkr" path="res://scenes/GameSceneUI/SelectLevel.gdshader" id="2_yku54"]
+[ext_resource type="Shader" uid="uid://bjp3bnqe1dxkr" path="res://scenes/SelectLevel.gdshader" id="2_yku54"]
 [ext_resource type="Texture2D" uid="uid://1dty4wpdee3m" path="res://assets/Jungle Asset Pack/new_window_2d.tres" id="3_bsgdq"]
 [ext_resource type="Texture2D" uid="uid://vhuqpvtdr7h2" path="res://assets/Jungle Asset Pack/parallax background/BG.png" id="3_eqg1o"]
 [ext_resource type="Texture2D" uid="uid://jeehyp7hpqns" path="res://assets/Jungle Asset Pack/parallax background/Window.png" id="4_i1mc2"]
