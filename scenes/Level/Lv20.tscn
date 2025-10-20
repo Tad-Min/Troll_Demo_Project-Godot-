@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=4 uid="uid://d2kw7yggp5slr"]
+[gd_scene load_steps=12 format=4 uid="uid://d2kw7yggp5slr"]
 
+[ext_resource type="PackedScene" uid="uid://6w2qdva0xb7s" path="res://scenes/GameSceneUI/Pause_zoomable.tscn" id="2_3a43c"]
 [ext_resource type="PackedScene" uid="uid://520f8jujsfyd" path="res://scenes/Trap/Shrink_Trapzone.tscn" id="4_uwjmi"]
 [ext_resource type="Script" uid="uid://c8iwgaqagw2rc" path="res://scenes/Trap/Infinite_Map_Illusion/Trigger_move_map.gd" id="6_4g8k0"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="6_ej453"]
@@ -705,8 +706,10 @@ limit_left = -100000
 limit_right = 100000
 limit_bottom = 2000
 
-[node name="Pause" parent="Player/Pause_canva" index="0"]
-visible = true
+[node name="Pause_zoomable" parent="Player/Pause_canva" index="0" instance=ExtResource("2_3a43c")]
+
+[node name="Pause" parent="Player/Pause_canva" index="1"]
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
 

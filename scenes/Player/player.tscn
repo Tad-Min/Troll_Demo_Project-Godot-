@@ -309,6 +309,5 @@ limit_bottom = 649
 [node name="Pause_canva" type="CanvasLayer" parent="."]
 
 [node name="Pause" parent="Pause_canva" instance=ExtResource("8_wwtew")]
-visible = false
 
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

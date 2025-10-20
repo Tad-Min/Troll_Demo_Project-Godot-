@@ -8,6 +8,10 @@ extends Control
 
 @onready var sound_button = $Panel/SoundButton
 
+# camera2d zoom settings
+@onready var zoom_close_button = $Panel/ZoomCloseButton
+@onready var zoom_normal_button = $Panel/ZoomNormalButton
+@onready var zoom_far_button = $Panel/ZoomFarButton
 
 var camera: Camera2D
 var audio_options
@@ -28,6 +32,11 @@ func _ready():
 	menu_button.pressed.connect(_on_menu_pressed)
 	if sound_button:
 		sound_button.pressed.connect(_on_sound_button_pressed)
+
+	# connect zoom buttons
+	zoom_close_button.pressed.connect(_on_zoom_close_pressed)
+	zoom_normal_button.pressed.connect(_on_zoom_normal_pressed)
+	zoom_far_button.pressed.connect(_on_zoom_far_pressed)
 
 	# safely get camera from Player node
 	var player = get_tree().get_first_node_in_group("Player")
@@ -61,3 +70,19 @@ func _on_menu_pressed():
 
 func _on_sound_button_pressed():
 	audio_options.visible = !audio_options.visible
+
+# === Zoom handling ===
+func _on_zoom_close_pressed():
+	if camera:
+		camera.zoom = Vector2(3, 3)  # smaller = closer
+		print("Zoom → Close")
+
+func _on_zoom_normal_pressed():
+	if camera:
+		camera.zoom = Vector2(2, 2)
+		print("Zoom → Normal")
+
+func _on_zoom_far_pressed():
+	if camera:
+		camera.zoom = Vector2(1, 1)  # larger = farther
+		print("Zoom → Far")
