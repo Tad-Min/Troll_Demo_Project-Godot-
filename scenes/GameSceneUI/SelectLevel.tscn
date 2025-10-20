@@ -1,89 +1,101 @@
-[gd_scene load_steps=43 format=3 uid="uid://blnjmna71025t"]
+[gd_scene load_steps=34 format=3 uid="uid://blnjmna71025t"]
 
 [ext_resource type="Script" uid="uid://bqud0bqb2dq15" path="res://scripts/UI_Scripts/select_level.gd" id="1_adu0t"]
-[ext_resource type="Texture2D" uid="uid://cwnk0n2t6kdcn" path="res://assets/Jungle Asset Pack/parallax background/background pixel.png" id="2_1b177"]
-[ext_resource type="Texture2D" uid="uid://ju1vowy23juk" path="res://assets/Jungle Asset Pack/parallax background/Lv1.png" id="3_uo0xe"]
-[ext_resource type="Texture2D" uid="uid://dwdnu5osgy8ne" path="res://assets/Jungle Asset Pack/parallax background/Lv2.png" id="4_vp03w"]
-[ext_resource type="Texture2D" uid="uid://k6rlbh1o1qen" path="res://assets/Jungle Asset Pack/parallax background/Lv3.png" id="5_82unp"]
-[ext_resource type="Texture2D" uid="uid://cpdroaybjaacl" path="res://assets/Jungle Asset Pack/parallax background/Ổ Khóa.png" id="5_f3alr"]
-[ext_resource type="Texture2D" uid="uid://dqtxwy55uhmdk" path="res://assets/Jungle Asset Pack/parallax background/Lv4.png" id="6_82unp"]
-[ext_resource type="Texture2D" uid="uid://m6t1xsf4dqfu" path="res://assets/Jungle Asset Pack/parallax background/Lv5.png" id="7_i1c1a"]
-[ext_resource type="Texture2D" uid="uid://btfe8eoe6ivjt" path="res://assets/Jungle Asset Pack/parallax background/Lv6.png" id="8_ibsxg"]
-[ext_resource type="Texture2D" uid="uid://b2w8r71c3dg5" path="res://assets/Jungle Asset Pack/parallax background/Lv7.png" id="9_xlyyc"]
-[ext_resource type="Texture2D" uid="uid://bkm8ls5d1j2gq" path="res://assets/Jungle Asset Pack/parallax background/Lv10.png" id="10_i1c1a"]
-[ext_resource type="Texture2D" uid="uid://ci1w865vhjd4h" path="res://assets/Jungle Asset Pack/parallax background/Lv8.png" id="11_xlyyc"]
-[ext_resource type="Texture2D" uid="uid://xovk1ahe08aq" path="res://assets/Jungle Asset Pack/parallax background/Lv9.png" id="12_iw11j"]
-[ext_resource type="Texture2D" uid="uid://0dfcqssi1j8w" path="res://assets/Jungle Asset Pack/parallax background/Lv11.png" id="13_iw11j"]
-[ext_resource type="Texture2D" uid="uid://b53auwfsla30i" path="res://assets/Jungle Asset Pack/parallax background/Lv12.png" id="14_peair"]
-[ext_resource type="Texture2D" uid="uid://cf7l454ydcbfk" path="res://assets/Jungle Asset Pack/parallax background/green-circle-next-button-pixel-art-vector.jpg" id="15_ckuqx"]
-[ext_resource type="Texture2D" uid="uid://cly6utkoyhvpw" path="res://assets/Jungle Asset Pack/select level.png" id="17_ckuqx"]
-[ext_resource type="Texture2D" uid="uid://byfthgul7cnvj" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/343px/back01.png" id="18_joqlv"]
-[ext_resource type="Texture2D" uid="uid://bp7noh00vvhot" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/343px/back02.png" id="19_ykhhf"]
-[ext_resource type="Texture2D" uid="uid://bc0k4bbfk5fcg" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/343px/back03.png" id="20_7tjtq"]
-[ext_resource type="Texture2D" uid="uid://cgux2glasfdco" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/343px/back04.png" id="21_sgi3x"]
-[ext_resource type="Texture2D" uid="uid://dnqre7d056rce" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/343px/back05.png" id="22_io17y"]
-[ext_resource type="Texture2D" uid="uid://caucg16hpkgt0" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/next/343px/next01.png" id="23_bpt75"]
-[ext_resource type="Texture2D" uid="uid://t6fp21x1npd0" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/next/343px/next02.png" id="24_jumvx"]
-[ext_resource type="Texture2D" uid="uid://bkypxtyn5nhgs" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/next/343px/next03.png" id="25_33nje"]
-[ext_resource type="Texture2D" uid="uid://35d750ibyqvf" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/next/343px/next04.png" id="26_mjtpf"]
-[ext_resource type="Texture2D" uid="uid://bsfrouhqchryf" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/next/343px/next05.png" id="27_47xv2"]
+[ext_resource type="Shader" uid="uid://bjp3bnqe1dxkr" path="res://scenes/GameSceneUI/SelectLevel.gdshader" id="2_yku54"]
+[ext_resource type="Texture2D" uid="uid://1dty4wpdee3m" path="res://assets/Jungle Asset Pack/new_window_2d.tres" id="3_bsgdq"]
+[ext_resource type="Texture2D" uid="uid://vhuqpvtdr7h2" path="res://assets/Jungle Asset Pack/parallax background/BG.png" id="3_eqg1o"]
+[ext_resource type="Texture2D" uid="uid://jeehyp7hpqns" path="res://assets/Jungle Asset Pack/parallax background/Window.png" id="4_i1mc2"]
+[ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="5_mcxre"]
+[ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/Screenshot 2025-10-17 152747.png" id="6_yku54"]
+[ext_resource type="Texture2D" uid="uid://dakrd3uqsu42m" path="res://assets/Jungle Asset Pack/parallax background/Button.png" id="8_4hu3u"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1c1a"]
-texture = ExtResource("2_1b177")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vtqlk"]
+shader = ExtResource("2_yku54")
+shader_parameter/speed = 0.1
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibsxg"]
-texture = ExtResource("3_uo0xe")
-modulate_color = Color(0.344076, 0.344076, 0.344076, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcxre"]
+atlas = ExtResource("3_bsgdq")
+region = Rect2(1057, 162, 926, 741)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xlyyc"]
-texture = ExtResource("4_vp03w")
-modulate_color = Color(0.332881, 0.332881, 0.332881, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_yku54"]
+atlas = ExtResource("4_i1mc2")
+region = Rect2(1304, 48, 384, 88)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iw11j"]
-texture = ExtResource("5_82unp")
-modulate_color = Color(0.389287, 0.389287, 0.389287, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eqg1o"]
+texture = ExtResource("6_yku54")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_peair"]
-texture = ExtResource("6_82unp")
-modulate_color = Color(0.299547, 0.299547, 0.299547, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vtqlk"]
+texture = ExtResource("6_yku54")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f3alr"]
-texture = ExtResource("7_i1c1a")
-modulate_color = Color(0.281187, 0.281187, 0.281187, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cir3e"]
+texture = ExtResource("6_yku54")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1b177"]
-texture = ExtResource("8_ibsxg")
-modulate_color = Color(0.252028, 0.252028, 0.252028, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tqpso"]
+texture = ExtResource("6_yku54")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ckuqx"]
-texture = ExtResource("9_xlyyc")
-modulate_color = Color(0.281187, 0.281187, 0.281187, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ugusr"]
+texture = ExtResource("6_yku54")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_85wt0"]
-texture = ExtResource("11_xlyyc")
-modulate_color = Color(0.306923, 0.306923, 0.306923, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mcxre"]
+texture = ExtResource("6_yku54")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rtkmm"]
-texture = ExtResource("12_iw11j")
-modulate_color = Color(0.277528, 0.277528, 0.277528, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yku54"]
+texture = ExtResource("6_yku54")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8gyec"]
-texture = ExtResource("10_i1c1a")
-modulate_color = Color(0.244776, 0.244776, 0.244776, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qwbve"]
+texture = ExtResource("6_yku54")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8p21l"]
-texture = ExtResource("13_iw11j")
-modulate_color = Color(0.230315, 0.230315, 0.230315, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kfdx2"]
+texture = ExtResource("6_yku54")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ykhhf"]
-texture = ExtResource("15_ckuqx")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xios8"]
+texture = ExtResource("6_yku54")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_joqlv"]
-texture = ExtResource("14_peair")
-modulate_color = Color(0.244776, 0.244776, 0.244776, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t3p1c"]
+texture = ExtResource("6_yku54")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7tjtq"]
-texture = ExtResource("17_ckuqx")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bpt75"]
+texture = ExtResource("6_yku54")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsgdq"]
+atlas = ExtResource("8_4hu3u")
+region = Rect2(197, 1190, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1mc2"]
+atlas = ExtResource("8_4hu3u")
+region = Rect2(197, 1190, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqg1o"]
+atlas = ExtResource("8_4hu3u")
+region = Rect2(197, 1190, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtqlk"]
+atlas = ExtResource("8_4hu3u")
+region = Rect2(197, 1190, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cir3e"]
+atlas = ExtResource("8_4hu3u")
+region = Rect2(197, 1190, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fl6s6"]
+atlas = ExtResource("8_4hu3u")
+region = Rect2(197, 972, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_va4dp"]
+atlas = ExtResource("8_4hu3u")
+region = Rect2(197, 972, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31p20"]
+atlas = ExtResource("8_4hu3u")
+region = Rect2(197, 972, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh8bf"]
+atlas = ExtResource("8_4hu3u")
+region = Rect2(197, 972, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cj5g"]
+atlas = ExtResource("8_4hu3u")
+region = Rect2(197, 972, 181, 190)
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3
@@ -98,305 +110,209 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_adu0t")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Background" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_vtqlk")
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -24.0
-offset_top = 4.0
-offset_right = -24.0
-offset_bottom = 19.0
+offset_left = -15.0
+offset_top = 13.0
+offset_right = 1131.0
+offset_bottom = 654.0
+texture = ExtResource("3_eqg1o")
+expand_mode = 1
+
+[node name="LevelMenu" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -461.0
+offset_top = -289.0
+offset_right = 462.0
+offset_bottom = 271.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_i1c1a")
+texture = SubResource("AtlasTexture_mcxre")
+expand_mode = 1
 
-[node name="btnlv1" type="Button" parent="."]
+[node name="Title" type="TextureRect" parent="LevelMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -198.0
+offset_top = -301.0
+offset_right = 186.0
+offset_bottom = -213.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_yku54")
+
+[node name="btnlv1" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = -25.0
-offset_top = 114.0
-offset_right = 221.0
-offset_bottom = 197.0
+offset_left = 40.5
+offset_top = 115.5
+offset_right = 184.5
+offset_bottom = 227.5
+theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_ibsxg")
-text = "LEVEL 1
+theme_override_styles/normal = SubResource("StyleBoxTexture_eqg1o")
+text = "1"
+
+[node name="btnlv2" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 120.0
+offset_right = 409.0
+offset_bottom = 232.0
+theme_override_fonts/font = ExtResource("5_mcxre")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_vtqlk")
+text = "2
 "
 
-[node name="btnlv2" type="Button" parent="."]
+[node name="btnlv3" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 261.0
-offset_top = 111.0
-offset_right = 505.0
-offset_bottom = 198.0
+offset_left = 489.0
+offset_top = 116.0
+offset_right = 638.0
+offset_bottom = 228.0
+theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_xlyyc")
-text = "LEVEL 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_cir3e")
+text = "3"
+
+[node name="btnlv4" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 116.0
+offset_right = 857.0
+offset_bottom = 228.0
+theme_override_fonts/font = ExtResource("5_mcxre")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_tqpso")
+text = "4"
+
+[node name="btnlv5" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 39.5
+offset_top = 243.5
+offset_right = 180.5
+offset_bottom = 355.5
+theme_override_fonts/font = ExtResource("5_mcxre")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_ugusr")
+text = "5"
+
+[node name="btnlv6" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 261.5
+offset_top = 239.5
+offset_right = 403.5
+offset_bottom = 357.5
+theme_override_fonts/font = ExtResource("5_mcxre")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_mcxre")
+text = "6"
+
+[node name="btnlv7" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 498.5
+offset_top = 240.5
+offset_right = 637.5
+offset_bottom = 357.5
+theme_override_fonts/font = ExtResource("5_mcxre")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_yku54")
+text = "7"
+
+[node name="btnlv8" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 707.5
+offset_top = 242.5
+offset_right = 851.5
+offset_bottom = 354.5
+theme_override_fonts/font = ExtResource("5_mcxre")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_qwbve")
+text = "8"
+
+[node name="btnlv9" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 362.0
+offset_right = 187.0
+offset_bottom = 474.0
+theme_override_fonts/font = ExtResource("5_mcxre")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_kfdx2")
+text = "9"
+
+[node name="btnlv10" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 361.0
+offset_right = 408.0
+offset_bottom = 473.0
+theme_override_fonts/font = ExtResource("5_mcxre")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_xios8")
+text = "10
 "
 
-[node name="lock2" type="TextureRect" parent="btnlv2"]
-visible = false
-modulate = Color(0.960351, 0.960351, 0.960351, 1)
-self_modulate = Color(0.270222, 0.270222, 0.270222, 1)
+[node name="btnlv11" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = -3.0
-offset_top = 3.0
-offset_right = 244.0
-offset_bottom = 90.0
-texture = ExtResource("5_f3alr")
-expand_mode = 3
-
-[node name="btnlv3" type="Button" parent="."]
-layout_mode = 0
-offset_left = 571.0
-offset_top = 108.0
-offset_right = 818.0
-offset_bottom = 193.0
+offset_left = 500.0
+offset_top = 367.0
+offset_right = 644.0
+offset_bottom = 479.0
+theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_iw11j")
-text = "LEVEL 3
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3p1c")
+text = "11
 "
 
-[node name="lock3" type="TextureRect" parent="btnlv3"]
-visible = false
-modulate = Color(0.252028, 0.252028, 0.252028, 1)
+[node name="btnlv12" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 3.0
-offset_right = 248.0
-offset_bottom = 87.0
-texture = ExtResource("5_f3alr")
-expand_mode = 3
-
-[node name="btnlv4" type="Button" parent="."]
-layout_mode = 0
-offset_left = 887.0
-offset_top = 105.0
-offset_right = 1134.0
-offset_bottom = 191.0
+offset_left = 707.0
+offset_top = 364.0
+offset_right = 853.0
+offset_bottom = 476.0
+theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_peair")
-text = "LEVEL 4
-"
-
-[node name="lock4" type="TextureRect" parent="btnlv4"]
-modulate = Color(0.255659, 0.255659, 0.255659, 1)
-layout_mode = 0
-offset_left = -1.0
-offset_top = -4.0
-offset_right = 246.0
-offset_bottom = 87.0
-texture = ExtResource("5_f3alr")
-expand_mode = 3
-
-[node name="btnlv5" type="Button" parent="."]
-layout_mode = 0
-offset_left = -24.0
-offset_top = 242.0
-offset_right = 215.0
-offset_bottom = 342.0
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_f3alr")
-text = "LEVEL 5
-"
-
-[node name="lock5" type="TextureRect" parent="btnlv5"]
-modulate = Color(0.255659, 0.255659, 0.255659, 1)
-layout_mode = 0
-offset_left = -8.0
-offset_right = 237.0
-offset_bottom = 101.0
-texture = ExtResource("5_f3alr")
-expand_mode = 3
-
-[node name="btnlv6" type="Button" parent="."]
-layout_mode = 0
-offset_left = 269.0
-offset_top = 237.0
-offset_right = 514.0
-offset_bottom = 340.0
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_1b177")
-text = "LEVEL 6
-"
-
-[node name="lock6" type="TextureRect" parent="btnlv6"]
-modulate = Color(0.252028, 0.252028, 0.252028, 1)
-layout_mode = 0
-offset_top = -1.0
-offset_right = 245.0
-offset_bottom = 107.0
-texture = ExtResource("5_f3alr")
-expand_mode = 3
-
-[node name="btnlv7" type="Button" parent="."]
-layout_mode = 0
-offset_left = 575.0
-offset_top = 233.0
-offset_right = 824.0
-offset_bottom = 340.0
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_ckuqx")
-text = "LEVEL 7
-"
-
-[node name="lock7" type="TextureRect" parent="btnlv7"]
-modulate = Color(0.325441, 0.325441, 0.325441, 1)
-layout_mode = 0
-offset_top = 2.0
-offset_right = 249.0
-offset_bottom = 108.0
-texture = ExtResource("5_f3alr")
-expand_mode = 3
-
-[node name="btnlv8" type="Button" parent="."]
-layout_mode = 0
-offset_left = 884.0
-offset_top = 232.0
-offset_right = 1134.0
-offset_bottom = 339.0
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_85wt0")
-text = "LEVEL 8
-"
-
-[node name="lock8" type="TextureRect" parent="btnlv8"]
-modulate = Color(0.310617, 0.310617, 0.310617, 1)
-layout_mode = 0
-offset_top = 2.0
-offset_right = 253.0
-offset_bottom = 107.0
-texture = ExtResource("5_f3alr")
-expand_mode = 3
-
-[node name="btnlv9" type="Button" parent="."]
-layout_mode = 0
-offset_left = -19.0
-offset_top = 467.0
-offset_right = 230.0
-offset_bottom = 572.0
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_rtkmm")
-text = "LEVEL 9
-"
-
-[node name="lock9" type="TextureRect" parent="btnlv9"]
-modulate = Color(0.288518, 0.288518, 0.288518, 1)
-layout_mode = 0
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 250.0
-offset_bottom = 106.0
-texture = ExtResource("5_f3alr")
-expand_mode = 3
-
-[node name="btnlv10" type="Button" parent="."]
-layout_mode = 0
-offset_left = 274.0
-offset_top = 469.0
-offset_right = 519.0
-offset_bottom = 572.0
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_8gyec")
-text = "LEVEL 10
-"
-
-[node name="lock10" type="TextureRect" parent="btnlv10"]
-modulate = Color(0.321728, 0.321728, 0.321728, 1)
-layout_mode = 0
-offset_left = 1.0
-offset_top = 2.0
-offset_right = 247.0
-offset_bottom = 103.0
-texture = ExtResource("5_f3alr")
-expand_mode = 3
-
-[node name="btnlv11" type="Button" parent="."]
-layout_mode = 0
-offset_left = 594.0
-offset_top = 461.0
-offset_right = 840.0
-offset_bottom = 565.0
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_8p21l")
-text = "LEVEL 11
-"
-
-[node name="lock11" type="TextureRect" parent="btnlv11"]
-modulate = Color(0.321728, 0.321728, 0.321728, 1)
-layout_mode = 0
-offset_left = -4.0
-offset_top = 3.0
-offset_right = 247.0
-offset_bottom = 103.0
-texture = ExtResource("5_f3alr")
-expand_mode = 3
-
-[node name="btnNext" type="Button" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 1032.0
-offset_top = 356.0
-offset_right = 1125.0
-offset_bottom = 442.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxTexture_ykhhf")
-
-[node name="btnlv12" type="Button" parent="."]
-layout_mode = 0
-offset_left = 878.0
-offset_top = 459.0
-offset_right = 1124.0
-offset_bottom = 564.0
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_joqlv")
-text = "LEVEL 12
-"
-
-[node name="lock12" type="TextureRect" parent="btnlv12"]
-modulate = Color(0.306923, 0.306923, 0.306923, 1)
-layout_mode = 0
-offset_left = -2.0
-offset_top = -3.0
-offset_right = 246.0
-offset_bottom = 105.0
-texture = ExtResource("5_f3alr")
-expand_mode = 3
-
-[node name="Panel2" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 385.0
-offset_top = 2.0
-offset_right = 724.0
-offset_bottom = 100.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_7tjtq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bpt75")
+text = "12"
 
 [node name="BackButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 373.0
-offset_top = 585.0
-offset_right = 1163.0
-offset_bottom = 928.0
+offset_left = 30.0
+offset_top = 279.0
+offset_right = 655.0
+offset_bottom = 837.0
 scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("18_joqlv")
-texture_pressed = ExtResource("19_ykhhf")
-texture_hover = ExtResource("20_7tjtq")
-texture_disabled = ExtResource("21_sgi3x")
-texture_focused = ExtResource("22_io17y")
+texture_normal = SubResource("AtlasTexture_bsgdq")
+texture_pressed = SubResource("AtlasTexture_i1mc2")
+texture_hover = SubResource("AtlasTexture_eqg1o")
+texture_disabled = SubResource("AtlasTexture_vtqlk")
+texture_focused = SubResource("AtlasTexture_cir3e")
 stretch_mode = 0
 
 [node name="NextButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 578.0
-offset_top = 585.0
-offset_right = 1368.0
-offset_bottom = 928.0
+offset_left = 980.0
+offset_top = 270.0
+offset_right = 1610.0
+offset_bottom = 855.0
 scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("23_bpt75")
-texture_pressed = ExtResource("24_jumvx")
-texture_hover = ExtResource("25_33nje")
-texture_disabled = ExtResource("26_mjtpf")
-texture_focused = ExtResource("27_47xv2")
+texture_normal = SubResource("AtlasTexture_fl6s6")
+texture_pressed = SubResource("AtlasTexture_va4dp")
+texture_hover = SubResource("AtlasTexture_31p20")
+texture_disabled = SubResource("AtlasTexture_sh8bf")
+texture_focused = SubResource("AtlasTexture_6cj5g")
 stretch_mode = 0
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

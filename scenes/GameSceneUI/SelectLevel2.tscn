@@ -1,49 +1,71 @@
-[gd_scene load_steps=21 format=3 uid="uid://bqji2w44moiqg"]
+[gd_scene load_steps=25 format=3 uid="uid://bqji2w44moiqg"]
 
 [ext_resource type="Script" uid="uid://uwb3lip6eosh" path="res://scripts/UI_Scripts/select_level_2.gd" id="1_brqsk"]
-[ext_resource type="Texture2D" uid="uid://cwnk0n2t6kdcn" path="res://assets/Jungle Asset Pack/parallax background/background pixel.png" id="2_srw1n"]
-[ext_resource type="Texture2D" uid="uid://cv6oy8a5i2hiy" path="res://assets/Jungle Asset Pack/parallax background/z7074105039702_a6fb693dd8f71496489647c1264f3abf.jpg" id="3_7aeyt"]
-[ext_resource type="Texture2D" uid="uid://l1fmgsmh67y2" path="res://assets/Jungle Asset Pack/parallax background/Lv13.png" id="3_b1ewi"]
-[ext_resource type="Texture2D" uid="uid://drsefvajvq178" path="res://assets/Jungle Asset Pack/parallax background/Lv14.png" id="4_4ketl"]
-[ext_resource type="Texture2D" uid="uid://cpdroaybjaacl" path="res://assets/Jungle Asset Pack/parallax background/Ổ Khóa.png" id="4_f2irv"]
-[ext_resource type="Texture2D" uid="uid://cosg55cva7ehn" path="res://assets/Jungle Asset Pack/parallax background/Lv15.png" id="5_f2irv"]
-[ext_resource type="Texture2D" uid="uid://cly6utkoyhvpw" path="res://assets/Jungle Asset Pack/select level.png" id="8_4vvy1"]
-[ext_resource type="Texture2D" uid="uid://c4dui4uh2y3oi" path="res://assets/Jungle Asset Pack/parallax background/Lv16.png" id="8_7aeyt"]
-[ext_resource type="Texture2D" uid="uid://dowg7cxr17bh7" path="res://assets/Jungle Asset Pack/parallax background/Lv17.png" id="10_5bbs1"]
-[ext_resource type="Texture2D" uid="uid://cgdsm88gs2a57" path="res://assets/Jungle Asset Pack/parallax background/Lv18.png" id="11_1v1xw"]
+[ext_resource type="Texture2D" uid="uid://vhuqpvtdr7h2" path="res://assets/Jungle Asset Pack/parallax background/BG.png" id="2_adhu8"]
+[ext_resource type="Shader" uid="uid://chfkq82vmvjuu" path="res://scenes/GameSceneUI/SelectLevel2.gdshader" id="2_tb5ri"]
+[ext_resource type="Texture2D" uid="uid://jeehyp7hpqns" path="res://assets/Jungle Asset Pack/parallax background/Window.png" id="3_tb5ri"]
+[ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="4_bg6gg"]
+[ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/Screenshot 2025-10-17 152747.png" id="5_xv5ut"]
+[ext_resource type="Texture2D" uid="uid://dakrd3uqsu42m" path="res://assets/Jungle Asset Pack/parallax background/Button.png" id="7_bg6gg"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x6o1n"]
-texture = ExtResource("2_srw1n")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bg6gg"]
+shader = ExtResource("2_tb5ri")
+shader_parameter/speed = 0.1
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5bbs1"]
-texture = ExtResource("3_7aeyt")
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0dj3"]
+atlas = ExtResource("3_tb5ri")
+region = Rect2(1057, 162, 926, 741)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6tc2i"]
-texture = ExtResource("3_b1ewi")
-modulate_color = Color(0.381703, 0.381703, 0.381703, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf23d"]
+atlas = ExtResource("3_tb5ri")
+region = Rect2(1328, 48, 344, 88)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1neio"]
-texture = ExtResource("4_4ketl")
-modulate_color = Color(0.325441, 0.325441, 0.325441, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a2xwi"]
+texture = ExtResource("5_xv5ut")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_srw1n"]
-texture = ExtResource("5_f2irv")
-modulate_color = Color(0.266575, 0.266575, 0.266575, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3u22v"]
+texture = ExtResource("5_xv5ut")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4vvy1"]
-texture = ExtResource("8_7aeyt")
-modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vwla1"]
+texture = ExtResource("5_xv5ut")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1v1xw"]
-texture = ExtResource("8_4vvy1")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ishi2"]
+texture = ExtResource("5_xv5ut")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rd5vd"]
-texture = ExtResource("10_5bbs1")
-modulate_color = Color(0.41598, 0.41598, 0.41598, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4x6gg"]
+texture = ExtResource("5_xv5ut")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sn6pr"]
-texture = ExtResource("11_1v1xw")
-modulate_color = Color(0.458405, 0.458405, 0.458405, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ug01h"]
+texture = ExtResource("5_xv5ut")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xoo1e"]
+texture = ExtResource("5_xv5ut")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8omjj"]
+texture = ExtResource("5_xv5ut")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24ohm"]
+texture = ExtResource("5_xv5ut")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg6gg"]
+atlas = ExtResource("7_bg6gg")
+region = Rect2(197, 1190, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv5ut"]
+atlas = ExtResource("7_bg6gg")
+region = Rect2(197, 1190, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2xwi"]
+atlas = ExtResource("7_bg6gg")
+region = Rect2(197, 1190, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u22v"]
+atlas = ExtResource("7_bg6gg")
+region = Rect2(197, 1190, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwla1"]
+atlas = ExtResource("7_bg6gg")
+region = Rect2(197, 1190, 181, 190)
 
 [node name="SelectLevel2" type="Control"]
 layout_mode = 3
@@ -54,204 +76,159 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_brqsk")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Background" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_bg6gg")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_x6o1n")
+texture = ExtResource("2_adhu8")
+expand_mode = 1
 
-[node name="btnReturn" type="Button" parent="."]
+[node name="LevelMenu" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -476.0
+offset_top = -309.0
+offset_right = 447.0
+offset_bottom = 274.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_k0dj3")
+expand_mode = 1
+
+[node name="Title" type="TextureRect" parent="LevelMenu"]
 layout_mode = 0
-offset_top = 293.0
-offset_right = 84.0
-offset_bottom = 367.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 280.0
+offset_right = 624.0
+offset_bottom = 88.0
+texture = SubResource("AtlasTexture_rf23d")
+
+[node name="btnlv13" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 128.0
+offset_right = 195.0
+offset_bottom = 240.0
+theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_5bbs1")
-text = "
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
+text = "13
 "
 
-[node name="btnlv13" type="Button" parent="."]
+[node name="btnlv14" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_top = 140.0
-offset_right = 249.0
-offset_bottom = 212.0
+offset_left = 267.0
+offset_top = 128.0
+offset_right = 415.0
+offset_bottom = 240.0
+theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_6tc2i")
-text = "LEVEL 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_3u22v")
+text = "14
 "
 
-[node name="lock13" type="TextureRect" parent="btnlv13"]
-modulate = Color(0.252028, 0.252028, 0.252028, 1)
+[node name="btnlv15" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 1.0
-offset_right = 254.0
-offset_bottom = 72.0
-texture = ExtResource("4_f2irv")
-expand_mode = 3
-
-[node name="btnlv14" type="Button" parent="."]
-layout_mode = 0
-offset_left = 288.0
-offset_top = 143.0
-offset_right = 531.0
-offset_bottom = 213.0
+offset_left = 482.0
+offset_top = 127.0
+offset_right = 633.0
+offset_bottom = 239.0
+theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_1neio")
-text = "LEVEL 14
+theme_override_styles/normal = SubResource("StyleBoxTexture_vwla1")
+text = "15"
+
+[node name="btnlv16" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 703.0
+offset_top = 124.0
+offset_right = 854.0
+offset_bottom = 236.0
+theme_override_fonts/font = ExtResource("4_bg6gg")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_ishi2")
+text = "16
 "
 
-[node name="lock14" type="TextureRect" parent="btnlv14"]
-modulate = Color(0.241156, 0.241156, 0.241156, 1)
+[node name="btnlv17" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = -5.0
-offset_top = 1.0
-offset_right = 246.0
-offset_bottom = 73.0
-texture = ExtResource("4_f2irv")
-expand_mode = 3
-
-[node name="btnlv15" type="Button" parent="."]
-layout_mode = 0
-offset_left = 594.0
-offset_top = 140.0
-offset_right = 837.0
-offset_bottom = 209.0
+offset_left = 41.0
+offset_top = 260.0
+offset_right = 190.0
+offset_bottom = 372.0
+theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_srw1n")
-text = "LEVEL 15"
-
-[node name="lock15" type="TextureRect" parent="btnlv15"]
-modulate = Color(0.244776, 0.244776, 0.244776, 1)
-layout_mode = 0
-offset_left = -3.0
-offset_right = 248.0
-offset_bottom = 69.0
-texture = ExtResource("4_f2irv")
-expand_mode = 3
-
-[node name="btnlv16" type="Button" parent="."]
-layout_mode = 0
-offset_left = 881.0
-offset_top = 141.0
-offset_right = 1126.0
-offset_bottom = 208.0
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_4vvy1")
-text = "LEVEL 16"
-
-[node name="lock16" type="TextureRect" parent="btnlv16"]
-modulate = Color(0.281187, 0.281187, 0.281187, 1)
-layout_mode = 0
-offset_right = 253.0
-offset_bottom = 69.0
-texture = ExtResource("4_f2irv")
-expand_mode = 3
-
-[node name="Panel2" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 385.0
-offset_top = -1.0
-offset_right = 741.0
-offset_bottom = 84.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_1v1xw")
-
-[node name="btnlv17" type="Button" parent="."]
-layout_mode = 0
-offset_left = 120.0
-offset_top = 295.0
-offset_right = 370.0
-offset_bottom = 369.0
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_rd5vd")
-text = "LEVEL 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_4x6gg")
+text = "17
 "
 
-[node name="lock17" type="TextureRect" parent="btnlv17"]
-modulate = Color(0.273873, 0.273873, 0.273873, 1)
+[node name="btnlv18" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_right = 250.0
-offset_bottom = 73.0
-texture = ExtResource("4_f2irv")
-expand_mode = 3
-
-[node name="btnlv18" type="Button" parent="."]
-layout_mode = 0
-offset_left = 440.0
-offset_top = 293.0
-offset_right = 694.0
-offset_bottom = 371.0
+offset_left = 271.0
+offset_top = 260.0
+offset_right = 419.0
+offset_bottom = 372.0
+theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxTexture_sn6pr")
-text = "LEVEL 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_ug01h")
+text = "18"
+
+[node name="btnlv19" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 260.0
+offset_right = 638.0
+offset_bottom = 372.0
+theme_override_fonts/font = ExtResource("4_bg6gg")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_xoo1e")
+text = "19
 "
 
-[node name="lock18" type="TextureRect" parent="btnlv18"]
-modulate = Color(0.252028, 0.252028, 0.252028, 1)
+[node name="btnlv20" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_right = 254.0
-offset_bottom = 80.0
-texture = ExtResource("4_f2irv")
-expand_mode = 3
-
-[node name="btnlv19" type="Button" parent="."]
-layout_mode = 0
-offset_left = 794.0
-offset_top = 290.0
-offset_right = 1047.0
-offset_bottom = 366.0
+offset_left = 705.0
+offset_top = 260.0
+offset_right = 856.0
+offset_bottom = 372.0
+theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
-text = "LEVEL 19
+theme_override_styles/normal = SubResource("StyleBoxTexture_8omjj")
+text = "20
 "
 
-[node name="lock19" type="TextureRect" parent="btnlv19"]
-modulate = Color(0.288518, 0.288518, 0.288518, 1)
+[node name="btnlv21" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_right = 252.0
-offset_bottom = 76.0
-texture = ExtResource("4_f2irv")
-expand_mode = 3
-
-[node name="btnlv20" type="Button" parent="."]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 425.0
-offset_right = 255.0
-offset_bottom = 501.0
+offset_left = 37.0
+offset_top = 385.0
+offset_right = 187.0
+offset_bottom = 497.0
+theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
-text = "LEVEL 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_24ohm")
+text = "21
 "
 
-[node name="lock20" type="TextureRect" parent="btnlv20"]
-modulate = Color(0.288518, 0.288518, 0.288518, 1)
+[node name="btnBack" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 1.0
-offset_right = 251.0
-offset_bottom = 77.0
-texture = ExtResource("4_f2irv")
-expand_mode = 3
+offset_left = 19.0
+offset_top = 281.0
+offset_right = 644.0
+offset_bottom = 839.0
+scale = Vector2(0.2, 0.2)
+texture_normal = SubResource("AtlasTexture_bg6gg")
+texture_pressed = SubResource("AtlasTexture_xv5ut")
+texture_hover = SubResource("AtlasTexture_a2xwi")
+texture_disabled = SubResource("AtlasTexture_3u22v")
+texture_focused = SubResource("AtlasTexture_vwla1")
+stretch_mode = 0
 
-[node name="btnlv21" type="Button" parent="."]
-layout_mode = 0
-offset_left = 286.0
-offset_top = 425.0
-offset_right = 539.0
-offset_bottom = 501.0
-theme_override_font_sizes/font_size = 40
-text = "LEVEL 21
-"
-
-[node name="lock21" type="TextureRect" parent="btnlv21"]
-modulate = Color(0.288518, 0.288518, 0.288518, 1)
-layout_mode = 0
-offset_left = 1.0
-offset_top = 3.0
-offset_right = 253.0
-offset_bottom = 79.0
-texture = ExtResource("4_f2irv")
-expand_mode = 3
+[connection signal="pressed" from="btnBack" to="." method="_on_btn_back_pressed"]
