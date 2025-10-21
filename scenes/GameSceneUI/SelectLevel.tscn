@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bqud0bqb2dq15" path="res://scripts/UI_Scripts/select_level.gd" id="1_adu0t"]
 [ext_resource type="Shader" uid="uid://bjp3bnqe1dxkr" path="res://scenes/SelectLevel.gdshader" id="2_yku54"]
 [ext_resource type="Texture2D" uid="uid://1dty4wpdee3m" path="res://assets/Jungle Asset Pack/new_window_2d.tres" id="3_bsgdq"]
-[ext_resource type="Texture2D" uid="uid://vhuqpvtdr7h2" path="res://assets/Jungle Asset Pack/parallax background/BG.png" id="3_eqg1o"]
+[ext_resource type="Texture2D" uid="uid://8gsfsmx8fv71" path="res://assets/Jungle Asset Pack/parallax background/unnamed.jpg" id="3_fl6s6"]
 [ext_resource type="Texture2D" uid="uid://jeehyp7hpqns" path="res://assets/Jungle Asset Pack/parallax background/Window.png" id="4_i1mc2"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="5_mcxre"]
 [ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/Screenshot 2025-10-17 152747.png" id="6_yku54"]
@@ -118,7 +118,7 @@ offset_left = -15.0
 offset_top = 13.0
 offset_right = 1131.0
 offset_bottom = 654.0
-texture = ExtResource("3_eqg1o")
+texture = ExtResource("3_fl6s6")
 expand_mode = 1
 
 [node name="LevelMenu" type="TextureRect" parent="."]
@@ -128,10 +128,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -461.0
-offset_top = -289.0
-offset_right = 462.0
-offset_bottom = 271.0
+offset_left = -450.0
+offset_top = -273.5
+offset_right = 450.0
+offset_bottom = 273.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_mcxre")
@@ -145,19 +145,19 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -198.0
-offset_top = -301.0
+offset_top = -266.5
 offset_right = 186.0
-offset_bottom = -213.0
+offset_bottom = -178.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_yku54")
 
 [node name="btnlv1" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 40.5
-offset_top = 115.5
-offset_right = 184.5
-offset_bottom = 227.5
+offset_left = 41.0
+offset_top = 124.0
+offset_right = 185.0
+offset_bottom = 236.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_eqg1o")
@@ -166,9 +166,9 @@ text = "1"
 [node name="btnlv2" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 257.0
-offset_top = 120.0
-offset_right = 409.0
-offset_bottom = 232.0
+offset_top = 124.0
+offset_right = 401.0
+offset_bottom = 236.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_vtqlk")
@@ -177,10 +177,10 @@ text = "2
 
 [node name="btnlv3" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 489.0
-offset_top = 116.0
-offset_right = 638.0
-offset_bottom = 228.0
+offset_left = 493.0
+offset_top = 124.5
+offset_right = 637.0
+offset_bottom = 236.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_cir3e")
@@ -188,10 +188,10 @@ text = "3"
 
 [node name="btnlv4" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 712.0
-offset_top = 116.0
-offset_right = 857.0
-offset_bottom = 228.0
+offset_left = 697.0
+offset_top = 121.5
+offset_right = 841.0
+offset_bottom = 233.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_tqpso")
@@ -199,10 +199,10 @@ text = "4"
 
 [node name="btnlv5" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 39.5
-offset_top = 243.5
-offset_right = 180.5
-offset_bottom = 355.5
+offset_left = 39.0
+offset_top = 236.5
+offset_right = 183.0
+offset_bottom = 348.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_ugusr")
@@ -210,10 +210,10 @@ text = "5"
 
 [node name="btnlv6" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 261.5
-offset_top = 239.5
-offset_right = 403.5
-offset_bottom = 357.5
+offset_left = 258.0
+offset_top = 237.5
+offset_right = 402.0
+offset_bottom = 349.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_mcxre")
@@ -221,10 +221,10 @@ text = "6"
 
 [node name="btnlv7" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 498.5
-offset_top = 240.5
-offset_right = 637.5
-offset_bottom = 357.5
+offset_left = 493.0
+offset_top = 238.5
+offset_right = 637.0
+offset_bottom = 350.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_yku54")
@@ -232,10 +232,10 @@ text = "7"
 
 [node name="btnlv8" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 707.5
-offset_top = 242.5
-offset_right = 851.5
-offset_bottom = 354.5
+offset_left = 695.0
+offset_top = 235.5
+offset_right = 839.0
+offset_bottom = 347.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_qwbve")
@@ -243,10 +243,10 @@ text = "8"
 
 [node name="btnlv9" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 362.0
-offset_right = 187.0
-offset_bottom = 474.0
+offset_left = 39.0
+offset_top = 351.5
+offset_right = 183.0
+offset_bottom = 463.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_kfdx2")
@@ -254,10 +254,10 @@ text = "9"
 
 [node name="btnlv10" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 265.0
-offset_top = 361.0
-offset_right = 408.0
-offset_bottom = 473.0
+offset_left = 261.0
+offset_top = 353.5
+offset_right = 405.0
+offset_bottom = 465.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_xios8")
@@ -266,10 +266,10 @@ text = "10
 
 [node name="btnlv11" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 500.0
-offset_top = 367.0
-offset_right = 644.0
-offset_bottom = 479.0
+offset_left = 494.0
+offset_top = 351.5
+offset_right = 638.0
+offset_bottom = 463.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_t3p1c")
@@ -278,10 +278,10 @@ text = "11
 
 [node name="btnlv12" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 707.0
-offset_top = 364.0
-offset_right = 853.0
-offset_bottom = 476.0
+offset_left = 696.0
+offset_top = 350.5
+offset_right = 840.0
+offset_bottom = 462.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_bpt75")
