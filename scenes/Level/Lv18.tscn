@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://dq5qxflggkpfo"]
+[gd_scene load_steps=28 format=4 uid="uid://ccutf1jfjqssp"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="1_d36sr"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://assets/Jungle Asset Pack/parallax background/plx-1.png" id="2_arqxs"]
