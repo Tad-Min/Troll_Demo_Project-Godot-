@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< Updated upstream:Trap asset/FallingPlatfrom.png.import
-uid="uid://dc4uubpjq4atl"
-path="res://.godot/imported/FallingPlatfrom.png-06c4426aa34ff19792a30a515f62bb51.ctex"
-========
-uid="uid://dvw14qft1xwj5"
+uid="uid://by0rc2lmm8cxq"
 path="res://.godot/imported/z7139860393590_1f298d668913f3ca00cc7e2ead70f883.jpg-1a86d7a2e5ff1e8b7b591a08cd6168a3.ctex"
->>>>>>>> Stashed changes:Jungle Asset Pack/parallax background/z7139860393590_1f298d668913f3ca00cc7e2ead70f883.jpg.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< Updated upstream:Trap asset/FallingPlatfrom.png.import
-source_file="res://Trap asset/FallingPlatfrom.png"
-dest_files=["res://.godot/imported/FallingPlatfrom.png-06c4426aa34ff19792a30a515f62bb51.ctex"]
-========
 source_file="res://assets/Jungle Asset Pack/parallax background/z7139860393590_1f298d668913f3ca00cc7e2ead70f883.jpg"
 dest_files=["res://.godot/imported/z7139860393590_1f298d668913f3ca00cc7e2ead70f883.jpg-1a86d7a2e5ff1e8b7b591a08cd6168a3.ctex"]
->>>>>>>> Stashed changes:Jungle Asset Pack/parallax background/z7139860393590_1f298d668913f3ca00cc7e2ead70f883.jpg.import
 
 [params]
 

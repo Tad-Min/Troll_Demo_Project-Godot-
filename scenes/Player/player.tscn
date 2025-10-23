@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cvy1ls0r8b1w1" path="res://assets/Audio Files Asset/male-death-scream-horror-352706.mp3" id="5_qlg0r"]
 [ext_resource type="PackedScene" uid="uid://kjekawpsm1pc" path="res://scenes/Player/death_count.tscn" id="6_tuyoq"]
 [ext_resource type="Script" uid="uid://cyr4gt8sv34wd" path="res://scripts/Utility&FunctionalScripts/progress_bar.gd" id="8_dl1wr"]
-[ext_resource type="PackedScene" uid="uid://0wdfjha3x3yw" path="res://scenes/GameSceneUI/Pause.tscn" id="8_wwtew"]
+[ext_resource type="PackedScene" uid="uid://5hygm82fy168" path="res://scenes/GameSceneUI/Pause.tscn" id="8_wwtew"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
 atlas = ExtResource("1_3vyb7")

@@ -237,17 +237,10 @@ text = "7"
 
 [node name="btnlv8" type="Button" parent="LevelMenu"]
 layout_mode = 0
-<<<<<<< Updated upstream
-offset_left = 707.5
-offset_top = 242.5
-offset_right = 851.5
-offset_bottom = 354.5
-=======
 offset_left = 696.0
 offset_top = 235.5
 offset_right = 840.0
 offset_bottom = 347.5
->>>>>>> Stashed changes
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
