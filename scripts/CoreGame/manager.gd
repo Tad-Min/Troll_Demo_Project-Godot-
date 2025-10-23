@@ -36,6 +36,11 @@ func on_player_died(cause: String = "") -> void:
 	if cause != "":
 		GameData.last_death_cause = cause
 	print("Manager: Player died (", GameData.last_death_cause, ") → going to game over...")
+	
+	# Increment global death counter
+	GameData.total_deaths += 1
+	print("Total deaths: ", GameData.total_deaths)
+	
 	_go_to_game_over()
 
 func _go_to_game_over() -> void:

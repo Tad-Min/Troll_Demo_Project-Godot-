@@ -2,6 +2,9 @@ extends Control
 
 @onready var death_label: Label = %DeathLabel
 @onready var cause_label: Label = %CauseLabel
+@onready var admob = $Admob
+
+var is_initialized: bool = false
 
 func _ready() -> void:
 	print("DeathLabel is: ", death_label)
@@ -16,7 +19,24 @@ func _ready() -> void:
 	else:
 		push_error("CauseLabel is null. Add Label/ CauseLabel in GameOver scene.")
 
+	# AdMob setup
+	if admob:
+		admob.connect("initialization_completed", Callable(self, "_on_admob_initialization_completed"))
+		admob.initialize()
+
+func _on_admob_initialization_completed(_status_data) -> void:
+	is_initialized = true
+	print("GameOver AdMob initialized")
+
 func _pressed():
+	# Check if we should show ad (every 10 deaths)
+	if admob and is_initialized and GameData.total_deaths > 0 and GameData.total_deaths % 10 == 0:
+		print("Showing death ad (death #", GameData.total_deaths, ")")
+		admob.load_interstitial_ad()
+		await admob.interstitial_ad_loaded
+		admob.show_interstitial_ad()
+		await admob.interstitial_ad_dismissed_full_screen_content
+	
 	get_tree().change_scene_to_file("res://scenes/Level/Lv%d.tscn" % (GameData.current_level + 1))
 
 
