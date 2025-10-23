@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://vr0cp86s7yb0"]
+[gd_scene load_steps=9 format=4 uid="uid://doq8ee3g47xry"]
 
 [ext_resource type="Script" uid="uid://bt6u63fquuj83" path="res://scripts/Level/LV3/drop_1_trigger_5.gd" id="1_krupe"]
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="2_anp2o"]

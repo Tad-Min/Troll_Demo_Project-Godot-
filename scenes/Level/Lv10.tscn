@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bak735etd5s7k" path="res://scenes/Trap/Portal/RPortal2.tscn" id="16_0mr8k"]
 [ext_resource type="Script" uid="uid://ytpbsyii5x3b" path="res://scripts/Portal/portmanage.gd" id="16_jo0gb"]
 [ext_resource type="Script" uid="uid://ov8ltcncjpjy" path="res://scripts/Level/Lv10/fakeportLv10.gd" id="16_ubacb"]
-[ext_resource type="PackedScene" uid="uid://vr0cp86s7yb0" path="res://scenes/Trap/falling_spike.tscn" id="17_q8e8i"]
+[ext_resource type="PackedScene" uid="uid://doq8ee3g47xry" path="res://scenes/Trap/falling_spike.tscn" id="17_q8e8i"]
 [ext_resource type="PackedScene" uid="uid://blxb0o4p0ex0b" path="res://scenes/Trap/hidden_spear.tscn" id="18_g58i0"]
 [ext_resource type="PackedScene" uid="uid://4ex8nd3vkga1" path="res://scenes/GameSceneUI/Button.tscn" id="19_hf8tp"]
 [ext_resource type="Script" uid="uid://srpyhg7wicp5" path="res://scripts/Level/Lv10/Button_Door_lv10.gd" id="20_1mj1c"]

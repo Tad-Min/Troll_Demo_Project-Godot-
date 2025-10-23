@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://djarqqo7pn1dk"]
 
-[ext_resource type="Texture2D" uid="uid://dvw14qft1xwj5" path="res://assets/Jungle Asset Pack/parallax background/z7139860393590_1f298d668913f3ca00cc7e2ead70f883.jpg" id="1_crdbs"]
+[ext_resource type="Texture2D" uid="uid://by0rc2lmm8cxq" path="res://assets/Jungle Asset Pack/parallax background/z7139860393590_1f298d668913f3ca00cc7e2ead70f883.jpg" id="1_crdbs"]
 [ext_resource type="Script" uid="uid://b7n2ph0te6k7t" path="res://scripts/UI_Scripts/coming_soon.gd" id="1_tktu8"]
 [ext_resource type="Texture2D" uid="uid://dw5nnf234null" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/72px/back01.png" id="3_8yoqk"]
 [ext_resource type="Texture2D" uid="uid://c53240aviurj0" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/back/72px/back03.png" id="4_svidj"]

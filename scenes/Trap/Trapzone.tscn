@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c3p15mm8xfels" path="res://scenes/Trap/Shuriken.tscn" id="2_1jf2o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jf2o"]
-size = Vector2(96.625, 37.6354)
+size = Vector2(57.3125, 37.6354)
 
 [node name="Trapzone" type="Area2D"]
 script = ExtResource("1_35auq")
