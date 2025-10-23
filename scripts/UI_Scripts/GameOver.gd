@@ -7,7 +7,6 @@ extends Control
 var is_initialized: bool = false
 
 func _ready() -> void:
-	print("DeathLabel is: ", death_label)
 	if death_label:
 		death_label.text = "Death: %d times" % GameData.Levels[GameData.current_level].countDie
 		GameData.save_progress()
@@ -26,7 +25,6 @@ func _ready() -> void:
 
 func _on_admob_initialization_completed(_status_data) -> void:
 	is_initialized = true
-	print("GameOver AdMob initialized")
 
 func _pressed():
 	# Check if we should show ad (every 10 deaths)
