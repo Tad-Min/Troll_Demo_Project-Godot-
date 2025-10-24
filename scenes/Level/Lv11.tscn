@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="7_t7e6a"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="8_y5vvw"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="9_bmwe1"]
-[ext_resource type="PackedScene" uid="uid://vr0cp86s7yb0" path="res://scenes/Trap/falling_spike.tscn" id="9_es8bb"]
+[ext_resource type="PackedScene" uid="uid://doq8ee3g47xry" path="res://scenes/Trap/falling_spike.tscn" id="9_es8bb"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="10_nelmb"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="13_ubacb"]
 [ext_resource type="PackedScene" uid="uid://co2ayiytafwtl" path="res://scenes/Trap/Chasing Boss/Chasing.tscn" id="14_vki80"]
@@ -550,7 +550,7 @@ position = Vector2(1853, 319)
 position = Vector2(22, 542)
 speed = 125.0
 
-[node name="Camera2D" parent="Player" index="7"]
+[node name="Camera2D" parent="Player" index="5"]
 limit_right = 2306
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]

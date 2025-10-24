@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://0wdfjha3x3yw"]
+[gd_scene load_steps=9 format=3 uid="uid://5hygm82fy168"]
 
 [ext_resource type="Script" uid="uid://5bfql4ngr8yu" path="res://scripts/UI_Scripts/pause.gd" id="1_0ep5p"]
 [ext_resource type="PackedScene" uid="uid://cn0njjk7bw8dv" path="res://scenes/GameSceneUI/AudioOptions.tscn" id="2_wcpj6"]
@@ -34,6 +34,13 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eh5vw"]
+bg_color = Color(0.955963, 0.955963, 0.955963, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [node name="Pause" type="Control"]
 process_mode = 3
 layout_mode = 3
@@ -51,10 +58,10 @@ text = "||"
 [node name="Panel" type="Panel" parent="."]
 process_mode = 3
 layout_mode = 0
-offset_left = 317.0
-offset_top = 90.0
-offset_right = 821.0
-offset_bottom = 616.0
+offset_left = 318.0
+offset_top = 58.0
+offset_right = 825.0
+offset_bottom = 631.0
 
 [node name="ContinueButton" type="Button" parent="Panel"]
 process_mode = 3
@@ -72,9 +79,9 @@ text = "CONTINUE
 [node name="RestartButton" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 145.0
-offset_top = 264.0
-offset_right = 352.0
-offset_bottom = 340.0
+offset_top = 134.0
+offset_right = 343.0
+offset_bottom = 202.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_hdb6x")
@@ -83,75 +90,42 @@ text = "RESTART
 
 [node name="MenuButton" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 145.0
-offset_top = 450.0
-offset_right = 357.0
-offset_bottom = 525.0
+offset_left = 148.0
+offset_top = 466.0
+offset_right = 346.0
+offset_bottom = 534.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_uc2tp")
 text = "MENU
 "
 
-[node name="ZoomPanel" type="TextEdit" parent="Panel"]
-layout_mode = 0
-offset_left = 25.0
-offset_top = 130.0
-offset_right = 478.0
-offset_bottom = 256.0
-text = "												Zoom
-"
-editable = false
-
-[node name="ZoomCloseButton" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 168.0
-offset_right = 160.0
-offset_bottom = 243.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_uc2tp")
-text = "Near
-"
-
-[node name="ZoomNormalButton" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 190.0
-offset_top = 168.0
-offset_right = 310.0
-offset_bottom = 243.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_uc2tp")
-text = "Mid
-"
-
-[node name="ZoomFarButton" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 340.0
-offset_top = 168.0
-offset_right = 460.0
-offset_bottom = 243.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_uc2tp")
-text = "Far
-"
-
 [node name="SoundButton" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 144.0
-offset_top = 351.0
-offset_right = 352.0
-offset_bottom = 440.0
+offset_left = 147.0
+offset_top = 358.0
+offset_right = 345.0
+offset_bottom = 426.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_0ep5p")
 text = "SOUNDS
 "
 
+[node name="SelectLevelButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 242.0
+offset_right = 342.0
+offset_bottom = 310.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_eh5vw")
+text = "SELECT LEVEL
+"
+
 [node name="AudioOptions" parent="Panel" instance=ExtResource("2_wcpj6")]
+visible = false
 layout_mode = 1
 offset_left = -315.0
 offset_top = -89.0

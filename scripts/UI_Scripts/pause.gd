@@ -5,40 +5,41 @@ extends Control
 @onready var continue_button = $Panel/ContinueButton
 @onready var restart_button = $Panel/RestartButton
 @onready var menu_button = $Panel/MenuButton
-
-@onready var sound_button = $Panel/SoundButton
-
-# camera2d zoom settings
-@onready var zoom_close_button = $Panel/ZoomCloseButton
-@onready var zoom_normal_button = $Panel/ZoomNormalButton
-@onready var zoom_far_button = $Panel/ZoomFarButton
+@onready var sound_button = $Panel.get_node_or_null("SoundButton")
+@onready var select_level_button: Button = $Panel.get_node_or_null("SelectLevelButton")
 
 var camera: Camera2D
 var audio_options
 
+func _noop_setget(val): 
+	pass
+
 func _ready():
+	# Ẩn panel pause khi khởi động
 	pause_panel.visible = false
-	audio_options = pause_panel.get_node("AudioOptions")
+	
+	# Lấy node AudioOptions nếu có
+	audio_options = pause_panel.get_node_or_null("AudioOptions")
 	if audio_options:
 		audio_options.visible = false
 	else:
 		push_error("AudioOptions is null!")
-	
 
-	# connect pause buttons
-	pause_button.pressed.connect(_on_pause_pressed)
-	continue_button.pressed.connect(_on_continue_pressed)
-	restart_button.pressed.connect(_on_restart_pressed)
-	menu_button.pressed.connect(_on_menu_pressed)
+	# Kết nối các nút (kiểm tra tồn tại trước khi connect)
+	if pause_button:
+		pause_button.pressed.connect(_on_pause_pressed)
+	if continue_button:
+		continue_button.pressed.connect(_on_continue_pressed)
+	if restart_button:
+		restart_button.pressed.connect(_on_restart_pressed)
+	if menu_button:
+		menu_button.pressed.connect(_on_menu_pressed)
 	if sound_button:
 		sound_button.pressed.connect(_on_sound_button_pressed)
+	if is_instance_valid(select_level_button):
+		select_level_button.pressed.connect(_on_select_level_pressed)
 
-	# connect zoom buttons
-	zoom_close_button.pressed.connect(_on_zoom_close_pressed)
-	zoom_normal_button.pressed.connect(_on_zoom_normal_pressed)
-	zoom_far_button.pressed.connect(_on_zoom_far_pressed)
-
-	# safely get camera from Player node
+	# Lấy camera từ Player nếu có
 	var player = get_tree().get_first_node_in_group("Player")
 	if player and player.has_node("Camera2D"):
 		camera = player.get_node("Camera2D")
@@ -69,20 +70,37 @@ func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/GameSceneUI/StartUI.tscn")
 
 func _on_sound_button_pressed():
-	audio_options.visible = !audio_options.visible
+	if audio_options:
+		audio_options.visible = !audio_options.visible
 
-# === Zoom handling ===
-func _on_zoom_close_pressed():
-	if camera:
-		camera.zoom = Vector2(3, 3)  # smaller = closer
-		print("Zoom → Close")
+# === Select Level logic ===
+func _on_select_level_pressed():
+	print("Select Level pressed from pause. current_level:", GameData.current_level)
+	get_tree().paused = false
+	_go_to_select_scene_by_level(GameData.current_level)
 
-func _on_zoom_normal_pressed():
-	if camera:
-		camera.zoom = Vector2(2, 2)
-		print("Zoom → Normal")
+func _go_to_select_scene_by_level(cur_level) -> void:
+	if cur_level == null:
+		cur_level = 1
 
-func _on_zoom_far_pressed():
-	if camera:
-		camera.zoom = Vector2(1, 1)  # larger = farther
-		print("Zoom → Far")
+	var go_to_select2 := false
+	if cur_level >= 13 and cur_level <= 24:
+		go_to_select2 = true
+	elif cur_level >= 12:
+		go_to_select2 = true
+	else:
+		go_to_select2 = false
+
+	var path := ""
+	if go_to_select2:
+		path = "res://scenes/GameSceneUI/SelectLevel2.tscn"
+	else:
+		path = "res://scenes/GameSceneUI/SelectLevel.tscn"
+
+	var packed = ResourceLoader.load(path)
+	if packed == null:
+		printerr("ERROR: Select scene not found at path:", path)
+		return
+
+	print("Changing to select scene:", path)
+	get_tree().change_scene_to_file(path)

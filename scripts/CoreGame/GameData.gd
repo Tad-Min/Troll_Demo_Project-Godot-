@@ -30,6 +30,9 @@ var current_level: int = 0
 
 var last_death_cause: String = ""
 
+# Global death counter for ads
+var total_deaths: int = 0
+
 # UI: per-level gem counter (transient, not persisted)
 signal gem_count_changed(current: int, required: int)
 var gem_current: int = 0
@@ -81,7 +84,8 @@ func save_progress() -> void:
 		
 	var data = { 
 		"levels": arr,
-		"current_level": current_level
+		"current_level": current_level,
+		"total_deaths": total_deaths
 	}
 	var file = FileAccess.open("user://save.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(data))
@@ -106,5 +110,8 @@ func load_progress() -> bool:
 			if data.has("current_level"):
 				current_level = data["current_level"]
 				current_level = clamp(current_level, 0, LvSize - 1)
+			# Load total deaths
+			if data.has("total_deaths"):
+				total_deaths = data["total_deaths"]
 			return true
 	return false
