@@ -1,0 +1,31 @@
+# Godot 4+ specific ignores
+.godot/
+.nomedia
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_credentials.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+
+# --- Custom ignores ---
+
+# Bỏ qua các file build tạm và lock
+build/
+*.lock
+*.tmp
+
+# Bỏ qua toàn bộ file export, trừ file PCK chính thức
+/export/*
+!/export/*.pck
+
+# Bỏ qua toàn bộ file release, trừ file APK chính thức
+/release/*
+!/release/*.apk

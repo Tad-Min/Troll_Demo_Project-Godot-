@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Troll_Troll_Viet_Nam"
-run/main_scene="uid://c2qh0a77og1hg"
+config/name="Troll Game Content"
+run/main_scene="res://scenes/GameSceneUI/StartUI.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="uid://cgk5wf30hxks8"
 config/enable_auto_update=true
@@ -34,7 +34,7 @@ window/stretch/mode="canvas_items"
 
 [dotnet]
 
-project/assembly_name="Troll_Demo"
+project/assembly_name="Troll_GameContent"
 
 [editor_plugins]
 
