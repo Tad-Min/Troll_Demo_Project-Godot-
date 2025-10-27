@@ -152,6 +152,7 @@ text = "SOUNDS
 "
 
 [node name="AudioOptions" parent="Panel" instance=ExtResource("2_ws64x")]
+visible = false
 layout_mode = 1
 offset_left = -315.0
 offset_top = -89.0
