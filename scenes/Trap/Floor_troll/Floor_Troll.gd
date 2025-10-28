@@ -21,6 +21,8 @@ var _activated := false
 
 func _ready() -> void:
 	connect("body_entered", Callable(self, "_on_body_entered"))
+	if waiting:
+		monitoring=false
 
 func _on_body_entered(body: Node) -> void:
 	if _activated or waiting:
@@ -31,6 +33,9 @@ func _on_body_entered(body: Node) -> void:
 
 func activate() -> void:
 	waiting=false
+	monitoring=true
+	print("triggered at")
+	print(self.get_parent().name)
 
 func _start_trigger_sequence() -> void:
 	_activated = true
