@@ -57,6 +57,7 @@ func _start_trigger_sequence() -> void:
 		trap_instance.position = trap_spawn_pos
 		trap_instance.rotation_degrees = trap_spawn_rot
 		Map.add_child(trap_instance)
+		nodes_to_free_after.insert(nodes_to_free_after.size(),trap_instance)
 
 	# 🎬 Start tween movement
 	var target_position = Map.position + direction.normalized() * move_distance
@@ -76,6 +77,7 @@ func _start_trigger_sequence() -> void:
 			t.activate()
 
 	# 🧹 Free nodes AFTER tween
+	
 	for n in nodes_to_free_after:
 		if n and is_instance_valid(n):
 			n.queue_free()
