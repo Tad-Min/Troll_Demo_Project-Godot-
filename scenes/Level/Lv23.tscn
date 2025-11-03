@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://c2qh0a77og1hg"]
+[gd_scene load_steps=23 format=4 uid="uid://c2qh0a77og1hg"]
 
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="1_um47n"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="3_4onoq"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://b6c5qp1h3vsum" path="res://scenes/Trap/Floor_troll/Floor_Troll.gd" id="6_lfqfb"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="7_p8m1t"]
 [ext_resource type="PackedScene" uid="uid://dv88dh8mekb3q" path="res://scenes/Trap/Floor_troll/spike_floor_troll.tscn" id="7_um47n"]
+[ext_resource type="Script" uid="uid://cak7mks8n7apb" path="res://scenes/Trap/Floor_troll/Floor_Troll_Fixed_Position.gd" id="8_um47n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trgvg"]
 texture = ExtResource("6_gsfau")
@@ -724,6 +725,9 @@ size = Vector2(54, 31)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8m1t"]
 size = Vector2(78, 161)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2mfq"]
+size = Vector2(15.875, 255.5)
+
 [node name="Lv23" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_um47n")]
@@ -866,9 +870,9 @@ shape = SubResource("RectangleShape2D_gsfau")
 
 [node name="Troll2_Area2D4" type="Area2D" parent="Map/Traps/Troll2" node_paths=PackedStringArray("Map")]
 position = Vector2(0, 232)
-script = ExtResource("6_lfqfb")
+script = ExtResource("8_um47n")
 Map = NodePath("..")
-move_distance = 320.0
+destination = Vector2(208, -136)
 move_duration = 0.8
 trap_to_spawn = ExtResource("7_um47n")
 trap_spawn_pos = Vector2(288, 628)
@@ -903,9 +907,9 @@ shape = SubResource("RectangleShape2D_j1mly")
 
 [node name="Troll3_Area2D2" type="Area2D" parent="Map/Traps/Troll3" node_paths=PackedStringArray("Map")]
 position = Vector2(0, 232)
-script = ExtResource("6_lfqfb")
+script = ExtResource("8_um47n")
 Map = NodePath("..")
-move_distance = 336.0
+destination = Vector2(208, -136)
 move_duration = 0.8
 trap_to_spawn = ExtResource("7_um47n")
 trap_spawn_pos = Vector2(290, 554)
@@ -953,12 +957,15 @@ activate_before = [NodePath("../../Troll2/Troll2_Area2D2")]
 position = Vector2(259, 340.5)
 shape = SubResource("RectangleShape2D_6iejb")
 
-[node name="Troll5" type="TileMapLayer" parent="Map/Traps"]
-position = Vector2(0, -232)
+[node name="Troll7" type="Node2D" parent="Map/Traps"]
+position = Vector2(560, 472)
+
+[node name="Troll5" type="TileMapLayer" parent="Map/Traps/Troll7"]
+position = Vector2(-560, -704)
 tile_map_data = PackedByteArray("AAAgACYAAAAFAAkAAAAhACYAAAAFAAkAAAAgACcAAAAFAAkAAAAgACgAAAAFAAkAAAAgACkAAAAFAAkAAAAgACoAAAAFAAkAAAAgACsAAAAFAAkAAAAgACwAAAAFAAkAAAAgAC0AAAAFAAkAAAAgAC4AAAAFAAkAAAAgAC8AAAAFAAkAAAAhACcAAAAFAAkAAAAhACgAAAAFAAkAAAAhACkAAAAFAAkAAAAhACoAAAAFAAkAAAAhACsAAAAFAAkAAAAhACwAAAAFAAkAAAAhAC0AAAAFAAkAAAAhAC4AAAAFAAkAAAAhAC8AAAAFAAkAAAA=")
 tile_set = SubResource("TileSet_1jteh")
 
-[node name="Troll5_Area2D" type="Area2D" parent="Map/Traps/Troll5" node_paths=PackedStringArray("Map", "activate_after")]
+[node name="Troll5_Area2D" type="Area2D" parent="Map/Traps/Troll7/Troll5" node_paths=PackedStringArray("Map", "activate_after")]
 position = Vector2(0, 232)
 script = ExtResource("6_lfqfb")
 Map = NodePath("..")
@@ -966,15 +973,46 @@ move_distance = 80.0
 direction = Vector2(-1, 0)
 move_duration = 0.8
 trap_spawn_rot = 180.0
-activate_after = [NodePath("../../Troll3/Troll3_Area2D2"), NodePath("../../Troll2/Troll2_Area2D4")]
+activate_after = [NodePath("../../../Troll3/Troll3_Area2D2"), NodePath("../../../Troll2/Troll2_Area2D4")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Traps/Troll5/Troll5_Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Traps/Troll7/Troll5/Troll5_Area2D"]
 position = Vector2(473, 458.5)
 shape = SubResource("RectangleShape2D_p8m1t")
 
-[node name="Troll6" type="TileMapLayer" parent="Map/Traps"]
-position = Vector2(0, -232)
+[node name="Troll6" type="TileMapLayer" parent="Map/Traps/Troll7"]
+position = Vector2(-560, -704)
 tile_map_data = PackedByteArray("AAAiACYAAAAFAAkAAAAiACcAAAAFAAkAAAAiACgAAAAFAAkAAAAiACkAAAAFAAkAAAAiACoAAAAFAAkAAAAiACsAAAAFAAkAAAAiACwAAAAFAAkAAAAiAC0AAAAFAAkAAAAiAC4AAAAFAAkAAAAiAC8AAAAFAAkAAAAjACYAAAAFAAkAAAAjACcAAAAFAAkAAAAjACgAAAAFAAkAAAAjACkAAAAFAAkAAAAjACoAAAAFAAkAAAAjACsAAAAFAAkAAAAjACwAAAAFAAkAAAAjAC0AAAAFAAkAAAAjAC4AAAAFAAkAAAAjAC8AAAAFAAkAAAA=")
 tile_set = SubResource("TileSet_1jteh")
+
+[node name="Troll6_Area2D" type="Area2D" parent="Map/Traps/Troll7/Troll6" node_paths=PackedStringArray("Map", "activate_after")]
+position = Vector2(0, 232)
+script = ExtResource("6_lfqfb")
+Map = NodePath("..")
+move_distance = 16.0
+move_duration = 0.16
+trap_spawn_rot = 180.0
+activate_after = [NodePath("../../../Troll3/Troll3_Area2D2"), NodePath("../../../Troll2/Troll2_Area2D4"), NodePath("../../../Immovable_Triggers/Troll7_Area2D")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Traps/Troll7/Troll6/Troll6_Area2D"]
+position = Vector2(473, 458.5)
+shape = SubResource("RectangleShape2D_p8m1t")
+
+[node name="Immovable_Triggers" type="Node" parent="Map/Traps"]
+
+[node name="Troll7_Area2D" type="Area2D" parent="Map/Traps/Immovable_Triggers" node_paths=PackedStringArray("Map")]
+position = Vector2(0, 232)
+script = ExtResource("8_um47n")
+Map = NodePath("../../Troll7")
+destination = Vector2(560, 504)
+rotation_destination = 90.0
+move_duration = 0.3
+trap_to_spawn = ExtResource("7_um47n")
+trap_spawn_pos = Vector2(290, 554)
+trap_spawn_rot = 90.0
+waiting = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Traps/Immovable_Triggers/Troll7_Area2D"]
+position = Vector2(711.063, 177.25)
+shape = SubResource("RectangleShape2D_m2mfq")
 
 [editable path="Player"]
