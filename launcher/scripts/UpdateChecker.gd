@@ -9,8 +9,8 @@ signal update_failed(error_message: String)
 signal download_progress(percent: int)
 
 const CURRENT_VERSION = "1.0.22"  # Phiên bản của Launcher
-const VERSION_URL = "https://raw.githubusercontent.com/Tad-Min/Troll_Demo_Project-Godot-/main/Export_file/version.txt"
-const UPDATE_URL = "https://raw.githubusercontent.com/Tad-Min/Troll_Demo_Project-Godot-/main/Export_file/Game_Troll_Vi_en_lastest.pck"
+const VERSION_URL = "https://raw.githubusercontent.com/Tad-Min/Troll_Demo_Project-Godot-/Van/GameContent/Export_file/version.txt"
+const UPDATE_URL = "https://media.githubusercontent.com/media/Tad-Min/Troll_Demo_Project-Godot-/refs/heads/Van/GameContent/Export_file/Game_Troll_Vi_en_lastest.pck"
 const LOCAL_PCK_PATH = "user://Game_Troll_Vi_en_lastest.pck"
 
 var http: HTTPRequest
