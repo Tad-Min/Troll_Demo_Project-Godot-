@@ -14,7 +14,6 @@ config/name="Troll Game Content"
 run/main_scene="res://scenes/GameSceneUI/StartUI.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="uid://cgk5wf30hxks8"
-config/enable_auto_update=true
 
 [audio]
 
@@ -25,7 +24,6 @@ buses/default_bus_layout="res://assets/default_bus_layout.tres"
 GameData="*res://scripts/CoreGame/GameData.gd"
 Session="*res://scripts/CoreGame/Session.gd"
 Global="*res://scripts/CoreGame/Global.gd"
-Update_Checking="*res://scripts/CoreGame/update_checker.gd"
 
 [display]
 
