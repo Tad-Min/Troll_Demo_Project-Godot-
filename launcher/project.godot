@@ -22,9 +22,8 @@ buses/default_bus_layout="res://assets/default_bus_layout.tres"
 
 [autoload]
 
-LauncherManager="*res://scripts/LauncherManager.gd"
 UpdateChecker="*res://scripts/UpdateChecker.gd"
-AdMobManager="*res://scripts/AdMobManager.gd"
+LauncherManager="*res://scripts/LauncherManager.gd"
 
 [display]
 
@@ -34,10 +33,6 @@ window/stretch/mode="canvas_items"
 [dotnet]
 
 project/assembly_name="Troll_Launcher"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/AdmobPlugin/plugin.cfg")
 
 [input_devices]
 
