@@ -78,7 +78,7 @@ func load_game():
 
 func change_to_game_scene():
 	# Chuyển sang scene chính của game
-	var game_scene_path = "res://GameContent/scenes/GameSceneUI/StartUI.tscn"
+	var game_scene_path = "res://scenes/GameSceneUI/StartUI.tscn"
 	
 	if ResourceLoader.exists(game_scene_path):
 		print("🎯 Chuyển sang scene game: ", game_scene_path)
