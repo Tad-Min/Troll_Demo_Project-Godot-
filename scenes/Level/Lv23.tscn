@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dv88dh8mekb3q" path="res://scenes/Trap/Floor_troll/spike_floor_troll.tscn" id="7_um47n"]
 [ext_resource type="Script" uid="uid://cak7mks8n7apb" path="res://scenes/Trap/Floor_troll/Floor_Troll_Fixed_Position.gd" id="8_um47n"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trgvg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j1mly"]
 texture = ExtResource("6_gsfau")
 19:1/0 = 0
 19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -691,7 +691,7 @@ texture = ExtResource("6_gsfau")
 
 [sub_resource type="TileSet" id="TileSet_1jteh"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_trgvg")
+sources/0 = SubResource("TileSetAtlasSource_j1mly")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lowjv"]
 size = Vector2(6, 179)
@@ -783,12 +783,12 @@ tile_set = SubResource("TileSet_1jteh")
 [node name="Secret_Portal" parent="Map" instance=ExtResource("7_p8m1t")]
 position = Vector2(544, 32)
 scale = Vector2(1.52, 1.52)
-next_level = 1
+next_level = 101
 
 [node name="Portal_lvl24" parent="Map" instance=ExtResource("7_p8m1t")]
 position = Vector2(823, 514)
 scale = Vector2(1.52, 1.52)
-next_level = 22
+next_level = 24
 
 [node name="Traps" type="Node2D" parent="Map"]
 
