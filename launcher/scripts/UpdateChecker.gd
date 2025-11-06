@@ -65,6 +65,7 @@ func _on_version_request_completed(result: int, response_code: int, headers: Pac
 		print("✅ Already up to date.")
 		update_completed.emit()
 
+
 func download_update():
 	if is_downloading:
 		print("⚠️ Đang tải cập nhật...")
@@ -115,6 +116,12 @@ func save_update_file(data: PackedByteArray):
 	file.store_buffer(data)
 	file.close()
 	print("Saved update to:", LOCAL_PCK_PATH)
+	
+	# ✅ Ghi file báo hiệu đã có update xong
+	var flag = FileAccess.open("user://update_ready.flag", FileAccess.WRITE)
+	if flag:
+		flag.store_string("ready")
+		flag.close()
 	
 	update_completed.emit()
 
