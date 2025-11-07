@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqx8h7lam2n3o"]
+[gd_scene load_steps=3 format=3 uid="uid://bqx8h7lam2n3o"]
 
 [ext_resource type="Script" uid="uid://dhfpr4sh0ovln" path="res://scripts/LauncherUI.gd" id="1_0h8k9"]
+[ext_resource type="Script" uid="uid://cvqfnguoxwt3" path="res://addons/AdmobPlugin/Admob.gd" id="2_xdu5s"]
 
 [node name="LauncherUI" type="Control"]
 layout_mode = 3
@@ -51,3 +52,9 @@ layout_mode = 2
 
 [node name="LoadingAnimation" type="AnimationPlayer" parent="VBoxContainer"]
 autoplay = "loading"
+
+[node name="Admob" type="Node" parent="VBoxContainer"]
+script = ExtResource("2_xdu5s")
+debug_application_id = "ca-app-pub-53720886101914"
+debug_banner_id = "ca-app-pub-3940256099942544/9214589741"
+metadata/_custom_type_script = "uid://cvqfnguoxwt3"
