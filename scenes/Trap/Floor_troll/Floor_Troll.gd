@@ -28,14 +28,22 @@ func _on_body_entered(body: Node) -> void:
 	if _activated or waiting:
 		return
 	
+	print("%s is entered"%self.name)
+	
 	if body.is_in_group("Player") and Map:
 		_start_trigger_sequence()
 
 func activate() -> void:
 	waiting=false
 	monitoring=true
-	print("triggered at")
-	print(self.get_parent().name)
+	_activated = false
+	print("%s is awake, waiting for collision"%self.name)
+	# 🔍 Check if any body is already inside
+	for body in get_overlapping_bodies():
+		if body.is_in_group("Player"):
+			print("Detected player already inside — triggering immediately.")
+			_on_body_entered(body)
+			break
 
 func _start_trigger_sequence() -> void:
 	_activated = true
@@ -74,7 +82,9 @@ func _start_trigger_sequence() -> void:
 	# 🔸 Activate others AFTER tween
 	for t in activate_after:
 		if t and is_instance_valid(t) and t.has_method("activate"):
+			print("activating %s from %s" % [t.name, self.name])
 			t.activate()
+
 
 	# 🧹 Free nodes AFTER tween
 	
