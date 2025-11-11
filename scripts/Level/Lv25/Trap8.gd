@@ -14,7 +14,7 @@ func _body_entered(body: Node) -> void:
 			
 		$"../../SpikeSimple 3".direction = Vector2(1,0)
 		$"../../SpikeSimple 3".move_distance = 1000
-		$"../../SpikeSimple 3".speed = 80
+		$"../../SpikeSimple 3".speed = 90
 		
 		$"../../SpikeSimple 3".isMove = true
 		$"../../SpikeSimple 3".start()

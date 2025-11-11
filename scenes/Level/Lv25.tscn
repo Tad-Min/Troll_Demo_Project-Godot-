@@ -7,23 +7,23 @@
 [ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://assets/Jungle Asset Pack/parallax background/plx-5.png" id="5_kgx0s"]
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="6_48v2c"]
 [ext_resource type="PackedScene" uid="uid://damf22lmf180i" path="res://scenes/Trap/Spike_Simple.tscn" id="7_jwp3d"]
-[ext_resource type="Script" uid="uid://d4my5kw4vcso7" path="res://scripts/Level/Lvdat2/spike_simple_move_scale.gd" id="8_u8lb3"]
+[ext_resource type="Script" uid="uid://d4my5kw4vcso7" path="res://scripts/Level/Lv25/spike_simple_move_scale.gd" id="8_u8lb3"]
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="9_v0wdv"]
 [ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="10_i3m2d"]
-[ext_resource type="Script" uid="uid://b8f6eqbw8j5ft" path="res://scripts/Level/Lvdat2/spike_simple_chain.gd" id="11_vpsfk"]
+[ext_resource type="Script" uid="uid://b8f6eqbw8j5ft" path="res://scripts/Level/Lv25/spike_simple_chain.gd" id="11_vpsfk"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="12_87x4b"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/GameSceneUI/MusicBackground.tscn" id="13_12cwx"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="14_1th61"]
-[ext_resource type="Script" uid="uid://r67b8wqo735s" path="res://scripts/Level/Lvdat2/Trap1.gd" id="15_havat"]
-[ext_resource type="Script" uid="uid://bi5codjir8v8n" path="res://scripts/Level/Lvdat2/Trap2.gd" id="16_7ha6x"]
-[ext_resource type="Script" uid="uid://dx2jmge3t14ns" path="res://scripts/Level/Lvdat2/Trap3.gd" id="17_pckc3"]
-[ext_resource type="Script" uid="uid://bh2iqnvkcied3" path="res://scripts/Level/Lvdat2/Trap4.gd" id="18_tmyx6"]
-[ext_resource type="Script" uid="uid://cprt6b0tjkbr5" path="res://scripts/Level/Lvdat2/Trap5.gd" id="19_oit6l"]
-[ext_resource type="Script" uid="uid://cmy4j36gb4dm6" path="res://scripts/Level/Lvdat2/Trap6.gd" id="20_smga2"]
-[ext_resource type="Script" uid="uid://deb6j0r1f76y2" path="res://scripts/Level/Lvdat2/Trap7.gd" id="21_kuo4n"]
-[ext_resource type="Script" uid="uid://cphb1gppleda5" path="res://scripts/Level/Lvdat2/Trap8.gd" id="22_ob7vs"]
-[ext_resource type="Script" uid="uid://cj07mw727e4cr" path="res://scripts/Level/Lvdat2/Trap9.gd" id="23_2dink"]
-[ext_resource type="Script" uid="uid://be45cuavjplat" path="res://scripts/Level/Lvdat2/Trap10.gd" id="24_05ree"]
+[ext_resource type="Script" uid="uid://r67b8wqo735s" path="res://scripts/Level/Lv25/Trap1.gd" id="15_havat"]
+[ext_resource type="Script" uid="uid://bi5codjir8v8n" path="res://scripts/Level/Lv25/Trap2.gd" id="16_7ha6x"]
+[ext_resource type="Script" uid="uid://dx2jmge3t14ns" path="res://scripts/Level/Lv25/Trap3.gd" id="17_pckc3"]
+[ext_resource type="Script" uid="uid://bh2iqnvkcied3" path="res://scripts/Level/Lv25/Trap4.gd" id="18_tmyx6"]
+[ext_resource type="Script" uid="uid://cprt6b0tjkbr5" path="res://scripts/Level/Lv25/Trap5.gd" id="19_oit6l"]
+[ext_resource type="Script" uid="uid://cmy4j36gb4dm6" path="res://scripts/Level/Lv25/Trap6.gd" id="20_smga2"]
+[ext_resource type="Script" uid="uid://deb6j0r1f76y2" path="res://scripts/Level/Lv25/Trap7.gd" id="21_kuo4n"]
+[ext_resource type="Script" uid="uid://cphb1gppleda5" path="res://scripts/Level/Lv25/Trap8.gd" id="22_ob7vs"]
+[ext_resource type="Script" uid="uid://cj07mw727e4cr" path="res://scripts/Level/Lv25/Trap9.gd" id="23_2dink"]
+[ext_resource type="Script" uid="uid://be45cuavjplat" path="res://scripts/Level/Lv25/Trap10.gd" id="24_05ree"]
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="25_hrwyk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_clusc"]
@@ -1855,24 +1855,23 @@ metadata/_edit_lock_ = true
 [node name="SpikeSimple 1" parent="." instance=ExtResource("7_jwp3d")]
 position = Vector2(224, 264)
 script = ExtResource("8_u8lb3")
-move_distance = 0.0
-speed = 0.0
+move_distance = 160.0
+speed = 400.0
 loop = false
-direction = Vector2(0, 0)
-newScale = Vector2(0, 0)
-speedScale = 1.0
+direction = Vector2(0, -1)
+newScale = Vector2(6, 6)
+speedScale = 0.05
 metadata/_edit_lock_ = true
 
 [node name="SpikeSimple 2" parent="." instance=ExtResource("7_jwp3d")]
 position = Vector2(464, 264)
 script = ExtResource("8_u8lb3")
-move_distance = 0.0
-speed = 0.0
+move_distance = 240.0
+speed = 400.0
 loop = false
-direction = Vector2(0, 0)
+direction = Vector2(-1, 0)
 newScale = Vector2(0, 0)
 speedScale = 1.0
-metadata/_edit_lock_ = true
 
 [node name="SpikeSimple 3" parent="." instance=ExtResource("7_jwp3d")]
 position = Vector2(424, 480)
