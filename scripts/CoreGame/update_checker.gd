@@ -91,6 +91,9 @@ func load_pck():
 		if status_label:
 			status_label.text = "✅ Đây là bản mới nhất! Chúc bạn chơi game zui zẻ"
 		return
+	
+	await get_tree().process_frame  # 👈 Cho phép main loop idle trước khi load
+	
 	if ProjectSettings.load_resource_pack(LOCAL_PCK_PATH):
 		print("✅ Loaded update pack successfully!")
 		if status_label:
