@@ -1,33 +1,33 @@
 [gd_scene load_steps=42 format=4 uid="uid://dqgnskm4lgcrn"]
 
-[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="1_y7b8s"]
-[ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://assets/Jungle Asset Pack/parallax background/plx-1.png" id="2_di14e"]
-[ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://assets/Jungle Asset Pack/parallax background/plx-2.png" id="3_gmnou"]
-[ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://assets/Jungle Asset Pack/parallax background/plx-4.png" id="4_48j13"]
-[ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://assets/Jungle Asset Pack/parallax background/plx-5.png" id="5_1vvja"]
-[ext_resource type="PackedScene" uid="uid://damf22lmf180i" path="res://scenes/Trap/Spike_Simple.tscn" id="5_gmnou"]
-[ext_resource type="Script" uid="uid://d4my5kw4vcso7" path="res://scripts/Level/Lvdat2/spike_simple_move_scale.gd" id="6_gmnou"]
-[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="6_gu0fj"]
-[ext_resource type="Script" uid="uid://b8f6eqbw8j5ft" path="res://scripts/Level/Lvdat2/spike_simple_chain.gd" id="9_1vvja"]
-[ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="9_clusc"]
-[ext_resource type="Script" uid="uid://r67b8wqo735s" path="res://scripts/Level/Lvdat2/Trap1.gd" id="12_48j13"]
-[ext_resource type="Script" uid="uid://bi5codjir8v8n" path="res://scripts/Level/Lvdat2/Trap2.gd" id="13_1vvja"]
-[ext_resource type="Script" uid="uid://dx2jmge3t14ns" path="res://scripts/Level/Lvdat2/Trap3.gd" id="14_gu0fj"]
-[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="15_48j13"]
-[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="16_qkicl"]
-[ext_resource type="Script" uid="uid://bh2iqnvkcied3" path="res://scripts/Level/Lvdat2/Trap4.gd" id="17_d30ks"]
-[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/GameSceneUI/MusicBackground.tscn" id="17_duyna"]
-[ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="18_2un5p"]
-[ext_resource type="Script" uid="uid://cprt6b0tjkbr5" path="res://scripts/Level/Lvdat2/Trap5.gd" id="18_d30ks"]
-[ext_resource type="Script" uid="uid://cmy4j36gb4dm6" path="res://scripts/Level/Lvdat2/Trap6.gd" id="19_4ajcu"]
-[ext_resource type="Script" uid="uid://deb6j0r1f76y2" path="res://scripts/Level/Lvdat2/Trap7.gd" id="20_8bu3k"]
-[ext_resource type="Script" uid="uid://cphb1gppleda5" path="res://scripts/Level/Lvdat2/Trap8.gd" id="21_oi1xu"]
-[ext_resource type="Script" uid="uid://cj07mw727e4cr" path="res://scripts/Level/Lvdat2/Trap9.gd" id="22_k36o2"]
-[ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="24_1h3dn"]
-[ext_resource type="Script" uid="uid://be45cuavjplat" path="res://scripts/Level/Lvdat2/Trap10.gd" id="24_abc04"]
+[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="1_rg17t"]
+[ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://assets/Jungle Asset Pack/parallax background/plx-1.png" id="2_sdd1v"]
+[ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://assets/Jungle Asset Pack/parallax background/plx-2.png" id="3_ems4f"]
+[ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://assets/Jungle Asset Pack/parallax background/plx-4.png" id="4_2bp25"]
+[ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://assets/Jungle Asset Pack/parallax background/plx-5.png" id="5_kgx0s"]
+[ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="6_48v2c"]
+[ext_resource type="PackedScene" uid="uid://damf22lmf180i" path="res://scenes/Trap/Spike_Simple.tscn" id="7_jwp3d"]
+[ext_resource type="Script" uid="uid://d4my5kw4vcso7" path="res://scripts/Level/Lvdat2/spike_simple_move_scale.gd" id="8_u8lb3"]
+[ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="9_v0wdv"]
+[ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="10_i3m2d"]
+[ext_resource type="Script" uid="uid://b8f6eqbw8j5ft" path="res://scripts/Level/Lvdat2/spike_simple_chain.gd" id="11_vpsfk"]
+[ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="12_87x4b"]
+[ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/GameSceneUI/MusicBackground.tscn" id="13_12cwx"]
+[ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="14_1th61"]
+[ext_resource type="Script" uid="uid://r67b8wqo735s" path="res://scripts/Level/Lvdat2/Trap1.gd" id="15_havat"]
+[ext_resource type="Script" uid="uid://bi5codjir8v8n" path="res://scripts/Level/Lvdat2/Trap2.gd" id="16_7ha6x"]
+[ext_resource type="Script" uid="uid://dx2jmge3t14ns" path="res://scripts/Level/Lvdat2/Trap3.gd" id="17_pckc3"]
+[ext_resource type="Script" uid="uid://bh2iqnvkcied3" path="res://scripts/Level/Lvdat2/Trap4.gd" id="18_tmyx6"]
+[ext_resource type="Script" uid="uid://cprt6b0tjkbr5" path="res://scripts/Level/Lvdat2/Trap5.gd" id="19_oit6l"]
+[ext_resource type="Script" uid="uid://cmy4j36gb4dm6" path="res://scripts/Level/Lvdat2/Trap6.gd" id="20_smga2"]
+[ext_resource type="Script" uid="uid://deb6j0r1f76y2" path="res://scripts/Level/Lvdat2/Trap7.gd" id="21_kuo4n"]
+[ext_resource type="Script" uid="uid://cphb1gppleda5" path="res://scripts/Level/Lvdat2/Trap8.gd" id="22_ob7vs"]
+[ext_resource type="Script" uid="uid://cj07mw727e4cr" path="res://scripts/Level/Lvdat2/Trap9.gd" id="23_2dink"]
+[ext_resource type="Script" uid="uid://be45cuavjplat" path="res://scripts/Level/Lvdat2/Trap10.gd" id="24_05ree"]
+[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="25_hrwyk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_clusc"]
-texture = ExtResource("6_gu0fj")
+texture = ExtResource("6_48v2c")
 19:1/0 = 0
 21:1/0 = 0
 25:1/0 = 0
@@ -371,7 +371,7 @@ texture = ExtResource("6_gu0fj")
 sources/0 = SubResource("TileSetAtlasSource_clusc")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ajcu"]
-texture = ExtResource("6_gu0fj")
+texture = ExtResource("6_48v2c")
 19:1/0 = 0
 19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:1/0 = 0
@@ -1054,7 +1054,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_4ajcu")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oi1xu"]
-texture = ExtResource("6_gu0fj")
+texture = ExtResource("6_48v2c")
 19:1/0 = 0
 19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:1/0 = 0
@@ -1766,7 +1766,7 @@ size = Vector2(20, 128)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vvja"]
 size = Vector2(20, 128)
 
-[node name="Lvdat2" type="Node2D"]
+[node name="Lv25" type="Node2D"]
 metadata/_edit_lock_ = true
 
 [node name="Background" type="TextureRect" parent="."]
@@ -1774,7 +1774,7 @@ offset_left = 191.0
 offset_top = 107.0
 offset_right = 1000.0
 offset_bottom = 584.0
-script = ExtResource("1_y7b8s")
+script = ExtResource("1_rg17t")
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -1789,7 +1789,7 @@ offset_right = 152.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_di14e")
+texture = ExtResource("2_sdd1v")
 metadata/_edit_lock_ = true
 
 [node name="Bg_layer2" type="TextureRect" parent="Background"]
@@ -1803,7 +1803,7 @@ offset_right = 152.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_gmnou")
+texture = ExtResource("3_ems4f")
 metadata/_edit_lock_ = true
 
 [node name="Bg_layer3" type="TextureRect" parent="Background"]
@@ -1817,7 +1817,7 @@ offset_right = 152.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_gmnou")
+texture = ExtResource("3_ems4f")
 metadata/_edit_lock_ = true
 
 [node name="Bg_layer4" type="TextureRect" parent="Background"]
@@ -1831,7 +1831,7 @@ offset_right = 152.0
 offset_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_48j13")
+texture = ExtResource("4_2bp25")
 metadata/_edit_lock_ = true
 
 [node name="Bg_layer5" type="TextureRect" parent="Background"]
@@ -1845,16 +1845,16 @@ offset_right = 152.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_1vvja")
+texture = ExtResource("5_kgx0s")
 metadata/_edit_lock_ = true
 
 [node name="Wall" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_d30ks")
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple 1" parent="." instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 1" parent="." instance=ExtResource("7_jwp3d")]
 position = Vector2(224, 264)
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -1863,9 +1863,9 @@ newScale = Vector2(0, 0)
 speedScale = 1.0
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple 2" parent="." instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 2" parent="." instance=ExtResource("7_jwp3d")]
 position = Vector2(464, 264)
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -1874,9 +1874,9 @@ newScale = Vector2(0, 0)
 speedScale = 1.0
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple 3" parent="." instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 3" parent="." instance=ExtResource("7_jwp3d")]
 position = Vector2(424, 480)
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 330.0
 speed = 200.0
 loop = false
@@ -1884,15 +1884,15 @@ direction = Vector2(-1, 0)
 newScale = Vector2(5, 5)
 speedScale = 0.05
 
-[node name="Spike" parent="." instance=ExtResource("9_clusc")]
+[node name="Spike" parent="." instance=ExtResource("9_v0wdv")]
 visible = false
 position = Vector2(920, 480)
 
-[node name="Spike2" parent="." instance=ExtResource("9_clusc")]
+[node name="Spike2" parent="." instance=ExtResource("9_v0wdv")]
 visible = false
 position = Vector2(504, 624)
 
-[node name="Jumper" parent="." instance=ExtResource("24_1h3dn")]
+[node name="Jumper" parent="." instance=ExtResource("10_i3m2d")]
 visible = false
 position = Vector2(784, 624)
 rotation = -1.31598
@@ -1902,7 +1902,7 @@ jump_force = 1000.0
 [node name="SpikeSimple chain" type="Node2D" parent="."]
 visible = false
 position = Vector2(808, 312)
-script = ExtResource("9_1vvja")
+script = ExtResource("11_vpsfk")
 move_distance = 500.0
 speed = 250.0
 direction = Vector2(-1, 1)
@@ -1910,10 +1910,10 @@ direction = Vector2(-1, 1)
 [node name="R" type="Node2D" parent="SpikeSimple chain"]
 position = Vector2(40, 24)
 
-[node name="SpikeSimple 1" parent="SpikeSimple chain/R" instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 1" parent="SpikeSimple chain/R" instance=ExtResource("7_jwp3d")]
 position = Vector2(-56, 64)
 rotation = -2.09439
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -1922,10 +1922,10 @@ newScale = Vector2(0, 0)
 speedScale = 1.0
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple 2" parent="SpikeSimple chain/R" instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 2" parent="SpikeSimple chain/R" instance=ExtResource("7_jwp3d")]
 position = Vector2(-32, 40)
 rotation = -2.09439
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -1934,10 +1934,10 @@ newScale = Vector2(0, 0)
 speedScale = 1.0
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple 3" parent="SpikeSimple chain/R" instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 3" parent="SpikeSimple chain/R" instance=ExtResource("7_jwp3d")]
 position = Vector2(-8, 16)
 rotation = -2.09439
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -1946,10 +1946,10 @@ newScale = Vector2(0, 0)
 speedScale = 1.0
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple 4" parent="SpikeSimple chain/R" instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 4" parent="SpikeSimple chain/R" instance=ExtResource("7_jwp3d")]
 position = Vector2(16, -8)
 rotation = -2.09439
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -1958,10 +1958,10 @@ newScale = Vector2(0, 0)
 speedScale = 1.0
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple 5" parent="SpikeSimple chain/R" instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 5" parent="SpikeSimple chain/R" instance=ExtResource("7_jwp3d")]
 position = Vector2(40, -32)
 rotation = -2.09439
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -1970,10 +1970,10 @@ newScale = Vector2(0, 0)
 speedScale = 1.0
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple 6" parent="SpikeSimple chain/R" instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 6" parent="SpikeSimple chain/R" instance=ExtResource("7_jwp3d")]
 position = Vector2(64, -56)
 rotation = -2.09439
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -1986,10 +1986,10 @@ metadata/_edit_lock_ = true
 position = Vector2(0, -24)
 rotation = -3.14159
 
-[node name="SpikeSimple 1" parent="SpikeSimple chain/L" instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 1" parent="SpikeSimple chain/L" instance=ExtResource("7_jwp3d")]
 position = Vector2(-56, 64)
 rotation = -2.09439
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -1998,10 +1998,10 @@ newScale = Vector2(0, 0)
 speedScale = 1.0
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple 2" parent="SpikeSimple chain/L" instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 2" parent="SpikeSimple chain/L" instance=ExtResource("7_jwp3d")]
 position = Vector2(-32, 40)
 rotation = -2.09439
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -2010,10 +2010,10 @@ newScale = Vector2(0, 0)
 speedScale = 1.0
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple 3" parent="SpikeSimple chain/L" instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 3" parent="SpikeSimple chain/L" instance=ExtResource("7_jwp3d")]
 position = Vector2(-8, 16)
 rotation = -2.09439
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -2022,10 +2022,10 @@ newScale = Vector2(0, 0)
 speedScale = 1.0
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple 4" parent="SpikeSimple chain/L" instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 4" parent="SpikeSimple chain/L" instance=ExtResource("7_jwp3d")]
 position = Vector2(16, -8)
 rotation = -2.09439
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -2034,10 +2034,10 @@ newScale = Vector2(0, 0)
 speedScale = 1.0
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple 5" parent="SpikeSimple chain/L" instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 5" parent="SpikeSimple chain/L" instance=ExtResource("7_jwp3d")]
 position = Vector2(40, -32)
 rotation = -2.09439
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -2046,10 +2046,10 @@ newScale = Vector2(0, 0)
 speedScale = 1.0
 metadata/_edit_lock_ = true
 
-[node name="SpikeSimple 6" parent="SpikeSimple chain/L" instance=ExtResource("5_gmnou")]
+[node name="SpikeSimple 6" parent="SpikeSimple chain/L" instance=ExtResource("7_jwp3d")]
 position = Vector2(64, -56)
 rotation = -2.09439
-script = ExtResource("6_gmnou")
+script = ExtResource("8_u8lb3")
 move_distance = 0.0
 speed = 0.0
 loop = false
@@ -2072,21 +2072,21 @@ tile_map_data = PackedByteArray("AABHABcAAAAJAA8AAAACABEAAAACAA4AAAADABEAAAADAA4
 tile_set = SubResource("TileSet_k36o2")
 metadata/_edit_lock_ = true
 
-[node name="Manager" parent="." instance=ExtResource("16_qkicl")]
-current_level = 21
+[node name="Manager" parent="." instance=ExtResource("12_87x4b")]
+current_level = 25
 
-[node name="MusicBackground" parent="." instance=ExtResource("17_duyna")]
+[node name="MusicBackground" parent="." instance=ExtResource("13_12cwx")]
 
-[node name="Portal" parent="." instance=ExtResource("18_2un5p")]
+[node name="Portal" parent="." instance=ExtResource("14_1th61")]
 position = Vector2(1104, 608)
-next_level = 22
+next_level = 26
 
 [node name="CbTrap1" type="Node2D" parent="."]
 position = Vector2(184, 208)
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="CbTrap1"]
-script = ExtResource("12_48j13")
+script = ExtResource("15_havat")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap1/Area2D"]
@@ -2098,7 +2098,7 @@ metadata/_edit_lock_ = true
 position = Vector2(408, 216)
 
 [node name="Area2D" type="Area2D" parent="CbTrap2"]
-script = ExtResource("13_1vvja")
+script = ExtResource("16_7ha6x")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap2/Area2D"]
@@ -2110,7 +2110,7 @@ metadata/_edit_lock_ = true
 position = Vector2(648, 200)
 
 [node name="Area2D" type="Area2D" parent="CbTrap3"]
-script = ExtResource("14_gu0fj")
+script = ExtResource("17_pckc3")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap3/Area2D"]
@@ -2122,7 +2122,7 @@ metadata/_edit_lock_ = true
 position = Vector2(968, 416)
 
 [node name="Area2D" type="Area2D" parent="CbTrap4"]
-script = ExtResource("17_d30ks")
+script = ExtResource("18_tmyx6")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap4/Area2D"]
@@ -2134,7 +2134,7 @@ metadata/_edit_lock_ = true
 position = Vector2(704, 424)
 
 [node name="Area2D" type="Area2D" parent="CbTrap5"]
-script = ExtResource("18_d30ks")
+script = ExtResource("19_oit6l")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap5/Area2D"]
@@ -2146,7 +2146,7 @@ metadata/_edit_lock_ = true
 position = Vector2(464, 424)
 
 [node name="Area2D" type="Area2D" parent="CbTrap6"]
-script = ExtResource("19_4ajcu")
+script = ExtResource("20_smga2")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap6/Area2D"]
@@ -2158,7 +2158,7 @@ metadata/_edit_lock_ = true
 position = Vector2(224, 424)
 
 [node name="Area2D" type="Area2D" parent="CbTrap7"]
-script = ExtResource("20_8bu3k")
+script = ExtResource("21_kuo4n")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap7/Area2D"]
@@ -2170,7 +2170,7 @@ metadata/_edit_lock_ = true
 position = Vector2(160, 600)
 
 [node name="Area2D" type="Area2D" parent="CbTrap8"]
-script = ExtResource("21_oi1xu")
+script = ExtResource("22_ob7vs")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap8/Area2D"]
@@ -2182,7 +2182,7 @@ metadata/_edit_lock_ = true
 position = Vector2(464, 592)
 
 [node name="Area2D" type="Area2D" parent="CbTrap9"]
-script = ExtResource("22_k36o2")
+script = ExtResource("23_2dink")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap9/Area2D"]
@@ -2194,7 +2194,7 @@ metadata/_edit_lock_ = true
 position = Vector2(736, 592)
 
 [node name="Area2D" type="Area2D" parent="CbTrap10"]
-script = ExtResource("24_abc04")
+script = ExtResource("24_05ree")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap10/Area2D"]
@@ -2202,7 +2202,7 @@ position = Vector2(0, -32)
 shape = SubResource("RectangleShape2D_1vvja")
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." instance=ExtResource("15_48j13")]
+[node name="Player" parent="." instance=ExtResource("25_hrwyk")]
 position = Vector2(96, 248)
 
 [node name="AnimatedSprite2D" parent="Player" index="0"]
