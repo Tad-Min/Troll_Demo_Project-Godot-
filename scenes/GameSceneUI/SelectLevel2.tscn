@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bqji2w44moiqg"]
+[gd_scene load_steps=32 format=3 uid="uid://bqji2w44moiqg"]
 
 [ext_resource type="Script" uid="uid://uwb3lip6eosh" path="res://scripts/UI_Scripts/select_level_2.gd" id="1_brqsk"]
 [ext_resource type="Texture2D" uid="uid://vhuqpvtdr7h2" path="res://assets/Jungle Asset Pack/parallax background/BG.png" id="2_adhu8"]
@@ -77,6 +77,18 @@ region = Rect2(810, 1190, 181, 190)
 [sub_resource type="AtlasTexture" id="AtlasTexture_a2xwi"]
 atlas = ExtResource("7_bg6gg")
 region = Rect2(401, 1190, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u22v"]
+atlas = ExtResource("7_bg6gg")
+region = Rect2(197, 972, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwla1"]
+atlas = ExtResource("7_bg6gg")
+region = Rect2(810, 972, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ishi2"]
+atlas = ExtResource("7_bg6gg")
+region = Rect2(401, 972, 181, 190)
 
 [node name="SelectLevel2" type="Control"]
 layout_mode = 3
@@ -319,6 +331,18 @@ scale = Vector2(0.2, 0.2)
 texture_normal = SubResource("AtlasTexture_bg6gg")
 texture_pressed = SubResource("AtlasTexture_xv5ut")
 texture_hover = SubResource("AtlasTexture_a2xwi")
+stretch_mode = 0
+
+[node name="btnNext" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 980.0
+offset_top = 270.0
+offset_right = 1610.0
+offset_bottom = 855.0
+scale = Vector2(0.2, 0.2)
+texture_normal = SubResource("AtlasTexture_3u22v")
+texture_pressed = SubResource("AtlasTexture_vwla1")
+texture_hover = SubResource("AtlasTexture_ishi2")
 stretch_mode = 0
 
 [connection signal="pressed" from="btnBack" to="." method="_on_btn_back_pressed"]

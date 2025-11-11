@@ -35,9 +35,9 @@ func _ready() -> void:
 	btn_lv20.pressed.connect(func(): _on_choose_level(20))
 	btn_lv21.pressed.connect(func(): _on_choose_level(21))
 
-	btn_lv22.pressed.connect(_on_any_button_pressed)
-	btn_lv23.pressed.connect(_on_any_button_pressed)
-	btn_lv24.pressed.connect(_on_any_button_pressed)
+	btn_lv22.pressed.connect(func(): _on_choose_level(22))
+	btn_lv23.pressed.connect(func(): _on_choose_level(23))
+	btn_lv24.pressed.connect(func(): _on_choose_level(24))
 
 
 func _on_choose_level(lv: int) -> void:
@@ -51,3 +51,6 @@ func _on_any_button_pressed() -> void:
 
 func _on_btn_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/GameSceneUI/SelectLevel.tscn")
+	
+func _on_btn_next_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/GameSceneUI/SelectLevel3.tscn")
