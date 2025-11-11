@@ -55,6 +55,6 @@ autoplay = "loading"
 
 [node name="Admob" type="Node" parent="VBoxContainer"]
 script = ExtResource("2_xdu5s")
-debug_application_id = "ca-app-pub-53720886101914"
+debug_application_id = "ca-app-pub-5372088610191477~741184036"
 debug_banner_id = "ca-app-pub-3940256099942544/9214589741"
 metadata/_custom_type_script = "uid://cvqfnguoxwt3"

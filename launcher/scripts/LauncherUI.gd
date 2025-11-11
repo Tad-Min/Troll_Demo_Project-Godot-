@@ -11,30 +11,12 @@ var is_updating = false
 
 func _ready():
 	print("🎨 LauncherUI khởi động...")
-	# ✅ Kiểm tra nếu có file cờ update
-	if FileAccess.file_exists("user://update_ready.flag"):
-		print("🚀 Có file cập nhật sẵn, load game luôn!")
-		load_game_content()
-		return
-
-# 🔧 Nếu có file .pck nhưng chưa load, cố load lại (phòng khi Android không restart)
-	if FileAccess.file_exists("user://Game_Troll_Vi_en_lastest.pck"):
-		print("📦 Phát hiện file game .pck — load thử ngay")
-		load_game_content()
-		return
-
 	setup_ui()
 	connect_signals()
 
 func load_game_content():
-	var pck_path = "user://Game_Troll_Vi_en_lastest.pck"
-	if ProjectSettings.load_resource_pack(pck_path):
-		print("📦 Đã load pack, khởi động game content...")
-		var main_scene = load("res://scenes/GameSceneUI/StartUI.tscn")
-		if main_scene:
-			get_tree().change_scene_to_packed(main_scene)
-	else:
-		print("⚠️ Không thể load pack. Tiếp tục launcher.")
+	# Để LauncherManager chịu trách nhiệm chuyển scene; tránh load trùng gây xung đột input
+	pass
 
 func setup_ui():
 	status_label.text = "🚀 Đang khởi động Launcher..."
