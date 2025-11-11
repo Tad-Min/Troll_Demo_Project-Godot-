@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Troll_Troll_Viet_Nam"
-run/main_scene="uid://x8vaywoxrn7l"
+run/main_scene="uid://dqgnskm4lgcrn"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="uid://cgk5wf30hxks8"
 config/enable_auto_update=true

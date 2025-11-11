@@ -1,4 +1,4 @@
-extends "res://scripts/Trap/spike_simple.gd"
+extends Node2D
 
 @export var move_distance: float
 @export var speed: float
@@ -16,6 +16,21 @@ var isScale:= false
 func _ready() -> void:
 	start_position = position
 	set_process(false)
+	disable_all_areas(self)
+	
+func disable_all_areas(parent: Node):
+	for child in parent.get_children():
+		if child is Area2D:
+			child.monitoring = false
+		elif child.get_child_count() > 0:
+			disable_all_areas(child)
+	
+func enable_all_areas(parent: Node):
+	for child in parent.get_children():
+		if child is Area2D:
+			child.monitoring = true
+		elif child.get_child_count() > 0:
+			enable_all_areas(child)
 
 func _process(delta: float) -> void:
 	if isMove:
@@ -66,4 +81,6 @@ func Scales() -> bool:
 	
 func start():
 	start_position = position
+	visible = true
+	enable_all_areas(self)
 	set_process(true)
