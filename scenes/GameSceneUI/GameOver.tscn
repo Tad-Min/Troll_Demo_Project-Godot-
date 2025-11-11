@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://1bof6obh3yvu"]
+[gd_scene load_steps=24 format=3 uid="uid://1bof6obh3yvu"]
 
 [ext_resource type="Script" uid="uid://5maxewdhu0r" path="res://scripts/UI_Scripts/GameOver.gd" id="1_6bcno"]
 [ext_resource type="Texture2D" uid="uid://btk83wkub78j5" path="res://assets/Jungle Asset Pack/parallax background/cranfield-traditional-etching-ink-mid-black-400x221.jpg" id="1_vuicl"]
+[ext_resource type="Script" uid="uid://cvqfnguoxwt3" path="res://addons/AdmobPlugin/Admob.gd" id="1_w85ox"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="3_4noiy"]
 [ext_resource type="AudioStream" uid="uid://o35vrtv5r07q" path="res://assets/Audio Files Asset/titanic-flute-music-1736313719587.mp3" id="4_4noiy"]
 [ext_resource type="Texture2D" uid="uid://btafcfrrk2638" path="res://assets/Buttons Pixel Animation Pack/Buttons Pixel Animation Pack/restart/343px/restart01.png" id="5_skdqa"]
@@ -114,7 +115,6 @@ texture_hover = ExtResource("7_0icj0")
 texture_disabled = ExtResource("8_5fq7v")
 texture_focused = ExtResource("9_1ye5n")
 stretch_mode = 0
-script = ExtResource("1_6bcno")
 
 [node name="BtnHome" type="TextureButton" parent="."]
 layout_mode = 0
@@ -139,4 +139,11 @@ offset_bottom = 846.0
 scale = Vector2(0.6, 0.6)
 texture = SubResource("AnimatedTexture_ya815")
 
+[node name="Admob" type="Node2D" parent="."]
+script = ExtResource("1_w85ox")
+debug_application_id = "ca-app-pub-5372088610191477~7411840360"
+debug_interstitial_id = "ca-app-pub-3940256099942544/1033173712"
+
+[connection signal="pressed" from="RestartButton" to="." method="_pressed"]
 [connection signal="pressed" from="BtnHome" to="." method="_on_btn_home_pressed"]
+[connection signal="initialization_completed" from="Admob" to="." method="_on_admob_initialization_completed"]

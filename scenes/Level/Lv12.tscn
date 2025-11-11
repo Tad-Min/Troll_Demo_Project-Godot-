@@ -4561,9 +4561,7 @@ shape = SubResource("RectangleShape2D_iqlsl")
 [node name="Infinite_Jumper_Hell" parent="." instance=ExtResource("11_jh8l3")]
 position = Vector2(-105.501, -119.662)
 
-[node name="Stuck" parent="Infinite_Jumper_Hell" index="16" node_paths=PackedStringArray("player_message", "pause", "player")]
-player_message = NodePath("../../Player/Message")
-pause = NodePath("../../Player/deathcount_canva/Pause")
+[node name="Stuck" parent="Infinite_Jumper_Hell" index="16" node_paths=PackedStringArray("player")]
 player = NodePath("../../Player")
 
 [node name="Detector" parent="Infinite_Jumper_Hell/Stuck" index="0"]

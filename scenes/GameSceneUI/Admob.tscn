@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://djeyd6xwuxlj4"]
+
+[ext_resource type="Script" uid="uid://cvqfnguoxwt3" path="res://addons/AdmobPlugin/Admob.gd" id="1_w85ox"]
+[ext_resource type="Script" uid="uid://iak7784am82f" path="res://scripts/UI_Scripts/admob.gd" id="1_yvy5c"]
+
+[node name="AdMobScene" type="Node2D"]
+script = ExtResource("1_yvy5c")
+
+[node name="Admob" type="Node2D" parent="."]
+script = ExtResource("1_w85ox")
+debug_application_id = "ca-app-pub-5372088610191477~7411840360"
+debug_interstitial_id = "ca-app-pub-3940256099942544/1033173712"
+
+[node name="Interstitial" type="Button" parent="."]
+offset_left = 470.0
+offset_top = 299.0
+offset_right = 585.0
+offset_bottom = 349.0
+text = "Interstitual"
+
+[connection signal="initialization_completed" from="Admob" to="." method="_on_admob_initialization_completed"]
+[connection signal="pressed" from="Interstitial" to="." method="_on_interstitial_pressed"]

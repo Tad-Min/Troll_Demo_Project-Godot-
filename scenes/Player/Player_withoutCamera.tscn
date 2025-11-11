@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://b75pvvfxrgeth"]
+[gd_scene load_steps=35 format=3 uid="uid://b75pvvfxrgeth"]
 
 [ext_resource type="Script" uid="uid://c27cqf6yfkjx5" path="res://scripts/CoreGame/player.gd" id="1_vumif"]
 [ext_resource type="Texture2D" uid="uid://bbjunvicfbbgg" path="res://assets/Graphics&Sprites/character.png" id="2_ykdy8"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cvy1ls0r8b1w1" path="res://assets/Audio Files Asset/male-death-scream-horror-352706.mp3" id="5_axd14"]
 [ext_resource type="PackedScene" uid="uid://kjekawpsm1pc" path="res://scenes/Player/death_count.tscn" id="6_0sxyl"]
 [ext_resource type="Script" uid="uid://cyr4gt8sv34wd" path="res://scripts/Utility&FunctionalScripts/progress_bar.gd" id="7_frt2i"]
+[ext_resource type="PackedScene" uid="uid://5hygm82fy168" path="res://scenes/GameSceneUI/Pause.tscn" id="8_ykdy8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("2_ykdy8")
@@ -277,5 +278,9 @@ offset_right = 252.0
 offset_bottom = 108.0
 fit_content = true
 horizontal_alignment = 1
+
+[node name="Pause_canva" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="Pause_canva" instance=ExtResource("8_ykdy8")]
 
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

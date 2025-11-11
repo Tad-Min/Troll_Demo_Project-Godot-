@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://blnjmna71025t"]
+[gd_scene load_steps=32 format=3 uid="uid://blnjmna71025t"]
 
 [ext_resource type="Script" uid="uid://bqud0bqb2dq15" path="res://scripts/UI_Scripts/select_level.gd" id="1_adu0t"]
 [ext_resource type="Shader" uid="uid://bjp3bnqe1dxkr" path="res://scenes/SelectLevel.gdshader" id="2_yku54"]
@@ -20,6 +20,13 @@ region = Rect2(1057, 162, 926, 741)
 [sub_resource type="AtlasTexture" id="AtlasTexture_yku54"]
 atlas = ExtResource("4_i1mc2")
 region = Rect2(1304, 48, 384, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cj5g"]
+atlas = ExtResource("8_4hu3u")
+region = Rect2(759, 668, 181, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4hu3u"]
+texture = SubResource("AtlasTexture_6cj5g")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eqg1o"]
 texture = ExtResource("6_yku54")
@@ -61,41 +68,25 @@ texture = ExtResource("6_yku54")
 atlas = ExtResource("8_4hu3u")
 region = Rect2(197, 1190, 181, 190)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i1mc2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hu3u"]
 atlas = ExtResource("8_4hu3u")
-region = Rect2(197, 1190, 181, 190)
+region = Rect2(810, 1190, 181, 190)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eqg1o"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_va4dp"]
 atlas = ExtResource("8_4hu3u")
-region = Rect2(197, 1190, 181, 190)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vtqlk"]
-atlas = ExtResource("8_4hu3u")
-region = Rect2(197, 1190, 181, 190)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cir3e"]
-atlas = ExtResource("8_4hu3u")
-region = Rect2(197, 1190, 181, 190)
+region = Rect2(401, 1190, 181, 190)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fl6s6"]
 atlas = ExtResource("8_4hu3u")
 region = Rect2(197, 972, 181, 190)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_va4dp"]
-atlas = ExtResource("8_4hu3u")
-region = Rect2(197, 972, 181, 190)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_31p20"]
 atlas = ExtResource("8_4hu3u")
-region = Rect2(197, 972, 181, 190)
+region = Rect2(810, 972, 181, 190)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sh8bf"]
 atlas = ExtResource("8_4hu3u")
-region = Rect2(197, 972, 181, 190)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6cj5g"]
-atlas = ExtResource("8_4hu3u")
-region = Rect2(197, 972, 181, 190)
+region = Rect2(401, 972, 181, 190)
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3
@@ -160,6 +151,8 @@ offset_right = 185.0
 offset_bottom = 236.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_eqg1o")
 text = "1"
 
@@ -171,6 +164,8 @@ offset_right = 401.0
 offset_bottom = 236.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_vtqlk")
 text = "2
 "
@@ -183,6 +178,8 @@ offset_right = 637.0
 offset_bottom = 236.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_cir3e")
 text = "3"
 
@@ -194,6 +191,8 @@ offset_right = 841.0
 offset_bottom = 233.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_tqpso")
 text = "4"
 
@@ -205,6 +204,8 @@ offset_right = 183.0
 offset_bottom = 348.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ugusr")
 text = "5"
 
@@ -216,6 +217,8 @@ offset_right = 402.0
 offset_bottom = 349.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_mcxre")
 text = "6"
 
@@ -227,17 +230,21 @@ offset_right = 637.0
 offset_bottom = 350.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_yku54")
 text = "7"
 
 [node name="btnlv8" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 695.0
+offset_left = 696.0
 offset_top = 235.5
-offset_right = 839.0
+offset_right = 840.0
 offset_bottom = 347.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_qwbve")
 text = "8"
 
@@ -249,6 +256,8 @@ offset_right = 183.0
 offset_bottom = 463.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_kfdx2")
 text = "9"
 
@@ -260,6 +269,8 @@ offset_right = 405.0
 offset_bottom = 465.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_xios8")
 text = "10
 "
@@ -272,6 +283,8 @@ offset_right = 638.0
 offset_bottom = 463.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_t3p1c")
 text = "11
 "
@@ -284,6 +297,8 @@ offset_right = 840.0
 offset_bottom = 462.5
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_bpt75")
 text = "12"
 
@@ -295,10 +310,8 @@ offset_right = 655.0
 offset_bottom = 837.0
 scale = Vector2(0.2, 0.2)
 texture_normal = SubResource("AtlasTexture_bsgdq")
-texture_pressed = SubResource("AtlasTexture_i1mc2")
-texture_hover = SubResource("AtlasTexture_eqg1o")
-texture_disabled = SubResource("AtlasTexture_vtqlk")
-texture_focused = SubResource("AtlasTexture_cir3e")
+texture_pressed = SubResource("AtlasTexture_4hu3u")
+texture_hover = SubResource("AtlasTexture_va4dp")
 stretch_mode = 0
 
 [node name="NextButton" type="TextureButton" parent="."]
@@ -309,10 +322,8 @@ offset_right = 1610.0
 offset_bottom = 855.0
 scale = Vector2(0.2, 0.2)
 texture_normal = SubResource("AtlasTexture_fl6s6")
-texture_pressed = SubResource("AtlasTexture_va4dp")
-texture_hover = SubResource("AtlasTexture_31p20")
-texture_disabled = SubResource("AtlasTexture_sh8bf")
-texture_focused = SubResource("AtlasTexture_6cj5g")
+texture_pressed = SubResource("AtlasTexture_31p20")
+texture_hover = SubResource("AtlasTexture_sh8bf")
 stretch_mode = 0
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
