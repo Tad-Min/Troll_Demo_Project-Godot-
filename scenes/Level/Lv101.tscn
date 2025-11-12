@@ -1446,7 +1446,7 @@ trap_spawn_rot = 180.0
 activate_after = [NodePath("../Troll1_Area2D2")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Traps/Troll1/Troll1_Area2D"]
-position = Vector2(26.25, 259.5)
+position = Vector2(133, 260)
 shape = SubResource("RectangleShape2D_yde71")
 
 [node name="Troll1_Area2D2" type="Area2D" parent="Map/Traps/Troll1" node_paths=PackedStringArray("Map", "activate_after")]
@@ -1514,7 +1514,7 @@ trap_spawn_rot = 180.0
 activate_after = [NodePath("../Troll2_Area2D2")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Traps/Troll2/Troll2_Area2D"]
-position = Vector2(391.25, 257)
+position = Vector2(502, 257)
 shape = SubResource("RectangleShape2D_yr688")
 
 [node name="Troll2_Area2D2" type="Area2D" parent="Map/Traps/Troll2" node_paths=PackedStringArray("Map", "activate_after")]
@@ -1537,9 +1537,8 @@ shape = SubResource("RectangleShape2D_6l4b0")
 position = Vector2(0, 232)
 script = ExtResource("7_wuidw")
 Map = NodePath("..")
-move_distance = 80.0
-direction = Vector2(0, 1)
-move_duration = 0.5
+move_distance = 176.0
+move_duration = 0.6
 trap_spawn_pos = Vector2(256, 596)
 trap_spawn_rot = 180.0
 waiting = true
@@ -1554,14 +1553,32 @@ shape = SubResource("RectangleShape2D_6l4b0")
 position = Vector2(0, 232)
 script = ExtResource("7_wuidw")
 Map = NodePath("..")
-move_distance = 160.0
+move_distance = 16.0
+direction = Vector2(-1, 0)
+move_duration = 0.5
+trap_spawn_pos = Vector2(256, 596)
+trap_spawn_rot = 180.0
+waiting = true
+activate_after = [NodePath("../Troll2_Area2D5")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Traps/Troll2/Troll2_Area2D4"]
+visible = false
+position = Vector2(596.5, 350.5)
+shape = SubResource("RectangleShape2D_6l4b0")
+
+[node name="Troll2_Area2D5" type="Area2D" parent="Map/Traps/Troll2" node_paths=PackedStringArray("Map", "activate_after")]
+position = Vector2(0, 232)
+script = ExtResource("7_wuidw")
+Map = NodePath("..")
+move_distance = 80.0
+direction = Vector2(0, 1)
 move_duration = 0.5
 trap_spawn_pos = Vector2(256, 596)
 trap_spawn_rot = 180.0
 waiting = true
 activate_after = [NodePath("../Troll2_Area2D")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Traps/Troll2/Troll2_Area2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Traps/Troll2/Troll2_Area2D5"]
 visible = false
 position = Vector2(596.5, 350.5)
 shape = SubResource("RectangleShape2D_6l4b0")
