@@ -2,7 +2,7 @@ extends Node
 
 const CURRENT_VERSION = "1.0.1"  # phiên bản trong file .apk hiện tại
 const VERSION_URL = "https://raw.githubusercontent.com/Tad-Min/Troll_Demo_Project-Godot-/main/Export_file/version.txt"
-const UPDATE_URL = "https://raw.githubusercontent.com/Tad-Min/Troll_Demo_Project-Godot-/main/Export_file/Game_Troll_Vi_en_lastest.pck"
+const UPDATE_URL = "https://drive.google.com/uc?export=download&confirm=t&id=1KbSPYN9SrUOCrbjlK1JyEWynAt6PgNF1"
 const LOCAL_PCK_PATH = "user://Game_Troll_Vi_en_lastest.pck"
 
 var http := HTTPRequest.new()
@@ -69,10 +69,21 @@ func _on_download_progress(downloaded, total):
 
 
 func _on_pck_downloaded(result, response_code, headers, body):
+	if response_code == 303:  # Xử lý chuyển hướng
+		for header in headers:
+			if header.begins_with("Location:"):
+				var redirect_url = header.split(": ")[1]
+				print("🔄 Redirecting to:", redirect_url)
+				http_download.request(redirect_url)
+				return
+
 	if response_code == 200:
 		print("✅ Update downloaded successfully!")
-		if status_label:
-			status_label.text = "📦 Đang lưu bản cập nhật..."
+		if body.size() < 1024 * 1024:  # Kiểm tra nếu file quá nhỏ (dưới 1MB)
+			print("❌ File quá nhỏ, có thể không hợp lệ.")
+			if status_label:
+				status_label.text = "❌ File tải về không hợp lệ."
+		return
 		
 		var file = FileAccess.open(LOCAL_PCK_PATH, FileAccess.WRITE)
 		file.store_buffer(body)
