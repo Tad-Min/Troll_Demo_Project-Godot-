@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://2dksvogo6exi"]
+[gd_scene load_steps=18 format=3 uid="uid://c8nthwa52p4i8"]
 
 [ext_resource type="Script" uid="uid://dfue1nrnn2mwp" path="res://scripts/UI_Scripts/select_level_3.gd" id="1_0i7vj"]
 [ext_resource type="Shader" uid="uid://chfkq82vmvjuu" path="res://scenes/SelectLevel2.gdshader" id="2_xtuwv"]
@@ -102,6 +102,160 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
 theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
 text = "25
+"
+
+[node name="btnlv26" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 122.0
+offset_right = 403.0
+offset_bottom = 234.0
+theme_override_fonts/font = ExtResource("5_lpat8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
+text = "26
+"
+
+[node name="btnlv27" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 124.0
+offset_right = 626.0
+offset_bottom = 236.0
+theme_override_fonts/font = ExtResource("5_lpat8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
+text = "27
+"
+
+[node name="btnlv28" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 692.0
+offset_top = 122.0
+offset_right = 836.0
+offset_bottom = 234.0
+theme_override_fonts/font = ExtResource("5_lpat8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
+text = "28
+"
+
+[node name="btnlv29" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 237.0
+offset_right = 184.0
+offset_bottom = 349.0
+theme_override_fonts/font = ExtResource("5_lpat8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
+text = "29
+"
+
+[node name="btnlv30" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 239.0
+offset_right = 405.0
+offset_bottom = 351.0
+theme_override_fonts/font = ExtResource("5_lpat8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
+text = "30
+"
+
+[node name="btnlv31" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 239.0
+offset_right = 626.0
+offset_bottom = 351.0
+theme_override_fonts/font = ExtResource("5_lpat8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
+text = "31
+"
+
+[node name="btnlv32" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 694.0
+offset_top = 236.0
+offset_right = 838.0
+offset_bottom = 348.0
+theme_override_fonts/font = ExtResource("5_lpat8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
+text = "32
+"
+
+[node name="btnlv33" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 355.0
+offset_right = 181.0
+offset_bottom = 467.0
+theme_override_fonts/font = ExtResource("5_lpat8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
+text = "33
+"
+
+[node name="btnlv34" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 357.0
+offset_right = 403.0
+offset_bottom = 469.0
+theme_override_fonts/font = ExtResource("5_lpat8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
+text = "34
+"
+
+[node name="btnlv35" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 355.0
+offset_right = 627.0
+offset_bottom = 467.0
+theme_override_fonts/font = ExtResource("5_lpat8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
+text = "35
+"
+
+[node name="btnlv36" type="Button" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 696.0
+offset_top = 352.0
+offset_right = 840.0
+offset_bottom = 464.0
+theme_override_fonts/font = ExtResource("5_lpat8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
+text = "36
 "
 
 [node name="btnBack" type="TextureButton" parent="."]
