@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://04hialep0hmr"]
+[gd_scene load_steps=34 format=4 uid="uid://04hialep0hmr"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="1_7480m"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://assets/Jungle Asset Pack/parallax background/plx-1.png" id="2_sj8k2"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://cw4fn4v8deieh" path="res://scripts/Level/LV26/trap_4.gd" id="15_00ops"]
 [ext_resource type="PackedScene" uid="uid://vh566w0ipk3h" path="res://scenes/Trap/Jumper.tscn" id="15_sj8k2"]
 [ext_resource type="Script" uid="uid://bxay7vsmw0iai" path="res://scripts/Level/LV26/trap_5.gd" id="16_38fgt"]
+[ext_resource type="PackedScene" uid="uid://5hygm82fy168" path="res://scenes/GameSceneUI/Pause.tscn" id="20_3ms34"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_clusc"]
 texture = ExtResource("8_gr66k")
@@ -2659,5 +2660,9 @@ visible = false
 [node name="Jumper2" parent="." instance=ExtResource("15_sj8k2")]
 position = Vector2(728, 520)
 jump_force = 900.0
+
+[node name="Pause_canva" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="Pause_canva" instance=ExtResource("20_3ms34")]
 
 [editable path="Player"]

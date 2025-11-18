@@ -14,9 +14,9 @@ extends Control
 func _ready() -> void:
 	btn_lv25.pressed.connect(func(): _on_choose_level(25))
 	btn_lv26.pressed.connect(func(): _on_choose_level(26))
-	btn_lv27.pressed.connect(_on_any_button_pressed)
+	btn_lv27.pressed.connect(func(): _on_choose_level(27))
 	btn_lv28.pressed.connect(_on_any_button_pressed)
-	btn_lv29.pressed.connect(_on_any_button_pressed)
+	btn_lv29.pressed.connect(func(): _on_choose_level(29))
 	btn_lv30.pressed.connect(_on_any_button_pressed)
 	btn_lv31.pressed.connect(_on_any_button_pressed)
 	btn_lv32.pressed.connect(_on_any_button_pressed)
