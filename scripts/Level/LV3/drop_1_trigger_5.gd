@@ -10,4 +10,5 @@ func start() -> void:
 	set_process(true)
 	set_physics_process(true)
 	visible = true;
+	moving_forward = true
 	
