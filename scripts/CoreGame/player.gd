@@ -148,3 +148,8 @@ func stop_move_1_sec() -> void:
 	stopmove = true
 	await get_tree().create_timer(0.3).timeout
 	stopmove = false
+
+#buffs
+func air_jump_buff() -> bool:
+	MAX_AIR_JUMPS=MAX_AIR_JUMPS+1
+	return true
