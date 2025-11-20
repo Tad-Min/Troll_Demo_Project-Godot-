@@ -1507,6 +1507,7 @@ speedScale = 1.0
 metadata/_edit_lock_ = true
 
 [node name="SpikeSimple3" parent="." instance=ExtResource("6_ra20u")]
+visible = false
 position = Vector2(680, 296)
 metadata/_edit_lock_ = true
 
