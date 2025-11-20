@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1c7s53lus6sa"]
+
+[ext_resource type="Texture2D" uid="uid://ddjejodwjabbl" path="res://assets/Graphics&Sprites/airjump.png" id="1_pceac"]
+[ext_resource type="Script" uid="uid://75otseuhgr2a" path="res://scripts/BuffItems/air_jump_buff.gd" id="2_26tpi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pceac"]
+size = Vector2(24, 26)
+
+[node name="AirJumpBuff" type="Node2D"]
+
+[node name="Airjump" type="Sprite2D" parent="."]
+position = Vector2(7.62939e-06, 0)
+scale = Vector2(0.123116, 0.123116)
+texture = ExtResource("1_pceac")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_26tpi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_pceac")
