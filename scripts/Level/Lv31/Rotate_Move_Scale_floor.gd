@@ -62,8 +62,6 @@ func Move() -> bool:
 		position.x += speedMove
 	else:
 		position.x = newPosition.x
-		isMove = false
-		return true
 	
 	if (myLY < 0) and (myLY < -speedScale):
 		position.y -= speedMove
@@ -71,8 +69,11 @@ func Move() -> bool:
 		position.y += speedMove
 	else:
 		position.y = newPosition.y
+		
+	if position.y == newPosition.y and position.x == newPosition.x:
 		isMove = false
 		return true
+	
 	return false
 	
 	
