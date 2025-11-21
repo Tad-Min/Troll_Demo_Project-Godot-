@@ -1,4 +1,5 @@
 extends Node2D
+signal buttonActivated
 var isActive := false
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -6,3 +7,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		$AnimatedSprite2D.play("default")
 		$Button.play()
 		isActive = true
+		emit_signal("buttonActivated")
