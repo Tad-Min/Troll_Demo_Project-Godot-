@@ -20,6 +20,10 @@ var last_direction = 0
 var is_dead: bool = false
 var air_jump_done = 0
 var stopmove: bool = false;
+var pushback_active: bool = false
+var pushback_target_velocity: Vector2 = Vector2.ZERO
+var pushback_accel: float = 0.0
+var pushback_require_ground: bool = true
 
 func get_jump_velocity() -> float:
 	if gravity_inverted:
@@ -119,6 +123,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
+	if pushback_active:
+		if not pushback_require_ground or is_on_ground():
+			velocity = velocity.move_toward(pushback_target_velocity, pushback_accel * delta)
+
 	#animation reset after jump
 	if is_on_ground() and jump_charge==min_jc:
 		last_direction = null
@@ -159,3 +167,17 @@ func stop_move_1_sec() -> void:
 func air_jump_buff() -> bool:
 	MAX_AIR_JUMPS=MAX_AIR_JUMPS+1
 	return true
+
+func set_pushback_force(target_velocity: Vector2, accel: float, require_ground: bool = true) -> void:
+	pushback_active = true
+	pushback_target_velocity = target_velocity
+	pushback_accel = accel
+	pushback_require_ground = require_ground
+
+func clear_pushback_force() -> void:
+	pushback_active = false
+	pushback_target_velocity = Vector2.ZERO
+	pushback_accel = 0.0
+
+func apply_pushback_impulse(impulse: Vector2) -> void:
+	velocity += impulse
