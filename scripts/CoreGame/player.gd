@@ -10,6 +10,7 @@ signal died(cause: String)
 @export var min_jc = 0.75
 @export var max_jc = 1.25
 @export var MAX_AIR_JUMPS = 1   # only 1 allowed in air by default
+@export var jumper_stun = false
 
 #event handling variables
 var jump_charge = min_jc
@@ -146,7 +147,12 @@ func die(cause: String = "trap") -> bool:
 
 func stop_move_1_sec() -> void:
 	stopmove = true
-	await get_tree().create_timer(0.3).timeout
+	if jumper_stun:
+		if last_direction == 1:
+			$AnimatedSprite2D.play("charge_right")
+		else: 
+			$AnimatedSprite2D.play("charge_left");
+	await get_tree().create_timer(0.4).timeout
 	stopmove = false
 
 #buffs

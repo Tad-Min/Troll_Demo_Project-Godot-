@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://hxcmp2d815ge"]
+[gd_scene load_steps=29 format=4 uid="uid://hxcmp2d815ge"]
 
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="1_i1dmc"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="2_vr3dx"]
@@ -9,6 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://dv88dh8mekb3q" path="res://scenes/Trap/Floor_troll/spike_floor_troll.tscn" id="7_yde71"]
 [ext_resource type="Script" uid="uid://4bbeyokdu0i0" path="res://scripts/Level/Lv12/map_default.gd" id="8_yr688"]
 [ext_resource type="Script" uid="uid://diwc227aqmnfd" path="res://scenes/Trap/On_Off_Path/Trigger_on.gd" id="9_i1dmc"]
+[ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="10_l75s7"]
+[ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://assets/Jungle Asset Pack/parallax background/plx-1.png" id="11_wuidw"]
+[ext_resource type="Texture2D" uid="uid://descvt2cpevhr" path="res://assets/Jungle Asset Pack/parallax background/plx-2.png" id="12_0blae"]
+[ext_resource type="Texture2D" uid="uid://dxbd45vbvo4a2" path="res://assets/Jungle Asset Pack/parallax background/plx-4.png" id="13_33vnf"]
+[ext_resource type="Texture2D" uid="uid://d3xgijnl3lvhn" path="res://assets/Jungle Asset Pack/parallax background/plx-5.png" id="14_ba05s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trgvg"]
 texture = ExtResource("5_1cpke")
@@ -1782,5 +1787,80 @@ path_node = NodePath("..")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/HiddenMap/Hidden3/Area2D"]
 position = Vector2(944, 824.25)
 shape = SubResource("RectangleShape2D_l75s7")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -1
+offset_left = -15.0
+offset_top = 285.0
+offset_right = 794.0
+offset_bottom = 762.0
+scale = Vector2(1.6, 1.6)
+script = ExtResource("10_l75s7")
+metadata/_edit_group_ = true
+
+[node name="Bg_layer1" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -108.0
+offset_right = 152.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_wuidw")
+
+[node name="Bg_layer2" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -108.0
+offset_right = 152.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_0blae")
+
+[node name="Bg_layer3" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -108.0
+offset_right = 152.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_0blae")
+
+[node name="Bg_layer4" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -108.0
+offset_right = 152.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_33vnf")
+
+[node name="Bg_layer5" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -108.0
+offset_right = 152.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_ba05s")
 
 [editable path="Player"]

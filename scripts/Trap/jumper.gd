@@ -4,8 +4,9 @@ extends Node2D
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
+		visible=true
 		body.is_on_jumper = true
-		
+		body.stop_move_1_sec()
 		var dir: Vector2 = -global_transform.y.normalized()
 		body.velocity = dir * jump_force
 		body.air_jump_done = 0

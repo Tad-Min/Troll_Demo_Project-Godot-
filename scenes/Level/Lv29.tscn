@@ -862,7 +862,6 @@ jump_force = 2000.0
 [node name="Spike" parent="." instance=ExtResource("15_8whmc")]
 position = Vector2(1051, 459)
 rotation = -3.12576
-scale = Vector2(1, 1)
 
 [node name="Spike2" parent="." instance=ExtResource("15_8whmc")]
 position = Vector2(1051, 588)
