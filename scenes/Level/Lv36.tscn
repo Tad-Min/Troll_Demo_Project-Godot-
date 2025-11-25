@@ -1484,6 +1484,7 @@ metadata/_edit_lock_ = true
 
 [node name="Portal" parent="." instance=ExtResource("11_77hae")]
 position = Vector2(576, 160)
+next_level = 37
 
 [node name="Trap1" type="Area2D" parent="."]
 position = Vector2(144, 288)
