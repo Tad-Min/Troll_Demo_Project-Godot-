@@ -813,17 +813,14 @@ scale = Vector2(0.999908, 1.49074)
 [node name="Spike3" parent="Spike" instance=ExtResource("10_fnl82")]
 position = Vector2(-61.9993, -0.30323)
 rotation = 0.00262845
-scale = Vector2(1, 1)
 
 [node name="Spike2" parent="Spike" instance=ExtResource("10_fnl82")]
 position = Vector2(62.9993, 0.308098)
 rotation = -0.000118255
-scale = Vector2(1, 1)
 
 [node name="Spike4" parent="Spike" instance=ExtResource("10_fnl82")]
 position = Vector2(124.003, -0.393539)
 rotation = -0.000118255
-scale = Vector2(1, 1)
 
 [node name="Spike3" parent="." instance=ExtResource("10_fnl82")]
 position = Vector2(123, 158)
@@ -833,17 +830,14 @@ scale = Vector2(0.999635, 1.49784)
 [node name="Spike3" parent="Spike3" instance=ExtResource("10_fnl82")]
 position = Vector2(-61.9993, -0.30323)
 rotation = 0.00262845
-scale = Vector2(1, 1)
 
 [node name="Spike2" parent="Spike3" instance=ExtResource("10_fnl82")]
 position = Vector2(62.9993, 0.308098)
 rotation = -0.000118255
-scale = Vector2(1, 1)
 
 [node name="Spike4" parent="Spike3" instance=ExtResource("10_fnl82")]
 position = Vector2(124.003, -0.393539)
 rotation = -0.000118255
-scale = Vector2(1, 1)
 
 [node name="Spike4" parent="." instance=ExtResource("10_fnl82")]
 position = Vector2(136, 413)
@@ -853,22 +847,18 @@ scale = Vector2(0.999809, 1.24229)
 [node name="Spike3" parent="Spike4" instance=ExtResource("10_fnl82")]
 position = Vector2(-61.9993, -0.30323)
 rotation = 0.00262845
-scale = Vector2(1, 1)
 
 [node name="Spike2" parent="Spike4" instance=ExtResource("10_fnl82")]
 position = Vector2(62.9993, 0.308098)
 rotation = -0.000118255
-scale = Vector2(1, 1)
 
 [node name="Spike4" parent="Spike4" instance=ExtResource("10_fnl82")]
 position = Vector2(124.003, -0.393539)
 rotation = -0.000118255
-scale = Vector2(1, 1)
 
 [node name="Spike5" parent="Spike4" instance=ExtResource("10_fnl82")]
 position = Vector2(-122.997, 0.895654)
 rotation = -0.000118255
-scale = Vector2(1, 1)
 
 [node name="Spike2" parent="." instance=ExtResource("10_fnl82")]
 position = Vector2(80, 361)
@@ -878,17 +868,14 @@ scale = Vector2(1.01268, 1.36754)
 [node name="Spike3" parent="Spike2" instance=ExtResource("10_fnl82")]
 position = Vector2(-61.9993, -0.30323)
 rotation = 0.00262845
-scale = Vector2(1, 1)
 
 [node name="Spike2" parent="Spike2" instance=ExtResource("10_fnl82")]
 position = Vector2(62.9993, 0.308098)
 rotation = -0.000118255
-scale = Vector2(1, 1)
 
 [node name="Spike4" parent="Spike2" instance=ExtResource("10_fnl82")]
 position = Vector2(124.003, -0.393539)
 rotation = -0.000118255
-scale = Vector2(1, 1)
 
 [node name="Spear" parent="." instance=ExtResource("12_hcnc5")]
 position = Vector2(113, 555)
