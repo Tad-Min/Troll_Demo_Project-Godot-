@@ -20,6 +20,10 @@ extends Area2D
 	## VN: Khi >0, thời gian tween = độ dài dịch chuyển / tốc độ này.
 	## EN: When >0, tween duration becomes shift distance / this speed.
 
+@export var start_hidden: bool = false
+	## VN: Nếu bật, các spike sẽ bị ẩn & tắt va chạm cho tới khi trigger chạy.
+	## EN: When true, hide/disable the spikes until the prank is triggered.
+
 var _has_triggered := false
 	## VN: Đảm bảo troll chỉ xảy ra một lần.
 	## EN: Makes sure the prank only runs once.
@@ -36,6 +40,8 @@ func _ready() -> void:
 		var spike := get_node_or_null(path)
 		if spike:
 			_spike_refs.append(spike)
+			if start_hidden:
+				_set_spike_hidden(spike, true)
 		else:
 			push_warning("SpikeShiftTrigger: Không tìm thấy node cho đường dẫn %s" % path)
 
@@ -62,6 +68,25 @@ func _troll_player() -> void:
 	for spike in _spike_refs:
 		if not is_instance_valid(spike):
 			continue
+		if start_hidden:
+			_set_spike_hidden(spike, false)
 		var tween := create_tween()
 		tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 		tween.tween_property(spike, "position", spike.position + shift_offset, target_duration)
+
+
+func _set_spike_hidden(spike: Node, hidden: bool) -> void:
+	## VN/EN: Ẩn/hiện spike và tắt/bật mọi collider con.
+	if spike is CanvasItem:
+		(spike as CanvasItem).visible = not hidden
+	if spike is Area2D:
+		var area := spike as Area2D
+		area.monitoring = not hidden
+		area.monitorable = not hidden
+	elif spike is PhysicsBody2D:
+		# Với PhysicsBody2D chỉ cần vô hiệu hóa collider con.
+		spike.set_physics_process(not hidden)
+	if spike is CollisionShape2D or spike is CollisionPolygon2D:
+		spike.set_deferred("disabled", hidden)
+	for child in spike.get_children():
+		_set_spike_hidden(child, hidden)
