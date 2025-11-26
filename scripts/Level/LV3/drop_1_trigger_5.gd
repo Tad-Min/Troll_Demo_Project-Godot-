@@ -1,6 +1,7 @@
 extends "res://scripts/Trap/floor_trap.gd"
 
 func _ready() -> void:
+	super()
 	start_position = position
 	set_process(false)
 	set_physics_process(false)
