@@ -2,6 +2,9 @@ extends RigidBody2D
 
 @export var roll_torque: float = 1000.0
 @export var stick_force: float = 50.0
+@export var y_jumpforce: float = -400
+@export var x_jumpforce: float = 100
+
 
 func _ready() -> void:
 	connect("body_entered", Callable(self, "_on_body_entered"))
@@ -27,3 +30,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	var result = space_state.intersect_ray(query)
 	if result:
 		apply_central_force(Vector2(0, stick_force))
+		
+func _jump() ->void:
+	linear_velocity.y += y_jumpforce
+	linear_velocity.x += x_jumpforce

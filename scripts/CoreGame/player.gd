@@ -164,8 +164,8 @@ func stop_move_1_sec() -> void:
 	stopmove = false
 
 #buffs
-func air_jump_buff() -> bool:
-	MAX_AIR_JUMPS=MAX_AIR_JUMPS+1
+func air_jump_buff( x : int) -> bool:
+	MAX_AIR_JUMPS=MAX_AIR_JUMPS + x
 	return true
 
 func set_pushback_force(target_velocity: Vector2, accel: float, require_ground: bool = true) -> void:
