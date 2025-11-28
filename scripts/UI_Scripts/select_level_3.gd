@@ -14,7 +14,8 @@ extends Control
 func _ready() -> void:
 	btn_lv25.pressed.connect(func(): _on_choose_level(25))
 	btn_lv26.pressed.connect(func(): _on_choose_level(26))
-	btn_lv27.pressed.connect(func(): _on_choose_level(27))
+<<<<<<< Updated upstream
+	btn_lv27.pressed.connect(_on_any_button_pressed)
 	btn_lv28.pressed.connect(_on_any_button_pressed)
 	btn_lv29.pressed.connect(func(): _on_choose_level(29))
 	btn_lv30.pressed.connect(_on_any_button_pressed)
@@ -24,6 +25,18 @@ func _ready() -> void:
 	btn_lv34.pressed.connect(_on_any_button_pressed)
 	btn_lv35.pressed.connect(_on_any_button_pressed)
 	btn_lv36.pressed.connect(_on_any_button_pressed)
+=======
+	btn_lv27.pressed.connect(func(): _on_choose_level(27))
+	btn_lv28.pressed.connect(func(): _on_choose_level(28))
+	btn_lv29.pressed.connect(func(): _on_choose_level(29))
+	btn_lv30.pressed.connect(func(): _on_choose_level(30))
+	btn_lv31.pressed.connect(func(): _on_choose_level(31))
+	btn_lv32.pressed.connect(func(): _on_choose_level(32))
+	btn_lv33.pressed.connect(func(): _on_choose_level(33))
+	btn_lv34.pressed.connect(func(): _on_choose_level(34))
+	btn_lv35.pressed.connect(func(): _on_choose_level(35))
+	btn_lv36.pressed.connect(func(): _on_choose_level(36))
+>>>>>>> Stashed changes
 func _on_choose_level(lv: int) -> void:
 	GameData.current_level = lv - 1
 	get_tree().change_scene_to_file("res://scenes/Level/Lv%d.tscn" % lv)
@@ -32,3 +45,5 @@ func _on_any_button_pressed() -> void:
 
 func _on_btn_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/GameSceneUI/SelectLevel2.tscn")
+func _on_next_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/GameSceneUI/SelectLevel4.tscn")
