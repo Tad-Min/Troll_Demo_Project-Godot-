@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=18 format=3 uid="uid://c8nthwa52p4i8"]
-=======
 [gd_scene load_steps=21 format=3 uid="uid://2dksvogo6exi"]
->>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://dfue1nrnn2mwp" path="res://scripts/UI_Scripts/select_level_3.gd" id="1_0i7vj"]
 [ext_resource type="Shader" uid="uid://chfkq82vmvjuu" path="res://scenes/SelectLevel2.gdshader" id="2_xtuwv"]
@@ -298,3 +294,4 @@ texture_hover = SubResource("AtlasTexture_0iogr")
 stretch_mode = 0
 
 [connection signal="pressed" from="btnBack" to="." method="_on_btn_back_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
