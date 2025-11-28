@@ -2197,7 +2197,7 @@ current_level = 38
 [node name="MusicBackground" parent="." instance=ExtResource("3_ue8i4")]
 
 [node name="Player" parent="." instance=ExtResource("1_8vb6g")]
-position = Vector2(995, 440)
+position = Vector2(88, 110)
 
 [node name="Portal" parent="." instance=ExtResource("5_p8e50")]
 position = Vector2(1104, 577)

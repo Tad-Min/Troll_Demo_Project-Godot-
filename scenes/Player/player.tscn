@@ -307,7 +307,6 @@ limit_bottom = 649
 [node name="deathcount_canva" parent="." instance=ExtResource("6_tuyoq")]
 
 [node name="Pause_canva" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Pause" parent="Pause_canva" instance=ExtResource("8_wwtew")]
 
