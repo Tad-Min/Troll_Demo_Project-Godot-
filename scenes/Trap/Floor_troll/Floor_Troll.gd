@@ -75,7 +75,7 @@ func _start_trigger_sequence() -> void:
 		"position",
 		target_position,
 		move_duration
-	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
 
 	await tween.finished
 

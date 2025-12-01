@@ -717,7 +717,7 @@ size = Vector2(29.75, 122.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1omaq"]
 size = Vector2(29.75, 202)
 
-[node name="Lv28" type="Node2D"]
+[node name="Lv37" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_q2omn")]
 position = Vector2(-41, 678)

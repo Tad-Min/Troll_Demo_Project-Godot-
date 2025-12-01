@@ -59,7 +59,7 @@ func _start_trigger_sequence() -> void:
 
 	# 🎬 Create tween for movement + rotation
 	var tween := create_tween()
-	tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	tween.set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
 	
 	tween.tween_property(Map, "position", destination, move_duration)
 	tween.parallel().tween_property(Map, "rotation_degrees", rotation_destination, move_duration)
