@@ -11,6 +11,7 @@ signal died(cause: String)
 @export var max_jc = 1.25
 @export var MAX_AIR_JUMPS = 1   # only 1 allowed in air by default
 @export var jumper_stun = false
+@export var invincible = false
 
 #event handling variables
 var jump_charge = min_jc
@@ -145,6 +146,8 @@ func _physics_process(delta: float) -> void:
 
 
 func die(cause: String = "trap") -> bool:
+	if invincible:
+		return true
 	is_dead = true
 	velocity.y = get_jump_velocity()
 	$DeathSound.play()
