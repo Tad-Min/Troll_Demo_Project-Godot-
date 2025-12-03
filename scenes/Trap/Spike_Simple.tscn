@@ -8,7 +8,7 @@ atlas = ExtResource("1_hw87m")
 region = Rect2(0, 0, 19, 28)
 
 [node name="SpikeSimple" type="Node2D"]
-z_index = -1
+z_index = 1
 script = ExtResource("1_uli81")
 
 [node name="SpikeSimple" type="Sprite2D" parent="."]
