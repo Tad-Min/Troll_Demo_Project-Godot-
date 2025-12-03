@@ -20,6 +20,14 @@ extends Area2D
 	## VN: Khi >0, thời gian tween = độ dài dịch chuyển / tốc độ này.
 	## EN: When >0, tween duration becomes shift distance / this speed.
 
+@export var return_after_delay: bool = false
+	## VN: Nếu bật, spike sẽ quay lại vị trí cũ sau một khoảng trễ.
+	## EN: When true, spikes will return to their original positions after a delay.
+
+@export var return_delay_sec: float = 2.0
+	## VN: Thời gian chờ trước khi spike quay lại (giây).
+	## EN: Delay before the spikes move back (seconds).
+
 @export var start_hidden: bool = false
 	## VN: Nếu bật, các spike sẽ bị ẩn & tắt va chạm cho tới khi trigger chạy.
 	## EN: When true, hide/disable the spikes until the prank is triggered.
@@ -31,6 +39,9 @@ var _has_triggered := false
 var _spike_refs: Array[Node2D] = []
 	## VN/EN: Bộ nhớ cache cho các spike thực tế để tránh phải get_node nhiều lần.
 
+var _original_positions: Dictionary = {}
+	## VN/EN: Lưu vị trí ban đầu của từng spike để có thể trả lại sau khi troll.
+
 
 func _ready() -> void:
 	## VN: Lưu lại các tham chiếu ngay khi node sẵn sàng.
@@ -40,6 +51,8 @@ func _ready() -> void:
 		var spike := get_node_or_null(path)
 		if spike:
 			_spike_refs.append(spike)
+			if spike is Node2D:
+				_original_positions[spike] = (spike as Node2D).position
 			if start_hidden:
 				_set_spike_hidden(spike, true)
 		else:
@@ -70,9 +83,18 @@ func _troll_player() -> void:
 			continue
 		if start_hidden:
 			_set_spike_hidden(spike, false)
+
+		var start_pos := spike.position
+		var target_pos := start_pos + shift_offset
+
 		var tween := create_tween()
 		tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-		tween.tween_property(spike, "position", spike.position + shift_offset, target_duration)
+		tween.tween_property(spike, "position", target_pos, target_duration)
+
+		if return_after_delay:
+			var original_pos: Vector2 = _original_positions.get(spike, start_pos)
+			tween.tween_interval(max(return_delay_sec, 0.0))
+			tween.tween_property(spike, "position", original_pos, target_duration)
 
 
 func _set_spike_hidden(spike: Node, hidden: bool) -> void:
