@@ -1673,29 +1673,5 @@ current_level = 43
 [node name="Player" parent="." instance=ExtResource("18_wqq4i")]
 position = Vector2(216, 200)
 
-[node name="AnimatedSprite2D" parent="Player" index="0"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="Player" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="ProgressBar" parent="Player" index="4"]
-visible = false
-metadata/_edit_lock_ = true
-
-[node name="Camera2D" parent="Player" index="5"]
-metadata/_edit_lock_ = true
-
-[node name="MobileControls" parent="Player" index="6"]
-visible = false
-
-[node name="Pause_canva" parent="Player" index="8"]
-visible = false
-
-[node name="Pause" parent="Player/Pause_canva" index="0"]
-visible = false
-metadata/_edit_lock_ = true
-
 [editable path="Tele2"]
 [editable path="Trap_1/Move/Tele"]
-[editable path="Player"]
