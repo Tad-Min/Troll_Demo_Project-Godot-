@@ -11,7 +11,6 @@ func _ready() -> void:
 func _on_body_entered(body: Node) -> void:
 	# Check if body is CharacterBody2D or RigidBody2D (Player types)
 	if body and (body.is_in_group("Player") or body.name == "Player" or "Player" in body.name):
-		print("Key collected! Total keys: ", GameData.keys_collected + 1)
-		GameData.add_key()
+		GameData.collect_key()
 		# Remove the entire key node (parent of Area2D)
 		get_parent().queue_free()

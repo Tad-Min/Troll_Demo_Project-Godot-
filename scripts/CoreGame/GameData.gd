@@ -36,6 +36,7 @@ var total_deaths: int = 0
 # Keys collected for unlocking Lv46 (need 3 keys from 45 levels)
 var keys_collected: int = 0
 var keys_required_for_lv46: int = 3
+var pending_keys: int = 0
 
 # UI: per-level gem counter (transient, not persisted)
 signal gem_count_changed(current: int, required: int)
@@ -51,19 +52,30 @@ func add_gem() -> void:
 	gem_current += 1
 	emit_signal("gem_count_changed", gem_current, gem_required)
 
-# Add key for unlocking Lv46
-func add_key() -> void:
-	keys_collected += 1
-	keys_collected = min(keys_collected, keys_required_for_lv46)
+# Register a key pickup inside the current level. Only committed on level completion.
+func collect_key() -> void:
+	pending_keys += 1
+
+# Transfer pending keys (from this run) into the persistent counter.
+func commit_pending_keys() -> void:
+	if pending_keys <= 0:
+		return
+	keys_collected = min(keys_collected + pending_keys, keys_required_for_lv46)
+	pending_keys = 0
 	save_progress()
 
 # Check if Lv46 can be unlocked
 func can_unlock_lv46() -> bool:
 	return keys_collected >= keys_required_for_lv46
 
+# Clear any keys collected in the current unfinished run.
+func reset_pending_keys() -> void:
+	pending_keys = 0
+
 # Reset keys for testing
 func reset_keys() -> void:
 	keys_collected = 0
+	pending_keys = 0
 	save_progress()
 
 func _ready() -> void:
@@ -72,6 +84,7 @@ func _ready() -> void:
 	else:
 		if not load_progress():
 			reset_progress()
+	pending_keys = 0
 	for i in range(LvSize):
 		Levels[i].mapId = i+1
 
@@ -82,6 +95,7 @@ func reset_progress():
 		Levels.append(Level.new(i == 0, 0))  # Level 0 unlock
 	current_level = 0
 	keys_collected = 0
+	pending_keys = 0
 	save_progress()
 
 # Unlock stage by index
@@ -137,5 +151,6 @@ func load_progress() -> bool:
 			# Load keys collected
 			if data.has("keys_collected"):
 				keys_collected = data["keys_collected"]
+			pending_keys = 0
 			return true
 	return false

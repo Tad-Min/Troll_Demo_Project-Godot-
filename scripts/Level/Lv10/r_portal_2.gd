@@ -25,6 +25,7 @@ func _on_body_entered(body):
 
 	if is_real:
 		emit_signal("player_entered")
+		GameData.commit_pending_keys()
 		GameData.current_level = max(0, next_level - 1)
 		GameData.unlock_level(GameData.current_level)
 		GameData.save_progress()

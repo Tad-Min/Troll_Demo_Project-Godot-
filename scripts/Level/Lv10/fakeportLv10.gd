@@ -30,6 +30,7 @@ func _on_body_entered(body: Node) -> void:
 	if is_real:
 		# Cổng thật → cập nhật level hiện tại và mở UI Next
 		_consumed = true
+		GameData.commit_pending_keys()
 		GameData.current_level = max(0, next_level - 1)
 		GameData.unlock_level(GameData.current_level)
 		GameData.save_progress()
@@ -48,6 +49,7 @@ func _on_body_entered(body: Node) -> void:
 		# Bước 2: chạm cổng tại điểm 2 → mở UI Next và reset trạng thái
 		_consumed = true
 		manager.reset()
+		GameData.commit_pending_keys()
 		GameData.current_level = max(0, next_level - 1)
 		GameData.unlock_level(GameData.current_level)
 		GameData.save_progress()

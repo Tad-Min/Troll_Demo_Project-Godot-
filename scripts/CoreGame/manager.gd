@@ -8,6 +8,7 @@ func _ready() -> void:
 	print("current level: %d" %current_level)
 	GameData.current_level = current_level - 1;
 	GameData.reset_gems(3)
+	GameData.reset_pending_keys()
 
 	# connect to portal
 	var portal = get_node_or_null(Portal)
@@ -26,6 +27,7 @@ func _ready() -> void:
 
 func on_portal_entered() -> void:
 	print("Manager: Portal entered, level completed...")
+	GameData.commit_pending_keys()
 	_go_to_next_screen()
 
 func _go_to_next_screen() -> void:
@@ -36,6 +38,7 @@ func on_player_died(cause: String = "") -> void:
 	if cause != "":
 		GameData.last_death_cause = cause
 	print("Manager: Player died (", GameData.last_death_cause, ") → going to game over...")
+	GameData.reset_pending_keys()
 	
 	# Increment global death counter
 	GameData.total_deaths += 1

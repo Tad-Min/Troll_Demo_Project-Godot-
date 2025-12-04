@@ -6,6 +6,7 @@ extends Node
 func _ready() -> void:
 	print("Portal manager ready!")
 	print("current level: %d" %current_level)
+	GameData.reset_pending_keys()
 	
 	# connect to portal
 	var portal = get_node_or_null(Portal)
@@ -24,6 +25,7 @@ func _ready() -> void:
 
 func on_portal_entered() -> void:
 	print("Manager: Portal entered, level completed...")
+	GameData.commit_pending_keys()
 	_go_to_next_screen()
 
 func _go_to_next_screen() -> void:

@@ -14,6 +14,7 @@ func _on_body_entered(body: Node) -> void:
 		return
 	print("Player entered the portal!")
 	emit_signal("player_entered")
+	GameData.commit_pending_keys()
 	
 	GameData.current_level = next_level-1
 	GameData.Levels[GameData.current_level].isUnlock = true
