@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://c7np11tiq8x0f"]
+[gd_scene load_steps=28 format=4 uid="uid://c7np11tiq8x0f"]
 
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="1_k3s88"]
 [ext_resource type="Texture2D" uid="uid://b4nwcsxfx7vup" path="res://assets/Jungle Asset Pack/parallax background/plx-1.png" id="2_5xy3k"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="16_rykfc"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="17_2vpdl"]
 [ext_resource type="PackedScene" uid="uid://dw0nh2pakk3la" path="res://scenes/Trap/Trapzone.tscn" id="19_heubl"]
+[ext_resource type="PackedScene" uid="uid://b21hcvpgwatj5" path="res://scenes/Collectibles/Key_animation.tscn" id="20_iu67e"]
 [ext_resource type="PackedScene" uid="uid://d8sfk2gyygn4" path="res://scenes/Trap/hidden_jumper.tscn" id="21_xqnkm"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/GameSceneUI/MusicBackground.tscn" id="23_f1njk"]
 
@@ -1796,6 +1797,9 @@ position = Vector2(1002, 506)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1153, 323)
+
+[node name="Key" parent="." instance=ExtResource("20_iu67e")]
+position = Vector2(44, 488)
 
 [editable path="DodgeTraps/Trapzone"]
 [editable path="DodgeTraps/Trapzone3"]

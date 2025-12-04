@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://b21hcvpgwatj5"]
+[gd_scene load_steps=29 format=3 uid="uid://b21hcvpgwatj5"]
 
 [ext_resource type="Texture2D" uid="uid://csp21erqm2iwb" path="res://assets/free_rotating_key_frakassets/key_32x32_24f.png" id="1_dk3nv"]
+[ext_resource type="Script" uid="uid://0dxfi04vi7y3" path="res://scripts/Collectibles/key_item.gd" id="2_key_script"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uyg5k"]
 atlas = ExtResource("1_dk3nv")
@@ -182,11 +183,13 @@ animations = [{
 radius = 14.0
 
 [node name="Key" type="AnimatedSprite2D"]
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_runaa")
 autoplay = "default"
 frame_progress = 0.359146
 
 [node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_key_script")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_3073u")

@@ -47,7 +47,7 @@ func _format_cause(cause: String) -> String:
 		"fell_out":
 			return "Fell out of the world"
 		_:
-			return "Unknown"
+			return "Deaths will make you smarter"
 
 
 func _on_btn_home_pressed() -> void:

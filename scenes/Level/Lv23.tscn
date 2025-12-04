@@ -791,7 +791,7 @@ tile_set = SubResource("TileSet_1jteh")
 [node name="Secret_Portal" parent="Map" instance=ExtResource("7_p8m1t")]
 position = Vector2(544, 32)
 scale = Vector2(1.52, 1.52)
-next_level = 101
+next_level = 47
 
 [node name="Portal_lvl24" parent="Map" instance=ExtResource("7_p8m1t")]
 position = Vector2(823, 514)

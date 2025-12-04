@@ -11,17 +11,20 @@ extends Control
 @onready var btn_lv46: Button = $LevelMenu/btnlv46
 @onready var btn_lv47: Button = $LevelMenu/btnlv47
 @onready var btn_lv48: Button = $LevelMenu/btnlv48
+@onready var key_label: Label = $LevelMenu/KeyLabel
+
 func _ready() -> void:
+	_update_lv46_unlock_status()
 	btn_lv37.pressed.connect(func(): _on_choose_level(37))
-	btn_lv38.pressed.connect(_on_any_button_pressed)
-	btn_lv39.pressed.connect(_on_any_button_pressed)
-	btn_lv40.pressed.connect(_on_any_button_pressed)
-	btn_lv41.pressed.connect(_on_any_button_pressed)
-	btn_lv42.pressed.connect(_on_any_button_pressed)
-	btn_lv43.pressed.connect(_on_any_button_pressed)
-	btn_lv44.pressed.connect(_on_any_button_pressed)
-	btn_lv45.pressed.connect(_on_any_button_pressed)
-	btn_lv46.pressed.connect(_on_any_button_pressed)
+	btn_lv38.pressed.connect(func(): _on_choose_level(38))
+	btn_lv39.pressed.connect(func(): _on_choose_level(39))
+	btn_lv40.pressed.connect(func(): _on_choose_level(40))
+	btn_lv41.pressed.connect(func(): _on_choose_level(41))
+	btn_lv42.pressed.connect(func(): _on_choose_level(42))
+	btn_lv43.pressed.connect(func(): _on_choose_level(43))
+	btn_lv44.pressed.connect(func(): _on_choose_level(44))
+	btn_lv45.pressed.connect(func(): _on_choose_level(45))
+	btn_lv46.pressed.connect(_on_lv46_button_pressed)
 	btn_lv47.pressed.connect(_on_any_button_pressed)
 	btn_lv48.pressed.connect(_on_any_button_pressed)
 func _on_choose_level(lv: int) -> void:
@@ -29,6 +32,30 @@ func _on_choose_level(lv: int) -> void:
 	get_tree().change_scene_to_file("res://scenes/Level/Lv%d.tscn" % lv)
 func _on_any_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/GameSceneUI/ComingSoon.tscn")
+
+func _update_lv46_unlock_status() -> void:
+	var can_unlock = GameData.can_unlock_lv46()
+	btn_lv46.disabled = not can_unlock
+	
+	# Update key label
+	if key_label:
+		key_label.text = "Keys: %d/%d" % [GameData.keys_collected, GameData.keys_required_for_lv46]
+		if can_unlock:
+			key_label.modulate = Color.GREEN
+		else:
+			key_label.modulate = Color.WHITE
+
+func _on_lv46_button_pressed() -> void:
+	if GameData.can_unlock_lv46():
+		_on_choose_level(46)
+	else:
+		# Show message or do nothing
+		pass
+
+func _on_reset_keys_pressed() -> void:
+	GameData.reset_keys()
+	_update_lv46_unlock_status()
+	print("Keys reset! Current keys: ", GameData.keys_collected)
 
 func _on_btn_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/GameSceneUI/SelectLevel2.tscn")

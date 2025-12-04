@@ -22,7 +22,7 @@ class Level:
 		isUnlock = data.get("isUnlock", false)
 		countDie = data.get("countDie", 0)
 
-var LvSize: int = 110
+var LvSize: int = 50
 var Levels: Array[Level]
 
 # Save current level
@@ -32,6 +32,10 @@ var last_death_cause: String = ""
 
 # Global death counter for ads
 var total_deaths: int = 0
+
+# Keys collected for unlocking Lv46 (need 3 keys from 45 levels)
+var keys_collected: int = 0
+var keys_required_for_lv46: int = 3
 
 # UI: per-level gem counter (transient, not persisted)
 signal gem_count_changed(current: int, required: int)
@@ -46,6 +50,21 @@ func reset_gems(required: int = 3) -> void:
 func add_gem() -> void:
 	gem_current += 1
 	emit_signal("gem_count_changed", gem_current, gem_required)
+
+# Add key for unlocking Lv46
+func add_key() -> void:
+	keys_collected += 1
+	keys_collected = min(keys_collected, keys_required_for_lv46)
+	save_progress()
+
+# Check if Lv46 can be unlocked
+func can_unlock_lv46() -> bool:
+	return keys_collected >= keys_required_for_lv46
+
+# Reset keys for testing
+func reset_keys() -> void:
+	keys_collected = 0
+	save_progress()
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
@@ -62,6 +81,7 @@ func reset_progress():
 	for i in range(LvSize):
 		Levels.append(Level.new(i == 0, 0))  # Level 0 unlock
 	current_level = 0
+	keys_collected = 0
 	save_progress()
 
 # Unlock stage by index
@@ -85,7 +105,8 @@ func save_progress() -> void:
 	var data = { 
 		"levels": arr,
 		"current_level": current_level,
-		"total_deaths": total_deaths
+		"total_deaths": total_deaths,
+		"keys_collected": keys_collected
 	}
 	var file = FileAccess.open("user://save.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(data))
@@ -113,5 +134,8 @@ func load_progress() -> bool:
 			# Load total deaths
 			if data.has("total_deaths"):
 				total_deaths = data["total_deaths"]
+			# Load keys collected
+			if data.has("keys_collected"):
+				keys_collected = data["keys_collected"]
 			return true
 	return false
