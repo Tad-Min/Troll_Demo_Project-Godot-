@@ -1480,7 +1480,7 @@ current_level = 46
 
 [node name="Portal" parent="." instance=ExtResource("10_u5xfg")]
 position = Vector2(592, 576)
-next_level = 45
+next_level = 47
 
 [node name="Player" parent="." instance=ExtResource("10_msao7")]
 position = Vector2(51, 585)

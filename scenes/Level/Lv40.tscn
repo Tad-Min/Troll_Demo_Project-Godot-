@@ -905,6 +905,7 @@ metadata/_edit_lock_ = true
 
 [node name="Portal" parent="Floorportal" instance=ExtResource("6_bsy0q")]
 position = Vector2(0, -16)
+next_level = 41
 metadata/_edit_lock_ = true
 
 [node name="Pad" type="TileMap" parent="."]
