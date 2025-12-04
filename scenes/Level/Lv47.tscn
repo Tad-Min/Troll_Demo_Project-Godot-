@@ -1439,7 +1439,7 @@ tab_size = 7
 
 [node name="Manager" parent="." instance=ExtResource("2_2vtnf")]
 Portal = NodePath("../Map/Portal_")
-current_level = 101
+current_level = 47
 
 [node name="MusicBackground" parent="." instance=ExtResource("3_cfaos")]
 
