@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://civw00atwcpq3"]
+
+[ext_resource type="Script" uid="uid://cbr0wi2qcvjo5" path="res://scripts/Trap/trapzone_repeat.gd" id="1_4t0dx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jf2o"]
+size = Vector2(57.3125, 37.6354)
+
+[node name="Trapzone_repeat" type="Area2D"]
+script = ExtResource("1_4t0dx")
+spawner = NodePath("Spawner")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1jf2o")
+
+[node name="Spawner" type="Marker2D" parent="."]
+position = Vector2(204, 0)
