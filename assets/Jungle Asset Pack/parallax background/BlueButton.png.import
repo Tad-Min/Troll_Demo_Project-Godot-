@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byvdy8ssa2vv"
-path="res://.godot/imported/Screenshot 2025-10-17 180500.png-31662215542d1534f31ac75967c6e832.ctex"
+uid="uid://cumn5lgfm4a26"
+path="res://.godot/imported/BlueButton.png-02782341d17678f9b9f350d55ff46850.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Jungle Asset Pack/parallax background/Screenshot 2025-10-17 180500.png"
-dest_files=["res://.godot/imported/Screenshot 2025-10-17 180500.png-31662215542d1534f31ac75967c6e832.ctex"]
+source_file="res://assets/Jungle Asset Pack/parallax background/BlueButton.png"
+dest_files=["res://.godot/imported/BlueButton.png-02782341d17678f9b9f350d55ff46850.ctex"]
 
 [params]
 

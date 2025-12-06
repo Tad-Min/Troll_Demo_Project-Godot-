@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://8gsfsmx8fv71" path="res://assets/Jungle Asset Pack/parallax background/unnamed.jpg" id="3_bg6gg"]
 [ext_resource type="Texture2D" uid="uid://jeehyp7hpqns" path="res://assets/Jungle Asset Pack/parallax background/Window.png" id="3_tb5ri"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="4_bg6gg"]
-[ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/Screenshot 2025-10-17 152747.png" id="5_xv5ut"]
+[ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/BlueButton.png" id="5_xv5ut"]
 [ext_resource type="Texture2D" uid="uid://dakrd3uqsu42m" path="res://assets/Jungle Asset Pack/parallax background/Button.png" id="7_bg6gg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bg6gg"]

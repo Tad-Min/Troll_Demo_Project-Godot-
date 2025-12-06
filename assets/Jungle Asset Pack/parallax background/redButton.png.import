@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cumn5lgfm4a26"
-path="res://.godot/imported/Screenshot 2025-10-17 152747.png-4a42526088b5e5e1035ed97aec4e4f4b.ctex"
+uid="uid://dq6evkyk35uyu"
+path="res://.godot/imported/redButton.png-261690179d3a8e13e9c522f531c3f26f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Jungle Asset Pack/parallax background/Screenshot 2025-10-17 152747.png"
-dest_files=["res://.godot/imported/Screenshot 2025-10-17 152747.png-4a42526088b5e5e1035ed97aec4e4f4b.ctex"]
+source_file="res://assets/Jungle Asset Pack/parallax background/redButton.png"
+dest_files=["res://.godot/imported/redButton.png-261690179d3a8e13e9c522f531c3f26f.ctex"]
 
 [params]
 
