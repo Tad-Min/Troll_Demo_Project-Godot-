@@ -1,0 +1,618 @@
+[gd_scene load_steps=49 format=3 uid="uid://cm01eny3kvgkm"]
+
+[ext_resource type="Texture2D" uid="uid://bbjunvicfbbgg" path="res://assets/Graphics&Sprites/character.png" id="2_yj1vf"]
+[ext_resource type="AudioStream" uid="uid://c4clc60ywg7em" path="res://assets/Audio Files Asset/cartoon-jump-6462.mp3" id="3_4c2mb"]
+[ext_resource type="AudioStream" uid="uid://cvy1ls0r8b1w1" path="res://assets/Audio Files Asset/male-death-scream-horror-352706.mp3" id="4_iyc42"]
+[ext_resource type="Script" uid="uid://cyr4gt8sv34wd" path="res://scripts/Utility&FunctionalScripts/progress_bar.gd" id="5_frckt"]
+[ext_resource type="PackedScene" uid="uid://kjekawpsm1pc" path="res://scenes/Player/death_count.tscn" id="7_jewke"]
+[ext_resource type="PackedScene" uid="uid://5hygm82fy168" path="res://scenes/GameSceneUI/Pause.tscn" id="8_hao35"]
+[ext_resource type="PackedScene" uid="uid://dvterlxbgw14s" path="res://scenes/Player/Shooter_button.tscn" id="8_l6b0f"]
+[ext_resource type="Texture2D" uid="uid://dhph72us1icyr" path="res://assets/Bow.png" id="10_iyc42"]
+
+[sub_resource type="GDScript" id="GDScript_yj1vf"]
+script/source = "extends CharacterBody2D
+
+#signaling
+signal died(cause: String)
+
+#adjustable section
+@export var speed: float = 100.0
+@export var jump_velocity: float = 400.0
+@export var gravity_inverted: bool = false
+@export var min_jc = 0.75
+@export var max_jc = 1.25
+@export var MAX_AIR_JUMPS = 1   # only 1 allowed in air by default
+@export var jumper_stun = false
+@export var invincible = false
+
+#event handling variables
+var jump_charge = min_jc
+const GRAVITY : int = 4200
+var is_on_jumper : bool = false
+var last_direction = 0
+var is_dead: bool = false
+var air_jump_done = 0
+var stopmove: bool = false;
+var pushback_active: bool = false
+var pushback_target_velocity: Vector2 = Vector2.ZERO
+var pushback_accel: float = 0.0
+var pushback_require_ground: bool = true
+
+#Shoot arrow
+var arrow_dir := 1
+var arrow_scene = preload(\"res://scenes/Player/Arrow.tscn\")
+func _on_bow_animation_finished() -> void:
+	spawn_arrow()
+	$Bow.play(\"default\")
+func spawn_arrow():
+	var arrow = arrow_scene.instantiate()
+	get_tree().current_scene.add_child(arrow)
+	arrow.global_position = global_position
+	arrow.scale = Vector2(0.5,0.5)
+	arrow.direction = arrow_dir
+	
+func get_jump_velocity() -> float:
+	if gravity_inverted:
+		return jump_velocity
+	else:
+		return -jump_velocity
+	
+func is_on_ground() -> bool:
+	if gravity_inverted:
+		return is_on_ceiling()
+	else:
+		return is_on_floor()
+		
+func _physics_process(delta: float) -> void:
+	if is_dead:
+		$CollisionShape2D.disabled = true
+		air_jump_done = MAX_AIR_JUMPS
+	
+	# Add the gravity.
+	if not is_on_ground():
+		var gravity_dir = 1
+		if gravity_inverted:
+			gravity_dir = -1
+		velocity += get_gravity() * delta * gravity_dir
+		jump_charge = min_jc
+	else:
+		air_jump_done = 0
+
+	# Handle jump.
+	if not stopmove and not is_on_jumper and Input.is_action_pressed(\"jump\"):
+		if is_on_ground():
+			if jump_charge<max_jc:
+				jump_charge += 0.02
+			if last_direction == -1.0:
+				$AnimatedSprite2D.play(\"charge_left\")
+			else:
+				$AnimatedSprite2D.play(\"charge_right\")
+					
+	if not stopmove and not is_on_jumper and Input.is_action_just_pressed(\"jump\") and not is_on_ground() and air_jump_done < MAX_AIR_JUMPS:
+		velocity.y = get_jump_velocity()
+		air_jump_done += 1
+		$JumpSound.play()
+	
+	if Input.is_action_just_released(\"jump\"):
+		if is_on_ground():
+			print(last_direction)
+			if last_direction ==1 or $AnimatedSprite2D.animation==\"charge_right\":
+				$AnimatedSprite2D.play(\"onair_right\")
+			if last_direction ==-1 or $AnimatedSprite2D.animation==\"charge_left\":
+				$AnimatedSprite2D.play(\"onair_left\")
+			velocity.y = get_jump_velocity() * jump_charge
+			jump_charge = min_jc
+			$JumpSound.play()
+			
+			
+	
+	if position.y > 900 or position.y < -900:
+		GameData.last_death_cause = \"fell_out\"
+		emit_signal(\"died\", GameData.last_death_cause)
+
+	if is_on_jumper:
+		stop_move_1_sec()
+
+	# Handle movement A-D
+	var direction := Input.get_axis(\"move_left\", \"move_right\")
+	
+	if last_direction != direction and not stopmove:
+		if is_on_ground() and jump_charge == min_jc: # jumpcharge = min meaning not charging -> use move animation
+			if direction == -1:
+				arrow_dir = -1
+				$AnimatedSprite2D.play(\"left\")
+			if direction == 1:
+				arrow_dir = 1
+				$AnimatedSprite2D.play(\"right\")
+			if direction ==0:
+				$AnimatedSprite2D.play(\"idle\")	
+		if not is_on_ground():
+			if direction == -1:
+				arrow_dir = -1
+				$AnimatedSprite2D.play(\"onair_left\")
+			if direction == 1:
+				arrow_dir = 1
+				$AnimatedSprite2D.play(\"onair_right\")
+			if direction ==0:
+				$AnimatedSprite2D.play(\"idle\")	
+	
+	if direction == 0 or direction == null:
+		if jump_charge==min_jc:
+			last_direction=direction
+	else:
+		last_direction=direction
+		
+	
+
+	#disable movement for an instant if on jumper
+	if direction and !stopmove:
+		if jump_charge == min_jc:
+			velocity.x = direction * speed
+		else:
+			velocity.x = direction * speed * 0.25
+	else:
+		velocity.x = move_toward(velocity.x, 0, speed)
+
+	if pushback_active:
+		if not pushback_require_ground or is_on_ground():
+			velocity = velocity.move_toward(pushback_target_velocity, pushback_accel * delta)
+
+	#animation reset after jump
+	if is_on_ground() and jump_charge==min_jc:
+		last_direction = null
+
+	move_and_slide()
+
+#func _on_animated_sprite_2d_frame_changed():
+	#if $AnimatedSprite2D.animation == \"jump_right\":
+	#	if $AnimatedSprite2D.frame == 4 and is_on_ground():
+	#		velocity.y = get_jump_velocity() * jump_charge
+	#		$JumpSound.play()
+	#if $AnimatedSprite2D.animation == \"jump_left\":
+	#	if $AnimatedSprite2D.frame == 4 and is_on_ground():
+	#		velocity.y = get_jump_velocity() * jump_charge
+	#		$JumpSound.play()
+
+
+func die(cause: String = \"trap\") -> bool:
+	if invincible:
+		return true
+	is_dead = true
+	velocity.y = get_jump_velocity()
+	$DeathSound.play()
+	GameData.last_death_cause = cause
+	emit_signal(\"died\", GameData.last_death_cause)
+	print(\"Player died: \", GameData.last_death_cause)
+	return true
+
+func stop_move_1_sec() -> void:
+	stopmove = true
+	if jumper_stun:
+		if last_direction == 1:
+			$AnimatedSprite2D.play(\"charge_right\")
+		else: 
+			$AnimatedSprite2D.play(\"charge_left\");
+	await get_tree().create_timer(0.4).timeout
+	stopmove = false
+
+#buffs
+func air_jump_buff( x : int) -> bool:
+	MAX_AIR_JUMPS=MAX_AIR_JUMPS + x
+	return true
+
+func set_pushback_force(target_velocity: Vector2, accel: float, require_ground: bool = true) -> void:
+	pushback_active = true
+	pushback_target_velocity = target_velocity
+	pushback_accel = accel
+	pushback_require_ground = require_ground
+
+func clear_pushback_force() -> void:
+	pushback_active = false
+	pushback_target_velocity = Vector2.ZERO
+	pushback_accel = 0.0
+
+func apply_pushback_impulse(impulse: Vector2) -> void:
+	velocity += impulse
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(80, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(80, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(32, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(112, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(0, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(32, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(112, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ej7"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(112, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oprun"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(32, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8ls1"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(0, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfm1y"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(16, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fulsm"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(32, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4r5pv"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(48, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60mlk"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(0, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4ail"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(16, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a38lo"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(32, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ni07"]
+atlas = ExtResource("2_yj1vf")
+region = Rect2(48, 32, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjrip"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}],
+"loop": true,
+"name": &"charge_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jej6c")
+}],
+"loop": true,
+"name": &"charge_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2els")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}],
+"loop": false,
+"name": &"jump_left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2wvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v2ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jej6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jej6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ej7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ej7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ej7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ej7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ej7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oprun")
+}],
+"loop": false,
+"name": &"jump_right",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8ls1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfm1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fulsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4r5pv")
+}],
+"loop": true,
+"name": &"left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}],
+"loop": true,
+"name": &"onair_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ej7")
+}],
+"loop": true,
+"name": &"onair_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60mlk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4ail")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a38lo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ni07")
+}],
+"loop": true,
+"name": &"right",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_smehm"]
+radius = 6.08276
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a06cl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dl1wr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frckt"]
+atlas = ExtResource("10_iyc42")
+region = Rect2(0, 0, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uio3"]
+atlas = ExtResource("10_iyc42")
+region = Rect2(70, 0, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jewke"]
+atlas = ExtResource("10_iyc42")
+region = Rect2(140, 0, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hao35"]
+atlas = ExtResource("10_iyc42")
+region = Rect2(210, 0, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qmol"]
+atlas = ExtResource("10_iyc42")
+region = Rect2(280, 0, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_goh23"]
+atlas = ExtResource("10_iyc42")
+region = Rect2(350, 0, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ug7ww"]
+atlas = ExtResource("10_iyc42")
+region = Rect2(0, 90, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6tm4"]
+atlas = ExtResource("10_iyc42")
+region = Rect2(70, 90, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0vhg"]
+atlas = ExtResource("10_iyc42")
+region = Rect2(140, 90, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ku681"]
+atlas = ExtResource("10_iyc42")
+region = Rect2(210, 90, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4xvm"]
+atlas = ExtResource("10_iyc42")
+region = Rect2(280, 90, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt2mg"]
+atlas = ExtResource("10_iyc42")
+region = Rect2(350, 90, 70, 90)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ab6bw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frckt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uio3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jewke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hao35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qmol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_goh23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ug7ww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6tm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0vhg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ku681")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4xvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt2mg")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = SubResource("GDScript_yj1vf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -10)
+sprite_frames = SubResource("SpriteFrames_fjrip")
+animation = &"charge_right"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
+z_index = 1
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_smehm")
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_4c2mb")
+volume_db = -20.612
+pitch_scale = 0.96
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_iyc42")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 2.0
+offset_top = -38.0
+offset_right = 6.0
+offset_bottom = -11.0
+scale = Vector2(0.71172, 0.71172)
+theme_override_styles/background = SubResource("StyleBoxEmpty_a06cl")
+theme_override_styles/fill = SubResource("StyleBoxEmpty_dl1wr")
+script = ExtResource("5_frckt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 1153
+limit_bottom = 649
+
+[node name="deathcount_canva" parent="." instance=ExtResource("7_jewke")]
+
+[node name="Pause_canva" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="Pause_canva" instance=ExtResource("8_hao35")]
+
+[node name="MobileControls" parent="." instance=ExtResource("8_l6b0f")]
+
+[node name="Bow" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(0.142857, 0.125)
+sprite_frames = SubResource("SpriteFrames_ab6bw")
+autoplay = "default"
+
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="animation_finished" from="Bow" to="." method="_on_bow_animation_finished"]
