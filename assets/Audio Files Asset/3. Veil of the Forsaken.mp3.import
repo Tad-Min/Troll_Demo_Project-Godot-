@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c55xf0hwpfl10"
+path="res://.godot/imported/3. Veil of the Forsaken.mp3-12521748b9611c90c44ae3027952c525.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio Files Asset/3. Veil of the Forsaken.mp3"
+dest_files=["res://.godot/imported/3. Veil of the Forsaken.mp3-12521748b9611c90c44ae3027952c525.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

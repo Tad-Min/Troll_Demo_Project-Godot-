@@ -266,6 +266,7 @@ text = "Keys: 0/3"
 horizontal_alignment = 1
 
 [node name="btnResetKeys" type="Button" parent="LevelMenu"]
+visible = false
 layout_mode = 0
 offset_left = 472.0
 offset_top = 471.0

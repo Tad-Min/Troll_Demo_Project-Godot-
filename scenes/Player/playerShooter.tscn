@@ -596,6 +596,7 @@ script = ExtResource("5_frckt")
 [node name="deathcount_canva" parent="." instance=ExtResource("7_jewke")]
 
 [node name="Pause_canva" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Pause" parent="Pause_canva" instance=ExtResource("8_hao35")]
 

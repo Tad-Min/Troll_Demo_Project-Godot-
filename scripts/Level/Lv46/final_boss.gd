@@ -4,8 +4,8 @@ extends Node2D
 signal boss_died
 signal hp_changed(current_hp: int, max_hp: int)
 
-@export var max_hp: int = 50
-var current_hp: int = 50
+@export var max_hp: int = 36
+var current_hp: int = 36
 
 func _ready() -> void:
 	current_hp = max_hp
