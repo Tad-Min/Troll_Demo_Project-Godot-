@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b5ralt6nyemgu"]
+[gd_scene load_steps=19 format=3 uid="uid://b5ralt6nyemgu"]
 
 [ext_resource type="Script" uid="uid://cjroiox442k41" path="res://scripts/UI_Scripts/select_level_4.gd" id="1_tj7b5"]
 [ext_resource type="Shader" uid="uid://chfkq82vmvjuu" path="res://scenes/SelectLevel2.gdshader" id="2_ji3qw"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="5_stah2"]
 [ext_resource type="Texture2D" uid="uid://dakrd3uqsu42m" path="res://assets/Jungle Asset Pack/parallax background/Button.png" id="6_xtjxf"]
 [ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/Screenshot 2025-10-17 152747.png" id="7_piry3"]
+[ext_resource type="Texture2D" uid="uid://b5mr45jlxtgb7" path="res://assets/Jungle Asset Pack/parallax background/boss.jpg" id="8_ji3qw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bg6gg"]
 shader = ExtResource("2_ji3qw")
@@ -229,32 +230,39 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
 text = "46
 "
 
+<<<<<<< Updated upstream
 [node name="btnlv47" type="Button" parent="LevelMenu"]
+=======
+[node name="KeyLabel" type="Label" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 483.0
-offset_top = 355.0
-offset_right = 627.0
-offset_bottom = 467.0
+offset_left = 260.0
+offset_top = 460.0
+offset_right = 412.0
+offset_bottom = 516.0
 theme_override_fonts/font = ExtResource("5_stah2")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
-theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
-text = "47
-"
+theme_override_font_sizes/font_size = 20
+text = "Keys: 0/3"
+horizontal_alignment = 1
 
-[node name="btnlv48" type="Button" parent="LevelMenu"]
+[node name="btnResetKeys" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 696.0
-offset_top = 352.0
-offset_right = 840.0
-offset_bottom = 464.0
+offset_left = 260.0
+offset_top = 520.0
+offset_right = 412.0
+offset_bottom = 540.0
 theme_override_fonts/font = ExtResource("5_stah2")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
-theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
-text = "48"
+theme_override_font_sizes/font_size = 16
+text = "Reset Keys (Debug)"
+
+[node name="TextureRect" type="TextureRect" parent="LevelMenu"]
+>>>>>>> Stashed changes
+layout_mode = 0
+offset_left = 261.0
+offset_top = 357.0
+offset_right = 404.0
+offset_bottom = 468.0
+texture = ExtResource("8_ji3qw")
+expand_mode = 1
 
 [node name="btnBack" type="TextureButton" parent="."]
 layout_mode = 0
