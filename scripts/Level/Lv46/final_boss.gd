@@ -1,4 +1,10 @@
 extends Node2D
+@export var summon_scene : PackedScene
+@export var spawn_cooldown : float = 1.0
+var _spawn_allowed: bool = true
+var _spawn_cd_timer: Timer = null
+
+
 @export var animate_state : Array[String] = ["idle","attack","skill","summon"]
 @export var animation_duration: float = 2.0
 
@@ -45,7 +51,12 @@ func _ready() -> void:
 		timer.one_shot = false
 		timer.timeout.connect(_on_timer_timeout)
 		add_child(timer)
-	
+		# Spawn cooldown timer
+	_spawn_cd_timer = Timer.new()
+	_spawn_cd_timer.wait_time = spawn_cooldown
+	_spawn_cd_timer.one_shot = true
+	_spawn_cd_timer.timeout.connect(_on_spawn_cd_timeout)
+	add_child(_spawn_cd_timer)
 	# Setup wait timer for movement
 	wait_timer = Timer.new()
 	wait_timer.one_shot = true
@@ -57,6 +68,8 @@ func _ready() -> void:
 	
 	# Choose initial target position
 	_choose_new_target()
+	
+	
 	
 	# Connect to Area2D for arrow detection and player collision
 	var area = $CharacterBody2D/Area2D
@@ -116,6 +129,39 @@ func _on_timer_timeout() -> void:
 	if sprite and animate_state.size() > 0:
 		current_animation_index = (current_animation_index + 1) % animate_state.size()
 		sprite.play(animate_state[current_animation_index])
+		var anim_name = animate_state[current_animation_index]
+		sprite.play(anim_name)
+
+		
+		if anim_name == "summon" and _spawn_allowed:
+			_spawn_summoner()
+			_spawn_allowed = false
+			if _spawn_cd_timer:
+				_spawn_cd_timer.start()
+
+func _spawn_summoner() -> void:
+	
+		var s = summon_scene.instantiate()
+
+		# spawn ngay tại boss
+		s.global_position = body.global_position + Vector2(0, -8 )
+
+		# truyền reference nếu có
+		if s.has_method("set_owner_boss"):
+			s.set_owner_boss(self)
+
+		# add summon vào parent
+		if get_parent():
+			get_parent().add_child(s)
+		else:
+			get_tree().get_root().add_child(s)
+
+		print("Spawned Summoner at ", s.global_position)
+
+
+func _on_spawn_cd_timeout() -> void:
+	_spawn_allowed = true
+
 
 func _choose_new_target() -> void:
 	# Choose a random position within move_range from start_position

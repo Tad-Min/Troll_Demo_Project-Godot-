@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://cn527uelr3ll5"]
+[gd_scene load_steps=23 format=3 uid="uid://cn527uelr3ll5"]
 
+[ext_resource type="Script" uid="uid://db50lcna83s1c" path="res://scenes/Trap/Final Boss/summoner.gd" id="1_cxmqf"]
 [ext_resource type="Texture2D" uid="uid://bnp2h0c24eyou" path="res://assets/Trap asset/ChasingBoss/summonAppear.png" id="1_p32dm"]
 [ext_resource type="Texture2D" uid="uid://dsnshqfcfa7nr" path="res://assets/Trap asset/ChasingBoss/summonDeath.png" id="2_cxmqf"]
 [ext_resource type="Texture2D" uid="uid://darg0724kvok5" path="res://assets/Trap asset/ChasingBoss/summonIdle.png" id="3_fvgyn"]
@@ -127,10 +128,30 @@ animations = [{
 "speed": 6.0
 }]
 
-[node name="Summoner" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_p32dm"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[sub_resource type="CircleShape2D" id="CircleShape2D_cxmqf"]
+
+[node name="Summoner" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_cxmqf")
+dash_speed = 400.0
+dash_duration = 2.7
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(27, -3)
 sprite_frames = SubResource("SpriteFrames_umga8")
 animation = &"appear"
 frame_progress = 0.961781
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(26, 5)
+shape = SubResource("CircleShape2D_p32dm")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(26, 5)
+shape = SubResource("CircleShape2D_cxmqf")

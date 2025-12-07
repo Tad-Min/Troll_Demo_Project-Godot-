@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://4pukh15r55n3"]
+[gd_scene load_steps=26 format=4 uid="uid://4pukh15r55n3"]
 
 [ext_resource type="Script" uid="uid://170fkeqihpou" path="res://scripts/Level/Lv46/lv46_boss_manager.gd" id="1_boss_mgr"]
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="1_hgm6p"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://brlefqvg6m2ln" path="res://scenes/GameSceneUI/FinalBossMusicBackground.tscn" id="14_fle4r"]
 [ext_resource type="PackedScene" uid="uid://damf22lmf180i" path="res://scenes/Trap/Spike_Simple.tscn" id="14_qpofa"]
 [ext_resource type="Script" uid="uid://cfuob8v3qy6ua" path="res://scripts/Level/Lv46/big_spike.gd" id="15_bigspike"]
+[ext_resource type="PackedScene" uid="uid://cn527uelr3ll5" path="res://scenes/Trap/Final Boss/Summoner.tscn" id="16_ajpu5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qooa"]
 texture = ExtResource("6_2hy1b")
@@ -2179,6 +2180,7 @@ next_level = 47
 [node name="FinalBoss" parent="." instance=ExtResource("11_v7v4n")]
 position = Vector2(687, 294)
 scale = Vector2(5, 5)
+summon_scene = ExtResource("16_ajpu5")
 AllDirectionSpike = ExtResource("11_ajpu5")
 
 [node name="Player" parent="." instance=ExtResource("11_o8sig")]
