@@ -4,6 +4,9 @@ extends Node2D
 @onready var victory_to_open: StaticBody2D = $Victory_to_open
 @onready var boss_hp_bar: ProgressBar = $BossHPUI/BossHPBar
 @onready var boss_hp_label: Label = $BossHPUI/BossHPLabel
+@onready var big_spike: Node2D = $BigSpike
+
+var big_spike_activated: bool = false
 
 func _ready() -> void:
 	# Connect boss_died signal
@@ -27,6 +30,12 @@ func _on_boss_died() -> void:
 
 func _on_boss_hp_changed(current_hp: int, max_hp: int) -> void:
 	_update_hp_display(current_hp, max_hp)
+	
+	# Kích hoạt BigSpike khi HP <= 30
+	if current_hp <= 30 and not big_spike_activated:
+		big_spike_activated = true
+		if big_spike and big_spike.has_method("start_moving"):
+			big_spike.start_moving()
 
 func _update_hp_display(current_hp: int, max_hp: int) -> void:
 	if boss_hp_bar:

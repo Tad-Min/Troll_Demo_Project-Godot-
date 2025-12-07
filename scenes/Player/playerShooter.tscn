@@ -562,6 +562,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_mask = 3
 script = SubResource("GDScript_yj1vf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
