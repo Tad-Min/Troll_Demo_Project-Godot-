@@ -2049,3 +2049,14 @@ next_level = 22
 [node name="Player" parent="." instance=ExtResource("23_fjktp")]
 position = Vector2(128, 128)
 MAX_AIR_JUMPS = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 206.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "Lv21"
+tab_size = 7

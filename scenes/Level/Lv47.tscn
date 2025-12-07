@@ -1434,7 +1434,7 @@ offset_top = 7.0
 offset_right = 206.0
 offset_bottom = 31.0
 scale = Vector2(1.96, 1.96)
-text = "Secret level 1"
+text = "Secret level"
 tab_size = 7
 
 [node name="Manager" parent="." instance=ExtResource("2_2vtnf")]

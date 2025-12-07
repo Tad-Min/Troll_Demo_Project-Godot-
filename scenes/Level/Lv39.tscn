@@ -1592,6 +1592,17 @@ jump_force = 1000.0
 position = Vector2(266, 229)
 jump_force = 450.0
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 206.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "Lv39"
+tab_size = 7
+
 [editable path="Player"]
 [editable path="On_Off_Block"]
 [editable path="On_Off_Block2"]

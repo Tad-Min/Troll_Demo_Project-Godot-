@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7o25l3pqqqkd"]
 
 [ext_resource type="Texture2D" uid="uid://c5te2iwxwp72e" path="res://assets/Arrow.png" id="1_3cuky"]
-[ext_resource type="Script" uid="uid://bi4m5yp3ux2ex" path="res://scenes/Player/arrow.gd" id="1_ek6wd"]
+[ext_resource type="Script" uid="uid://bi4m5yp3ux2ex" path="res://scripts/Level/Lv46/arrow.gd" id="1_ek6wd"]
 
 [node name="Arrow" type="Area2D"]
 script = ExtResource("1_ek6wd")

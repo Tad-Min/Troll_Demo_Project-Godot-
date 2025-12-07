@@ -956,20 +956,27 @@ metadata/_edit_lock_ = true
 [node name="MobileControls" parent="Player" index="6"]
 visible = false
 
-[node name="Pause_canva" parent="Player" index="8"]
-visible = false
-
 [node name="Pause" parent="Player/Pause_canva" index="0"]
-visible = false
 metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 206.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "Lv40"
+tab_size = 7
 
 [connection signal="body_entered" from="Trap_1" to="." method="_on_trap_1_body_entered"]
 [connection signal="buttonActivated" from="Floor1/Button1" to="." method="_on_button_1_button_activated"]
-[connection signal="buttonActivated" from="Floor3/Button4" to="." method="_on_button_1_button_activated"]
 [connection signal="buttonActivated" from="Floor3/Button4" to="." method="_on_button_4_button_activated"]
-[connection signal="buttonActivated" from="Floor4/Button5" to="." method="_on_button_1_button_activated"]
-[connection signal="buttonActivated" from="Floor4/Button5" to="." method="_on_button_4_button_activated"]
+[connection signal="buttonActivated" from="Floor3/Button4" to="." method="_on_button_1_button_activated"]
 [connection signal="buttonActivated" from="Floor4/Button5" to="." method="_on_button_5_button_activated"]
+[connection signal="buttonActivated" from="Floor4/Button5" to="." method="_on_button_4_button_activated"]
+[connection signal="buttonActivated" from="Floor4/Button5" to="." method="_on_button_1_button_activated"]
 [connection signal="buttonActivated" from="Floor2/Button2" to="." method="_on_button_2_button_activated"]
 
 [editable path="Player"]

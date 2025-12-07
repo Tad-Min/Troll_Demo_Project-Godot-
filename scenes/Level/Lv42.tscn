@@ -776,9 +776,6 @@ current_level = 42
 [node name="Player" parent="." instance=ExtResource("8_6dvol")]
 position = Vector2(18, 30)
 
-[node name="Pause_canva" parent="Player" index="8"]
-visible = false
-
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(11, 14)
 tile_set = SubResource("TileSet_rlo12")
@@ -929,6 +926,17 @@ jump_force = 2000.0
 
 [node name="Area2D" parent="Jumper" index="1"]
 position = Vector2(0, 5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 206.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "Lv42"
+tab_size = 7
 
 [editable path="Player"]
 [editable path="On_Off_Block"]

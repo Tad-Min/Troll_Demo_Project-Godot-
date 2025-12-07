@@ -912,6 +912,17 @@ scale = Vector2(4.30188, 4.62357)
 position = Vector2(1128, 587)
 jump_force = 1300.0
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 206.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "Lv24"
+tab_size = 7
+
 [editable path="Player"]
 [editable path="Trapzone"]
 [editable path="Trapzone2"]

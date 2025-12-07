@@ -2792,3 +2792,14 @@ metadata/_edit_lock_ = true
 [node name="Player" parent="." instance=ExtResource("29_h7q65")]
 position = Vector2(128, 464)
 metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 206.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "Lv19"
+tab_size = 7

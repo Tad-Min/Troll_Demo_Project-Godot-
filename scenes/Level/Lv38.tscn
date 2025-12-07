@@ -1408,7 +1408,7 @@ size = Vector2(55, 51)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ue8i4"]
 size = Vector2(212.712, 5.39425)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p8e50"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5rfoc"]
 texture = ExtResource("4_stayf")
 19:1/0 = 0
 19:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -2089,7 +2089,7 @@ texture = ExtResource("4_stayf")
 
 [sub_resource type="TileSet" id="TileSet_p8e50"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_p8e50")
+sources/0 = SubResource("TileSetAtlasSource_5rfoc")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stayf"]
 size = Vector2(492, 42)
@@ -2468,3 +2468,14 @@ z_index = 1
 position = Vector2(-6.5, 0)
 tile_map_data = PackedByteArray("AADm//b/AAArAAsAAADm//P/AAAXAA4AAADm//T/AAAXAA4AAADm//X/AAAXAA4AAADl//b/AAArAAsAAADl//P/AAAXAA4AAADl//T/AAAXAA4AAADl//X/AAAXAA4AAAA=")
 tile_set = SubResource("TileSet_p8e50")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 206.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "Lv38"
+tab_size = 7

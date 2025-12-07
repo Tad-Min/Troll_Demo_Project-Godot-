@@ -1717,3 +1717,14 @@ rotation = 3.14159
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonTrigger2"]
 position = Vector2(677, 576)
 shape = SubResource("RectangleShape2D_637io")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 206.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "Lv34"
+tab_size = 7
