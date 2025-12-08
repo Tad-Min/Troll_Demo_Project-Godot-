@@ -37,19 +37,33 @@ var pushback_active: bool = false
 var pushback_target_velocity: Vector2 = Vector2.ZERO
 var pushback_accel: float = 0.0
 var pushback_require_ground: bool = true
+@onready var bow: AnimatedSprite2D = $Bow
+var bow_offset := Vector2(8, -6)
 
 #Shoot arrow
 var arrow_dir := 1
 var arrow_scene = preload(\"res://scenes/Player/Arrow.tscn\")
+func _ready() -> void:
+	_update_bow_orientation()
+
 func _on_bow_animation_finished() -> void:
 	spawn_arrow()
 	$Bow.play(\"default\")
 func spawn_arrow():
 	var arrow = arrow_scene.instantiate()
 	get_tree().current_scene.add_child(arrow)
-	arrow.global_position = global_position
+	var spawn_pos = global_position
+	if bow:
+		spawn_pos = bow.global_position + Vector2(arrow_dir * 6, 0)
+	arrow.global_position = spawn_pos
 	arrow.scale = Vector2(0.5,0.5)
 	arrow.direction = arrow_dir
+	
+func _update_bow_orientation() -> void:
+	if not bow:
+		return
+	bow.position = Vector2(bow_offset.x * arrow_dir, bow_offset.y)
+	bow.flip_h = arrow_dir < 0
 	
 func get_jump_velocity() -> float:
 	if gravity_inverted:
@@ -120,18 +134,22 @@ func _physics_process(delta: float) -> void:
 		if is_on_ground() and jump_charge == min_jc: # jumpcharge = min meaning not charging -> use move animation
 			if direction == -1:
 				arrow_dir = -1
+				_update_bow_orientation()
 				$AnimatedSprite2D.play(\"left\")
 			if direction == 1:
 				arrow_dir = 1
+				_update_bow_orientation()
 				$AnimatedSprite2D.play(\"right\")
 			if direction ==0:
 				$AnimatedSprite2D.play(\"idle\")	
 		if not is_on_ground():
 			if direction == -1:
 				arrow_dir = -1
+				_update_bow_orientation()
 				$AnimatedSprite2D.play(\"onair_left\")
 			if direction == 1:
 				arrow_dir = 1
+				_update_bow_orientation()
 				$AnimatedSprite2D.play(\"onair_right\")
 			if direction ==0:
 				$AnimatedSprite2D.play(\"idle\")	

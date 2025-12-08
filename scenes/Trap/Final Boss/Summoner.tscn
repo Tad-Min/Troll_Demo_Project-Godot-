@@ -139,6 +139,7 @@ dash_speed = 400.0
 dash_duration = 2.7
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 128
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(27, -3)
@@ -151,6 +152,7 @@ position = Vector2(26, 5)
 shape = SubResource("CircleShape2D_p32dm")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(26, 5)

@@ -2064,7 +2064,7 @@ texture = ExtResource("6_2hy1b")
 38:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_uqvi0"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_o8sig")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
@@ -2184,7 +2184,7 @@ summon_scene = ExtResource("16_ajpu5")
 AllDirectionSpike = ExtResource("11_ajpu5")
 
 [node name="Player" parent="." instance=ExtResource("11_o8sig")]
-position = Vector2(86, 589)
+position = Vector2(1051, 558)
 scale = Vector2(1.5, 1.5)
 
 [node name="Victory_to_open" type="StaticBody2D" parent="."]
