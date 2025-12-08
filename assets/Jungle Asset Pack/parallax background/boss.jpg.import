@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< Updated upstream:scenes/Lv1.png.import
-uid="uid://ju1vowy23juk"
-path="res://.godot/imported/Lv1.png-5654f2c686cb45d38f9d4d761056f0cc.ctex"
-========
-uid="uid://b5mr45jlxtgb7"
+uid="uid://31bcdxrdtbyr"
 path="res://.godot/imported/boss.jpg-dc40a229fde79673f07a6f999cc9e5dc.ctex"
->>>>>>>> Stashed changes:Jungle Asset Pack/parallax background/boss.jpg.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< Updated upstream:scenes/Lv1.png.import
-source_file="res://scenes/Lv1.png"
-dest_files=["res://.godot/imported/Lv1.png-5654f2c686cb45d38f9d4d761056f0cc.ctex"]
-========
 source_file="res://assets/Jungle Asset Pack/parallax background/boss.jpg"
 dest_files=["res://.godot/imported/boss.jpg-dc40a229fde79673f07a6f999cc9e5dc.ctex"]
->>>>>>>> Stashed changes:Jungle Asset Pack/parallax background/boss.jpg.import
 
 [params]
 
