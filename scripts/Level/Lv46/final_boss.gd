@@ -217,16 +217,18 @@ func spawn_all_direction_spike():
 	if AllDirectionSpike == null:
 		push_warning("AllDirectionSpike is not assigned!")
 		return
-
 	var spike = AllDirectionSpike.instantiate()
-
-	# Set position BEFORE adding to scene
 	spike.position = target_position
 	print(spike.position)
+	# Defer adding to avoid flushing queries warnings
+	call_deferred("_add_spike_and_timer", spike)
 
-	# Add to scene
+func _add_spike_and_timer(spike: Node) -> void:
+	if not is_instance_valid(spike):
+		return
+	if get_tree() == null:
+		return
 	get_tree().current_scene.add_child(spike)
-
 	# Auto-free after 2 seconds
 	var t := Timer.new()
 	t.wait_time = 2.5
@@ -235,5 +237,5 @@ func spawn_all_direction_spike():
 		if is_instance_valid(spike):
 			spike.queue_free()
 	)
-	spike.add_child(t)  # attach timer to the spike
+	spike.add_child(t)
 	t.start()
