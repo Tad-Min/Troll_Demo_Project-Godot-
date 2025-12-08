@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://llyny0t3rl0h"]
+
+[ext_resource type="Texture2D" uid="uid://crwwankac2qls" path="res://assets/Jungle Asset Pack/parallax background/Boss.png" id="1_2oy87"]
+[ext_resource type="FontFile" uid="uid://c0xdx3liagfb2" path="res://assets/Jungle Asset Pack/PixelCaps-LOnE.ttf" id="2_w3e8g"]
+[ext_resource type="Script" uid="uid://chd3lsf1w6yg6" path="res://scripts/UI_Scripts/rich_text_label.gd" id="3_8c6db"]
+
+[node name="UnlockBoss" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2oy87")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 408.0
+offset_right = 1238.0
+offset_bottom = 684.0
+theme_override_fonts/bold_italics_font = ExtResource("2_w3e8g")
+theme_override_font_sizes/bold_italics_font_size = 1
+bbcode_enabled = true
+text = "Still here? Damn, respect.
+Thanks for surviving this far—desk-slams, rage quits, maybe even uninstalling included.
+Only one thing left: The Final Boss.
+He’s been ruling this forest for 100+ years, strong and evil as hell.
+Wanna face him? Get all 3 Keys first.Not enough? Turn back.
+Got them? Congrats—final gate unlocked. Gear up, pro.
+It’s showtime!!!!."
+fit_content = true
+script = ExtResource("3_8c6db")
+text_speed = 0.04

@@ -283,6 +283,7 @@ texture_hover = SubResource("AtlasTexture_a2xwi")
 stretch_mode = 0
 
 [node name="NextButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 980.0
 offset_top = 270.0
 offset_right = 1610.0
