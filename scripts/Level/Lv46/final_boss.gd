@@ -26,6 +26,9 @@ var stuck_timer: float = 0.0
 var last_position: Vector2
 var stuck_threshold: float = 0.5  # Nếu không di chuyển quá 0.5 giây thì coi như bị kẹt
 
+@export var AllDirectionSpike: PackedScene
+@export var spikeSpawnFrequency: int = 3
+
 func _ready() -> void:
 	current_hp = max_hp
 	emit_signal("hp_changed", current_hp, max_hp)
@@ -135,6 +138,10 @@ func take_damage(amount: int = 1) -> void:
 	print("Boss took damage! HP: ", current_hp, "/", max_hp)
 	emit_signal("hp_changed", current_hp, max_hp)
 	
+	if current_hp>0 and (max_hp-current_hp)%spikeSpawnFrequency==0:
+		print("shoots all direction")
+		spawn_all_direction_spike()
+	
 	if current_hp <= 0:
 		current_hp = 0
 		emit_signal("hp_changed", current_hp, max_hp)
@@ -159,3 +166,28 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		if body.has_method("die"):
 			body.die("boss")
+			
+func spawn_all_direction_spike():
+	if AllDirectionSpike == null:
+		push_warning("AllDirectionSpike is not assigned!")
+		return
+
+	var spike = AllDirectionSpike.instantiate()
+
+	# Set position BEFORE adding to scene
+	spike.position = target_position
+	print(spike.position)
+
+	# Add to scene
+	get_tree().current_scene.add_child(spike)
+
+	# Auto-free after 2 seconds
+	var t := Timer.new()
+	t.wait_time = 2.5
+	t.one_shot = true
+	t.timeout.connect(func():
+		if is_instance_valid(spike):
+			spike.queue_free()
+	)
+	spike.add_child(t)  # attach timer to the spike
+	t.start()

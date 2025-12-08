@@ -15,7 +15,8 @@ extends Area2D
 @export var waiting: bool = false                     # if true, waits for manual activation
 @export var activate_before: Array[Node] = []         # triggers to activate before tween
 @export var activate_after: Array[Node] = []          # triggers to activate after tween
-
+@export var instant_activate_before: Array[Node] = []         # triggers to activate before tween
+@export var instant_activate_after: Array[Node] = []          # triggers to activate after tween
 
 var _activated := false
 
@@ -28,7 +29,7 @@ func _on_body_entered(body: Node) -> void:
 	if _activated or waiting:
 		return
 	
-	print("%s is entered"%self.name)
+	#print("%s is entered"%self.name)
 	
 	if body.is_in_group("Player") and Map:
 		_start_trigger_sequence()
@@ -37,13 +38,14 @@ func activate() -> void:
 	waiting=false
 	monitoring=true
 	_activated = false
-	print("%s is awake, waiting for collision"%self.name)
+	#print("%s is awake, waiting for collision"%self.name)
 	# 🔍 Check if any body is already inside
 	for body in get_overlapping_bodies():
 		if body.is_in_group("Player"):
-			print("Detected player already inside — triggering immediately.")
+			#print("Detected player already inside — triggering immediately.")
 			_on_body_entered(body)
 			break
+
 
 func _start_trigger_sequence() -> void:
 	_activated = true
@@ -53,6 +55,10 @@ func _start_trigger_sequence() -> void:
 	for t in activate_before:
 		if t and is_instance_valid(t) and t.has_method("activate"):
 			t.activate()
+	
+	for t in instant_activate_before:
+		if t and is_instance_valid(t) and t.has_method("_start_trigger_sequence"):
+			t._start_trigger_sequence()
 
 	# 🧹 Free nodes BEFORE tween
 	for n in nodes_to_free_before:
@@ -84,6 +90,11 @@ func _start_trigger_sequence() -> void:
 		if t and is_instance_valid(t) and t.has_method("activate"):
 			print("activating %s from %s" % [t.name, self.name])
 			t.activate()
+			
+	for t in instant_activate_after:
+		if t and is_instance_valid(t) and t.has_method("_start_trigger_sequence"):
+			t._start_trigger_sequence()
+
 
 
 	# 🧹 Free nodes AFTER tween

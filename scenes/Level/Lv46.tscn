@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://4pukh15r55n3"]
+[gd_scene load_steps=25 format=4 uid="uid://4pukh15r55n3"]
 
 [ext_resource type="Script" uid="uid://170fkeqihpou" path="res://scripts/Level/Lv46/lv46_boss_manager.gd" id="1_boss_mgr"]
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="1_hgm6p"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="6_2hy1b"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="7_1rvjj"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="10_u5xfg"]
+[ext_resource type="PackedScene" uid="uid://br68d1pcr6k6q" path="res://scenes/Trap/Final Boss/AllDirectionSpikes.tscn" id="11_ajpu5"]
 [ext_resource type="PackedScene" uid="uid://cm01eny3kvgkm" path="res://scenes/Player/playerShooter.tscn" id="11_o8sig"]
 [ext_resource type="PackedScene" uid="uid://bc2umwfunn2td" path="res://scenes/Trap/Final Boss/FinalBoss.tscn" id="11_v7v4n"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="13_font"]
@@ -2176,8 +2177,9 @@ position = Vector2(592, 576)
 next_level = 47
 
 [node name="FinalBoss" parent="." instance=ExtResource("11_v7v4n")]
-position = Vector2(568, 230)
+position = Vector2(687, 294)
 scale = Vector2(5, 5)
+AllDirectionSpike = ExtResource("11_ajpu5")
 
 [node name="Player" parent="." instance=ExtResource("11_o8sig")]
 position = Vector2(86, 589)

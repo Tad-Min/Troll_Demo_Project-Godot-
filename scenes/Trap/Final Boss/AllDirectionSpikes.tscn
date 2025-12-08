@@ -1,0 +1,278 @@
+[gd_scene load_steps=4 format=3 uid="uid://br68d1pcr6k6q"]
+
+[ext_resource type="PackedScene" uid="uid://damf22lmf180i" path="res://scenes/Trap/Spike_Simple.tscn" id="1_u6prq"]
+[ext_resource type="Script" uid="uid://b6c5qp1h3vsum" path="res://scenes/Trap/Floor_troll/Floor_Troll.gd" id="2_grnkg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u6prq"]
+radius = 674.06
+
+[node name="AlldirectionSpikes" type="Node2D"]
+
+[node name="24DirectionSpike" type="Node2D" parent="."]
+
+[node name="Spike 1" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = 1.5708
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 1" node_paths=PackedStringArray("Map", "instant_activate_before")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+move_duration = 2.0
+instant_activate_before = [NodePath("../../Spike 2/push"), NodePath("../../Spike 3/push"), NodePath("../../Spike 4/push"), NodePath("../../Spike 5/push"), NodePath("../../Spike 6/push"), NodePath("../../Spike 7/push"), NodePath("../../Spike 8/push"), NodePath("../../Spike 9/push"), NodePath("../../Spike 10/push"), NodePath("../../Spike 11/push"), NodePath("../../Spike 12/push"), NodePath("../../Spike 13/push"), NodePath("../../Spike 14/push"), NodePath("../../Spike 15/push"), NodePath("../../Spike 16/push"), NodePath("../../Spike 17/push"), NodePath("../../Spike 18/push"), NodePath("../../Spike 19/push"), NodePath("../../Spike 20/push"), NodePath("../../Spike 21/push"), NodePath("../../Spike 22/push"), NodePath("../../Spike 23/push"), NodePath("../../Spike 24/push")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="24DirectionSpike/Spike 1/push"]
+visible = false
+shape = SubResource("CircleShape2D_u6prq")
+
+[node name="Spike 2" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = 1.309
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 2" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(0.966, -0.259)
+move_duration = 2.0
+
+[node name="Spike 3" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = 1.0472
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 3" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(0.866, -0.5)
+move_duration = 2.0
+
+[node name="Spike 4" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = 0.785398
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 4" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(0.707, -0.707)
+move_duration = 2.0
+
+[node name="Spike 5" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = 0.523599
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 5" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(0.5, -0.866)
+move_duration = 2.0
+
+[node name="Spike 6" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = 0.261799
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 6" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(0.259, -0.966)
+move_duration = 2.0
+
+[node name="Spike 7" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 7" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(0, -1)
+move_duration = 2.0
+
+[node name="Spike 8" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -0.261799
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 8" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(-0.259, -0.966)
+move_duration = 2.0
+
+[node name="Spike 9" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -0.523599
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 9" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(-0.5, -0.866)
+move_duration = 2.0
+
+[node name="Spike 10" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -0.785398
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 10" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(-0.707, -0.707)
+move_duration = 2.0
+
+[node name="Spike 11" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -1.0472
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 11" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(-0.866, -0.5)
+move_duration = 2.0
+
+[node name="Spike 12" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -1.309
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 12" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(-0.966, -0.259)
+move_duration = 2.0
+
+[node name="Spike 13" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -1.5708
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 13" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(-1, 0)
+move_duration = 2.0
+
+[node name="Spike 14" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -1.8326
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 14" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(-0.966, 0.259)
+move_duration = 2.0
+
+[node name="Spike 15" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -2.0944
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 15" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(-0.866, 0.5)
+move_duration = 2.0
+
+[node name="Spike 16" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -2.35619
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 16" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(-0.707, 0.707)
+move_duration = 2.0
+
+[node name="Spike 17" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -2.61799
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 17" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(-0.5, 0.866)
+move_duration = 2.0
+
+[node name="Spike 18" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -2.87979
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 18" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(-0.259, 0.966)
+move_duration = 2.0
+
+[node name="Spike 19" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -3.14159
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 19" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(0, 1)
+move_duration = 2.0
+
+[node name="Spike 20" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -3.40339
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 20" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(0.259, 0.966)
+move_duration = 2.0
+
+[node name="Spike 21" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -3.66519
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 21" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(0.5, 0.966)
+move_duration = 2.0
+
+[node name="Spike 22" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -3.92699
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 22" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(0.707, 0.707)
+move_duration = 2.0
+
+[node name="Spike 23" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -4.18879
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 23" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(0.866, 0.5)
+move_duration = 2.0
+
+[node name="Spike 24" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
+position = Vector2(-2, -5)
+rotation = -4.45059
+
+[node name="push" type="Area2D" parent="24DirectionSpike/Spike 24" node_paths=PackedStringArray("Map")]
+script = ExtResource("2_grnkg")
+Map = NodePath("..")
+move_distance = 1000.0
+direction = Vector2(0.966, 0.259)
+move_duration = 2.0
