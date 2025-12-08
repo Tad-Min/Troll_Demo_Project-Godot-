@@ -5,8 +5,16 @@ extends Node2D
 @onready var boss_hp_bar: ProgressBar = $BossHPUI/BossHPBar
 @onready var boss_hp_label: Label = $BossHPUI/BossHPLabel
 @onready var big_spike: Node2D = $BigSpike
+@onready var spike_balls: Array = [
+	$SpikeBall1,
+	$SpikeBall2,
+	$SpikeBall3,
+	$SpikeBall4,
+]
 
 var big_spike_activated: bool = false
+var big_spike_reverse_triggered: bool = false
+var spike_balls_triggered: bool = false
 
 func _ready() -> void:
 	# Connect boss_died signal
@@ -36,6 +44,19 @@ func _on_boss_hp_changed(current_hp: int, max_hp: int) -> void:
 		big_spike_activated = true
 		if big_spike and big_spike.has_method("start_moving"):
 			big_spike.start_moving()
+	
+	# Đảo chiều BigSpike khi HP <= 20
+	if current_hp <= 20 and not big_spike_reverse_triggered:
+		big_spike_reverse_triggered = true
+		if big_spike and big_spike.has_method("start_reverse"):
+			big_spike.start_reverse()
+	
+	# Thả 4 spike_ball khi HP <= 10
+	if current_hp <= 10 and not spike_balls_triggered:
+		spike_balls_triggered = true
+		for spike_ball in spike_balls:
+			if spike_ball and spike_ball.has_method("start_fall"):
+				spike_ball.start_fall()
 
 func _update_hp_display(current_hp: int, max_hp: int) -> void:
 	if boss_hp_bar:

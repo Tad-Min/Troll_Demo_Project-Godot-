@@ -27,12 +27,22 @@ func _ready() -> void:
 func start_moving() -> void:
 	if is_moving:
 		return
-	
+	_begin_move()
+	print("BigSpike started moving!")
+
+func start_reverse() -> void:
+	# Đảo hướng và di chuyển lại từ vị trí hiện tại
+	move_direction *= -1
+	_begin_move()
+	print("BigSpike reversed and started moving!")
+
+func _begin_move() -> void:
+	start_position = global_position
+	target_position = start_position + Vector2(move_direction * move_distance, 0)
 	is_moving = true
 	visible = true
 	if area:
 		area.monitoring = true
-	print("BigSpike started moving!")
 
 func _process(delta: float) -> void:
 	if not is_moving:
@@ -56,4 +66,3 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		if body.has_method("die"):
 			body.die("big_spike")
-

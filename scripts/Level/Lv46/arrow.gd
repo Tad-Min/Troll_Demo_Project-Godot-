@@ -31,4 +31,4 @@ func _on_area_entered(area: Area2D) -> void:
 		if boss_node and boss_node.name == "FinalBoss":
 			has_hit = true
 			# The boss will handle damage in its own script
-			queue_free()
+		queue_free()
