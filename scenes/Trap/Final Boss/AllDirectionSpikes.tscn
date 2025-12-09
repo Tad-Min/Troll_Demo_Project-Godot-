@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b6c5qp1h3vsum" path="res://scenes/Trap/Floor_troll/Floor_Troll.gd" id="2_grnkg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u6prq"]
-radius = 674.06
+radius = 1394.01
 
 [node name="AlldirectionSpikes" type="Node2D"]
 
@@ -22,7 +22,6 @@ move_duration = 2.0
 instant_activate_before = [NodePath("../../Spike 2/push"), NodePath("../../Spike 3/push"), NodePath("../../Spike 4/push"), NodePath("../../Spike 5/push"), NodePath("../../Spike 6/push"), NodePath("../../Spike 7/push"), NodePath("../../Spike 8/push"), NodePath("../../Spike 9/push"), NodePath("../../Spike 10/push"), NodePath("../../Spike 11/push"), NodePath("../../Spike 12/push"), NodePath("../../Spike 13/push"), NodePath("../../Spike 14/push"), NodePath("../../Spike 15/push"), NodePath("../../Spike 16/push"), NodePath("../../Spike 17/push"), NodePath("../../Spike 18/push"), NodePath("../../Spike 19/push"), NodePath("../../Spike 20/push"), NodePath("../../Spike 21/push"), NodePath("../../Spike 22/push"), NodePath("../../Spike 23/push"), NodePath("../../Spike 24/push")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="24DirectionSpike/Spike 1/push"]
-visible = false
 shape = SubResource("CircleShape2D_u6prq")
 
 [node name="Spike 2" parent="24DirectionSpike" instance=ExtResource("1_u6prq")]
