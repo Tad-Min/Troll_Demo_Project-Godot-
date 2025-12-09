@@ -116,7 +116,7 @@ func _update_lv46_unlock_status() -> void:
 		if can_unlock:
 			key_label.modulate = Color.GREEN
 		else:
-			key_label.modulate = Color.WHITE
+			key_label.modulate = Color.RED
 
 func _on_lv46_button_pressed() -> void:
 	if GameData.can_unlock_lv46():
