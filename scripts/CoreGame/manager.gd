@@ -31,7 +31,11 @@ func on_portal_entered() -> void:
 	_go_to_next_screen()
 
 func _go_to_next_screen() -> void:
-	get_tree().call_deferred("change_scene_to_file", "res://scenes/GameSceneUI/Next.tscn")  # chỉ chuyển đến màn Next
+	# If completing level 46, go to ThankYou screen
+	if current_level == 46:
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/GameSceneUI/ThankYou.tscn")
+	else:
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/GameSceneUI/Next.tscn")  # chỉ chuyển đến màn Next
 
 
 func on_player_died(cause: String = "") -> void:

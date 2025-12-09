@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="4_bg6gg"]
 [ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/BlueButton.png" id="5_xv5ut"]
 [ext_resource type="Texture2D" uid="uid://dakrd3uqsu42m" path="res://assets/Jungle Asset Pack/parallax background/Button.png" id="7_bg6gg"]
-[ext_resource type="Texture2D" uid="uid://dxbvug5of2pfh" path="res://assets/Jungle Asset Pack/parallax background/lock.png" id="8_xv5ut"]
+[ext_resource type="Texture2D" uid="uid://byvdy8ssa2vv" path="res://assets/Jungle Asset Pack/parallax background/LockScreen.png" id="8_xv5ut"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bg6gg"]
 shader = ExtResource("2_tb5ri")
@@ -160,10 +160,10 @@ expand_mode = 1
 
 [node name="btnlv14" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 266.0
-offset_top = 120.0
-offset_right = 410.0
-offset_bottom = 232.0
+offset_left = 259.0
+offset_top = 122.0
+offset_right = 403.0
+offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
@@ -182,10 +182,10 @@ expand_mode = 1
 
 [node name="btnlv15" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 480.0
-offset_top = 120.0
-offset_right = 624.0
-offset_bottom = 232.0
+offset_left = 482.0
+offset_top = 122.0
+offset_right = 626.0
+offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
@@ -204,10 +204,10 @@ expand_mode = 1
 
 [node name="btnlv16" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 693.0
-offset_top = 121.0
-offset_right = 837.0
-offset_bottom = 233.0
+offset_left = 694.0
+offset_top = 122.0
+offset_right = 838.0
+offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
@@ -226,10 +226,10 @@ expand_mode = 1
 
 [node name="btnlv17" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 39.0
-offset_top = 236.0
-offset_right = 183.0
-offset_bottom = 348.0
+offset_left = 40.0
+offset_top = 237.0
+offset_right = 184.0
+offset_bottom = 349.0
 theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
@@ -248,10 +248,10 @@ expand_mode = 1
 
 [node name="btnlv18" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 267.0
-offset_top = 235.0
-offset_right = 411.0
-offset_bottom = 347.0
+offset_left = 259.0
+offset_top = 237.0
+offset_right = 403.0
+offset_bottom = 349.0
 theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
@@ -268,10 +268,10 @@ expand_mode = 1
 
 [node name="btnlv19" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 480.0
-offset_top = 235.0
-offset_right = 624.0
-offset_bottom = 347.0
+offset_left = 482.0
+offset_top = 237.0
+offset_right = 626.0
+offset_bottom = 349.0
 theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
@@ -290,10 +290,10 @@ expand_mode = 1
 
 [node name="btnlv20" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 692.0
-offset_top = 234.0
-offset_right = 836.0
-offset_bottom = 346.0
+offset_left = 694.0
+offset_top = 237.0
+offset_right = 838.0
+offset_bottom = 349.0
 theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
@@ -312,9 +312,9 @@ expand_mode = 1
 
 [node name="btnlv21" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 39.0
+offset_left = 40.0
 offset_top = 352.0
-offset_right = 183.0
+offset_right = 184.0
 offset_bottom = 464.0
 theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
@@ -334,10 +334,10 @@ expand_mode = 1
 
 [node name="btnlv22" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 268.0
-offset_top = 351.0
-offset_right = 412.0
-offset_bottom = 463.0
+offset_left = 259.0
+offset_top = 352.0
+offset_right = 403.0
+offset_bottom = 464.0
 theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
@@ -378,10 +378,10 @@ expand_mode = 1
 
 [node name="btnlv24" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 693.0
-offset_top = 350.0
-offset_right = 837.0
-offset_bottom = 462.0
+offset_left = 694.0
+offset_top = 352.0
+offset_right = 838.0
+offset_bottom = 464.0
 theme_override_fonts/font = ExtResource("4_bg6gg")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")

@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="5_mcxre"]
 [ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/BlueButton.png" id="6_yku54"]
 [ext_resource type="Texture2D" uid="uid://dakrd3uqsu42m" path="res://assets/Jungle Asset Pack/parallax background/Button.png" id="8_4hu3u"]
-[ext_resource type="Texture2D" uid="uid://dxbvug5of2pfh" path="res://assets/Jungle Asset Pack/parallax background/lock.png" id="9_va4dp"]
+[ext_resource type="Texture2D" uid="uid://byvdy8ssa2vv" path="res://assets/Jungle Asset Pack/parallax background/LockScreen.png" id="9_va4dp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vtqlk"]
 shader = ExtResource("2_yku54")
@@ -146,10 +146,10 @@ texture = SubResource("AtlasTexture_yku54")
 
 [node name="btnlv1" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 41.0
-offset_top = 124.0
-offset_right = 185.0
-offset_bottom = 236.0
+offset_left = 40.0
+offset_top = 122.0
+offset_right = 184.0
+offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
@@ -159,10 +159,10 @@ text = "1"
 
 [node name="btnlv2" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 257.0
-offset_top = 124.0
-offset_right = 401.0
-offset_bottom = 236.0
+offset_left = 259.0
+offset_top = 122.0
+offset_right = 403.0
+offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
@@ -173,10 +173,10 @@ text = "2
 
 [node name="btnlv3" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 493.0
-offset_top = 124.5
-offset_right = 637.0
-offset_bottom = 236.5
+offset_left = 482.0
+offset_top = 122.0
+offset_right = 626.0
+offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
@@ -194,10 +194,10 @@ expand_mode = 1
 
 [node name="btnlv4" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 697.0
-offset_top = 121.5
-offset_right = 841.0
-offset_bottom = 233.5
+offset_left = 694.0
+offset_top = 122.0
+offset_right = 838.0
+offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
@@ -216,10 +216,10 @@ expand_mode = 1
 
 [node name="btnlv5" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 39.0
-offset_top = 236.5
-offset_right = 183.0
-offset_bottom = 348.5
+offset_left = 40.0
+offset_top = 237.0
+offset_right = 184.0
+offset_bottom = 349.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
@@ -236,10 +236,10 @@ expand_mode = 1
 
 [node name="btnlv6" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 258.0
-offset_top = 237.5
-offset_right = 402.0
-offset_bottom = 349.5
+offset_left = 259.0
+offset_top = 237.0
+offset_right = 403.0
+offset_bottom = 349.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
@@ -257,10 +257,10 @@ expand_mode = 1
 
 [node name="btnlv7" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 492.0
-offset_top = 237.5
-offset_right = 636.0
-offset_bottom = 349.5
+offset_left = 482.0
+offset_top = 237.0
+offset_right = 626.0
+offset_bottom = 349.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
@@ -279,10 +279,10 @@ expand_mode = 1
 
 [node name="btnlv8" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 696.0
-offset_top = 235.5
-offset_right = 840.0
-offset_bottom = 347.5
+offset_left = 694.0
+offset_top = 237.0
+offset_right = 838.0
+offset_bottom = 349.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
@@ -301,10 +301,10 @@ expand_mode = 1
 
 [node name="btnlv9" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 39.0
-offset_top = 351.5
-offset_right = 183.0
-offset_bottom = 463.5
+offset_left = 40.0
+offset_top = 352.0
+offset_right = 184.0
+offset_bottom = 464.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
@@ -323,10 +323,10 @@ expand_mode = 1
 
 [node name="btnlv10" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 261.0
-offset_top = 353.5
-offset_right = 405.0
-offset_bottom = 465.5
+offset_left = 259.0
+offset_top = 352.0
+offset_right = 403.0
+offset_bottom = 464.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
@@ -346,10 +346,10 @@ expand_mode = 1
 
 [node name="btnlv11" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 494.0
-offset_top = 351.5
-offset_right = 638.0
-offset_bottom = 463.5
+offset_left = 482.0
+offset_top = 352.0
+offset_right = 626.0
+offset_bottom = 464.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
@@ -368,10 +368,10 @@ expand_mode = 1
 
 [node name="btnlv12" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 696.0
-offset_top = 350.5
-offset_right = 840.0
-offset_bottom = 462.5
+offset_left = 694.0
+offset_top = 352.0
+offset_right = 838.0
+offset_bottom = 464.0
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")

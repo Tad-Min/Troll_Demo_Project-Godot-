@@ -1471,7 +1471,7 @@ tile_map_data = PackedByteArray("AADf/xEAAAAFAAkAAADf/xIAAAAFAAkAAADf/xMAAAAFAAk
 tile_set = SubResource("TileSet_1jteh")
 
 [node name="Portal" parent="Map" instance=ExtResource("5_8fs37")]
-position = Vector2(249, 734)
+position = Vector2(251, 735)
 scale = Vector2(1.52, 1.52)
 next_level = 46
 

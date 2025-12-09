@@ -59,15 +59,42 @@ func show_second_part():
 	current_index = 0  # Bắt đầu từ đầu
 	start_typing()
 
+func show_first_part():
+	"""Quay lại hiển thị phần text thứ 1"""
+	is_first_part = true
+	text = ""  # Xóa text cũ
+	full_text = first_text  # Chỉ hiển thị text mới
+	current_index = 0  # Bắt đầu từ đầu
+	start_typing()
+
 func _input(event):
-	if can_skip and event is InputEventKey:
-		if event.pressed and event.keycode == skip_key:
-			if is_typing:
-				# Đang gõ -> Skip
-				skip_to_end()
-			elif is_finished and is_first_part:
+	if not can_skip:
+		return
+	
+	# Kiểm tra chuột (PC) hoặc chạm màn hình (Android)
+	var is_click_or_touch = false
+	
+	if event is InputEventMouseButton:
+		# Nhận sự kiện click chuột
+		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+			is_click_or_touch = true
+	elif event is InputEventScreenTouch:
+		# Nhận sự kiện chạm màn hình (Android)
+		if event.pressed:
+			is_click_or_touch = true
+	
+	if is_click_or_touch:
+		if is_typing:
+			# Đang gõ -> Skip
+			skip_to_end()
+		elif is_finished:
+			# Text xong -> Chuyển đổi giữa text 1 và text 2
+			if is_first_part:
 				# Text 1 xong -> Hiện text 2
 				show_second_part()
+			else:
+				# Text 2 xong -> Quay lại text 1 (vòng lặp)
+				show_first_part()
 
 func restart_typing():
 	current_index = 0

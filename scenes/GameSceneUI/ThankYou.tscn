@@ -1,13 +1,28 @@
-[gd_scene load_steps=6 format=3 uid="uid://c41dg68uloqvb"]
+[gd_scene load_steps=12 format=3 uid="uid://c41dg68uloqvb"]
 
 [ext_resource type="Texture2D" uid="uid://4kvtnf1x2kcx" path="res://assets/Jungle Asset Pack/parallax background/Gemini_Generated_Image_gg8c48gg8c48gg8c.png" id="1_fo6nu"]
+[ext_resource type="Script" uid="uid://bqvciim4wcdl0" path="res://scripts/UI_Scripts/thank_you.gd" id="1_siymn"]
 [ext_resource type="Texture2D" uid="uid://jeehyp7hpqns" path="res://assets/Jungle Asset Pack/parallax background/Window.png" id="2_0m72f"]
 [ext_resource type="FontFile" uid="uid://c0xdx3liagfb2" path="res://assets/Jungle Asset Pack/PixelCaps-LOnE.ttf" id="3_vqadi"]
 [ext_resource type="Script" uid="uid://c1te3imx5csln" path="res://scripts/UI_Scripts/rich_text_label2.gd" id="4_vqadi"]
+[ext_resource type="PackedScene" uid="uid://csk1513c0wpah" path="res://scenes/GameSceneUI/VictoryMusicBackground.tscn" id="5_i5m1m"]
+[ext_resource type="Texture2D" uid="uid://dakrd3uqsu42m" path="res://assets/Jungle Asset Pack/parallax background/Button.png" id="6_kyjnr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i5m1m"]
 atlas = ExtResource("2_0m72f")
 region = Rect2(1876, 2119, 738, 514)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_siymn"]
+atlas = ExtResource("6_kyjnr")
+region = Rect2(197, 1190, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyjo1"]
+atlas = ExtResource("6_kyjnr")
+region = Rect2(810, 1190, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4s3n"]
+atlas = ExtResource("6_kyjnr")
+region = Rect2(401, 1190, 181, 190)
 
 [node name="ThankYou" type="Control"]
 layout_mode = 3
@@ -16,6 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_siymn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -54,3 +70,17 @@ You’re basically the definition of: “I don’t quit. I just quit sleeping.�
 Congrats on beating the game! Now go rest, pro.
 The game is over, but your real-life deadlines are still camping outside. 💀"
 script = ExtResource("4_vqadi")
+
+[node name="MusicBackground" parent="." instance=ExtResource("5_i5m1m")]
+
+[node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 234.0
+offset_right = 630.0
+offset_bottom = 792.0
+scale = Vector2(0.2, 0.2)
+texture_normal = SubResource("AtlasTexture_siymn")
+texture_pressed = SubResource("AtlasTexture_hyjo1")
+texture_hover = SubResource("AtlasTexture_y4s3n")
+stretch_mode = 0

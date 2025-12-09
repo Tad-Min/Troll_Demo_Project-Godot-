@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b5ralt6nyemgu"]
+[gd_scene load_steps=27 format=3 uid="uid://b5ralt6nyemgu"]
 
 [ext_resource type="Script" uid="uid://cjroiox442k41" path="res://scripts/UI_Scripts/select_level_4.gd" id="1_tj7b5"]
 [ext_resource type="Shader" uid="uid://chfkq82vmvjuu" path="res://scenes/SelectLevel2.gdshader" id="2_ji3qw"]
@@ -10,8 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cw0ggi016uokk" path="res://assets/skull/1.png" id="8_oc8lb"]
 [ext_resource type="Texture2D" uid="uid://s71yvh7jigbb" path="res://assets/skull/2.png" id="9_wupp6"]
 [ext_resource type="Texture2D" uid="uid://dq6evkyk35uyu" path="res://assets/Jungle Asset Pack/parallax background/redButton.png" id="10_redbtn"]
-[ext_resource type="Texture2D" uid="uid://byvdy8ssa2vv" path="res://assets/Jungle Asset Pack/parallax background/LockScreen.png" id="11_lock"]
-[ext_resource type="Texture2D" uid="uid://dxbvug5of2pfh" path="res://assets/Jungle Asset Pack/parallax background/lock.png" id="12_xtjxf"]
+[ext_resource type="Texture2D" uid="uid://byvdy8ssa2vv" path="res://assets/Jungle Asset Pack/parallax background/LockScreen.png" id="12_xtjxf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bg6gg"]
 shader = ExtResource("2_ji3qw")
@@ -39,7 +38,7 @@ texture = SubResource("AtlasTexture_6cj5g")
 texture = ExtResource("7_piry3")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lock_disabled"]
-texture = ExtResource("11_lock")
+texture = ExtResource("12_xtjxf")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_red_hover"]
 texture = SubResource("AtlasTexture_6cj5g")
@@ -162,9 +161,9 @@ expand_mode = 1
 [node name="btnlv39" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 482.0
-offset_top = 124.0
+offset_top = 122.0
 offset_right = 626.0
-offset_bottom = 236.0
+offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("5_stah2")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
@@ -184,9 +183,9 @@ expand_mode = 1
 
 [node name="btnlv40" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 692.0
+offset_left = 694.0
 offset_top = 122.0
-offset_right = 836.0
+offset_right = 838.0
 offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("5_stah2")
 theme_override_font_sizes/font_size = 40
@@ -228,10 +227,10 @@ expand_mode = 1
 
 [node name="btnlv42" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 261.0
-offset_top = 239.0
-offset_right = 405.0
-offset_bottom = 351.0
+offset_left = 259.0
+offset_top = 237.0
+offset_right = 403.0
+offset_bottom = 349.0
 theme_override_fonts/font = ExtResource("5_stah2")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
@@ -250,9 +249,9 @@ expand_mode = 1
 [node name="btnlv43" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 482.0
-offset_top = 239.0
+offset_top = 237.0
 offset_right = 626.0
-offset_bottom = 351.0
+offset_bottom = 349.0
 theme_override_fonts/font = ExtResource("5_stah2")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
@@ -273,9 +272,9 @@ expand_mode = 1
 [node name="btnlv44" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 694.0
-offset_top = 236.0
+offset_top = 237.0
 offset_right = 838.0
-offset_bottom = 348.0
+offset_bottom = 349.0
 theme_override_fonts/font = ExtResource("5_stah2")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
@@ -335,10 +334,10 @@ icon = SubResource("AnimatedTexture_stah2")
 
 [node name="KeyLabel" type="Label" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 700.0
-offset_top = 406.0
-offset_right = 852.0
-offset_bottom = 462.0
+offset_left = 668.0
+offset_top = 371.0
+offset_right = 820.0
+offset_bottom = 427.0
 theme_override_fonts/font = ExtResource("5_stah2")
 theme_override_font_sizes/font_size = 20
 text = " 0/3"

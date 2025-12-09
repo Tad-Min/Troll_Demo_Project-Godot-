@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://llyny0t3rl0h"]
 
 [ext_resource type="Texture2D" uid="uid://crwwankac2qls" path="res://assets/Jungle Asset Pack/parallax background/Boss.png" id="1_2oy87"]
-[ext_resource type="Script" uid="uid://c007qigatht3k" path="res://scripts/UI_Scripts/unlock_boss.gd" id="1_jnnad"]
+[ext_resource type="Script" path="res://scripts/UI_Scripts/unlock_boss.gd" id="1_jnnad"]
 [ext_resource type="FontFile" uid="uid://c0xdx3liagfb2" path="res://assets/Jungle Asset Pack/PixelCaps-LOnE.ttf" id="2_w3e8g"]
 [ext_resource type="Script" uid="uid://chd3lsf1w6yg6" path="res://scripts/UI_Scripts/rich_text_label.gd" id="3_8c6db"]
 [ext_resource type="Texture2D" uid="uid://dakrd3uqsu42m" path="res://assets/Jungle Asset Pack/parallax background/Button.png" id="5_ww8wl"]
@@ -61,6 +61,7 @@ script = ExtResource("3_8c6db")
 text_speed = 0.04
 
 [node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 271.0
 offset_right = 628.0
