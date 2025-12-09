@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://blnjmna71025t"]
+[gd_scene load_steps=33 format=3 uid="uid://blnjmna71025t"]
 
 [ext_resource type="Script" uid="uid://bqud0bqb2dq15" path="res://scripts/UI_Scripts/select_level.gd" id="1_adu0t"]
 [ext_resource type="Shader" uid="uid://bjp3bnqe1dxkr" path="res://scenes/SelectLevel.gdshader" id="2_yku54"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="5_mcxre"]
 [ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/BlueButton.png" id="6_yku54"]
 [ext_resource type="Texture2D" uid="uid://dakrd3uqsu42m" path="res://assets/Jungle Asset Pack/parallax background/Button.png" id="8_4hu3u"]
+[ext_resource type="Texture2D" uid="uid://dxbvug5of2pfh" path="res://assets/Jungle Asset Pack/parallax background/lock.png" id="9_va4dp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vtqlk"]
 shader = ExtResource("2_yku54")
@@ -183,6 +184,14 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_cir3e")
 text = "3"
 
+[node name="lock3" type="TextureRect" parent="LevelMenu/btnlv3"]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 143.0
+offset_bottom = 109.0
+texture = ExtResource("9_va4dp")
+expand_mode = 1
+
 [node name="btnlv4" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 697.0
@@ -195,6 +204,15 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_tqpso")
 text = "4"
+
+[node name="lock4" type="TextureRect" parent="LevelMenu/btnlv4"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 143.0
+offset_bottom = 110.0
+texture = ExtResource("9_va4dp")
+expand_mode = 1
 
 [node name="btnlv5" type="Button" parent="LevelMenu"]
 layout_mode = 0
@@ -209,6 +227,13 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ugusr")
 text = "5"
 
+[node name="lock5" type="TextureRect" parent="LevelMenu/btnlv5"]
+layout_mode = 0
+offset_right = 144.0
+offset_bottom = 109.0
+texture = ExtResource("9_va4dp")
+expand_mode = 1
+
 [node name="btnlv6" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 258.0
@@ -222,18 +247,42 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_mcxre")
 text = "6"
 
+[node name="lock6" type="TextureRect" parent="LevelMenu/btnlv6"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 145.0
+offset_bottom = 109.0
+texture = ExtResource("9_va4dp")
+expand_mode = 1
+
 [node name="btnlv7" type="Button" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 493.0
-offset_top = 238.5
-offset_right = 637.0
-offset_bottom = 350.5
+<<<<<<< Updated upstream
+offset_left = 498.5
+offset_top = 240.5
+offset_right = 637.5
+offset_bottom = 357.5
+=======
+offset_left = 492.0
+offset_top = 237.5
+offset_right = 636.0
+offset_bottom = 349.5
+>>>>>>> Stashed changes
 theme_override_fonts/font = ExtResource("5_mcxre")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_yku54")
 text = "7"
+
+[node name="lock7" type="TextureRect" parent="LevelMenu/btnlv7"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 5.0
+offset_right = 143.0
+offset_bottom = 114.0
+texture = ExtResource("9_va4dp")
+expand_mode = 1
 
 [node name="btnlv8" type="Button" parent="LevelMenu"]
 layout_mode = 0
@@ -248,6 +297,15 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_qwbve")
 text = "8"
 
+[node name="lock8" type="TextureRect" parent="LevelMenu/btnlv8"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 143.0
+offset_bottom = 110.0
+texture = ExtResource("9_va4dp")
+expand_mode = 1
+
 [node name="btnlv9" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 39.0
@@ -260,6 +318,15 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_kfdx2")
 text = "9"
+
+[node name="lock9" type="TextureRect" parent="LevelMenu/btnlv9"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 145.0
+offset_bottom = 110.0
+texture = ExtResource("9_va4dp")
+expand_mode = 1
 
 [node name="btnlv10" type="Button" parent="LevelMenu"]
 layout_mode = 0
@@ -275,6 +342,15 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_xios8")
 text = "10
 "
 
+[node name="lock10" type="TextureRect" parent="LevelMenu/btnlv10"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 111.0
+texture = ExtResource("9_va4dp")
+expand_mode = 1
+
 [node name="btnlv11" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 494.0
@@ -289,6 +365,14 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_t3p1c")
 text = "11
 "
 
+[node name="lock11" type="TextureRect" parent="LevelMenu/btnlv11"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 144.0
+offset_bottom = 111.0
+texture = ExtResource("9_va4dp")
+expand_mode = 1
+
 [node name="btnlv12" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 696.0
@@ -301,6 +385,15 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4hu3u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_bpt75")
 text = "12"
+
+[node name="lock12" type="TextureRect" parent="LevelMenu/btnlv12"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = 143.0
+offset_bottom = 112.0
+texture = ExtResource("9_va4dp")
+expand_mode = 1
 
 [node name="BackButton" type="TextureButton" parent="."]
 layout_mode = 0

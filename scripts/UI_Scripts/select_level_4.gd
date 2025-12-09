@@ -11,11 +11,63 @@ extends Control
 @onready var btn_lv46: Button = $LevelMenu/btnlv46
 @onready var key_label: Label = $LevelMenu/KeyLabel
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+func _ready() -> void:
+=======
+#lock
+@onready var lock37: TextureRect = $LevelMenu/btnlv37/lock37 if $LevelMenu/btnlv37.has_node("lock37") else null
+@onready var lock38: TextureRect = $LevelMenu/btnlv38/lock38 if $LevelMenu/btnlv38.has_node("lock38") else null
+@onready var lock39: TextureRect = $LevelMenu/btnlv39/lock39 if $LevelMenu/btnlv39.has_node("lock39") else null
+@onready var lock40: TextureRect = $LevelMenu/btnlv40/lock40 if $LevelMenu/btnlv40.has_node("lock40") else null
+@onready var lock41: TextureRect = $LevelMenu/btnlv41/lock41 if $LevelMenu/btnlv41.has_node("lock41") else null
+@onready var lock42: TextureRect = $LevelMenu/btnlv42/lock42 if $LevelMenu/btnlv42.has_node("lock42") else null
+@onready var lock43: TextureRect = $LevelMenu/btnlv43/lock43 if $LevelMenu/btnlv43.has_node("lock43") else null
+@onready var lock44: TextureRect = $LevelMenu/btnlv44/lock44 if $LevelMenu/btnlv44.has_node("lock44") else null
+@onready var lock45: TextureRect = $LevelMenu/btnlv45/lock45 if $LevelMenu/btnlv45.has_node("lock45") else null
+
+
 const LOCK_ICON = preload("res://assets/Jungle Asset Pack/parallax background/LockScreen.png")
 
 var _original_skull_icon: AnimatedTexture = null
 
 func _ready() -> void:
+	btn_lv37.disabled = not GameData.is_stage_unlocked(36)
+	if $LevelMenu/btnlv37.has_node("lock37"):
+		$LevelMenu/btnlv37/lock37.visible = not GameData.is_stage_unlocked(36)
+
+	btn_lv38.disabled = not GameData.is_stage_unlocked(37)
+	if $LevelMenu/btnlv38.has_node("lock38"):
+		$LevelMenu/btnlv38/lock38.visible = not GameData.is_stage_unlocked(37)
+
+	btn_lv39.disabled = not GameData.is_stage_unlocked(38)
+	if $LevelMenu/btnlv39.has_node("lock39"):
+		$LevelMenu/btnlv39/lock39.visible = not GameData.is_stage_unlocked(38)
+
+	btn_lv40.disabled = not GameData.is_stage_unlocked(39)
+	if $LevelMenu/btnlv40.has_node("lock40"):
+		$LevelMenu/btnlv40/lock40.visible = not GameData.is_stage_unlocked(39)
+
+	btn_lv41.disabled = not GameData.is_stage_unlocked(40)
+	if $LevelMenu/btnlv41.has_node("lock41"):
+		$LevelMenu/btnlv41/lock41.visible = not GameData.is_stage_unlocked(40)
+
+	btn_lv42.disabled = not GameData.is_stage_unlocked(41)
+	if $LevelMenu/btnlv42.has_node("lock42"):
+		$LevelMenu/btnlv42/lock42.visible = not GameData.is_stage_unlocked(41)
+
+	btn_lv43.disabled = not GameData.is_stage_unlocked(42)
+	if $LevelMenu/btnlv43.has_node("lock43"):
+		$LevelMenu/btnlv43/lock43.visible = not GameData.is_stage_unlocked(42)
+
+	btn_lv44.disabled = not GameData.is_stage_unlocked(43)
+	if $LevelMenu/btnlv44.has_node("lock44"):
+		$LevelMenu/btnlv44/lock44.visible = not GameData.is_stage_unlocked(43)
+
+	btn_lv45.disabled = not GameData.is_stage_unlocked(44)
+	if $LevelMenu/btnlv45.has_node("lock45"):
+		$LevelMenu/btnlv45/lock45.visible = not GameData.is_stage_unlocked(44)
+
 	# Save original skull icon
 	if btn_lv46.icon is AnimatedTexture:
 		_original_skull_icon = btn_lv46.icon as AnimatedTexture
@@ -30,6 +82,7 @@ func _ready() -> void:
 		_original_skull_icon.set_frame_duration(1, 1.0)
 	
 	_update_lv46_unlock_status()
+>>>>>>> Stashed changes
 	btn_lv37.pressed.connect(func(): _on_choose_level(37))
 	btn_lv38.pressed.connect(func(): _on_choose_level(38))
 	btn_lv39.pressed.connect(func(): _on_choose_level(39))

@@ -1509,9 +1509,15 @@ tile_map_data = PackedByteArray("AAAYAFQAAAAKAA4AAAAYAFUAAAAKAA8AAAAZAFQAAAABAA4
 tile_set = SubResource("TileSet_fqcln")
 
 [node name="Portal" parent="." instance=ExtResource("6_g4q3r")]
+<<<<<<< Updated upstream
 position = Vector2(1016, 192)
+next_level_path = "res://scenes/Level/Lv3.tscn"
+stage_to_unlock = 2
+=======
+position = Vector2(1011, 189)
 scale = Vector2(2, 2)
 next_level = 3
+>>>>>>> Stashed changes
 
 [node name="Manager" parent="." instance=ExtResource("8_ctqag")]
 current_level = 2
@@ -1625,7 +1631,11 @@ position = Vector2(768, 144)
 shape = SubResource("RectangleShape2D_w6d4j")
 
 [node name="Player" parent="." instance=ExtResource("7_vyjv3")]
-position = Vector2(48, 224)
+<<<<<<< Updated upstream
+position = Vector2(56, 224)
+=======
+position = Vector2(52, 224)
+>>>>>>> Stashed changes
 scale = Vector2(1.5, 1.5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]

@@ -1437,6 +1437,7 @@ scale = Vector2(1.76, 1.76)
 max_jc = 1.5
 
 [node name="Camera2D" parent="Player" index="5"]
+position = Vector2(1.70455, -2.27273)
 limit_left = -100
 limit_right = 100000
 limit_bottom = 780
@@ -1470,7 +1471,7 @@ tile_map_data = PackedByteArray("AADf/xEAAAAFAAkAAADf/xIAAAAFAAkAAADf/xMAAAAFAAk
 tile_set = SubResource("TileSet_1jteh")
 
 [node name="Portal" parent="Map" instance=ExtResource("5_8fs37")]
-position = Vector2(258, 736)
+position = Vector2(249, 734)
 scale = Vector2(1.52, 1.52)
 next_level = 46
 
@@ -1819,7 +1820,7 @@ position = Vector2(-403.5, 504)
 shape = SubResource("RectangleShape2D_mhwvk")
 
 [node name="Spawner" parent="Map/Trapzones/Trapzone4" index="1"]
-position = Vector2(-528, 504)
+position = Vector2(-468, 480)
 
 [node name="Background" type="TextureRect" parent="."]
 z_index = -10

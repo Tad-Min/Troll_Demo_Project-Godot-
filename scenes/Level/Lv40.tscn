@@ -972,11 +972,11 @@ tab_size = 7
 
 [connection signal="body_entered" from="Trap_1" to="." method="_on_trap_1_body_entered"]
 [connection signal="buttonActivated" from="Floor1/Button1" to="." method="_on_button_1_button_activated"]
-[connection signal="buttonActivated" from="Floor3/Button4" to="." method="_on_button_4_button_activated"]
 [connection signal="buttonActivated" from="Floor3/Button4" to="." method="_on_button_1_button_activated"]
+[connection signal="buttonActivated" from="Floor3/Button4" to="." method="_on_button_4_button_activated"]
+[connection signal="buttonActivated" from="Floor4/Button5" to="." method="_on_button_1_button_activated"]
 [connection signal="buttonActivated" from="Floor4/Button5" to="." method="_on_button_5_button_activated"]
 [connection signal="buttonActivated" from="Floor4/Button5" to="." method="_on_button_4_button_activated"]
-[connection signal="buttonActivated" from="Floor4/Button5" to="." method="_on_button_1_button_activated"]
 [connection signal="buttonActivated" from="Floor2/Button2" to="." method="_on_button_2_button_activated"]
 
 [editable path="Player"]

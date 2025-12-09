@@ -4262,7 +4262,7 @@ metadata/_edit_lock_ = true
 current_level = 5
 
 [node name="Player" parent="." instance=ExtResource("14_sskub")]
-position = Vector2(58, 470)
+position = Vector2(45, 480)
 scale = Vector2(1.5, 1.5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player"]
@@ -4279,7 +4279,7 @@ tab_size = 7
 [node name="MusicBackground" parent="." instance=ExtResource("16_ipiet")]
 
 [node name="Portal" parent="." instance=ExtResource("10_b5mx3")]
-position = Vector2(964, 56)
+position = Vector2(940, 58)
 scale = Vector2(-1.5, 1.5)
 next_level = 6
 

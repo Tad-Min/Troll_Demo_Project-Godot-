@@ -24,7 +24,7 @@ class Level:
 
 var LvSize: int = 50
 var Levels: Array[Level]
-
+var next_level: int = 0
 # Save current level
 var current_level: int = 0
 
@@ -92,7 +92,8 @@ func _ready() -> void:
 func reset_progress():
 	Levels.clear()
 	for i in range(LvSize):
-		Levels.append(Level.new(i == 0, 0))  # Level 0 unlock
+		var unlock = (i == 0)
+		Levels.append(Level.new(i + 1, unlock, 0))  # Level 0 unlock
 	current_level = 0
 	keys_collected = 0
 	pending_keys = 0
