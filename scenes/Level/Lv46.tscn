@@ -2249,17 +2249,17 @@ move_direction = -1
 move_distance = 2000.0
 
 [node name="SpikeBall1" parent="." instance=ExtResource("17_spikeball_lv46")]
-position = Vector2(881, 111)
+position = Vector2(915, 61)
 scale = Vector2(0.05, 0.05)
 
 [node name="SpikeBall2" parent="." instance=ExtResource("17_spikeball_lv46")]
-position = Vector2(305, 102)
+position = Vector2(287, 55)
 scale = Vector2(0.04, 0.04)
 
 [node name="SpikeBall3" parent="." instance=ExtResource("17_spikeball_lv46")]
-position = Vector2(1065, 263)
+position = Vector2(839, 62)
 scale = Vector2(0.04, 0.04)
 
 [node name="SpikeBall4" parent="." instance=ExtResource("17_spikeball_lv46")]
-position = Vector2(144, 103)
+position = Vector2(175, 58)
 scale = Vector2(0.04, 0.04)
