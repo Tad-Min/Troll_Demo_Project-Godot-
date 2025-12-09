@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=19 format=3 uid="uid://b5ralt6nyemgu"]
-=======
 [gd_scene load_steps=28 format=3 uid="uid://b5ralt6nyemgu"]
->>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://cjroiox442k41" path="res://scripts/UI_Scripts/select_level_4.gd" id="1_tj7b5"]
 [ext_resource type="Shader" uid="uid://chfkq82vmvjuu" path="res://scenes/SelectLevel2.gdshader" id="2_ji3qw"]
@@ -10,17 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://jeehyp7hpqns" path="res://assets/Jungle Asset Pack/parallax background/Window.png" id="4_wupp6"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="5_stah2"]
 [ext_resource type="Texture2D" uid="uid://dakrd3uqsu42m" path="res://assets/Jungle Asset Pack/parallax background/Button.png" id="6_xtjxf"]
-<<<<<<< Updated upstream
-[ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/Screenshot 2025-10-17 152747.png" id="7_piry3"]
-[ext_resource type="Texture2D" uid="uid://b5mr45jlxtgb7" path="res://assets/Jungle Asset Pack/parallax background/boss.jpg" id="8_ji3qw"]
-=======
 [ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/BlueButton.png" id="7_piry3"]
 [ext_resource type="Texture2D" uid="uid://cw0ggi016uokk" path="res://assets/skull/1.png" id="8_oc8lb"]
 [ext_resource type="Texture2D" uid="uid://s71yvh7jigbb" path="res://assets/skull/2.png" id="9_wupp6"]
 [ext_resource type="Texture2D" uid="uid://dq6evkyk35uyu" path="res://assets/Jungle Asset Pack/parallax background/redButton.png" id="10_redbtn"]
 [ext_resource type="Texture2D" uid="uid://byvdy8ssa2vv" path="res://assets/Jungle Asset Pack/parallax background/LockScreen.png" id="11_lock"]
 [ext_resource type="Texture2D" uid="uid://dxbvug5of2pfh" path="res://assets/Jungle Asset Pack/parallax background/lock.png" id="12_xtjxf"]
->>>>>>> Stashed changes
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bg6gg"]
 shader = ExtResource("2_ji3qw")
@@ -344,17 +335,10 @@ icon = SubResource("AnimatedTexture_stah2")
 
 [node name="KeyLabel" type="Label" parent="LevelMenu"]
 layout_mode = 0
-<<<<<<< Updated upstream
-offset_left = 260.0
-offset_top = 460.0
-offset_right = 412.0
-offset_bottom = 516.0
-=======
 offset_left = 700.0
 offset_top = 406.0
 offset_right = 852.0
 offset_bottom = 462.0
->>>>>>> Stashed changes
 theme_override_fonts/font = ExtResource("5_stah2")
 theme_override_font_sizes/font_size = 20
 text = " 0/3"

@@ -1813,11 +1813,6 @@ current_level = 33
 
 [node name="MusicBackground" parent="." instance=ExtResource("20_sy2fa")]
 
-<<<<<<< Updated upstream:scenes/Level/Lv2.tscn1341135084.tmp
-[node name="Player" parent="." instance=ExtResource("7_vyjv3")]
-position = Vector2(56, 320)
-scale = Vector2(2, 2)
-=======
 [node name="MusicBackground" parent="." instance=ExtResource("13_12cwx")]
 
 [node name="Portal" parent="." instance=ExtResource("14_1th61")]
@@ -1972,4 +1967,3 @@ text = "Lv25"
 tab_size = 7
 
 [editable path="Player"]
->>>>>>> Stashed changes:scenes/Level/Lv25.tscn

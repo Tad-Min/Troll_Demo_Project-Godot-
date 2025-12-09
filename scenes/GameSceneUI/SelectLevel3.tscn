@@ -1,12 +1,4 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[gd_scene load_steps=18 format=3 uid="uid://c8nthwa52p4i8"]
-=======
-[gd_scene load_steps=21 format=3 uid="uid://2dksvogo6exi"]
->>>>>>> Stashed changes
-=======
 [gd_scene load_steps=22 format=3 uid="uid://2dksvogo6exi"]
->>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://dfue1nrnn2mwp" path="res://scripts/UI_Scripts/select_level_3.gd" id="1_0i7vj"]
 [ext_resource type="Shader" uid="uid://chfkq82vmvjuu" path="res://scenes/SelectLevel2.gdshader" id="2_xtuwv"]
@@ -14,12 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://jeehyp7hpqns" path="res://assets/Jungle Asset Pack/parallax background/Window.png" id="4_2jlim"]
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="5_lpat8"]
 [ext_resource type="Texture2D" uid="uid://dakrd3uqsu42m" path="res://assets/Jungle Asset Pack/parallax background/Button.png" id="6_q03yg"]
-<<<<<<< Updated upstream
-[ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/Screenshot 2025-10-17 152747.png" id="7_swm6w"]
-=======
 [ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/BlueButton.png" id="7_swm6w"]
 [ext_resource type="Texture2D" uid="uid://dxbvug5of2pfh" path="res://assets/Jungle Asset Pack/parallax background/lock.png" id="8_xtuwv"]
->>>>>>> Stashed changes
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bg6gg"]
 shader = ExtResource("2_xtuwv")

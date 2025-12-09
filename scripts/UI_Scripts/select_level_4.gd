@@ -11,10 +11,6 @@ extends Control
 @onready var btn_lv46: Button = $LevelMenu/btnlv46
 @onready var key_label: Label = $LevelMenu/KeyLabel
 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-func _ready() -> void:
-=======
 #lock
 @onready var lock37: TextureRect = $LevelMenu/btnlv37/lock37 if $LevelMenu/btnlv37.has_node("lock37") else null
 @onready var lock38: TextureRect = $LevelMenu/btnlv38/lock38 if $LevelMenu/btnlv38.has_node("lock38") else null
@@ -82,7 +78,6 @@ func _ready() -> void:
 		_original_skull_icon.set_frame_duration(1, 1.0)
 	
 	_update_lv46_unlock_status()
->>>>>>> Stashed changes
 	btn_lv37.pressed.connect(func(): _on_choose_level(37))
 	btn_lv38.pressed.connect(func(): _on_choose_level(38))
 	btn_lv39.pressed.connect(func(): _on_choose_level(39))

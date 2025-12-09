@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://4kvtnf1x2kcx" path="res://assets/Jungle Asset Pack/parallax background/Gemini_Generated_Image_gg8c48gg8c48gg8c.png" id="1_fo6nu"]
 [ext_resource type="Texture2D" uid="uid://jeehyp7hpqns" path="res://assets/Jungle Asset Pack/parallax background/Window.png" id="2_0m72f"]
 [ext_resource type="FontFile" uid="uid://c0xdx3liagfb2" path="res://assets/Jungle Asset Pack/PixelCaps-LOnE.ttf" id="3_vqadi"]
-[ext_resource type="Script" uid="uid://c1te3imx5csln" path="res://scenes/GameSceneUI/rich_text_label2.gd" id="4_vqadi"]
+[ext_resource type="Script" uid="uid://c1te3imx5csln" path="res://scripts/UI_Scripts/rich_text_label2.gd" id="4_vqadi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i5m1m"]
 atlas = ExtResource("2_0m72f")
