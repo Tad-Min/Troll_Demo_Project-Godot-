@@ -1,6 +1,6 @@
 extends Area2D
 @export var speed := 500
-@export var max_distance := 800
+@export var max_distance := 10000
 var direction := 1
 var start_position := Vector2.ZERO
 var has_hit := false
