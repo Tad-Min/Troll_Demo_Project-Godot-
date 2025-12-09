@@ -1599,6 +1599,235 @@ animation = &"Default"
 autoplay = "Default"
 frame_progress = 0.390006
 
+<<<<<<< Updated upstream:scenes/Level/Lv1.tscn15015291865.tmp
 [node name="Player" parent="." instance=ExtResource("6_oskok")]
 position = Vector2(48, 560)
 scale = Vector2(2.51654, 2.51654)
+=======
+[node name="MusicBackground" parent="." instance=ExtResource("20_t1sw0")]
+
+[node name="Player" parent="." instance=ExtResource("21_thb42")]
+position = Vector2(177, 122)
+
+[node name="Portal" parent="." instance=ExtResource("11_fjnmm")]
+position = Vector2(977, 625)
+next_level = 35
+
+[node name="SpikeFastShiftTrigger" type="Area2D" parent="."]
+position = Vector2(610, 496)
+script = ExtResource("14_fsqcv")
+spike_targets = Array[NodePath]([NodePath("../spikeSimple/SpikeSimple3")])
+shift_offset = Vector2(-400, 0)
+speed_pixels_per_sec = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeFastShiftTrigger"]
+position = Vector2(-149, -277)
+shape = SubResource("RectangleShape2D_i83ud")
+
+[node name="SpikeFastShiftTrigger2" type="Area2D" parent="."]
+position = Vector2(577, 839)
+script = ExtResource("14_fsqcv")
+spike_targets = Array[NodePath]([NodePath("../spikeSimple/SpikeSimple12")])
+shift_offset = Vector2(400, 0)
+speed_pixels_per_sec = 100.0
+start_hidden = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeFastShiftTrigger2"]
+position = Vector2(-150, -292)
+shape = SubResource("RectangleShape2D_i83ud")
+
+[node name="SpikePrankTrigger" type="Area2D" parent="."]
+position = Vector2(804, 176)
+script = ExtResource("14_fsqcv")
+spike_targets = Array[NodePath]([NodePath("../spikeSimple/SpikeSimple5")])
+shift_offset = Vector2(-24, 0)
+tween_duration = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikePrankTrigger"]
+position = Vector2(2, 3)
+shape = SubResource("RectangleShape2D_gowgi")
+
+[node name="SpikePrankTrigger2" type="Area2D" parent="."]
+position = Vector2(924, 172)
+script = ExtResource("14_fsqcv")
+spike_targets = Array[NodePath]([NodePath("../spikeSimple/SpikeSimple6")])
+tween_duration = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikePrankTrigger2"]
+position = Vector2(2, 3)
+shape = SubResource("RectangleShape2D_gowgi")
+
+[node name="SpikePrankTrigger3" type="Area2D" parent="."]
+position = Vector2(437, 456)
+script = ExtResource("14_fsqcv")
+spike_targets = Array[NodePath]([NodePath("../spikeSimple/SpikeSimple9")])
+shift_offset = Vector2(44, 0)
+tween_duration = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikePrankTrigger3"]
+position = Vector2(2, 3)
+shape = SubResource("RectangleShape2D_gowgi")
+
+[node name="SpikePrankTrigger4" type="Area2D" parent="."]
+position = Vector2(385, 446)
+script = ExtResource("14_fsqcv")
+spike_targets = Array[NodePath]([NodePath("../spikeSimple/SpikeSimple9")])
+shift_offset = Vector2(-44, 0)
+tween_duration = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikePrankTrigger4"]
+position = Vector2(2, 3)
+shape = SubResource("RectangleShape2D_gowgi")
+
+[node name="SpikePrankTrigger5" type="Area2D" parent="."]
+position = Vector2(433, 486)
+script = ExtResource("14_fsqcv")
+spike_targets = Array[NodePath]([NodePath("../spikeSimple/SpikeSimple10")])
+shift_offset = Vector2(-44, 0)
+tween_duration = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikePrankTrigger5"]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_gowgi")
+
+[node name="SpikeScaleTrigger" type="Area2D" parent="."]
+position = Vector2(810, 384)
+script = ExtResource("22_o9n31")
+spike_path = NodePath("../spikeSimple/SpikeSimpleBeooo")
+tween_duration = 0.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeScaleTrigger"]
+position = Vector2(8, -25)
+shape = SubResource("RectangleShape2D_v3y5m")
+
+[node name="Falling_Spike" parent="." instance=ExtResource("14_i83ud")]
+position = Vector2(452, 92)
+
+[node name="Falling_Spike2" parent="." instance=ExtResource("14_i83ud")]
+position = Vector2(595, 503)
+
+[node name="SpikeNotSimple" type="Node" parent="."]
+
+[node name="HiddenSpike" parent="SpikeNotSimple" instance=ExtResource("11_syuef")]
+position = Vector2(58, 393)
+
+[node name="HiddenSpike2" parent="SpikeNotSimple" instance=ExtResource("11_syuef")]
+position = Vector2(107, 393)
+
+[node name="HiddenSpike3" parent="SpikeNotSimple" instance=ExtResource("11_syuef")]
+position = Vector2(1058, 441)
+
+[node name="HiddenSpike4" parent="SpikeNotSimple" instance=ExtResource("11_syuef")]
+position = Vector2(631, 442)
+
+[node name="spikeSimple" type="Node" parent="."]
+
+[node name="SpikeSimple" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+position = Vector2(347, 180)
+
+[node name="SpikeSimple2" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+position = Vector2(421, 180)
+
+[node name="SpikeSimple3" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+position = Vector2(593, 213)
+scale = Vector2(2, 2)
+
+[node name="SpikeSimple4" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+position = Vector2(1052, 281)
+rotation = 1.5708
+scale = Vector2(4, 2)
+
+[node name="SpikeSimple5" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+position = Vector2(832, 213)
+scale = Vector2(2, 2)
+
+[node name="SpikeSimple6" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+position = Vector2(952, 213)
+scale = Vector2(2, 2)
+
+[node name="SpikeSimple7" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+position = Vector2(955, 395)
+scale = Vector2(2, 4)
+
+[node name="SpikeSimpleBeooo" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+position = Vector2(815, 423)
+scale = Vector2(4, 2)
+
+[node name="SpikeSimple8" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+position = Vector2(676, 396)
+scale = Vector2(2, 3.9)
+
+[node name="SpikeSimple9" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+position = Vector2(387, 470)
+rotation = 1.5708
+scale = Vector2(2, 1.5)
+
+[node name="SpikeSimple10" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+position = Vector2(428, 522)
+rotation = -1.5708
+scale = Vector2(2, 1.5)
+
+[node name="SpikeSimple11" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+position = Vector2(387, 577)
+rotation = 1.5708
+scale = Vector2(2, 1.5)
+
+[node name="SpikeSimple12" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+z_index = 2
+position = Vector2(335, 598)
+scale = Vector2(2, 3)
+
+[node name="SpikeSimple13" parent="spikeSimple" instance=ExtResource("8_1en2m")]
+position = Vector2(537, 628)
+
+[node name="hidden_shuriken" type="Area2D" parent="."]
+position = Vector2(211, 145)
+script = ExtResource("16_44wa2")
+shuriken_scene = ExtResource("17_0t3do")
+spawner = NodePath("Spawner")
+shoot_direction = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hidden_shuriken"]
+position = Vector2(346, 286)
+shape = SubResource("RectangleShape2D_ay1ae")
+
+[node name="Spawner" type="Marker2D" parent="hidden_shuriken"]
+position = Vector2(175, 290)
+
+[node name="ButtonTrigger1" type="Area2D" parent="."]
+script = ExtResource("14_fsqcv")
+spike_targets = Array[NodePath]([NodePath("../spikeSimple/SpikeSimple12")])
+shift_offset = Vector2(-400, 0)
+speed_pixels_per_sec = 100.0
+
+[node name="Button1" parent="ButtonTrigger1" instance=ExtResource("7_ptvk0")]
+position = Vector2(639, 578)
+rotation = 3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonTrigger1"]
+position = Vector2(638.75, 575.75)
+shape = SubResource("RectangleShape2D_qxnij")
+
+[node name="ButtonTrigger2" type="Area2D" parent="."]
+script = ExtResource("20_qxnij")
+spike_path = NodePath("../spikeSimple/SpikeSimple12")
+
+[node name="Button2" parent="ButtonTrigger2" instance=ExtResource("7_ptvk0")]
+position = Vector2(676, 579)
+rotation = 3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonTrigger2"]
+position = Vector2(677, 576)
+shape = SubResource("RectangleShape2D_637io")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 101.0
+offset_top = 7.0
+offset_right = 206.0
+offset_bottom = 31.0
+scale = Vector2(1.96, 1.96)
+text = "Lv34"
+tab_size = 7
+>>>>>>> Stashed changes:scenes/Level/Lv34.tscn

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bqji2w44moiqg"]
+[gd_scene load_steps=33 format=3 uid="uid://bqji2w44moiqg"]
 
 [ext_resource type="Script" uid="uid://uwb3lip6eosh" path="res://scripts/UI_Scripts/select_level_2.gd" id="1_brqsk"]
 [ext_resource type="Texture2D" uid="uid://vhuqpvtdr7h2" path="res://assets/Jungle Asset Pack/parallax background/BG.png" id="2_adhu8"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://d081marsgcthd" path="res://assets/Jungle Asset Pack/Pixeled.ttf" id="4_bg6gg"]
 [ext_resource type="Texture2D" uid="uid://cumn5lgfm4a26" path="res://assets/Jungle Asset Pack/parallax background/Screenshot 2025-10-17 152747.png" id="5_xv5ut"]
 [ext_resource type="Texture2D" uid="uid://dakrd3uqsu42m" path="res://assets/Jungle Asset Pack/parallax background/Button.png" id="7_bg6gg"]
+[ext_resource type="Texture2D" uid="uid://dxbvug5of2pfh" path="res://assets/Jungle Asset Pack/parallax background/lock.png" id="8_xv5ut"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bg6gg"]
 shader = ExtResource("2_tb5ri")
@@ -148,6 +149,14 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_a2xwi")
 text = "13
 "
 
+[node name="lock13" type="TextureRect" parent="LevelMenu/btnlv13"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 142.0
+offset_bottom = 113.0
+texture = ExtResource("8_xv5ut")
+expand_mode = 1
+
 [node name="btnlv14" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 267.0
@@ -162,6 +171,14 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_3u22v")
 text = "14
 "
 
+[node name="lock14" type="TextureRect" parent="LevelMenu/btnlv14"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 144.0
+offset_bottom = 114.0
+texture = ExtResource("8_xv5ut")
+expand_mode = 1
+
 [node name="btnlv15" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 482.0
@@ -174,6 +191,15 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
 theme_override_styles/normal = SubResource("StyleBoxTexture_vwla1")
 text = "15"
+
+[node name="lock15" type="TextureRect" parent="LevelMenu/btnlv15"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -3.0
+offset_right = 143.0
+offset_bottom = 110.0
+texture = ExtResource("8_xv5ut")
+expand_mode = 1
 
 [node name="btnlv16" type="Button" parent="LevelMenu"]
 layout_mode = 0
@@ -189,6 +215,14 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ishi2")
 text = "16
 "
 
+[node name="lock16" type="TextureRect" parent="LevelMenu/btnlv16"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 145.0
+offset_bottom = 113.0
+texture = ExtResource("8_xv5ut")
+expand_mode = 1
+
 [node name="btnlv17" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 41.0
@@ -202,6 +236,14 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
 theme_override_styles/normal = SubResource("StyleBoxTexture_4x6gg")
 text = "17
 "
+
+[node name="lock17" type="TextureRect" parent="LevelMenu/btnlv17"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 144.0
+offset_bottom = 112.0
+texture = ExtResource("8_xv5ut")
+expand_mode = 1
 
 [node name="btnlv18" type="Button" parent="LevelMenu"]
 layout_mode = 0
@@ -222,6 +264,13 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_rf23d")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ug01h")
 text = "18"
+
+[node name="lock18" type="TextureRect" parent="LevelMenu/btnlv18"]
+layout_mode = 0
+offset_right = 144.0
+offset_bottom = 113.0
+texture = ExtResource("8_xv5ut")
+expand_mode = 1
 
 [node name="btnlv19" type="Button" parent="LevelMenu"]
 layout_mode = 0
@@ -244,6 +293,14 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_xoo1e")
 text = "19
 "
 
+[node name="lock19" type="TextureRect" parent="LevelMenu/btnlv19"]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 144.0
+offset_bottom = 111.0
+texture = ExtResource("8_xv5ut")
+expand_mode = 1
+
 [node name="btnlv20" type="Button" parent="LevelMenu"]
 layout_mode = 0
 <<<<<<< Updated upstream
@@ -265,6 +322,14 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_8omjj")
 text = "20
 "
 
+[node name="lock20" type="TextureRect" parent="LevelMenu/btnlv20"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 144.0
+offset_bottom = 112.0
+texture = ExtResource("8_xv5ut")
+expand_mode = 1
+
 [node name="btnlv21" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 37.0
@@ -278,6 +343,14 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
 theme_override_styles/normal = SubResource("StyleBoxTexture_24ohm")
 text = "21
 "
+
+[node name="lock21" type="TextureRect" parent="LevelMenu/btnlv21"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 142.0
+offset_bottom = 113.0
+texture = ExtResource("8_xv5ut")
+expand_mode = 1
 
 [node name="btnlv22" type="Button" parent="LevelMenu"]
 layout_mode = 0
@@ -293,6 +366,14 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_bg6gg")
 text = "22
 "
 
+[node name="lock22" type="TextureRect" parent="LevelMenu/btnlv22"]
+layout_mode = 0
+offset_top = -3.0
+offset_right = 144.0
+offset_bottom = 110.0
+texture = ExtResource("8_xv5ut")
+expand_mode = 1
+
 [node name="btnlv23" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 482.0
@@ -307,6 +388,14 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_xv5ut")
 text = "23
 "
 
+[node name="lock23" type="TextureRect" parent="LevelMenu/btnlv23"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 145.0
+offset_bottom = 113.0
+texture = ExtResource("8_xv5ut")
+expand_mode = 1
+
 [node name="btnlv24" type="Button" parent="LevelMenu"]
 layout_mode = 0
 offset_left = 693.0
@@ -320,6 +409,15 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_m84f5")
 theme_override_styles/normal = SubResource("StyleBoxTexture_k0dj3")
 text = "24
 "
+
+[node name="lock24" type="TextureRect" parent="LevelMenu/btnlv24"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 115.0
+texture = ExtResource("8_xv5ut")
+expand_mode = 1
 
 [node name="btnBack" type="TextureButton" parent="."]
 layout_mode = 0
