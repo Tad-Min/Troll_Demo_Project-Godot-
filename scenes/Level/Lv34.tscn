@@ -1644,16 +1644,16 @@ position = Vector2(952, 213)
 scale = Vector2(2, 2)
 
 [node name="SpikeSimple7" parent="spikeSimple" instance=ExtResource("8_1en2m")]
-position = Vector2(955, 395)
-scale = Vector2(2, 4)
+position = Vector2(955, 400)
+scale = Vector2(2, 3.6)
 
 [node name="SpikeSimpleBeooo" parent="spikeSimple" instance=ExtResource("8_1en2m")]
 position = Vector2(815, 423)
 scale = Vector2(4, 2)
 
 [node name="SpikeSimple8" parent="spikeSimple" instance=ExtResource("8_1en2m")]
-position = Vector2(676, 396)
-scale = Vector2(2, 3.9)
+position = Vector2(676, 400)
+scale = Vector2(2, 3.6)
 
 [node name="SpikeSimple9" parent="spikeSimple" instance=ExtResource("8_1en2m")]
 position = Vector2(387, 470)

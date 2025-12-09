@@ -2237,8 +2237,8 @@ position = Vector2(462, 45)
 rotation = 3.14159
 
 [node name="SpikeSimple9" parent="SpikeSetNo1" instance=ExtResource("15_5rfoc")]
-position = Vector2(699, 122)
-scale = Vector2(3, 2.8)
+position = Vector2(699, 128)
+scale = Vector2(3, 2.5)
 
 [node name="SpikePrankTrigger" type="Area2D" parent="."]
 position = Vector2(401, 96)

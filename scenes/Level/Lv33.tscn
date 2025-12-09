@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://dmahgcie1odrc"]
+[gd_scene load_steps=41 format=4 uid="uid://dmahgcie1odrc"]
 
 [ext_resource type="Script" uid="uid://coyt280ivehot" path="res://scripts/Level/Lv33/setup.gd" id="1_33buv"]
 [ext_resource type="Script" uid="uid://5dns7nk120qa" path="res://scripts/UI_Scripts/background.gd" id="2_kgajo"]
@@ -12,15 +12,15 @@
 [ext_resource type="Texture2D" uid="uid://cf0it5t65w2y0" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="10_to6me"]
 [ext_resource type="PackedScene" uid="uid://43frl41ejo30" path="res://scenes/portal.tscn" id="11_5eo4h"]
 [ext_resource type="PackedScene" uid="uid://c3s1s0rrb27tt" path="res://scenes/Trap/spike.tscn" id="12_kj4p1"]
-[ext_resource type="Script" uid="uid://dmor17pb2d72c" path="res://scripts/Level/Lv33/trap_3.gd" id="13_4bh6e"]
 [ext_resource type="Script" uid="uid://bb2ylveliwwi6" path="res://scripts/Level/Lv33/spike_simple_move_scale.gd" id="14_penxc"]
 [ext_resource type="Script" uid="uid://roqdnn02s0ig" path="res://scripts/Level/Lv33/trap_1.gd" id="15_ndx0g"]
-[ext_resource type="Script" uid="uid://jev6ouav4410" path="res://scripts/Level/Lv33/trap_2.gd" id="16_1m3kn"]
-[ext_resource type="Script" uid="uid://bpugmmc6ik5cv" path="res://scripts/Level/Lv33/trap_4.gd" id="17_jton4"]
-[ext_resource type="Script" uid="uid://cfyyq26vh4lx0" path="res://scripts/Level/Lv33/trap_5.gd" id="18_lwwo0"]
 [ext_resource type="PackedScene" uid="uid://sg7rvsrlocap" path="res://scenes/GameSceneUI/manager.tscn" id="19_koekt"]
 [ext_resource type="PackedScene" uid="uid://su8pavg7ap8i" path="res://scenes/GameSceneUI/MusicBackground.tscn" id="20_sy2fa"]
-[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="21_knncw"]
+[ext_resource type="Script" uid="uid://cfyyq26vh4lx0" path="res://scripts/Level/Lv33/trap_5.gd" id="21_kuo4n"]
+[ext_resource type="Script" uid="uid://jev6ouav4410" path="res://scripts/Level/Lv33/trap_2.gd" id="22_ob7vs"]
+[ext_resource type="Script" uid="uid://dmor17pb2d72c" path="res://scripts/Level/Lv33/trap_3.gd" id="23_2dink"]
+[ext_resource type="Script" uid="uid://bpugmmc6ik5cv" path="res://scripts/Level/Lv33/trap_4.gd" id="24_05ree"]
+[ext_resource type="PackedScene" uid="uid://dhqdda1mfogu7" path="res://scenes/Player/player.tscn" id="25_hrwyk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y3nt4"]
 texture = ExtResource("10_to6me")
@@ -1403,6 +1403,36 @@ size = Vector2(64, 360)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3nt4"]
 size = Vector2(16, 608)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0i5yo"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aaxfg"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgdxn"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16lfx"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7b8s"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_di14e"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmnou"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1h3dn"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48j13"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vvja"]
+size = Vector2(50, 50)
+
 [node name="Lv33" type="Node2D"]
 script = ExtResource("1_33buv")
 metadata/_edit_lock_ = true
@@ -1539,7 +1569,7 @@ position = Vector2(880, 384)
 
 [node name="Trap3" type="Area2D" parent="."]
 position = Vector2(656, 384)
-script = ExtResource("13_4bh6e")
+script = ExtResource("23_2dink")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap3"]
 position = Vector2(1, -52)
@@ -1781,7 +1811,7 @@ metadata/_edit_lock_ = true
 
 [node name="Trap2" type="Area2D" parent="."]
 position = Vector2(328, 392)
-script = ExtResource("16_1m3kn")
+script = ExtResource("22_ob7vs")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap2"]
@@ -1791,7 +1821,7 @@ metadata/_edit_lock_ = true
 
 [node name="Trap4" type="Area2D" parent="."]
 position = Vector2(896, 440)
-script = ExtResource("17_jton4")
+script = ExtResource("24_05ree")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap4"]
 position = Vector2(-16, -228)
@@ -1800,7 +1830,7 @@ metadata/_edit_lock_ = true
 
 [node name="Trap5" type="Area2D" parent="."]
 position = Vector2(1032, 408)
-script = ExtResource("18_lwwo0")
+script = ExtResource("21_kuo4n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap5"]
 position = Vector2(0, -72)
@@ -1813,18 +1843,12 @@ current_level = 33
 
 [node name="MusicBackground" parent="." instance=ExtResource("20_sy2fa")]
 
-[node name="MusicBackground" parent="." instance=ExtResource("13_12cwx")]
-
-[node name="Portal" parent="." instance=ExtResource("14_1th61")]
-position = Vector2(1098, 607)
-next_level = 26
-
 [node name="CbTrap1" type="Node2D" parent="."]
 position = Vector2(184, 208)
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="CbTrap1"]
-script = ExtResource("15_havat")
+script = ExtResource("15_ndx0g")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap1/Area2D"]
@@ -1836,7 +1860,7 @@ metadata/_edit_lock_ = true
 position = Vector2(408, 216)
 
 [node name="Area2D" type="Area2D" parent="CbTrap2"]
-script = ExtResource("16_7ha6x")
+script = ExtResource("22_ob7vs")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap2/Area2D"]
@@ -1848,7 +1872,7 @@ metadata/_edit_lock_ = true
 position = Vector2(648, 200)
 
 [node name="Area2D" type="Area2D" parent="CbTrap3"]
-script = ExtResource("17_pckc3")
+script = ExtResource("23_2dink")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap3/Area2D"]
@@ -1860,7 +1884,7 @@ metadata/_edit_lock_ = true
 position = Vector2(968, 416)
 
 [node name="Area2D" type="Area2D" parent="CbTrap4"]
-script = ExtResource("18_tmyx6")
+script = ExtResource("24_05ree")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap4/Area2D"]
@@ -1872,7 +1896,7 @@ metadata/_edit_lock_ = true
 position = Vector2(704, 424)
 
 [node name="Area2D" type="Area2D" parent="CbTrap5"]
-script = ExtResource("19_oit6l")
+script = ExtResource("21_kuo4n")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap5/Area2D"]
@@ -1884,7 +1908,7 @@ metadata/_edit_lock_ = true
 position = Vector2(464, 424)
 
 [node name="Area2D" type="Area2D" parent="CbTrap6"]
-script = ExtResource("20_smga2")
+script = ExtResource("24_05ree")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CbTrap6/Area2D"]
@@ -1941,7 +1965,7 @@ shape = SubResource("RectangleShape2D_1vvja")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("25_hrwyk")]
-position = Vector2(96, 248)
+position = Vector2(91, 428)
 
 [node name="AnimatedSprite2D" parent="Player" index="0"]
 metadata/_edit_lock_ = true
@@ -1963,7 +1987,7 @@ offset_top = 7.0
 offset_right = 206.0
 offset_bottom = 31.0
 scale = Vector2(1.96, 1.96)
-text = "Lv25"
+text = "Lv33"
 tab_size = 7
 
 [editable path="Player"]

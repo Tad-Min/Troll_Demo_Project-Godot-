@@ -6,5 +6,7 @@ func _ready() -> void:
 func _body_entered(body: Node) -> void:
 	if body.is_in_group("Player"):
 		call_deferred("set_monitoring", false)
-		$"../moveFloor2".isMove = true
-		$"../moveFloor2".start()
+		var move_floor = get_node_or_null("../moveFloor2")
+		if move_floor:
+			move_floor.isMove = true
+			move_floor.start()

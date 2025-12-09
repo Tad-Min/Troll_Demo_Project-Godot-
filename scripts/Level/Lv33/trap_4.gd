@@ -6,4 +6,6 @@ func _ready() -> void:
 func _body_entered(body: Node) -> void:
 	if body.is_in_group("Player"):
 		call_deferred("set_monitoring", false)
-		$"../Spike".visible = true
+		var spike = get_node_or_null("../Spike")
+		if spike:
+			spike.visible = true
