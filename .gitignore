@@ -29,3 +29,4 @@ build/
 # Bỏ qua toàn bộ file release, trừ file APK chính thức
 /release/*
 !/release/*.apk
+[Bb]in/
